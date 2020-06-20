@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "null",
+      "Body": "</xmp><svg onload=alert(1)>",
+      "ARGS": "</xmp><svg onload=alert(1)>",
+      "Headers": "</xmp><svg onload=alert(1)>"
+    }
+  ]
+}

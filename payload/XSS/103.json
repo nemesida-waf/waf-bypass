@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "Body": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "ARGS": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "Headers": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "[1].find(alert)",
+      "Body": "[1].find(alert)",
+      "ARGS": "[1].find(alert)",
+      "Headers": "[1].find(alert)"
+    }
+  ]
+}

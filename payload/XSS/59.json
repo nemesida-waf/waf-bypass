@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "null",
+      "Body": "\"autofocus=alert(1)//",
+      "ARGS": "\"autofocus=alert(1)//",
+      "Headers": "\"autofocus=alert(1)//"
+    }
+  ]
+}

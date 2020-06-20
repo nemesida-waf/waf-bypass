@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<x contenteditable onblur=alert(1)>lose focus!",
+      "Body": "<x contenteditable onblur=alert(1)>lose focus!",
+      "ARGS": "<x contenteditable onblur=alert(1)>lose focus!",
+      "Headers": "<x contenteditable onblur=alert(1)>lose focus!"
+    }
+  ]
+}

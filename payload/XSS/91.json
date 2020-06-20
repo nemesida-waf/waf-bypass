@@ -1,0 +1,12 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "setInterval`alert\\x28document.domain\\x29`",
+      "Body": "setInterval`alert\\x28document.domain\\x29`",
+      "ARGS": "setInterval`alert\\x28document.domain\\x29`",
+      "Headers": "setInterval`alert\\x28document.domain\\x29`",
+      "URL": "setInterval`alert\\x28document.domain\\x29`"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<input autofocus onblur=alert(1)>",
+      "Body": "<input autofocus onblur=alert(1)>",
+      "ARGS": "<input autofocus onblur=alert(1)>",
+      "Headers": "<input autofocus onblur=alert(1)>"
+    }
+  ]
+}

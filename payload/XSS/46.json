@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "null",
+      "Body": "<base href='http://example.com'><a href='/test'>TEST</a>",
+      "ARGS": "<base href='http://example.com'><a href='/test'>TEST</a>",
+      "Headers": "null"
+    }
+  ]
+}

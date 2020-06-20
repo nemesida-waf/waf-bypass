@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "; cat /et?/pa?swd",
+      "Body": "; cat /et?/pa?swd",
+      "ARGS": "; cat /et?/pa?swd",
+      "Headers": "; cat /et?/pa?swd"
+    }
+  ]
+}

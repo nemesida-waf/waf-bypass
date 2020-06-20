@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<x oncut=alert(1)>copy this!",
+      "Body": "<x oncut=alert(1)>copy this!",
+      "ARGS": "<x oncut=alert(1)>copy this!",
+      "Headers": "<x oncut=alert(1)>copy this!"
+    }
+  ]
+}

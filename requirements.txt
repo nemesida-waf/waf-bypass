@@ -1,0 +1,11 @@
+attrs==19.3.0
+certifi==2019.11.28
+chardet==3.0.4
+colorama==0.4.3
+idna==2.8
+idna-ssl==1.1.0
+multidict==4.7.4
+requests==2.22.0
+typing-extensions==3.7.4.1
+urllib3==1.25.8
+yarl==1.4.2

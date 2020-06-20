@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "null",
+      "Body": "'>alert(1)</script><script/1='",
+      "ARGS": "'>alert(1)</script><script/1='",
+      "Headers": "'>alert(1)</script><script/1='"
+    }
+  ]
+}

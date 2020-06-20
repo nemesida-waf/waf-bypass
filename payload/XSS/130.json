@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<x onclick=alert(1)>click this!",
+      "Body": "<x onclick=alert(1)>click this!",
+      "ARGS": "<x onclick=alert(1)>click this!",
+      "Headers": "<x onclick=alert(1)>click this!"
+    }
+  ]
+}

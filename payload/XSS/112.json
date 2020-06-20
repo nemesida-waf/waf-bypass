@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js>\\n</script><x ng-app ng-csp>{{constructor.constructor('alert(1)')()}}",
+      "Body": "<script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js>\\n</script><x ng-app ng-csp>{{constructor.constructor('alert(1)')()}}",
+      "ARGS": "<script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js>\\n</script><x ng-app ng-csp>{{constructor.constructor('alert(1)')()}}",
+      "Headers": "<script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js>\\n</script><x ng-app ng-csp>{{constructor.constructor('alert(1)')()}}"
+    }
+  ]
+}

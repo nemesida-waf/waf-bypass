@@ -1,0 +1,2 @@
+host='http://example.com'
+proxy=''

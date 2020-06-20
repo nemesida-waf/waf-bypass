@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
+      "Body": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
+      "ARGS": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
+      "Headers": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//"
+    }
+  ]
+}

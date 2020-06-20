@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<svg><script xlink:href=data:,alert(1) />",
+      "Body": "<svg><script xlink:href=data:,alert(1) />",
+      "ARGS": "<svg><script xlink:href=data:,alert(1) />",
+      "Headers": "<svg><script xlink:href=data:,alert(1) />"
+    }
+  ]
+}

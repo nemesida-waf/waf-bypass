@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<object data=javascript:alert(1)>",
+      "Body": "<object data=javascript:alert(1)>",
+      "ARGS": "<object data=javascript:alert(1)>",
+      "Headers": "<object data=javascript:alert(1)>"
+    }
+  ]
+}

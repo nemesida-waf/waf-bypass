@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
+      "Body": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
+      "ARGS": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
+      "Headers": "<body onhashchange=alert(1)><a href=%23x>click this!#x"
+    }
+  ]
+}

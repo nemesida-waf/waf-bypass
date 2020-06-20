@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "'\"</Script><Html /Onmouseover=(alert)(1) //",
+      "Body": "'\"</Script><Html /Onmouseover=(alert)(1) //",
+      "ARGS": "'\"</Script><Html /Onmouseover=(alert)(1) //",
+      "Headers": "'\"</Script><Html /Onmouseover=(alert)(1) //"
+    }
+  ]
+}

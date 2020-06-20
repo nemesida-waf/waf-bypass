@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<script src=data:,alert(1)>",
+      "Body": "<script src=data:,alert(1)>",
+      "ARGS": "<script src=data:,alert(1)>",
+      "Headers": "<script src=data:,alert(1)>"
+    }
+  ]
+}

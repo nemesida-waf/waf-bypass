@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "; cat$u+/etc$u/passwd$u",
+      "Body": "; cat$u+/etc$u/passwd$u",
+      "ARGS": "; cat$u+/etc$u/passwd$u",
+      "Headers": "; cat$u+/etc$u/passwd$u"
+    }
+  ]
+}

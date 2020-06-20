@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "Body": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "ARGS": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "Headers": "<marquee loop=1 width=0 onfinish=alert(1)>"
+    }
+  ]
+}

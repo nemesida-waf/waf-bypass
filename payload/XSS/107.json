@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "\"o<x>nmouseover=alert<x>(1)//",
+      "Body": "\"o<x>nmouseover=alert<x>(1)//",
+      "ARGS": "\"o<x>nmouseover=alert<x>(1)//",
+      "Headers": "\"o<x>nmouseover=alert<x>(1)//"
+    }
+  ]
+}

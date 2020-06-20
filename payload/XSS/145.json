@@ -1,0 +1,11 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "<x contenteditable onpaste=alert(1)>paste here!",
+      "Body": "<x contenteditable onpaste=alert(1)>paste here!",
+      "ARGS": "<x contenteditable onpaste=alert(1)>paste here!",
+      "Headers": "<x contenteditable onpaste=alert(1)>paste here!"
+    }
+  ]
+}
