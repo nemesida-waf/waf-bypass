@@ -1,22 +1,25 @@
 #!/usr/bin/python3
 
 import sys
+import configparser
 from requests.exceptions import MissingSchema
-from signatures_test import SignaturesTest
+from bypass import waf_bypass
 
 options = {}
+settings_file = 'settings.conf'
+
+config = configparser.ConfigParser()
 try:
-    with open('options.txt') as f:
-        for line in f:
-            name, value = line.split('=')
-            options[name] = value.strip('\n\'"')
+    config.read(settings_file)
+    host = config['main']['TARGET']
+    proxy = config['main']['PROXY']
 except FileNotFoundError:
-    print('Отсутствует файл с настройками - options.txt')
+    print('File not found: {}'.format(settings_file))
     sys.exit()
-        
-test = SignaturesTest(**options)
+
+test = waf_bypass(host, proxy)
 
 try:
     test.start_test()
 except MissingSchema:
-    print('В настройках host и proxy обязателен протокол')
+    print('The protocol is not set for TARGET or PROXY')

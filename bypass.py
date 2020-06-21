@@ -7,14 +7,14 @@ import re
 from urllib.parse import urljoin
 
 
-class SignaturesTest:
-    """Класс выполняющий тестирование"""
-    def __init__(self, host, proxy=None):
+class waf_bypass:
+    """Класс, выполняющий тестирование"""
+    def __init__(self, host, proxy):
         self.host = host
-        if proxy is not None:
-            self.proxy = {'http':proxy, 'https':proxy}
+        if proxy == '':
+            self.proxy = {'http': proxy, 'https': proxy}
         else:
-            self.proxy = None
+            self.proxy = {'http': None, 'https': None}
         self.session = requests.Session()
         self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
@@ -59,11 +59,11 @@ class SignaturesTest:
 
 
     def output(self, test_type, request_data, request):
-        base_str = '{{}}{} {} {{}}{}'.format(request_data.path, test_type, Style.RESET_ALL)
+        base_str = '{{}}{} in {}: {{}}{}'.format(request_data.path.replace("payload/", ""), test_type, Style.RESET_ALL)
         if request.status_code == 403:
-            print(base_str.format(Fore.GREEN, 'PASSED'))
+            print(base_str.format(Fore.GREEN, 'BLOCKED'))
         else:
-            print(base_str.format(Fore.RED, 'FAILED'))
+            print(base_str.format(Fore.RED, 'BYPASSED'))
 
     def test_args(self, request_data):
         request = self.session.get(self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout)
