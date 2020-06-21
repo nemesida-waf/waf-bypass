@@ -1,6 +1,6 @@
 # WAF Bypass script
 
-WAF bypass is a simple script written in Python3 and designed to check the WAF. Before use, it is recommended to temporarily add the IP address from which testing is carried out to the whitelist.
+WAF bypass is a simple script written in Python3 for testing Web Application Firewall. Before use, it is recommended to temporarily add the IP address from which testing is carried out to the whitelist.
 
 ## Do not break the law when using!
 
