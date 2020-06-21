@@ -1,10 +1,12 @@
 # WAF Bypass script
 
-WAF bypass script written in Python3 is designed to test WAF.
+WAF bypass is a simple script written in Python3 and designed to check the WAF. Before use, it is recommended to temporarily add the IP address from which testing is carried out to the whitelist.
 
 ## Do not break the law when using!
 
 A script developed for internal needs, including for testing Nemesis WAF and Nemesida WAF Free, but you can use it to test any WAF.
+
+![WAF Bypass Script](https://github.com/nemesida-waf/waf_bypass/blob/master/img/bypass_result.png)
 
 There are attacks for which it is impossible to create a signature, while not increasing the number of false positives. Therefore, it is absolutely normal that Nemesida WAF Free skips the attack, and the commercial version of Nemesida WAF Free blocks. For example, we can execute the <code>cat /etc/passwd</code> command in the following ways:
 <pre>
