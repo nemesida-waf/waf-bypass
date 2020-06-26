@@ -2,7 +2,6 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "al\\u0065rt(1)",
       "Body": "al\\u0065rt(1)",
       "ARGS": "al\\u0065rt(1)",
       "Headers": "al\\u0065rt(1)"
