@@ -3,9 +3,6 @@ import json
 
 
 class Request:
-    """ Объекты данного класса формируются из json по заданному пути
-    path - относительный путь в выводе, payload - абсолютный путь пейлоада
-    """
     def __init__(self, path, payload):
         self._path = path
         with open(payload) as f:
@@ -66,12 +63,6 @@ class Request:
 
     @staticmethod
     def parse_pairs(data, separator):
-        """ Статический метод, парсящий параметры или куки, возвращает словарь
-        data: строка вида a=1&b=2 или a=1;b=2, также учитывается наличие просто
-        значения без имени параметра, в этом случае создается параметр или куки
-        test
-        separator: заделитель, & для параметров, ; для куки
-        """
         result = {}
         for pair in data.split(separator):
             if '=' in pair:
@@ -86,11 +77,6 @@ class Request:
 
     @staticmethod
     def extract_value(json_data, key):
-        """ Метод создан исключительно из-за возможности отсутствия ключа в
-            json
-            json_data: данные из json файла
-            key: ключ, значение которого нужно извлечь из json
-        """
         return json_data.get(key, 'null')
 
     def __str__(self):

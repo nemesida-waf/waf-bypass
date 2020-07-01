@@ -8,7 +8,6 @@ from urllib.parse import urljoin
 
 
 class waf_bypass:
-    """Класс, выполняющий тестирование"""
     def __init__(self, host, proxy):
         self.host = host
         if proxy == '':
