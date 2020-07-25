@@ -5,7 +5,7 @@
       "UA": "null",
       "Body": "</script><svg onload=alert(1)>",
       "ARGS": "</script><svg onload=alert(1)>",
-      "Headers": "</script><svg onload=alert(1)>"
+      "Headers": "CustomHeader: </script><svg onload=alert(1)>"
     }
   ]
 }

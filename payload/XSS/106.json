@@ -5,7 +5,7 @@
       "UA": "document.write(decodeURI(location.hash)) #<img/src/onerror=alert(1)>",
       "Body": "document.write(decodeURI(location.hash)) #<img/src/onerror=alert(1)>",
       "ARGS": "document.write(decodeURI(location.hash)) #<img/src/onerror=alert(1)>",
-      "Headers": "document.write(decodeURI(location.hash)) #<img/src/onerror=alert(1)>"
+      "Headers": "CustomHeader: document.write(decodeURI(location.hash)) #<img/src/onerror=alert(1)>"
     }
   ]
 }

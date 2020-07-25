@@ -5,6 +5,8 @@ colorama==0.4.3
 idna==2.8
 idna-ssl==1.1.0
 multidict==4.7.4
+progress==1.5
+prettytable==0.7.2
 requests==2.22.0
 typing-extensions==3.7.4.1
 urllib3==1.25.8

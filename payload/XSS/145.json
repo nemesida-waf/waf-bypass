@@ -5,7 +5,7 @@
       "UA": "<x contenteditable onpaste=alert(1)>paste here!",
       "Body": "<x contenteditable onpaste=alert(1)>paste here!",
       "ARGS": "<x contenteditable onpaste=alert(1)>paste here!",
-      "Headers": "<x contenteditable onpaste=alert(1)>paste here!"
+      "Headers": "CustomHeader: <x contenteditable onpaste=alert(1)>paste here!"
     }
   ]
 }

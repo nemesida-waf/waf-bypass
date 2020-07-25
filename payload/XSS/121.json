@@ -5,7 +5,7 @@
       "UA": "<form><input formaction=javascript:alert(1) type=submit value=click>",
       "Body": "<form><input formaction=javascript:alert(1) type=submit value=click>",
       "ARGS": "<form><input formaction=javascript:alert(1) type=submit value=click>",
-      "Headers": "<form><input formaction=javascript:alert(1) type=submit value=click>"
+      "Headers": "CustomHeader: <form><input formaction=javascript:alert(1) type=submit value=click>"
     }
   ]
 }

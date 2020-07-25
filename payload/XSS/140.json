@@ -5,7 +5,7 @@
       "UA": "<x onmousedown=alert(1)>click this!",
       "Body": "<x onmousedown=alert(1)>click this!",
       "ARGS": "<x onmousedown=alert(1)>click this!",
-      "Headers": "<x onmousedown=alert(1)>click this!"
+      "Headers": "CustomHeader: <x onmousedown=alert(1)>click this!"
     }
   ]
 }

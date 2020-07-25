@@ -5,7 +5,7 @@
       "UA": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\" src=\"//brutelogic.com.br/1.js\"/>",
       "Body": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\" src=\"//brutelogic.com.br/1.js\"/>",
       "ARGS": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\" src=\"//brutelogic.com.br/1.js\"/>",
-      "Headers": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\" src=\"//brutelogic.com.br/1.js\"/>"
+      "Headers": "CustomHeader: <x:script xmlns:x=\"http://www.w3.org/1999/xhtml\" src=\"//brutelogic.com.br/1.js\"/>"
     }
   ]
 }

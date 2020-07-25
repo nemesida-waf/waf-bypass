@@ -5,7 +5,7 @@
       "UA": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "Body": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "ARGS": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
-      "Headers": "<menu id=x contextmenu=x onshow=alert(1)>right click me!"
+      "Headers": "CustomHeader: <menu id=x contextmenu=x onshow=alert(1)>right click me!"
     }
   ]
 }

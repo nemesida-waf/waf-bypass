@@ -5,7 +5,7 @@
       "UA": "<body onfocus=alert(1)>",
       "Body": "<body onfocus=alert(1)>",
       "ARGS": "<body onfocus=alert(1)>",
-      "Headers": "<body onfocus=alert(1)>"
+      "Headers": "CustomHeader: <body onfocus=alert(1)>"
     }
   ]
 }

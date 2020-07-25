@@ -5,7 +5,7 @@
       "UA": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
       "Body": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
       "ARGS": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
-      "Headers": "<x ng-app>{{constructor.constructor('alert(1)')()}}"
+      "Headers": "CustomHeader: <x ng-app>{{constructor.constructor('alert(1)')()}}"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "UA": "<html ontouchend=alert(1)>",
       "Body": "<html ontouchend=alert(1)>",
       "ARGS": "<html ontouchend=alert(1)>",
-      "Headers": "<html ontouchend=alert(1)>"
+      "Headers": "CustomHeader: <html ontouchend=alert(1)>"
     }
   ]
 }

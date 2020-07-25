@@ -5,7 +5,7 @@
       "UA": "<form action=javascript:alert(1)><input type=submit>",
       "Body": "<form action=javascript:alert(1)><input type=submit>",
       "ARGS": "<form action=javascript:alert(1)><input type=submit>",
-      "Headers": "<form action=javascript:alert(1)><input type=submit>"
+      "Headers": "CustomHeader: <form action=javascript:alert(1)><input type=submit>"
     }
   ]
 }

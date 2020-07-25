@@ -5,7 +5,7 @@
       "UA": "<embed src=javascript:alert(1)>",
       "Body": "<embed src=javascript:alert(1)>",
       "ARGS": "<embed src=javascript:alert(1)>",
-      "Headers": "<embed src=javascript:alert(1)>"
+      "Headers": "CustomHeader: <embed src=javascript:alert(1)>"
     }
   ]
 }

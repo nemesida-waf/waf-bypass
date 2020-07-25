@@ -64,6 +64,8 @@ class Request:
     @staticmethod
     def parse_pairs(data, separator):
         result = {}
+        if separator == '&':
+            return data
         for pair in data.split(separator):
             if '=' in pair:
                 name, value = pair.split('=', 1)

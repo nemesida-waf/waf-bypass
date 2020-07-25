@@ -5,7 +5,7 @@
       "UA": "<x contenteditable onfocus=alert(1)>focus this!",
       "Body": "<x contenteditable onfocus=alert(1)>focus this!",
       "ARGS": "<x contenteditable onfocus=alert(1)>focus this!",
-      "Headers": "<x contenteditable onfocus=alert(1)>focus this!"
+      "Headers": "CustomHeader: <x contenteditable onfocus=alert(1)>focus this!"
     }
   ]
 }

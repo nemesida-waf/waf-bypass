@@ -5,7 +5,7 @@
       "UA": "<svg onload=alert&lpar;1&rpar;>",
       "Body": "<svg onload=alert&lpar;1&rpar;>",
       "ARGS": "<svg onload=alert&lpar;1&rpar;>",
-      "Headers": "<svg onload=alert&lpar;1&rpar;>",
+      "Headers": "CustomHeader: <svg onload=alert&lpar;1&rpar;>",
       "URL": "<svg onload=alert&lpar;1%26rpar;>"
     }
   ]

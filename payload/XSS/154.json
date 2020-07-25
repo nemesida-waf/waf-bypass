@@ -5,7 +5,7 @@
       "UA": "<body onload=alert(1)>",
       "Body": "<body onload=alert(1)>",
       "ARGS": "<body onload=alert(1)>",
-      "Headers": "<body onload=alert(1)>"
+      "Headers": "CustomHeader: <body onload=alert(1)>"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "UA": "<math><brute xlink:href=javascript:alert(1)>click",
       "Body": "<math><brute xlink:href=javascript:alert(1)>click",
       "ARGS": "<math><brute xlink:href=javascript:alert(1)>click",
-      "Headers": "<math><brute xlink:href=javascript:alert(1)>click"
+      "Headers": "CustomHeader: <math><brute xlink:href=javascript:alert(1)>click"
     }
   ]
 }

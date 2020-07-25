@@ -5,7 +5,7 @@
       "UA": "<img src=1 onerror=alert(1)>",
       "Body": "<img src=1 onerror=alert(1)>",
       "ARGS": "<img src=1 onerror=alert(1)>",
-      "Headers": "<img src=1 onerror=alert(1)>"
+      "Headers": "CustomHeader: <img src=1 onerror=alert(1)>"
     }
   ]
 }

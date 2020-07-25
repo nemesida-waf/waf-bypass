@@ -5,7 +5,7 @@
       "UA": "<Script>alert(1)</Script>",
       "Body": "<Script>alert(1)</Script>",
       "ARGS": "<Script>alert(1)</Script>",
-      "Headers": "<Script>alert(1)</Script>"
+      "Headers": "CustomHeader: <Script>alert(1)</Script>"
     }
   ]
 }

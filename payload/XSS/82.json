@@ -5,7 +5,7 @@
       "UA": "<Svg OnLoad=alert(1)>",
       "Body": "<Svg OnLoad=alert(1)>",
       "ARGS": "<Svg OnLoad=alert(1)>",
-      "Headers": "<Svg OnLoad=alert(1)>"
+      "Headers": "CustomHeader: <Svg OnLoad=alert(1)>"
     }
   ]
 }

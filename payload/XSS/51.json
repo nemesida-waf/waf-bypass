@@ -5,7 +5,7 @@
       "UA": "null",
       "Body": "</textarea><svg onload=alert(1)>",
       "ARGS": "</textarea><svg onload=alert(1)>",
-      "Headers": "</textarea><svg onload=alert(1)>"
+      "Headers": "CustomHeader: </textarea><svg onload=alert(1)>"
     }
   ]
 }

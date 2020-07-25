@@ -5,7 +5,7 @@
       "UA": "<iframe src=javascript:alert(1)>",
       "Body": "<iframe src=javascript:alert(1)>",
       "ARGS": "<iframe src=javascript:alert(1)>",
-      "Headers": "<iframe src=javascript:alert(1)>"
+      "Headers": "CustomHeader: <iframe src=javascript:alert(1)>"
     }
   ]
 }

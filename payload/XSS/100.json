@@ -4,7 +4,7 @@
       "Type": "ALL",
       "Body": "al\\u0065rt(1)",
       "ARGS": "al\\u0065rt(1)",
-      "Headers": "al\\u0065rt(1)"
+      "Headers": "CustomHeader: al\\u0065rt(1)"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "UA": "<x ondblclick=alert(1)>double click this!",
       "Body": "<x ondblclick=alert(1)>double click this!",
       "ARGS": "<x ondblclick=alert(1)>double click this!",
-      "Headers": "<x ondblclick=alert(1)>double click this!"
+      "Headers": "CustomHeader: <x ondblclick=alert(1)>double click this!"
     }
   ]
 }

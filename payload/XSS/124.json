@@ -5,7 +5,7 @@
       "UA": "<isindex formaction=javascript:alert(1) type=submit value=click>",
       "Body": "<isindex formaction=javascript:alert(1) type=submit value=click>",
       "ARGS": "<isindex formaction=javascript:alert(1) type=submit value=click>",
-      "Headers": "<isindex formaction=javascript:alert(1) type=submit value=click>"
+      "Headers": "CustomHeader: <isindex formaction=javascript:alert(1) type=submit value=click>"
     }
   ]
 }

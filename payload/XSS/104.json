@@ -5,7 +5,7 @@
       "UA": "eval(URL.slice(-8)) #alert(1)",
       "Body": "eval(URL.slice(-8)) #alert(1)",
       "ARGS": "eval(URL.slice(-8)) #alert(1)",
-      "Headers": "eval(URL.slice(-8)) #alert(1)"
+      "Headers": "CustomHeader: eval(URL.slice(-8)) #alert(1)"
     }
   ]
 }

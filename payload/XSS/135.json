@@ -5,7 +5,7 @@
       "UA": "<x ondrag=alert(1)>drag this!",
       "Body": "<x ondrag=alert(1)>drag this!",
       "ARGS": "<x ondrag=alert(1)>drag this!",
-      "Headers": "<x ondrag=alert(1)>drag this!"
+      "Headers": "CustomHeader: <x ondrag=alert(1)>drag this!"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "UA": "null",
       "Body": "'-alert(1)//",
       "ARGS": "'-alert(1)//",
-      "Headers": "'-alert(1)//"
+      "Headers": "CustomHeader: '-alert(1)//"
     }
   ]
 }

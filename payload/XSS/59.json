@@ -5,7 +5,7 @@
       "UA": "null",
       "Body": "\"autofocus=alert(1)//",
       "ARGS": "\"autofocus=alert(1)//",
-      "Headers": "\"autofocus=alert(1)//"
+      "Headers": "CustomHeader: \"autofocus=alert(1)//"
     }
   ]
 }

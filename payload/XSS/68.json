@@ -5,7 +5,7 @@
       "UA": "null",
       "Body": "p=<svg/1='&q='onload=alert(1)>",
       "ARGS": "p=<svg/1='&q='onload=alert(1)>",
-      "Headers": "null"
+      "Headers": "CustomHeader: null"
     }
   ]
 }

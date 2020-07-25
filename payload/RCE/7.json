@@ -5,7 +5,7 @@
       "UA": "null",
       "Body": "cmd=127.0.0.1+%26%26+ls",
       "ARGS": "cmd=127.0.0.1+%26%26+ls",
-      "Headers": "cmd=127.0.0.1+%26%26+ls"
+      "Headers": "CustomHeader: cmd=127.0.0.1+%26%26+ls"
     }
   ]
 }

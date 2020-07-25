@@ -5,7 +5,7 @@
       "UA": "<select onchange=alert(1)><option>1<option>2",
       "Body": "<select onchange=alert(1)><option>1<option>2",
       "ARGS": "<select onchange=alert(1)><option>1<option>2",
-      "Headers": "<select onchange=alert(1)><option>1<option>2"
+      "Headers": "CustomHeader: <select onchange=alert(1)><option>1<option>2"
     }
   ]
 }

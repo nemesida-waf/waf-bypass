@@ -5,7 +5,7 @@
       "UA": "eval(location.hash.slice(1)) #alert(1)",
       "Body": "eval(location.hash.slice(1)) #alert(1)",
       "ARGS": "eval(location.hash.slice(1)) #alert(1)",
-      "Headers": "eval(location.hash.slice(1)) #alert(1)"
+      "Headers": "CustomHeader: eval(location.hash.slice(1)) #alert(1)"
     }
   ]
 }

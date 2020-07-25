@@ -5,6 +5,9 @@ import requests
 from request import Request
 import re
 from urllib.parse import urljoin
+from progress.bar import IncrementalBar
+from logging_req import log_in
+
 
 
 class waf_bypass:
@@ -20,6 +23,7 @@ class waf_bypass:
         self.timeout = 150
 
     def start_test(self):
+        bar = IncrementalBar('Processing: ',max = 183,suffix ='%(percent)d%%')
         for (dirpath, _, filenames) in walk('payload'):
             for filename in filenames:
                 if self.name_pattern.match(filename):
@@ -29,12 +33,12 @@ class waf_bypass:
                                                      relative_path)
                         request_data = Request(relative_path, absolute_path)
                         if request_data.req_type == 'ALL':
+                            if request_data.req_body is not None:
+                                self.test_body(request_data)
                             if request_data.args is not None:
                                 self.test_args(request_data)
                             if request_data.ua is not None:
                                 self.test_ua(request_data)
-                            if request_data.req_body is not None:
-                                self.test_body(request_data)
                             if request_data.cookie is not None:
                                 self.test_cookie(request_data)
                             if request_data.req_header is not None:
@@ -53,16 +57,21 @@ class waf_bypass:
                             self.test_header(request_data)
                         elif request_data.url == 'URL':
                             self.test_url(request_data)
+                        bar.next()
                     except Exception as e:
                         print('{}Error: {}. Using file: {}{}'.format(Fore.RED, e, relative_path, Style.RESET_ALL))
 
 
     def output(self, test_type, request_data, request):
-        base_str = '{{}}{} in {}: {{}}{}'.format(request_data.path.replace("payload/", ""), test_type, Style.RESET_ALL)
+        #base_str = '{{}}{} in {}: {{}}{}'.format(request_data.path.replace("payload/", ""), test_type, Style.RESET_ALL)
+        
         if request.status_code == 403:
-            print(base_str.format(Fore.GREEN, 'BLOCKED'))
+            log_in(request_data.path.replace("payload/",""),test_type,'BLOCKED')
         else:
-            print(base_str.format(Fore.RED, 'BYPASSED'))
+            log_in(request_data.path.replace("payload/", ""),test_type,'BYPASSED')
+
+        
+        
 
     def test_args(self, request_data):
         request = self.session.get(self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout)

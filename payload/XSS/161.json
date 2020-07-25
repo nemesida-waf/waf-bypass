@@ -5,7 +5,7 @@
       "UA": "<br><x id=x>#x",
       "Body": "<br><x id=x>#x",
       "ARGS": "<br><x id=x>#x",
-      "Headers": "<br><x id=x>#x"
+      "Headers": "CustomHeader: <br><x id=x>#x"
     }
   ]
 }

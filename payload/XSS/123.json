@@ -5,7 +5,7 @@
       "UA": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "Body": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "ARGS": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "Headers": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>"
+      "Headers": "CustomHeader: <form><input formaction=javascript:alert(1) type=image src=SOURCE>"
     }
   ]
 }

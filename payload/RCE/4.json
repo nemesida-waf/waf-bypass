@@ -5,7 +5,7 @@
       "UA": "; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h",
       "Body": "; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h",
       "ARGS": "; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h",
-      "Headers": "; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h"
+      "Headers": "CustomHeader: ; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h"
     }
   ]
 }

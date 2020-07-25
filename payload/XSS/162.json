@@ -5,7 +5,7 @@
       "UA": "<body onresize=alert(1)>press F12!",
       "Body": "<body onresize=alert(1)>press F12!",
       "ARGS": "<body onresize=alert(1)>press F12!",
-      "Headers": "<body onresize=alert(1)>press F12!"
+      "Headers": "CustomHeader: <body onresize=alert(1)>press F12!"
     }
   ]
 }

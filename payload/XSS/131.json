@@ -5,7 +5,7 @@
       "UA": "<x oncopy=alert(1)>copy this!",
       "Body": "<x oncopy=alert(1)>copy this!",
       "ARGS": "<x oncopy=alert(1)>copy this!",
-      "Headers": "<x oncopy=alert(1)>copy this!"
+      "Headers": "CustomHeader: <x oncopy=alert(1)>copy this!"
     }
   ]
 }

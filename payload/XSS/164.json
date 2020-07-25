@@ -5,7 +5,7 @@
       "UA": "<marquee onstart=alert(1)>",
       "Body": "<marquee onstart=alert(1)>",
       "ARGS": "<marquee onstart=alert(1)>",
-      "Headers": "<marquee onstart=alert(1)>"
+      "Headers": "CustomHeader: <marquee onstart=alert(1)>"
     }
   ]
 }

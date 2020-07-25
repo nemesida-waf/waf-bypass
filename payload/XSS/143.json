@@ -5,7 +5,7 @@
       "UA": "<x onmouseover=alert(1)>hover this!",
       "Body": "<x onmouseover=alert(1)>hover this!",
       "ARGS": "<x onmouseover=alert(1)>hover this!",
-      "Headers": "<x onmouseover=alert(1)>hover this!"
+      "Headers": "CustomHeader: <x onmouseover=alert(1)>hover this!"
     }
   ]
 }

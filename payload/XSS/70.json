@@ -5,7 +5,7 @@
       "UA": "null",
       "Body": "><svg onload=alert(1)>.gif",
       "ARGS": "null",
-      "Headers": "null"
+      "Headers": "CustomHeader: null"
     }
   ]
 }

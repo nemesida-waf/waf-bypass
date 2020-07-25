@@ -5,7 +5,7 @@
       "UA": "<a href=javascript:alert(1)>click",
       "Body": "<a href=javascript:alert(1)>click",
       "ARGS": "<a href=javascript:alert(1)>click",
-      "Headers": "<a href=javascript:alert(1)>click"
+      "Headers": "CustomHeader: <a href=javascript:alert(1)>click"
     }
   ]
 }

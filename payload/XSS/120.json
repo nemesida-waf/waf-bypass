@@ -5,7 +5,7 @@
       "UA": "<form><button formaction=javascript:alert(1)>click",
       "Body": "<form><button formaction=javascript:alert(1)>click",
       "ARGS": "<form><button formaction=javascript:alert(1)>click",
-      "Headers": "<form><button formaction=javascript:alert(1)>click"
+      "Headers": "CustomHeader: <form><button formaction=javascript:alert(1)>click"
     }
   ]
 }
