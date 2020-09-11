@@ -22,7 +22,7 @@ class waf_bypass:
 
     def start_test(self):
         for (dirpath, _, filenames) in walk('payload'):
-            for filename in filenames:
+            for filename in sorted(filenames):
                 if self.name_pattern.match(filename):
                     try:
                         relative_path = os.path.join(dirpath, filename)
