@@ -5,7 +5,10 @@
       "UA": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
       "Body": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
       "ARGS": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
-      "Headers": "CustomHeader: <body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x"
+      "Cookie": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
+      "URL": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
+      "Referer": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
+      "Headers": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x"
     }
   ]
 }

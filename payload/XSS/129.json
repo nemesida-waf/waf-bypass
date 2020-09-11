@@ -5,7 +5,10 @@
       "UA": "<x contenteditable onblur=alert(1)>lose focus!",
       "Body": "<x contenteditable onblur=alert(1)>lose focus!",
       "ARGS": "<x contenteditable onblur=alert(1)>lose focus!",
-      "Headers": "CustomHeader: <x contenteditable onblur=alert(1)>lose focus!"
+      "Cookie": "<x contenteditable onblur=alert(1)>lose focus!",
+      "URL": "<x contenteditable onblur=alert(1)>lose focus!",
+      "Referer": "<x contenteditable onblur=alert(1)>lose focus!",
+      "Headers": "<x contenteditable onblur=alert(1)>lose focus!"
     }
   ]
 }

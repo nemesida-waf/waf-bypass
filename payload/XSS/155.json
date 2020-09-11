@@ -5,7 +5,10 @@
       "UA": "<body onpageshow=alert(1)>",
       "Body": "<body onpageshow=alert(1)>",
       "ARGS": "<body onpageshow=alert(1)>",
-      "Headers": "CustomHeader: <body onpageshow=alert(1)>"
+      "Cookie": "<body onpageshow=alert(1)>",
+      "URL": "<body onpageshow=alert(1)>",
+      "Referer": "<body onpageshow=alert(1)>",
+      "Headers": "<body onpageshow=alert(1)>"
     }
   ]
 }

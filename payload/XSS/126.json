@@ -5,7 +5,10 @@
       "UA": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
       "Body": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
       "ARGS": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
-      "Headers": "CustomHeader: <iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>"
+      "Cookie": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
+      "URL": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
+      "Referer": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
+      "Headers": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>"
     }
   ]
 }

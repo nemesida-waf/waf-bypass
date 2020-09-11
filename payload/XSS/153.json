@@ -5,7 +5,10 @@
       "UA": "<body onorientationchange=alert(1)>",
       "Body": "<body onorientationchange=alert(1)>",
       "ARGS": "<body onorientationchange=alert(1)>",
-      "Headers": "CustomHeader: <body onorientationchange=alert(1)>"
+      "Cookie": "<body onorientationchange=alert(1)>",
+      "URL": "<body onorientationchange=alert(1)>",
+      "Referer": "<body onorientationchange=alert(1)>",
+      "Headers": "<body onorientationchange=alert(1)>"
     }
   ]
 }

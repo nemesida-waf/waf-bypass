@@ -5,7 +5,10 @@
       "UA": "<body onhelp=alert(1)>press F1!",
       "Body": "<body onhelp=alert(1)>press F1!",
       "ARGS": "<body onhelp=alert(1)>press F1!",
-      "Headers": "CustomHeader: <body onhelp=alert(1)>press F1!"
+      "Cookie": "<body onhelp=alert(1)>press F1!",
+      "URL": "<body onhelp=alert(1)>press F1!",
+      "Referer": "<body onhelp=alert(1)>press F1!",
+      "Headers": "<body onhelp=alert(1)>press F1!"
     }
   ]
 }

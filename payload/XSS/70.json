@@ -5,7 +5,10 @@
       "UA": "null",
       "Body": "><svg onload=alert(1)>.gif",
       "ARGS": "null",
-      "Headers": "CustomHeader: null"
+      "Cookie": "null",
+      "URL": "null",
+      "Referer": "null",
+      "Headers": "null"
     }
   ]
 }

@@ -5,7 +5,10 @@
       "UA": "null",
       "Body": "*/alert(1)</script><script>/*",
       "ARGS": "*/alert(1)</script><script>/*",
-      "Headers": "CustomHeader: */alert(1)</script><script>/*"
+      "Cookie": "*/alert(1)</script><script>/*",
+      "URL": "*/alert(1)</script><script>/*",
+      "Referer": "*/alert(1)</script><script>/*",
+      "Headers": "*/alert(1)</script><script>/*"
     }
   ]
 }

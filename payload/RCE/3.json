@@ -2,10 +2,12 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "; cat /et*/pa**wd",
-      "Body": "; cat /et*/pa**wd",
-      "ARGS": "; cat /et*/pa**wd",
-      "Headers": "CustomHeader: ; cat /et*/pa**wd"
+      "UA": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "Body": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "ARGS": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "Cookie": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "Cookie": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "Headers": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd"
     }
   ]
 }

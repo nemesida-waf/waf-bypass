@@ -1,0 +1,14 @@
+{
+    "req": [
+      {
+        "Type": "ALL",
+        "UA": "http%3A%2F%2Fevil.com%2Fexample.php",
+        "Body": "http%3A%2F%2Fevil.com%2Fexample.php",
+        "ARGS": "http%3A%2F%2Fevil.com%2Fexample.php",
+        "Cookie" : "http%3A%2F%2Fevil.com%2Fexample.php",
+        "URL": "null",
+        "Referer" : "http%3A%2F%2Fevil.com%2Fexample.php",
+        "Headers": "http%3A%2F%2Fevil.com%2Fexample.php"
+      }
+    ]
+  }

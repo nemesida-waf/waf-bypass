@@ -3,9 +3,12 @@
     {
       "Type": "ALL",
       "UA": "null",
-      "Body": "cmd=127.0.0.1+%26%26+ls",
-      "ARGS": "cmd=127.0.0.1+%26%26+ls",
-      "Headers": "CustomHeader: cmd=127.0.0.1+%26%26+ls"
+      "Body": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
+      "ARGS": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
+      "Cookie": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
+      "URL": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
+      "Referer": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
+      "Headers": "cmd%3D127.0.0.1%2B%2526%2526%2Bls"
     }
   ]
 }

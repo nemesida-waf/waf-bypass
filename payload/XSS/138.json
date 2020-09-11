@@ -5,7 +5,10 @@
       "UA": "<x contenteditable onkeydown=alert(1)>press any key!",
       "Body": "<x contenteditable onkeydown=alert(1)>press any key!",
       "ARGS": "<x contenteditable onkeydown=alert(1)>press any key!",
-      "Headers": "CustomHeader: <x contenteditable onkeydown=alert(1)>press any key!"
+      "Cookie": "<x contenteditable onkeydown=alert(1)>press any key!",
+      "URL": "<x contenteditable onkeydown=alert(1)>press any key!",
+      "Referer": "<x contenteditable onkeydown=alert(1)>press any key!",
+      "Headers": "<x contenteditable onkeydown=alert(1)>press any key!"
     }
   ]
 }

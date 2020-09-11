@@ -5,7 +5,10 @@
       "UA": "<form><input formaction=javascript:alert(1) type=image value=click>",
       "Body": "<form><input formaction=javascript:alert(1) type=image value=click>",
       "ARGS": "<form><input formaction=javascript:alert(1) type=image value=click>",
-      "Headers": "CustomHeader: <form><input formaction=javascript:alert(1) type=image value=click>"
+      "Cookie": "<form><input formaction=javascript:alert(1) type=image value=click>",
+      "URL": "<form><input formaction=javascript:alert(1) type=image value=click>",
+      "Referer": "<form><input formaction=javascript:alert(1) type=image value=click>",
+      "Headers": "<form><input formaction=javascript:alert(1) type=image value=click>"
     }
   ]
 }

@@ -5,7 +5,10 @@
       "UA": "{{constructor.constructor('alert(1)')()}}",
       "Body": "{{constructor.constructor('alert(1)')()}}",
       "ARGS": "{{constructor.constructor('alert(1)')()}}",
-      "Headers": "CustomHeader: {{constructor.constructor('alert(1)')()}}"
+      "Cookie": "{{constructor.constructor('alert(1)')()}}",
+      "URL": "{{constructor.constructor('alert(1)')()}}",
+      "Referer": "{{constructor.constructor('alert(1)')()}}",
+      "Headers": "{{constructor.constructor('alert(1)')()}}"
     }
   ]
 }

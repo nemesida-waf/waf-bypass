@@ -5,7 +5,10 @@
       "UA": "'\"</Script><Html /Onmouseover=(alert)(1) //",
       "Body": "'\"</Script><Html /Onmouseover=(alert)(1) //",
       "ARGS": "'\"</Script><Html /Onmouseover=(alert)(1) //",
-      "Headers": "CustomHeader: '\"</Script><Html /Onmouseover=(alert)(1) //"
+      "Cookie": "'\"</Script><Html /Onmouseover=(alert)(1) //",
+      "URL": "'\"</Script><Html /Onmouseover=(alert)(1) //",
+      "Referer": "'\"</Script><Html /Onmouseover=(alert)(1) //",
+      "Headers": "'\"</Script><Html /Onmouseover=(alert)(1) //"
     }
   ]
 }

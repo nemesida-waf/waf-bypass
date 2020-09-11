@@ -5,7 +5,10 @@
       "UA": "<svg onload=alert(1)//",
       "Body": "<svg onload=alert(1)//",
       "ARGS": "<svg onload=alert(1)//",
-      "Headers": "CustomHeader: <svg onload=alert(1)//"
+      "Cookie": "<svg onload=alert(1)//",
+      "URL": "<svg onload=alert(1)//",
+      "Referer": "<svg onload=alert(1)//",
+      "Headers": "<svg onload=alert(1)//"
     }
   ]
 }

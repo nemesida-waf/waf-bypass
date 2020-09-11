@@ -17,7 +17,11 @@ try:
     config.read(settings_file)
     host = config['main']['TARGET']
     proxy = config['main']['PROXY']
-    print("Target: ",host)
+    print('\n')
+    print('##')
+    print('Target: ', host)
+    print('##')
+    print('\n')
 except FileNotFoundError:
     print('File not found: {}'.format(settings_file))
     sys.exit()
@@ -32,4 +36,5 @@ try:
 
 except MissingSchema:
     print('The protocol is not set for TARGET or PROXY')
+
 print("\n")

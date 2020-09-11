@@ -5,7 +5,10 @@
       "UA": "top[/al/.source+/ert/.source](1)",
       "Body": "top[/al/.source+/ert/.source](1)",
       "ARGS": "top[/al/.source+/ert/.source](1)",
-      "Headers": "CustomHeader: top[/al/.source+/ert/.source](1)"
+      "Cookie": "top[/al/.source+/ert/.source](1)",
+      "URL": "top[/al/.source+/ert/.source](1)",
+      "Referer": "top[/al/.source+/ert/.source](1)",
+      "Headers": "top[/al/.source+/ert/.source](1)"
     }
   ]
 }

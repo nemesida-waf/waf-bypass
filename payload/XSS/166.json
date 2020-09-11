@@ -5,7 +5,10 @@
       "UA": "<audio src onloadstart=alert(1)>",
       "Body": "<audio src onloadstart=alert(1)>",
       "ARGS": "<audio src onloadstart=alert(1)>",
-      "Headers": "CustomHeader: <audio src onloadstart=alert(1)>"
+      "Cookie": "<audio src onloadstart=alert(1)>",
+      "URL": "<audio src onloadstart=alert(1)>",
+      "Referer": "<audio src onloadstart=alert(1)>",
+      "Headers": "<audio src onloadstart=alert(1)>"
     }
   ]
 }

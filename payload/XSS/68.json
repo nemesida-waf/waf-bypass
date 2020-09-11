@@ -5,7 +5,10 @@
       "UA": "null",
       "Body": "p=<svg/1='&q='onload=alert(1)>",
       "ARGS": "p=<svg/1='&q='onload=alert(1)>",
-      "Headers": "CustomHeader: null"
+      "URL": "p=<svg/1='&q='onload=alert(1)>",
+      "Referer": "p=<svg/1='&q='onload=alert(1)>",
+      "Cookie": "p=<svg/1='&q='onload=alert(1)>",
+      "Headers": "null"
     }
   ]
 }

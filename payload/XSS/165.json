@@ -5,7 +5,10 @@
       "UA": "<marquee loop=1 width=0 onfinish=alert(1)>",
       "Body": "<marquee loop=1 width=0 onfinish=alert(1)>",
       "ARGS": "<marquee loop=1 width=0 onfinish=alert(1)>",
-      "Headers": "CustomHeader: <marquee loop=1 width=0 onfinish=alert(1)>"
+      "Cookie": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "URL": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "Referer": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "Headers": "<marquee loop=1 width=0 onfinish=alert(1)>"
     }
   ]
 }

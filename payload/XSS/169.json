@@ -5,7 +5,10 @@
       "UA": "<form onsubmit=alert(1)><input type=submit>",
       "Body": "<form onsubmit=alert(1)><input type=submit>",
       "ARGS": "<form onsubmit=alert(1)><input type=submit>",
-      "Headers": "CustomHeader: <form onsubmit=alert(1)><input type=submit>"
+      "Cookie": "<form onsubmit=alert(1)><input type=submit>",
+      "URL": "<form onsubmit=alert(1)><input type=submit>",
+      "Referer": "<form onsubmit=alert(1)><input type=submit>",
+      "Headers": "<form onsubmit=alert(1)><input type=submit>"
     }
   ]
 }

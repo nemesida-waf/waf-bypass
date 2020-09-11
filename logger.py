@@ -1,20 +1,18 @@
+import logging
 from colorama import Fore, Style
 from prettytable import PrettyTable
 
-
-
 def read_log():
     log_dict =dict()
-    with open('app.log', 'r') as log_file:
-        logs = log_file.readlines() 
+    with open('log/all.log', 'r') as log_file:
+        logs = log_file.readlines()
 
     for log in logs:
-        key= log.split(" : ")[1] 
-        value = log.split(" : ")[0] 
+        key= log.split(" : ")[1]
+        value = log.split(" : ")[0]
         log_dict[key] = value
 
     return log_dict
-
 
 
 def write_log_stat():
@@ -26,9 +24,8 @@ def write_log_stat():
             bypass_log.append(key)
         else:
             blocked_log.append(key)
-    return bypass_log
+    return bypass_log,blocked_log
 
-    
 
 def logger_stat():
     count_pass = 0
@@ -48,4 +45,7 @@ def logger_stat():
     return stat_req
 
 
-
+def log_in(log,test_type, status_test):
+    logging.basicConfig(filename="log/all.log", filemode = 'w', format=('%(message)s'), level=logging.INFO)
+    log_message = '{} : {} in {}'.format(status_test,log,test_type)
+    logging.info(log_message)

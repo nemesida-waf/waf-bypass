@@ -5,7 +5,10 @@
       "UA": "null",
       "Body": "';alert(1)//",
       "ARGS": "';alert(1)//",
-      "Headers": "CustomHeader: ';alert(1)//"
+      "Cookie": "';alert(1)//",
+      "URL": "';alert(1)//",
+      "Referer": "';alert(1)//",
+      "Headers": "';alert(1)//"
     }
   ]
 }

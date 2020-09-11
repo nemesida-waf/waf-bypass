@@ -5,7 +5,10 @@
       "UA": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
       "Body": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
       "ARGS": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
-      "Headers": "CustomHeader: <svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>"
+      "Cookie": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "URL": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "Referer": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "Headers": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>"
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+    "req": [
+      {
+        "Type": "ALL",
+        "UA": "C:/WINNT/win.ini",
+        "Body": "C:/WINNT/win.ini",
+        "ARGS": "C:/WINNT/win.ini",
+        "Cookie" : "C:/WINNT/win.ini",
+        "URL": "null",
+        "Referer" : "C:/WINNT/win.ini",
+        "Headers": "C:/WINNT/win.ini"
+      }
+    ]
+  }

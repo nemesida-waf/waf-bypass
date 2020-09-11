@@ -5,7 +5,10 @@
       "UA": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
       "Body": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
       "ARGS": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
-      "Headers": "CustomHeader: <x ng-app>{{constructor.constructor('alert(1)')()}}"
+      "Cookie": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "URL": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "Referer": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "Headers": "<x ng-app>{{constructor.constructor('alert(1)')()}}"
     }
   ]
 }

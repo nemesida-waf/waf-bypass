@@ -1,0 +1,14 @@
+{
+    "req": [
+      {
+        "Type": "ALL",
+        "UA": "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F%2Fetc%2Fpasswd",
+        "Body": "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F%2Fetc%2Fpasswd",
+        "ARGS": "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F%2Fetc%2Fpasswd",
+        "Cookie" : "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F%2Fetc%2Fpasswd",
+        "URL": "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F%2Fetc%2Fpasswd",
+        "Referer" : "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F%2Fetc%2Fpasswd",
+        "Headers": "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F%2Fetc%2Fpasswd"
+      }
+    ]
+  }

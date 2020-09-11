@@ -2,10 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h",
-      "Body": "; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h",
-      "ARGS": "; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h",
-      "Headers": "CustomHeader: ; e'c'ho 'swd test pentest' |awk '{print \"cat /etc/pas\"$1}' |bas'h"
+      "UA": "%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h",
+      "Body": "%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h",
+      "ARGS": "%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h",
+      "Cookie": "%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h",
+      "URL": "%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h",
+      "Referer": "%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h",
+      "Headers": "%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h"
     }
   ]
 }

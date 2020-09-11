@@ -1,33 +1,50 @@
 import re
 import json
-
+from time import time, sleep
 
 class Request:
     def __init__(self, path, payload):
         self._path = path
         with open(payload) as f:
             data = json.load(f)['req'][0]
+
         # Type
         req_type = self.extract_value(data, 'Type')
         self._req_type = None if req_type == 'null' else req_type
-        # UA
-        ua = self.extract_value(data, 'UA')
-        self._ua = None if ua == 'null' else ua
-        # Body
-        body = self.extract_value(data, 'Body')
-        self._req_body = None if body == 'null' else self.parse_pairs(body, '&')
-        #ARGS
-        args = self.extract_value(data, 'ARGS')
-        self._args = None if args == 'null' else self.parse_pairs(args, '&')
-        # Header
-        req_header = self.extract_value(data, 'Headers')
-        self._req_header = None if req_header == 'null' else {'test':req_header}
-        # Cookie
-        cookie = self.extract_value(data, 'Cookie')
-        self._cookie = None if cookie == 'null' else self.parse_pairs(cookie)
+
         # URL
         url = self.extract_value(data, 'URL')
         self._url = None if url == 'null' else url
+
+        # ARGS
+        args = self.extract_value(data, 'ARGS')
+        self._args = None if args == 'null' else args
+
+        # Referer
+        ref = self.extract_value(data, 'Referer')
+        self._ref = None if ref == 'null' else ref
+
+        # UA
+        ua = self.extract_value(data, 'UA')
+        self._ua = None if ua == 'null' else ua
+
+        # Body
+        body = self.extract_value(data, 'Body')
+        self._req_body = None if body == 'null' else body
+
+        # Cookie
+        cookie = self.extract_value(data, 'Cookie')
+        self._cookie = None if cookie == 'null' else cookie
+
+        # Header
+        req_header = self.extract_value(data, 'Headers')
+        self._req_header = None if req_header == 'null' else req_header
+
+        sleep(3)
+
+    @property
+    def ref(self):
+        return self._ref
 
     @property
     def path(self):
@@ -60,22 +77,6 @@ class Request:
     @property
     def url(self):
         return self._url
-
-    @staticmethod
-    def parse_pairs(data, separator):
-        result = {}
-        if separator == '&':
-            return data
-        for pair in data.split(separator):
-            if '=' in pair:
-                name, value = pair.split('=', 1)
-                if re.match(r'\w+', name):
-                    result[name] = value
-                else:
-                    result['test'] = pair
-            else:
-                result['test'] = pair
-        return result
 
     @staticmethod
     def extract_value(json_data, key):

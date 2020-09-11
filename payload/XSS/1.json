@@ -2,10 +2,14 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "<svg/onload=alert()//",
-      "Body": "<svg/onload=alert()//",
-      "ARGS": "<svg/onload=alert()//",
-      "Headers": "CustomHeader: <svg/onload=alert()//"
+      "UA": "%3Csvg%2Fonload%3Dalert%28%29%2F%2F",
+      "Body": "%3Csvg%2Fonload%3Dalert%28%29%2F%2F",
+      "ARGS": "%3Csvg%2Fonload%3Dalert%28%29%2F%2F",
+      "Cookie": "%3Csvg%2Fonload%3Dalert%28%29%2F%2F",
+      "URL": "%3Csvg%2Fonload%3Dalert%28%29%2F%2F",
+      "Referer": "%3Csvg%2Fonload%3Dalert%28%29%2F%2F",
+      "Headers": "%3Csvg%2Fonload%3Dalert%28%29%2F%2F"
+
     }
   ]
 }

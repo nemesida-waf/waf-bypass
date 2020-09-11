@@ -5,7 +5,10 @@
       "UA": "<script src=data:,alert(1)>",
       "Body": "<script src=data:,alert(1)>",
       "ARGS": "<script src=data:,alert(1)>",
-      "Headers": "CustomHeader: <script src=data:,alert(1)>"
+      "Cookie": "<script src=data:,alert(1)>",
+      "URL": "<script src=data:,alert(1)>",
+      "Referer": "<script src=data:,alert(1)>",
+      "Headers": "<script src=data:,alert(1)>"
     }
   ]
 }

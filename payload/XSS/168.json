@@ -5,7 +5,10 @@
       "UA": "<keygen autofocus onfocus=alert(1)>",
       "Body": "<keygen autofocus onfocus=alert(1)>",
       "ARGS": "<keygen autofocus onfocus=alert(1)>",
-      "Headers": "CustomHeader: <keygen autofocus onfocus=alert(1)>"
+      "Cookie": "<keygen autofocus onfocus=alert(1)>",
+      "URL": "<keygen autofocus onfocus=alert(1)>",
+      "Referer": "<keygen autofocus onfocus=alert(1)>",
+      "Headers": "<keygen autofocus onfocus=alert(1)>"
     }
   ]
 }

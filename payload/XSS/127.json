@@ -5,7 +5,10 @@
       "UA": "<svg><script xlink:href=data:,alert(1) />",
       "Body": "<svg><script xlink:href=data:,alert(1) />",
       "ARGS": "<svg><script xlink:href=data:,alert(1) />",
-      "Headers": "CustomHeader: <svg><script xlink:href=data:,alert(1) />"
+      "Cookie": "<svg><script xlink:href=data:,alert(1) />",
+      "URL": "<svg><script xlink:href=data:,alert(1) />",
+      "Referer": "<svg><script xlink:href=data:,alert(1) />",
+      "Headers": "<svg><script xlink:href=data:,alert(1) />"
     }
   ]
 }
