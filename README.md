@@ -2,7 +2,7 @@
 
 WAF bypass is a simple script written in Python3 for testing Web Application Firewall. Turn off ban mode before use.
 
-## When using, do not violate the law!
+## When using, do not violate the law. We are not responsible for the use of the program.
 
 A script developed for internal needs, including for testing Nemesis WAF and Nemesida WAF Free, but you can use it to test any WAF.
 
