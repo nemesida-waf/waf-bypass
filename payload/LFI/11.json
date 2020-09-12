@@ -2,13 +2,13 @@
     "req": [
       {
         "Type": "ALL",
-        "UA": "%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot.ini",
-        "Body": "%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot.ini",
-        "ARGS": "%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot.ini",
-        "Cookie" : "%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot.ini",
-        "URL": "%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot.ini",
-        "Referer" : "%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot.ini",
-        "Headers": "%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fboot.ini"
+        "UA": "../../../../../../../../boot.ini",
+        "Body": "../../../../../../../../boot.ini",
+        "ARGS": "../../../../../../../../boot.ini",
+        "Cookie" : "../../../../../../../../boot.ini",
+        "URL": "../../../../../../../../boot.ini",
+        "Referer" : "../../../../../../../../boot.ini",
+        "Headers": "../../../../../../../../boot.ini"
       }
     ]
   }

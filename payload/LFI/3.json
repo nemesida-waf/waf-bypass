@@ -2,13 +2,13 @@
     "req": [
       {
         "Type": "ALL",
-        "UA": "%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e//etc/passwd",
-        "Body": "%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e//etc/passwd",
-        "ARGS": "%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e//etc/passwd",
-        "Cookie" : "%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e//etc/passwd",
-        "URL": "%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e//etc/passwd",
-        "Referer" : "%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e//etc/passwd",
-        "Headers": "%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e//etc/passwd"
+        "UA": "../../../../../../../..//etc/passwd",
+        "Body": "../../../../../../../..//etc/passwd",
+        "ARGS": "../../../../../../../..//etc/passwd",
+        "Cookie" : "../../../../../../../..//etc/passwd",
+        "URL": "../../../../../../../..//etc/passwd",
+        "Referer" : "../../../../../../../..//etc/passwd",
+        "Headers": "../../../../../../../..//etc/passwd"
       }
     ]
   }

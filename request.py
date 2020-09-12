@@ -40,7 +40,7 @@ class Request:
         req_header = self.extract_value(data, 'Headers')
         self._req_header = None if req_header == 'null' else req_header
 
-        sleep(3)
+        sleep(1)
 
     @property
     def ref(self):
