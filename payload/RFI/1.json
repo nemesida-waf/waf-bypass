@@ -7,7 +7,7 @@
         "ARGS": "http%3A%2F%2Fevil.com%2Fexample.php",
         "Cookie" : "http%3A%2F%2Fevil.com%2Fexample.php",
         "URL": "null",
-        "Referer" : "http%3A%2F%2Fevil.com%2Fexample.php",
+        "Referer" : "null",
         "Headers": "http%3A%2F%2Fevil.com%2Fexample.php"
       }
     ]
