@@ -19,7 +19,7 @@ try:
     proxy = config['main']['PROXY']
     print('\n')
     print('##')
-    print('Target: ', host)
+    print('# Target: ', host)
     print('##')
     print('\n')
 except FileNotFoundError:

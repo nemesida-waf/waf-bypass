@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "[1].find(alert)",
-      "Body": "[1].find(alert)",
-      "ARGS": "[1].find(alert)",
-      "Cookie": "[1].find(alert)",
-      "URL": "[1].find(alert)",
-      "Referer": "[1].find(alert)",
-      "Headers": "[1].find(alert)"
+      "UA": "[1].find(alert('1'))",
+      "Body": "[1].find(alert('1'))",
+      "ARGS": "[1].find(alert('1'))",
+      "Cookie": "[1].find(alert('1'))",
+      "URL": "[1].find(alert('1'))",
+      "Referer": "[1].find(alert('1'))",
+      "Headers": "[1].find(alert('1'))"
     }
   ]
 }
