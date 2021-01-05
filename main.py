@@ -12,8 +12,8 @@ from table_out import bypass_table
 options = {}
 settings_file = 'settings.conf'
 
-config = configparser.ConfigParser()
 try:
+    config = configparser.ConfigParser()
     config.read(settings_file)
     host = config['main']['TARGET']
     proxy = config['main']['PROXY']

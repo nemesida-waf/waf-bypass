@@ -24,7 +24,7 @@ ec'h'o 'cat /etc/examplewd' | sed 's/example/pass/g' | bash
 # python3 -m pip install -r /opt/waf-bypass/requirements.txt
 # cd /opt/waf-bypass/
 
-Copy settings.conf.default to the settings.conf and make changes
+Make changes to settings.conf
 
 # python3 /opt/waf-bypass/main.py
 </pre>
