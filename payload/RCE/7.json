@@ -3,12 +3,12 @@
     {
       "Type": "ALL",
       "UA": "null",
-      "Body": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
-      "ARGS": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
-      "Cookie": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
-      "URL": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
-      "Referer": "cmd%3D127.0.0.1%2B%2526%2526%2Bls",
-      "Headers": "cmd%3D127.0.0.1%2B%2526%2526%2Bls"
+      "Body": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "ARGS": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "Cookie": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "URL": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "Referer": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "Headers": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc"
     }
   ]
 }
