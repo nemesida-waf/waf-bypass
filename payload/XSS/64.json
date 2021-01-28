@@ -2,7 +2,7 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "null",
+      "UA": "",
       "Body": "</script><svg onload=alert(1)>",
       "ARGS": "</script><svg onload=alert(1)>",
       "Cookie": "</script><svg onload=alert(1)>",

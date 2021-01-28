@@ -2,7 +2,7 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "null",
+      "UA": "",
       "Body": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
       "ARGS": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
       "Cookie": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",

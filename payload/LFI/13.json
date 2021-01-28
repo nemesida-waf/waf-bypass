@@ -2,13 +2,13 @@
     "req": [
       {
         "Type": "Body",
-        "UA": "null",
-        "Body": "parm=I%40kdo9ijegieokf%2Ckinkokdw0=login=admin=_token=ifwkaw-9ri0ofigjo9fgkiwn9df2o0kf0w9tgk30=parm2=fdna9rkif2ndfkigfji89rkfj29rk0hg3j98yhfile=..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5Cboot.ini=password=fawikfiawgfiawkgiwaigkoiwg",
-        "ARGS": "null",
-        "Cookie" : "null",
-        "URL": "null",
-        "Referer" : ".null",
-        "Headers": "null"
+        "UA": "",
+        "Body": "param=I%40kdo9ijegieokf%2Ckinkokdw0=login=admin=_token=ifwkaw-9ri0ofigjo9fgkiwn9df2o0kf0w9tgk30=parm2=fdna9rkif2ndfkigfji89rkfj29rk0hg3j98yhfile=..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5Cboot.ini=password=fawikfiawgfiawkgiwaigkoiwg",
+        "ARGS": "",
+        "Cookie": "",
+        "URL": "",
+        "Referer": "",
+        "Headers": ""
       }
     ]
   }

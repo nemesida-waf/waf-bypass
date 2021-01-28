@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "null",
+      "UA": "",
       "Body": "<svg><script href=data:,alert(1) />",
       "ARGS": "<svg><script href=data:,alert(1) />",
       "Cookie": "<svg><script href=data:,alert(1) />",
       "URL": "<svg><script href=data:,alert(1) />",
       "Referer": "<svg><script href=data:,alert(1) />",
-      "Headers": "null"
+      "Headers": ""
     }
   ]
 }

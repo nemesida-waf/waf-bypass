@@ -1,32 +1,55 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
+import getopt
 import sys
-import configparser
+
+from bypass import WAFBypass
 from requests.exceptions import MissingSchema
-from bypass import waf_bypass
-from logger import logger_stat
-from colorama import Fore, Style
-from table_out import print_table
 from table_out import bypass_table
+from table_out import print_table
 
-options = {}
-settings_file = 'settings.conf'
+# init default
+host = ''
+proxy = ''
 
+# Processing args from cmd
 try:
-    config = configparser.ConfigParser()
-    config.read(settings_file)
-    host = config['main']['TARGET']
-    proxy = config['main']['PROXY']
-    print('\n')
-    print('##')
-    print('# Target: ', host)
-    print('##')
-    print('\n')
-except FileNotFoundError:
-    print('File not found: {}'.format(settings_file))
+
+    # read args from input
+    args = sys.argv[1:]
+
+    # input to lowercase
+    for i in range(len(args)):
+        args[i] = args[i].lower()
+
+    # options
+    args_options = ['host=', 'proxy=']
+
+    # parsing args
+    optlist, values = getopt.getopt(args, '', args_options)
+    for k, v in optlist:
+        if k == '--host':
+            host = str(v)
+        elif k == '--proxy':
+            proxy = str(v)
+
+except Exception as e:
+    print('An error occurred while processing the target/proxy: {}'.format(e))
     sys.exit()
 
-test = waf_bypass(host, proxy)
+# check host
+if not host:
+    print("ERROR: the host is not set. Syntax: main.py --host=example.com:80 --proxy='http://proxy.example.com:3128'")
+    sys.exit()
+
+print('\n')
+print('##')
+print('# Target: ', host)
+print('# Proxy: ', proxy)
+print('##')
+print('\n')
+
+test = WAFBypass(host, proxy)
 
 try:
     test.start_test()

@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "%3C%21--%23exec%20cmd%3D%22cd%20C%3A%5C%5Cadmin%5C%5Cdir%22%3E",
+      "Body": "param=%3C%21--%23exec%20cmd%3D%22cd%20C%3A%5C%5Cadmin%5C%5Cdir%22%3E",
+      "ARGS": "param=%3C%21--%23exec%20cmd%3D%22cd%20C%3A%5C%5Cadmin%5C%5Cdir%22%3E",
+      "Cookie": "%3C%21--%23exec%20cmd%3D%22cd%20C%3A%5C%5Cadmin%5C%5Cdir%22%3E",
+      "URL": "%3C%21--%23exec%20cmd%3D%22cd%20C%3A%5C%5Cadmin%5C%5Cdir%22%3E",
+      "Referer": "%3C%21--%23exec%20cmd%3D%22cd%20C%3A%5C%5Cadmin%5C%5Cdir%22%3E",
+      "Headers": "%3C%21--%23exec%20cmd%3D%22cd%20C%3A%5C%5Cadmin%5C%5Cdir%22%3E"
+    }
+  ]
+}

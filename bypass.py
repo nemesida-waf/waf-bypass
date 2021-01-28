@@ -1,14 +1,16 @@
-from os import walk
-import os.path
-from colorama import Fore, Style
-import requests
-from request import Request
+#!/usr/bin/env python3
+
+import os
 import re
-from urllib.parse import urljoin
+import requests
+
+from colorama import Fore, Style
 from logger import log_in
+from os import walk
+from request import Request
+from urllib.parse import urljoin
 
-
-class waf_bypass:
+class WAFBypass:
     def __init__(self, host, proxy):
         self.host = host
         if proxy == '':
@@ -21,11 +23,15 @@ class waf_bypass:
         self.timeout = 150
 
     def start_test(self):
-        for (dirpath, _, filenames) in walk('payload'):
+
+        # init default
+        relative_path = ''
+
+        for (dir_path, _, filenames) in walk('payload'):
             for filename in sorted(filenames):
                 if self.name_pattern.match(filename):
                     try:
-                        relative_path = os.path.join(dirpath, filename)
+                        relative_path = os.path.join(dir_path, filename)
                         absolute_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
                         request_data = Request(relative_path, absolute_path)
                         if request_data.req_type == 'ALL':
@@ -69,8 +75,8 @@ class waf_bypass:
                     except Exception as e:
                         print('{}Error: {}. Using file: {}{}'.format(Fore.RED, e, relative_path, Style.RESET_ALL))
 
-
-    def output(self, test_type, request_data, request):
+    @staticmethod
+    def output(test_type, request_data, request):
         base_str = '{{}}{} in {}: {{}}{}'.format(request_data.path.replace("payload/", ""), test_type, Style.RESET_ALL)
 
         if request.status_code == 403:
@@ -80,38 +86,45 @@ class waf_bypass:
             log_in(request_data.path.replace("payload/", ""),test_type,'BYPASSED')
             print(base_str.format(Fore.RED, 'BYPASSED'))
 
-
     def test_args(self, request_data):
-        request = self.session.get(self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout)
+        request = self.session.get(
+            self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout
+        )
         self.output('ARGS', request_data, request)
 
-
     def test_ua(self, request_data):
-        request = self.session.get(self.host, headers={'User-Agent':request_data.ua}, proxies=self.proxy, timeout=self.timeout)
+        request = self.session.get(
+            self.host, headers={'User-Agent': request_data.ua}, proxies=self.proxy, timeout=self.timeout
+        )
         self.output('UA', request_data, request)
 
-
     def test_ref(self, request_data):
-        request = self.session.get(self.host, headers={'referer':request_data.ref}, proxies=self.proxy, timeout=self.timeout)
+        request = self.session.get(
+            self.host, headers={'referer': request_data.ref}, proxies=self.proxy, timeout=self.timeout
+        )
         self.output('Referer', request_data, request)
 
-
     def test_body(self, request_data):
-        request = self.session.post(self.host, data=request_data.req_body, proxies=self.proxy, timeout=self.timeout)
+        request = self.session.post(
+            self.host, data=request_data.req_body, proxies=self.proxy, timeout=self.timeout
+        )
         self.output('Body', request_data, request)
 
-
     def test_cookie(self, request_data):
-        request = self.session.get(self.host, cookies={ "CustomCookie" : request_data.cookie }, proxies=self.proxy, timeout=self.timeout)
+        request = self.session.get(
+            self.host, cookies={"CustomCookie": request_data.cookie}, proxies=self.proxy, timeout=self.timeout
+        )
         self.output('Cookie', request_data, request)
 
-
     def test_header(self, request_data):
-        request = self.session.get(self.host, headers={ "CustomHeader" : request_data.req_header }, proxies=self.proxy, timeout=self.timeout)
+        request = self.session.get(
+            self.host, headers={"CustomHeader": request_data.req_header}, proxies=self.proxy, timeout=self.timeout
+        )
         self.output('Header', request_data, request)
-
 
     def test_url(self, request_data):
         payload_url = urljoin(self.host, request_data.url)
-        request = self.session.get(payload_url, proxies=self.proxy, timeout=self.timeout)
+        request = self.session.get(
+            payload_url, proxies=self.proxy, timeout=self.timeout
+        )
         self.output('URL', request_data, request)

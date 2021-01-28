@@ -1,14 +1,15 @@
+#!/usr/bin/env python3
+
 import logging
-from colorama import Fore, Style
-from prettytable import PrettyTable
+
 
 def read_log():
-    log_dict =dict()
+    log_dict = dict()
     with open('log/all.log', 'r') as log_file:
         logs = log_file.readlines()
 
     for log in logs:
-        key= log.split(" : ")[1]
+        key = log.split(" : ")[1]
         value = log.split(" : ")[0]
         log_dict[key] = value
 
@@ -24,7 +25,7 @@ def write_log_stat():
             bypass_log.append(key)
         else:
             blocked_log.append(key)
-    return bypass_log,blocked_log
+    return bypass_log, blocked_log
 
 
 def logger_stat():
@@ -35,17 +36,16 @@ def logger_stat():
     items_stat = read_log()
     for item in items_stat.values():
         if item == 'BYPASSED':
-            count_pass +=1
+            count_pass += 1
         else:
-            count_block +=1
+            count_block += 1
         stat_req['BYPASSED'] = count_pass
         stat_req['BLOCKED'] = count_block
-
 
     return stat_req
 
 
-def log_in(log,test_type, status_test):
-    logging.basicConfig(filename="log/all.log", filemode = 'w', format=('%(message)s'), level=logging.INFO)
-    log_message = '{} : {} in {}'.format(status_test,log,test_type)
+def log_in(log, test_type, status_test):
+    logging.basicConfig(filename="log/all.log", filemode='w', format='%(message)s', level=logging.INFO)
+    log_message = '{} : {} in {}'.format(status_test, log, test_type)
     logging.info(log_message)

@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "Body",
-      "UA": "null",
+      "UA": "",
       "Body": "><svg onload=alert(1)>.gif",
-      "ARGS": "null",
-      "Cookie": "null",
-      "URL": "null",
-      "Referer": "null",
-      "Headers": "null"
+      "ARGS": "",
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "%24gt%3A0",
+      "Body": "param=%24gt%3A0",
+      "ARGS": "param=%24gt%3A0",
+      "Cookie": "%24gt%3A0",
+      "URL": "",
+      "Referer": "%24gt%3A0",
+      "Headers": "%24gt%3A0"
+    }
+  ]
+}

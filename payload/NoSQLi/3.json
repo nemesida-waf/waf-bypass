@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "password%5B%2524ne%5D%3D",
+      "Body": "param=password%5B%2524ne%5D%3D",
+      "ARGS": "param=password%5B%2524ne%5D%3D",
+      "Cookie": "password%5B%2524ne%5D%3D",
+      "URL": "password%5B%2524ne%5D%3D",
+      "Referer": "password%5B%2524ne%5D%3D",
+      "Headers": "password%5B%2524ne%5D%3D"
+    }
+  ]
+}
