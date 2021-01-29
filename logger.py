@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 
 import logging
+import os
 
 
 def read_log():
     log_dict = dict()
-    with open('log/all.log', 'r') as log_file:
+    log_file = '/tmp/waf-bypass-log/all.log'
+
+    if not os.path.exists(log_file):
+        os.mknod(log_file)
+
+    with open(log_file, 'r') as log_file:
         logs = log_file.readlines()
 
     for log in logs:
@@ -46,6 +52,7 @@ def logger_stat():
 
 
 def log_in(log, test_type, status_test):
-    logging.basicConfig(filename="log/all.log", filemode='w', format='%(message)s', level=logging.INFO)
+    log_file = '/tmp/waf-bypass-log/all.log'
+    logging.basicConfig(filename=log_file, filemode='w', format='%(message)s', level=logging.INFO)
     log_message = '{} : {} in {}'.format(status_test, log, test_type)
     logging.info(log_message)

@@ -22,7 +22,6 @@ ec'h'o 'cat /etc/examplewd' | sed 's/example/pass/g' | bash
 # mkdir /opt/waf-bypass/
 # git clone https://github.com/nemesida-waf/waf_bypass.git /opt/waf-bypass/
 # python3 -m pip install -r /opt/waf-bypass/requirements.txt
-# cd /opt/waf-bypass/
 
 # python3 /opt/waf-bypass/main.py --host='example.com'
 or

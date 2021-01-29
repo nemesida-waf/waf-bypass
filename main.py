@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import getopt
+import os
+import re
 import sys
 
 from bypass import WAFBypass
@@ -30,6 +32,9 @@ try:
     for k, v in optlist:
         if k == '--host':
             host = str(v)
+            # check host's schema
+            if not re.search(r'^http[s]?\:\/\/', host):
+                host = 'http://' + host
         elif k == '--proxy':
             proxy = str(v)
 
@@ -41,6 +46,13 @@ except Exception as e:
 if not host:
     print("ERROR: the host is not set. Syntax: main.py --host=example.com:80 --proxy='http://proxy.example.com:3128'")
     sys.exit()
+
+# create log. dir
+try:
+    log_dir = '/tmp/waf-bypass-log'
+    os.mkdir(log_dir)
+except OSError:
+    pass
 
 print('\n')
 print('##')

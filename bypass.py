@@ -26,8 +26,9 @@ class WAFBypass:
 
         # init default
         relative_path = ''
+        work_dir = os.path.dirname(os.path.realpath(__file__))
 
-        for (dir_path, _, filenames) in walk('payload'):
+        for (dir_path, _, filenames) in walk(work_dir + '/payload'):
             for filename in sorted(filenames):
                 if self.name_pattern.match(filename):
                     try:

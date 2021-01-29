@@ -42,10 +42,10 @@ def bypass_table():
 
     passeds, blockeds = write_log_stat()
 
-    with open('log/bypass.log', 'w') as bypass_file:
+    with open('/tmp/waf-bypass-log/bypass.log', 'w') as bypass_file:
         for passed in passeds:
             bypass_file.writelines(passed)
-    with open('log/blocked.log', 'w') as blocked_file:
+    with open('/tmp/waf-bypass-log/blocked.log', 'w') as blocked_file:
         for blocked in blockeds:
             blocked_file.writelines(blocked)
 
@@ -53,7 +53,7 @@ def bypass_table():
         source, zone = passed.split(" in ")
         if zone == 'Body\n':
             dict_bypass.setdefault(source, []).append("BODY")
-        
+
         elif zone == 'ARGS\n':
             dict_bypass.setdefault(source, []).append("ARGS")
 
@@ -74,16 +74,16 @@ def bypass_table():
 
     b = OrderedDict(sorted(dict_bypass.items(), key=lambda t: t[0]))
 
-    for key, value in b.items():            
+    for key, value in b.items():
         value_str = Fore.RED+' '.join(value)+Style.RESET_ALL
         table_bypass_color.add_row([key, value_str])
-    
+
     for key, value in b.items():
         value_str = ' '.join(value)
         table_bypass_uncolor.add_row([key, value_str])
 
     string_table = table_bypass_uncolor.get_string()
-    with open('log/bypass_zone.log', 'w') as file_pass:
+    with open('/tmp/waf-bypass-log/bypass_zone.log', 'w') as file_pass:
         file_pass.write(string_table)
 
     # blocked zone
@@ -117,7 +117,7 @@ def bypass_table():
         table_blocked_uncolor.add_row([key, value_str])
 
     string_table = table_blocked_uncolor.get_string()
-    with open('log/blocked_zone.log', 'w') as file_block:
+    with open('/tmp/waf-bypass-log/blocked_zone.log', 'w') as file_block:
         file_block.write(string_table)
-    
+
     return print(table_bypass_color)
