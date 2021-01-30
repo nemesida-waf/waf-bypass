@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "",
-      "Body": "param=ey8vOiAiIn0=",
-      "ARGS": "param=ey8vOiAiIn0=",
-      "Cookie": "ey8vOiAiIn0=",
-      "URL": "ey8vOiAiIn0=",
-      "Referer": "",
-      "Headers": "ey8vOiAiIn0="
+      "UA": "%27%20%26%26%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500",
+      "Body": "param=%27%20%26%26%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500",
+      "ARGS": "param=%27%20%26%26%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500",
+      "Cookie": "%27%20%26%26%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500",
+      "URL": "%27%20%26%26%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500",
+      "Referer": "%27%20%26%26%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500",
+      "Headers": "%27%20%26%26%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500"
     }
   ]
 }

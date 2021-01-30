@@ -3,12 +3,12 @@
     {
       "Type": "ALL",
       "UA": "",
-      "Body": "param%3D%5B%5C%5Cs%5C%5CS%5D",
-      "ARGS": "param%3D%5B%5C%5Cs%5C%5CS%5D",
-      "Cookie": "",
-      "URL": "",
-      "Referer": "",
-      "Headers": ""
+      "Body": "username%5B%24ne%5D%3D1%26password%5B%24ne%5D%3D1",
+      "ARGS": "username%5B%24ne%5D%3D1%26password%5B%24ne%5D%3D1",
+      "Cookie": "username%5B%24ne%5D%3D1%26password%5B%24ne%5D%3D1",
+      "URL": "username%5B%24ne%5D%3D1%26password%5B%24ne%5D%3D1",
+      "Referer": "username%5B%24ne%5D%3D1%26password%5B%24ne%5D%3D1",
+      "Headers": "username%5B%24ne%5D%3D1%26password%5B%24ne%5D%3D1"
     }
   ]
 }

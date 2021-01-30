@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "%24gt%3A0",
-      "Body": "param=%24gt%3A0",
-      "ARGS": "param=%24gt%3A0",
-      "Cookie": "%24gt%3A0",
-      "URL": "",
-      "Referer": "%24gt%3A0",
-      "Headers": "%24gt%3A0"
+      "UA": "ZGIuY29sbGVjdGlvbi5maW5kKCB7ICR3aGVyZTogZnVuY3Rpb24oKSB7IAogICAgcmV0dXJuICh0aGlzLm5hbWUgPT0gJHVzZXJEYXRhKSB9IH0gKTs=",
+      "Body": "ZGIuY29sbGVjdGlvbi5maW5kKCB7ICR3aGVyZTogZnVuY3Rpb24oKSB7IAogICAgcmV0dXJuICh0aGlzLm5hbWUgPT0gJHVzZXJEYXRhKSB9IH0gKTs=",
+      "ARGS": "ZGIuY29sbGVjdGlvbi5maW5kKCB7ICR3aGVyZTogZnVuY3Rpb24oKSB7IAogICAgcmV0dXJuICh0aGlzLm5hbWUgPT0gJHVzZXJEYXRhKSB9IH0gKTs=",
+      "Cookie": "ZGIuY29sbGVjdGlvbi5maW5kKCB7ICR3aGVyZTogZnVuY3Rpb24oKSB7IAogICAgcmV0dXJuICh0aGlzLm5hbWUgPT0gJHVzZXJEYXRhKSB9IH0gKTs=",
+      "URL": "ZGIuY29sbGVjdGlvbi5maW5kKCB7ICR3aGVyZTogZnVuY3Rpb24oKSB7IAogICAgcmV0dXJuICh0aGlzLm5hbWUgPT0gJHVzZXJEYXRhKSB9IH0gKTs=",
+      "Referer": "ZGIuY29sbGVjdGlvbi5maW5kKCB7ICR3aGVyZTogZnVuY3Rpb24oKSB7IAogICAgcmV0dXJuICh0aGlzLm5hbWUgPT0gJHVzZXJEYXRhKSB9IH0gKTs=",
+      "Headers": "ZGIuY29sbGVjdGlvbi5maW5kKCB7ICR3aGVyZTogZnVuY3Rpb24oKSB7IAogICAgcmV0dXJuICh0aGlzLm5hbWUgPT0gJHVzZXJEYXRhKSB9IH0gKTs="
     }
   ]
 }

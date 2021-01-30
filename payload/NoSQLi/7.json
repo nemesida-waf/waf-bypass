@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "",
-      "Body": "param=W1xzXFNd",
-      "ARGS": "param=W1xzXFNd",
-      "Cookie": "W1xzXFNd",
-      "URL": "W1xzXFNd",
+      "UA": "login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
+      "Body": "param=login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
+      "ARGS": "param=login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
+      "Cookie": "login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
+      "URL": "login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
       "Referer": "",
-      "Headers": "W1xzXFNd"
+      "Headers": "login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1"
     }
   ]
 }

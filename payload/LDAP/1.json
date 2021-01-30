@@ -5,10 +5,10 @@
       "UA": "",
       "Body": "param=%2A%29%28uid%3D%2A%29%29%28%7C%28uid%3D%2A",
       "ARGS": "param=%2A%29%28uid%3D%2A%29%29%28%7C%28uid%3D%2A",
-      "Cookie": "%2A%29%28uid%3D%2A%29%29%28%7C%28uid%3D%2A",
-      "URL": "%2A%29%28uid%3D%2A%29%29%28%7C%28uid%3D%2A",
-      "Referer": "%2A%29%28uid%3D%2A%29%29%28%7C%28uid%3D%2A",
-      "Headers": "%2A%29%28uid%3D%2A%29%29%28%7C%28uid%3D%2A"
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
     }
   ]
 }

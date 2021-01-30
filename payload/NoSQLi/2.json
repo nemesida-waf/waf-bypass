@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "%7B%27%24gt%27%3A%20%5C%22%5C%22%7D",
-      "Body": "param=%7B%27%24gt%27%3A%20%5C%22%5C%22%7D",
-      "ARGS": "param=%7B%27%24gt%27%3A%20%5C%22%5C%22%7D",
-      "Cookie": "%7B%27%24gt%27%3A%20%5C%22%5C%22%7D",
-      "URL": "%7B%27%24gt%27%3A%20%5C%22%5C%22%7D",
-      "Referer": "%7B%27%24gt%27%3A%20%5C%22%5C%22%7D",
-      "Headers": "%7B%27%24gt%27%3A%20%5C%22%5C%22%7D"
+      "UA": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20%3D%3D%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "Body": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20%3D%3D%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "ARGS": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20%3D%3D%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "Cookie": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20%3D%3D%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "URL": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20%3D%3D%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "Referer": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20%3D%3D%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "Headers": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20%3D%3D%20%24userData%29%20%7D%20%7D%20%29%3B"
     }
   ]
 }

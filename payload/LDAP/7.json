@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "%2A%28%7C%28mail%3D%2A%29%29",
-      "Body": "param=%2A%28%7C%28mail%3D%2A%29%29",
-      "ARGS": "param=%2A%28%7C%28mail%3D%2A%29%29",
-      "Cookie": "%2A%28%7C%28mail%3D%2A%29%29",
-      "URL": "%2A%28%7C%28mail%3D%2A%29%29",
-      "Referer": "%2A%28%7C%28mail%3D%2A%29%29",
-      "Headers": "%2A%28%7C%28mail%3D%2A%29%29"
+      "UA": "",
+      "Body": "user=%2A%28%7C%28mail%3D%2A%29%29",
+      "ARGS": "user=%2A%28%7C%28mail%3D%2A%29%29",
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
     }
   ]
 }

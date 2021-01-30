@@ -3,12 +3,12 @@
     {
       "Type": "ALL",
       "UA": "",
-      "Body": "param=KikodWlkPSopKSh8KHVpZD0q",
-      "ARGS": "param=KikodWlkPSopKSh8KHVpZD0q",
-      "Cookie": "KikodWlkPSopKSh8KHVpZD0q",
-      "URL": "KikodWlkPSopKSh8KHVpZD0q",
+      "Body": "KikodWlkPSopKSh8KHVpZD0q",
+      "ARGS": "KikodWlkPSopKSh8KHVpZD0q",
+      "Cookie": "",
+      "URL": "",
       "Referer": "",
-      "Headers": "KikodWlkPSopKSh8KHVpZD0q"
+      "Headers": ""
     }
   ]
 }

@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "%2A%29%29%00",
-      "Body": "param=%2A%29%29%00",
-      "ARGS": "param=%2A%29%29%00",
-      "Cookie": "%2A%29%29%00",
-      "URL": "%2A%29%29%00",
-      "Referer": "%2A%29%29%00",
-      "Headers": "%2A%29%29%00"
+      "UA": "",
+      "Body": "user=%2A%29%29%00",
+      "ARGS": "user=%2A%29%29%00",
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
     }
   ]
 }

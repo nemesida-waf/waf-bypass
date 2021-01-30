@@ -2,13 +2,13 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
+      "UA": "",
       "Body": "param=admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
       "ARGS": "param=admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
-      "Cookie": "admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
-      "URL": "admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
-      "Referer": "admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
-      "Headers": "admin%2A%29%28%28%7Cuserpassword%3D%2A%29"
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
     }
   ]
 }
