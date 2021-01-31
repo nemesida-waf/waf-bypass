@@ -2,12 +2,12 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
+      "UA": "",
       "Body": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
       "ARGS": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
       "Cookie": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
       "URL": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
-      "Referer": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
+      "Referer": "",
       "Headers": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ=="
     }
   ]

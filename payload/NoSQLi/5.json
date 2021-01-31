@@ -2,12 +2,12 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "dXNlcm5hbWVbJG5lXT0xJnBhc3N3b3JkWyRuZV09MQ==",
+      "UA": "",
       "Body": "dXNlcm5hbWVbJG5lXT0xJnBhc3N3b3JkWyRuZV09MQ==",
       "ARGS": "dXNlcm5hbWVbJG5lXT0xJnBhc3N3b3JkWyRuZV09MQ==",
       "Cookie": "dXNlcm5hbWVbJG5lXT0xJnBhc3N3b3JkWyRuZV09MQ==",
       "URL": "dXNlcm5hbWVbJG5lXT0xJnBhc3N3b3JkWyRuZV09MQ==",
-      "Referer": "dXNlcm5hbWVbJG5lXT0xJnBhc3N3b3JkWyRuZV09MQ==",
+      "Referer": "",
       "Headers": "dXNlcm5hbWVbJG5lXT0xJnBhc3N3b3JkWyRuZV09MQ=="
     }
   ]
