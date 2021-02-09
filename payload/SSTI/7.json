@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "",
+      "Body": "login%3D%7Bphp%7Decho%20%60id%60%3B%7B%2Fphp%7D%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
+      "ARGS": "login%3D%7Bphp%7Decho%20%60id%60%3B%7B%2Fphp%7D%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
+      "Cookie": "%7Bphp%7Decho%20%60id%60%3B%7B%2Fphp%7D",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "",
+      "Body": "{\"username\": {\"$gt\":\"\"}, \"password\": {\"$gt\":\"\"}}",
+      "ARGS": "",
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "",
+      "Body": "username%5B%24ne%5D%3Dtoto%26password%5B%24ne%5D%3Dtoto",
+      "ARGS": "username%5B%24ne%5D%3Dtoto%26password%5B%24ne%5D%3Dtoto",
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
+    }
+  ]
+}

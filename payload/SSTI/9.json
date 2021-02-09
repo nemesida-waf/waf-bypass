@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "",
+      "Body": "login%3D%7B%7B_self.env.registerUndefinedFilterCallback(%C2%ABexec%C2%BB)%7D%7D%7B%7B_self.env.getFilter(%C2%ABid%C2%BB)%7D%7D%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
+      "ARGS": "",
+      "Cookie": "%7B%7B_self.env.registerUndefinedFilterCallback(%C2%ABexec%C2%BB)%7D%7D%7B%7B_self.env.getFilter(%C2%ABid%C2%BB)%7D%7D",
+      "URL": "",
+      "Referer": "",
+      "Headers": "%7B%7B_self.env.registerUndefinedFilterCallback(%C2%ABexec%C2%BB)%7D%7D%7B%7B_self.env.getFilter(%C2%ABid%C2%BB)%7D%7D"
+    }
+  ]
+}

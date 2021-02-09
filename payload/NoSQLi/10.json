@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "",
+      "Body": "{\"username\": {\"$eq\": \"admin\"}, \"password\": {\"$regex\": \"^md\" }}",
+      "ARGS": "",
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
+    }
+  ]
+}

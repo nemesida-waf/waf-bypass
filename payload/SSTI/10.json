@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "",
+      "Body": "login%3D%24%7Bclass.getClassLoader()%7D%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
+      "ARGS": "login%3D%24%7Bclass.getClassLoader()%7D%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": ""
+    }
+  ]
+}

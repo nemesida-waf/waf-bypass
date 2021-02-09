@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "Type": "ALL",
+      "UA": "",
+      "Body": "login%3D%3C%25%3D%207%20*%207%20%25%3E%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
+      "ARGS": "login%3D%3C%25%3D%207%20*%207%20%25%3E%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
+      "Cookie": "%3C%25%3D%207%20*%207%20%25%3E",
+      "URL": "",
+      "Referer": "",
+      "Headers": "%3C%25%3D%207%20*%207%20%25%3E"
+    }
+  ]
+}
