@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
       "Body": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "ARGS": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "Cookie": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "URL": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "Referer": "<base href='http://example.com'><a href='/test'>TEST</a>",
-      "Headers": ""
+      "Headers": "",
+      "Blocked": true
     }
   ]
 }

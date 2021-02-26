@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<math><brute xlink:href=javascript:alert(1)>click",
       "Body": "<math><brute xlink:href=javascript:alert(1)>click",
       "ARGS": "<math><brute xlink:href=javascript:alert(1)>click",
       "Cookie": "<math><brute xlink:href=javascript:alert(1)>click",
       "URL": "<math><brute xlink:href=javascript:alert(1)>click",
       "Referer": "<math><brute xlink:href=javascript:alert(1)>click",
-      "Headers": "<math><brute xlink:href=javascript:alert(1)>click"
+      "Headers": "<math><brute xlink:href=javascript:alert(1)>click",
+      "Blocked": true
     }
   ]
 }

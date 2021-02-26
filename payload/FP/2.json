@@ -2,13 +2,13 @@
     "req": [
       {
         "UA": "",
-        "Body": "cGFyYW0xPWFjdGlvbiZwYXJhbTI9cGhwOi8vZmlsdGVyL3JlYWQ9c3RyaW5nLnJvdDEzL3Jlc291cmNl",
-        "ARGS": "",
+        "Body": "select_items=yes",
+        "ARGS": "select_items=yes",
         "Cookie": "",
         "URL": "",
         "Referer": "",
         "Headers": "",
-        "Blocked": true
+        "Blocked": false
       }
     ]
   }

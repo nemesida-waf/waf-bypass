@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
       "Body": "\"autofocus=alert(1)//",
       "ARGS": "\"autofocus=alert(1)//",
       "Cookie": "\"autofocus=alert(1)//",
       "URL": "\"autofocus=alert(1)//",
       "Referer": "\"autofocus=alert(1)//",
-      "Headers": "\"autofocus=alert(1)//"
+      "Headers": "\"autofocus=alert(1)//",
+      "Blocked": true
     }
   ]
 }

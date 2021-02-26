@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
-      "Body": "p=<svg/1='&q='onload=alert(1)>",
-      "ARGS": "p=<svg/1='&q='onload=alert(1)>",
-      "URL": "p=<svg/1='&q='onload=alert(1)>",
-      "Referer": "p=<svg/1='&q='onload=alert(1)>",
-      "Cookie": "p=<svg/1='&q='onload=alert(1)>",
-      "Headers": ""
+      "Body": "p%RND%=<svg/1='&q='onload=alert(1)>",
+      "ARGS": "p%RND%=<svg/1='&q='onload=alert(1)>",
+      "URL": "<svg/1='&q='onload=alert(1)>",
+      "Referer": "<svg/1='&q='onload=alert(1)>",
+      "Cookie": "<svg/1='&q='onload=alert(1)>",
+      "Headers": "",
+      "Blocked": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
-      "UA": "login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
-      "Body": "param=login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
-      "ARGS": "param=login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
-      "Cookie": "login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
-      "URL": "login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1",
+      "UA": "",
+      "Body": "param%RND%=login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
+      "ARGS": "param%RND%=login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
+      "Cookie": "",
+      "URL": "",
       "Referer": "",
-      "Headers": "login%5B%24gt%5D%3Dadmin%26login%5B%24lt%5D%3Dtest%26pass%5B%24ne%5D%3D1"
+      "Headers": "",
+      "Blocked": true
     }
   ]
 }

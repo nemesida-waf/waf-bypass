@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<x onmousemove=alert(1)>hover this!",
       "Body": "<x onmousemove=alert(1)>hover this!",
       "ARGS": "<x onmousemove=alert(1)>hover this!",
       "Cookie": "<x onmousemove=alert(1)>hover this!",
       "URL": "<x onmousemove=alert(1)>hover this!",
       "Referer": "<x onmousemove=alert(1)>hover this!",
-      "Headers": "<x onmousemove=alert(1)>hover this!"
+      "Headers": "<x onmousemove=alert(1)>hover this!",
+      "Blocked": true
     }
   ]
 }

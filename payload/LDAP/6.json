@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
-      "Body": "user=%2A%28%29%7C%26%27",
-      "ARGS": "user=%2A%28%29%7C%26%27",
+      "Body": "user%RND%=%2A%28%29%7C%26%27",
+      "ARGS": "user%RND%=%2A%28%29%7C%26%27",
       "Cookie": "",
       "URL": "",
       "Referer": "",
-      "Headers": ""
+      "Headers": "",
+      "Blocked": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "Body": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "ARGS": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
+      "Body": "param%RND%=%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
+      "ARGS": "param%RND%=%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
       "Cookie": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
       "URL": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
       "Referer": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "Headers": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u"
+      "Headers": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
+      "Blocked": true
     }
   ]
 }

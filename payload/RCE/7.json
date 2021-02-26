@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
-      "Body": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
-      "ARGS": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
-      "Cookie": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
-      "URL": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
-      "Referer": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc",
-      "Headers": "cmd%3D127.0.0.1%2B%2526%2526%2Bls+/etc"
+      "Body": "param%RND%=cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "ARGS": "param%RND%=cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "Cookie": "cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "URL": "cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "Referer": "cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "Headers": "cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "Blocked": true
     }
   ]
 }

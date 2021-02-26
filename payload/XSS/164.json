@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<marquee onstart=alert(1)>",
       "Body": "<marquee onstart=alert(1)>",
       "ARGS": "<marquee onstart=alert(1)>",
       "Cookie": "<marquee onstart=alert(1)>",
       "URL": "<marquee onstart=alert(1)>",
       "Referer": "<marquee onstart=alert(1)>",
-      "Headers": "<marquee onstart=alert(1)>"
+      "Headers": "<marquee onstart=alert(1)>",
+      "Blocked": true
     }
   ]
 }

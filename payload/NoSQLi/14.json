@@ -3,8 +3,8 @@
     {
       "Type": "ALL",
       "UA": "",
-      "Body": "login%5B%24nin%5D%5B%5D%3Dadmin%26login%5B%24nin%5D%5B%5D%3Dtest%26pass%5B%24ne%5D%3Dtoto",
-      "ARGS": "login%5B%24nin%5D%5B%5D%3Dadmin%26login%5B%24nin%5D%5B%5D%3Dtest%26pass%5B%24ne%5D%3Dtoto",
+      "Body": "login%5B%24nin%5D%5B%5D=admin&login%5B%24nin%5D%5B%5D=test&pass%5B%24ne%5D=toto",
+      "ARGS": "login%5B%24nin%5D%5B%5D=admin&login%5B%24nin%5D%5B%5D=test&pass%5B%24ne%5D=toto",
       "Cookie": "",
       "URL": "",
       "Referer": "",

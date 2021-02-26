@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<img src=1 onerror=alert(1)>",
       "Body": "<img src=1 onerror=alert(1)>",
       "ARGS": "<img src=1 onerror=alert(1)>",
       "Cookie": "<img src=1 onerror=alert(1)>",
       "URL": "<img src=1 onerror=alert(1)>",
       "Referer": "<img src=1 onerror=alert(1)>",
-      "Headers": "<img src=1 onerror=alert(1)>"
+      "Headers": "<img src=1 onerror=alert(1)>",
+      "Blocked": true
     }
   ]
 }

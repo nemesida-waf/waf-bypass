@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "Body": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "ARGS": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "Cookie": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "URL": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "Referer": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
-      "Headers": "<menu id=x contextmenu=x onshow=alert(1)>right click me!"
+      "Headers": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
+      "Blocked": true
     }
   ]
 }

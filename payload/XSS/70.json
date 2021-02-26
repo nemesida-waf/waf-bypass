@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "Body",
       "UA": "",
       "Body": "><svg onload=alert(1)>.gif",
       "ARGS": "",
       "Cookie": "",
       "URL": "",
       "Referer": "",
-      "Headers": ""
+      "Headers": "",
+      "Blocked": true
     }
   ]
 }

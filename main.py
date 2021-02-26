@@ -5,18 +5,34 @@ import os
 import re
 import sys
 
+from urllib3 import connectionpool, poolmanager
 from bypass import WAFBypass
 from requests.exceptions import MissingSchema
-from table_out import bypass_table
-from table_out import print_table
+from table_out import table_payload_zone, table_status_count_accuracy
 
-# init default
+
+def patch_http_connection_pool(**constructor_kwargs):
+    """
+    This allows to override the default parameters of the
+    HTTPConnectionPool constructor.
+    For example, to increase the poolsize to fix problems
+    with "HttpConnectionPool is full, discarding connection"
+    """
+    class MyHTTPConnectionPool(connectionpool.HTTPConnectionPool):
+        def __init__(self, *args, **kwargs):
+            kwargs.update(constructor_kwargs)
+            super(MyHTTPConnectionPool, self).__init__(*args, **kwargs)
+    poolmanager.pool_classes_by_scheme['http'] = MyHTTPConnectionPool
+
+
+# Increasing max pool size
+patch_http_connection_pool(maxsize=100)
+
 host = ''
 proxy = ''
 
 # Processing args from cmd
 try:
-
     # read args from input
     args = sys.argv[1:]
 
@@ -33,7 +49,7 @@ try:
         if k == '--host':
             host = str(v)
             # check host's schema
-            if not re.search(r'^http[s]?\:\/\/', host):
+            if not re.search(r'^http[s]?://', host):
                 host = 'http://' + host
         elif k == '--proxy':
             proxy = str(v)
@@ -49,7 +65,7 @@ if not host:
 
 # create log. dir
 try:
-    log_dir = '/tmp/waf-bypass-log'
+    log_dir = '/tmp/waf-bypass-log/'
     os.mkdir(log_dir)
 except OSError:
     pass
@@ -65,9 +81,10 @@ test = WAFBypass(host, proxy)
 
 try:
     test.start_test()
-    print_table()
-    print('\n')
-    bypass_table()
+    table_status_count_accuracy()
+    table_payload_zone()
+except KeyboardInterrupt:
+    print('\nKeyboard Interrupt')
 
 except MissingSchema:
     print('The protocol is not set for TARGET or PROXY')

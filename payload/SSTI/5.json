@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
-      "Body": "login%3D%40(1%2B2)%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
-      "ARGS": "login%3D%40(1%2B2)%26passw%3Dhij3kfmedfekmkm%26token%3Dfdawgk2mnjdnwidfkamjn2i%26sort%3Dtrue",
+      "Body": "login%RND%=%40(1%2B2)&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
+      "ARGS": "login%RND%=%40(1%2B2)&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "Cookie": "%40(1%2B2)",
       "URL": "",
       "Referer": "",
-      "Headers": "%40(1%2B2)"
+      "Headers": "%40(1%2B2)",
+      "Blocked": true
     }
   ]
 }

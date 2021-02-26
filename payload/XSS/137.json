@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<x contenteditable oninput=alert(1)>input here!",
       "Body": "<x contenteditable oninput=alert(1)>input here!",
       "ARGS": "<x contenteditable oninput=alert(1)>input here!",
       "Cookie": "<x contenteditable oninput=alert(1)>input here!",
       "URL": "<x contenteditable oninput=alert(1)>input here!",
       "Referer": "<x contenteditable oninput=alert(1)>input here!",
-      "Headers": "<x contenteditable oninput=alert(1)>input here!"
+      "Headers": "<x contenteditable oninput=alert(1)>input here!",
+      "Blocked": true
     }
   ]
 }

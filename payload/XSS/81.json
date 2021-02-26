@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "Body": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",
       "UA": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",
       "ARGS": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",
       "Referer": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",
       "Cookie": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",
       "Headers": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",
-      "URL": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E"
+      "URL": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",
+      "Blocked": true
     }
   ]
 }

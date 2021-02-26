@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
-      "UA": "%3C%21--%23exec%20cmd%3D%22dir%22%20--%3E",
-      "Body": "param=%3C%21--%23exec%20cmd%3D%22dir%22%20--%3E",
-      "ARGS": "param=%3C%21--%23exec%20cmd%3D%22dir%22%20--%3E",
-      "Cookie": "%3C%21--%23exec%20cmd%3D%22dir%22%20--%3E",
-      "URL": "%3C%21--%23exec%20cmd%3D%22dir%22%20--%3E",
-      "Referer": "%3C%21--%23exec%20cmd%3D%22dir%22%20--%3E",
-      "Headers": "%3C%21--%23exec%20cmd%3D%22dir%22%20--%3E"
+      "UA": "%3C%21--%23exec%20cmd=%22dir%22%20--%3E",
+      "Body": "param%RND%=%3C%21--%23exec%20cmd=%22dir%22%20--%3E",
+      "ARGS": "param%RND%=%3C%21--%23exec%20cmd=%22dir%22%20--%3E",
+      "Cookie": "%3C%21--%23exec%20cmd=%22dir%22%20--%3E",
+      "URL": "%3C%21--%23exec%20cmd=%22dir%22%20--%3E",
+      "Referer": "%3C%21--%23exec%20cmd=%22dir%22%20--%3E",
+      "Headers": "%3C%21--%23exec%20cmd=%22dir%22%20--%3E",
+      "Blocked": true
     }
   ]
 }

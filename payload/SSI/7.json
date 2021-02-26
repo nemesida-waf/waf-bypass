@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
-      "Body": "param=PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
-      "ARGS": "param=PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
+      "Body": "param%RND%=PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
+      "ARGS": "param%RND%=PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
       "Cookie": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
       "URL": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
       "Referer": "",
-      "Headers": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+"
+      "Headers": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
+      "Blocked": true
     }
   ]
 }

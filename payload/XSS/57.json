@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
       "Body": "</iframe><svg onload=alert(1)>",
       "ARGS": "</iframe><svg onload=alert(1)>",
       "Cookie": "</iframe><svg onload=alert(1)>",
       "URL": "</iframe><svg onload=alert(1)>",
       "Referer": "</iframe><svg onload=alert(1)>",
-      "Headers": "</iframe><svg onload=alert(1)>"
+      "Headers": "</iframe><svg onload=alert(1)>",
+      "Blocked": true
     }
   ]
 }

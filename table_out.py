@@ -1,123 +1,95 @@
 #!/usr/bin/env python3
 
 from prettytable import PrettyTable
-from colorama import Fore, Style
-from logger import logger_stat
-from logger import write_log_stat
+from logger import logger_stat, write_log_stat
 from collections import OrderedDict
+from colorama import Fore as f
+from colorama import Style as s
 
 
-def print_table():
+def table_payload_zone():
+    red, green, yellow, white_br, reset = f.RED, f.GREEN, f.YELLOW, s.BRIGHT, s.RESET_ALL
+    directory = '/tmp/waf-bypass-log/'
+    passed, failed_fn, failed_fp, errors = write_log_stat()
 
-    passed = Fore.RED + "BYPASSED" + Style.RESET_ALL
-    passed_count = Fore.RED + str(logger_stat()['BYPASSED']) + Style.RESET_ALL
+    def items_processing(passed_or_failed):
+        dictionary = {}
+        table = PrettyTable(['Payload', 'Zone'])
+        for i in ['passed.log', 'failed_fn.log', 'failed_fp.log', 'errors.log']:
+            with open(directory + i, 'w') as opened_file:
+                for items in passed_or_failed:
+                    opened_file.writelines(items)
 
-    blocked = Fore.GREEN + "BLOCKED" + Style.RESET_ALL
-    blocked_count = Fore.GREEN + str(logger_stat()['BLOCKED']) + Style.RESET_ALL
+        if passed_or_failed == passed:
+            file_name = 'passed.log'
+        elif passed_or_failed == failed_fn:
+            file_name = 'failed_fn.log'
+        elif passed_or_failed == failed_fp:
+            file_name = 'failed_fp.log'
+        else:
+            file_name = 'errors.log'
 
-    table_status = PrettyTable()
-    table_status.field_names = ['Status', 'Count']
-    table_status.add_row([passed, passed_count])
-    table_status.add_row([blocked, blocked_count])
-    print("\n")
+        for i in passed_or_failed:
+            source, zone = i.split(" in ")
+            formatted_zone = zone.strip('\n')
+            if formatted_zone in ('Body', 'ARGS', 'Referer', 'UA', 'Cookie', 'Header', 'URL'):
+                dictionary.setdefault(source, []).append(formatted_zone.lower())
 
-    return print(table_status)
+        b = OrderedDict(sorted(dictionary.items(), key=lambda t: t[0]))
+
+        for key, value in b.items():
+            value_str = ' '.join(value)
+            table.add_row([key, value_str])
+
+        string_table = table.get_string()
+
+        with open(directory + file_name, 'w') as file_pass:
+            file_pass.write(string_table)
+            file_pass.close()
+        return dictionary
+
+    def add_line_to_table_payload_zone(dictionary_selected, colour):
+        for payload_path, value in dictionary_selected.items():
+            all_zone_arguments = ' '.join(value)
+            print('|{:^51}'.format(payload_path) + '|' + '{:^55}'.format(colour + all_zone_arguments + reset) + '|')
+
+    """Payload-Zone table elements"""
+    crossbar = '+' + 51 * '-' + '+' + 46 * '-' + '+'
+    table_header_1 = crossbar + '\n|' + 22 * ' ' + f'{white_br}Payload{reset}' + 22 * ' ' + '|' \
+                                     + 21 * ' ' + f'{white_br}Zone{reset}' + 21 * ' ' + '|\n' + \
+                     crossbar + '\n|' + 44 * ' ' + 'False Positive' + 40 * ' ' + '|' + '\n' + crossbar
+    table_header_2 = crossbar + '\n|' + 44 * ' ' + 'False Negative' + 40 * ' ' + '|' + '\n' + crossbar
+
+    """Payload-Zone table print"""
+    print(table_header_1)
+    add_line_to_table_payload_zone(items_processing(failed_fp), red)
+    print(table_header_2)
+    add_line_to_table_payload_zone(items_processing(failed_fn), red)
+    print(crossbar)
+    """End of the table"""
 
 
-def bypass_table():
-    table_bypass_color = PrettyTable()
-    table_bypass_uncolor = PrettyTable()
-    table_blocked_uncolor = PrettyTable()
+def table_status_count_accuracy():
+    r, g, y, w, n = f.RED, f.GREEN, f.YELLOW, s.BRIGHT, s.RESET_ALL
 
-    dict_bypass = {}
-    dict_blocked = {}
+    count_of_passed = logger_stat()['PASSED']
+    count_of_failed_fn = logger_stat()['FAILED_FN']
+    count_of_failed_fp = logger_stat()['FAILED_FP']
+    count_of_errors = logger_stat()['ERROR']
 
-    table_bypass_color.field_names = ['Payload', 'Zone']
-    table_bypass_uncolor.field_names = ['Payload', 'Zone']
-    table_blocked_uncolor.field_names = ['Payload', 'Zone']
+    failed_sum = count_of_failed_fn + count_of_failed_fp
+    sum_all = count_of_passed + failed_sum + count_of_errors
 
-    table_bypass_color.align = "c"
-    table_bypass_uncolor.align = "c"
-    table_blocked_uncolor.align = "c"
+    passed_accuracy = round((count_of_passed/sum_all)*100, 2) if sum_all != 0 else '0.00'
+    failed_accuracy = round((failed_sum/sum_all)*100, 2) if sum_all != 0 else '0.00'
+    errors_accuracy = round((count_of_errors/sum_all)*100, 2) if sum_all != 0 else '0.00'
 
-    passeds, blockeds = write_log_stat()
+    table = PrettyTable([f'Status',     f'Count',                       f'Accuracy'])
+    table.add_row(      [f'PASSED',     f'{g}{count_of_passed}{n}',     f'{g}{passed_accuracy}%{n}'])
+    table.add_row(      [f'FAILED',     f'{r}{failed_sum}{n}',          f'{r}{failed_accuracy}%{n}'])
+    table.add_row(      [f'ERROR',      f'{y}{count_of_errors}{n}',     f'{y}{errors_accuracy}%{n}'])
+    table.title = f'{w}Summary{n}'
+    table.align[f'Status'] = "l"
 
-    with open('/tmp/waf-bypass-log/bypass.log', 'w') as bypass_file:
-        for passed in passeds:
-            bypass_file.writelines(passed)
-    with open('/tmp/waf-bypass-log/blocked.log', 'w') as blocked_file:
-        for blocked in blockeds:
-            blocked_file.writelines(blocked)
-
-    for passed in passeds:
-        source, zone = passed.split(" in ")
-        if zone == 'Body\n':
-            dict_bypass.setdefault(source, []).append("BODY")
-
-        elif zone == 'ARGS\n':
-            dict_bypass.setdefault(source, []).append("ARGS")
-
-        elif zone == 'UA\n':
-            dict_bypass.setdefault(source, []).append("UA")
-
-        elif zone == 'Cookie\n' or zone == 'Cookie':
-            dict_bypass.setdefault(source, []).append("Cookie")
-
-        elif zone == 'URL\n' or zone == 'URL':
-            dict_bypass.setdefault(source, []).append("URL")
-
-        elif zone == 'Referer\n' or zone == 'Referer':
-            dict_bypass.setdefault(source, []).append("Referer")
-
-        elif zone == 'Header\n' or zone == 'Header':
-            dict_bypass.setdefault(source, []).append("HEADER")
-
-    b = OrderedDict(sorted(dict_bypass.items(), key=lambda t: t[0]))
-
-    for key, value in b.items():
-        value_str = Fore.RED+' '.join(value)+Style.RESET_ALL
-        table_bypass_color.add_row([key, value_str])
-
-    for key, value in b.items():
-        value_str = ' '.join(value)
-        table_bypass_uncolor.add_row([key, value_str])
-
-    string_table = table_bypass_uncolor.get_string()
-    with open('/tmp/waf-bypass-log/bypass_zone.log', 'w') as file_pass:
-        file_pass.write(string_table)
-
-    # blocked zone
-
-    for blocked in blockeds:
-        source, zone = blocked.split(" in ")
-        if zone == 'Body\n':
-            dict_blocked.setdefault(source, []).append("BODY")
-
-        elif zone == 'ARGS\n':
-            dict_blocked.setdefault(source, []).append("ARGS")
-        elif zone == 'Referer\n' or zone == 'Referer':
-            dict_blocked.setdefault(source, []).append("Referer")
-
-        elif zone == 'UA\n':
-            dict_blocked.setdefault(source, []).append("UA")
-
-        elif zone == 'Cookie\n' or zone == 'Cookie':
-            dict_blocked.setdefault(source, []).append("Cookie")
-
-        elif zone == 'Header\n' or zone == 'Header':
-            dict_blocked.setdefault(source, []).append("HEADER")
-
-        elif zone == 'URL\n' or zone == 'URL':
-            dict_blocked.setdefault(source, []).append("URL")
-
-    b = OrderedDict(sorted(dict_blocked.items(), key=lambda t: t[0]))
-
-    for key, value in b.items():
-        value_str = ' '.join(value)
-        table_blocked_uncolor.add_row([key, value_str])
-
-    string_table = table_blocked_uncolor.get_string()
-    with open('/tmp/waf-bypass-log/blocked_zone.log', 'w') as file_block:
-        file_block.write(string_table)
-
-    return print(table_bypass_color)
+    print('\n')
+    print(table)

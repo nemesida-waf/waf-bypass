@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
-      "Body": "param=PGJvZHkgb25oYXNoY2hhbmdlPWFsZXJ0KDEpPjxhIGhyZWY9JTIzeD5jbGljayB0aGlzISN4Cg==",
-      "ARGS": "param=PGJvZHkgb25oYXNoY2hhbmdlPWFsZXJ0KDEpPjxhIGhyZWY9JTIzeD5jbGljayB0aGlzISN4Cg==",
+      "Body": "param%RND%=PGJvZHkgb25oYXNoY2hhbmdlPWFsZXJ0KDEpPjxhIGhyZWY9JTIzeD5jbGljayB0aGlzISN4Cg==",
+      "ARGS": "param%RND%=PGJvZHkgb25oYXNoY2hhbmdlPWFsZXJ0KDEpPjxhIGhyZWY9JTIzeD5jbGljayB0aGlzISN4Cg==",
       "Cookie": "PGJvZHkgb25oYXNoY2hhbmdlPWFsZXJ0KDEpPjxhIGhyZWY9JTIzeD5jbGljayB0aGlzISN4Cg==",
       "URL": "PGJvZHkgb25oYXNoY2hhbmdlPWFsZXJ0KDEpPjxhIGhyZWY9JTIzeD5jbGljayB0aGlzISN4Cg==",
       "Referer": "",
-      "Headers": "PGJvZHkgb25oYXNoY2hhbmdlPWFsZXJ0KDEpPjxhIGhyZWY9JTIzeD5jbGljayB0aGlzISN4Cg=="
+      "Headers": "PGJvZHkgb25oYXNoY2hhbmdlPWFsZXJ0KDEpPjxhIGhyZWY9JTIzeD5jbGljayB0aGlzISN4Cg==",
+      "Blocked": true
     }
   ]
 }

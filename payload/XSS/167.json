@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<input autofocus onblur=alert(1)>",
       "Body": "<input autofocus onblur=alert(1)>",
       "ARGS": "<input autofocus onblur=alert(1)>",
       "Cookie": "<input autofocus onblur=alert(1)>",
       "URL": "<input autofocus onblur=alert(1)>",
       "Referer": "<input autofocus onblur=alert(1)>",
-      "Headers": "<input autofocus onblur=alert(1)>"
+      "Headers": "<input autofocus onblur=alert(1)>",
+      "Blocked": true
     }
   ]
 }

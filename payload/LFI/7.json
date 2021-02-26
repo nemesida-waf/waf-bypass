@@ -1,14 +1,14 @@
 {
     "req": [
       {
-        "Type": "ALL",
         "UA": "C:/WINNT/win.ini",
-        "Body": "C:/WINNT/win.ini",
-        "ARGS": "C:/WINNT/win.ini",
+        "Body": "param%RND%=C:/WINNT/win.ini",
+        "ARGS": "param%RND%=C:/WINNT/win.ini",
         "Cookie": "C:/WINNT/win.ini",
         "URL": "",
         "Referer": "C:/WINNT/win.ini",
-        "Headers": "C:/WINNT/win.ini"
+        "Headers": "C:/WINNT/win.ini",
+        "Blocked": true
       }
     ]
   }

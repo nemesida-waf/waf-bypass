@@ -1,14 +1,14 @@
 {
     "req": [
       {
-        "Type": "ALL",
         "UA": "../../../../../../../..//etc/passwd",
-        "Body": "../../../../../../../..//etc/passwd",
-        "ARGS": "../../../../../../../..//etc/passwd",
+        "Body": "param%RND%=../../../../../../../..//etc/passwd",
+        "ARGS": "param%RND%=../../../../../../../..//etc/passwd",
         "Cookie": "../../../../../../../..//etc/passwd",
         "URL": "",
         "Referer": "../../../../../../../..//etc/passwd",
-        "Headers": "../../../../../../../..//etc/passwd"
+        "Headers": "../../../../../../../..//etc/passwd",
+        "Blocked": true
       }
     ]
   }

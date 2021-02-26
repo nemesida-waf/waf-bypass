@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
       "Body": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
       "ARGS": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
       "Cookie": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
       "URL": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
       "Referer": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
-      "Headers": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>"
+      "Headers": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
+      "Blocked": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<object data=javascript:alert(1)>",
       "Body": "<object data=javascript:alert(1)>",
       "ARGS": "<object data=javascript:alert(1)>",
       "Cookie": "<object data=javascript:alert(1)>",
       "URL": "<object data=javascript:alert(1)>",
       "Referer": "<object data=javascript:alert(1)>",
-      "Headers": "<object data=javascript:alert(1)>"
+      "Headers": "<object data=javascript:alert(1)>",
+      "Blocked": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "Body",
       "UA": "",
-      "Body": "param=bG9naW49OytjYXQrL2V0Yy9wYXNzd2QmcGFzc3dvcmQ9RGZhd2lrZmlhd2dmaWF3a2dpd2FpZ2tvaXdn",
+      "Body": "param%RND%=bG9naW49OytjYXQrL2V0Yy9wYXNzd2QmcGFzc3dvcmQ9RGZhd2lrZmlhd2dmaWF3a2dpd2FpZ2tvaXdn",
       "ARGS": "",
       "Cookie": "",
       "URL": "",
       "Referer": "",
-      "Headers": ""
+      "Headers": "",
+      "Blocked": true
     }
   ]
 }

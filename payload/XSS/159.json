@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "Body": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "ARGS": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "Cookie": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "URL": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "Referer": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
-      "Headers": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>"
+      "Headers": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
+      "Blocked": true
     }
   ]
 }

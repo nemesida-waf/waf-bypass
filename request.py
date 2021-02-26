@@ -1,45 +1,47 @@
 #!/usr/bin/env python3
 
 import json
+import secrets
 
 
 class Request:
-    def __init__(self, path, payload):
-        self._path = path
-        with open(payload) as f:
-            data = json.load(f)['req'][0]
-
-        # Type
-        req_type = self.extract_value(data, 'Type')
-        self._req_type = None if (req_type == 'null' or not req_type) else req_type
+    def __init__(self, json_path):
+        self._path = json_path
+        with open(json_path) as opened_json:
+            json_data = json.load(opened_json)['req'][0]
 
         # URL
-        url = self.extract_value(data, 'URL')
-        self._url = None if (url == 'null' or not url) else url
+        url = self.extract_value(json_data, 'URL')
+        self._url = None if (url is None or not url) else url.replace("%RND%", secrets.token_urlsafe(12))
 
         # ARGS
-        args = self.extract_value(data, 'ARGS')
-        self._args = None if (args == 'null' or not args) else args
+        args = self.extract_value(json_data, 'ARGS')
+        self._args = None if (args is None or not args) else args.replace("%RND%", secrets.token_urlsafe(12))
 
         # Referer
-        ref = self.extract_value(data, 'Referer')
-        self._ref = None if (ref == 'null' or not ref) else ref
+        ref = self.extract_value(json_data, 'Referer')
+        self._ref = None if (ref is None or not ref) else ref.replace("%RND%", secrets.token_urlsafe(12))
 
         # UA
-        ua = self.extract_value(data, 'UA')
-        self._ua = None if (ua == 'null' or not ua) else ua
+        ua = self.extract_value(json_data, 'UA')
+        self._ua = None if (ua is None or not ua) else ua.replace("%RND%", secrets.token_urlsafe(12))
 
         # Body
-        body = self.extract_value(data, 'Body')
-        self._req_body = None if (body == 'null' or not body) else body
+        body = self.extract_value(json_data, 'Body')
+        self._req_body = None if (body is None or not body) else body.replace("%RND%", secrets.token_urlsafe(12))
 
         # Cookie
-        cookie = self.extract_value(data, 'Cookie')
-        self._cookie = None if (cookie == 'null' or not cookie) else cookie
+        cookie = self.extract_value(json_data, 'Cookie')
+        self._cookie = None if (cookie is None or not cookie) else cookie.replace("%RND%", secrets.token_urlsafe(12))
 
         # Header
-        req_header = self.extract_value(data, 'Headers')
-        self._req_header = None if (req_header == 'null' or not req_header) else req_header
+        req_header = self.extract_value(json_data, 'Headers')
+        self._req_header = None if (req_header is None or not req_header) \
+            else req_header.replace("%RND%", secrets.token_urlsafe(12))
+
+        # Blocked
+        blocked = self.extract_value(json_data, 'Blocked')
+        self._blocked = blocked
 
     @property
     def ref(self):
@@ -48,10 +50,6 @@ class Request:
     @property
     def path(self):
         return self._path
-
-    @property
-    def req_type(self):
-        return self._req_type
 
     @property
     def ua(self):
@@ -77,12 +75,16 @@ class Request:
     def url(self):
         return self._url
 
+    @property
+    def blocked(self):
+        return self._blocked
+
     @staticmethod
     def extract_value(json_data, key):
-        return json_data.get(key, 'null')
+        return json_data.get(key, None)
 
     def __str__(self):
-        resp = 'path: {}; req_type: {}; ua: {}; req_body: {}; args: {}; req_header: {}; req_cookie: {}'.format(
-                    self.path, self.req_type, self.ua, self.req_body, self.args, self.req_header, self.cookie
+        resp = 'path: {}; ua: {}; req_body: {}; args: {}; req_header: {}; req_cookie: {}'.format(
+                self._path, self._ua, self._req_body, self._args, self._req_header, self._cookie
                 )
         return resp

@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Type": "URL",
-      "URL": "\"><svg onload=alert(1)>?a=reader"
+      "URL": "\"><svg onload=alert(1)>?a=reader",
+      "Blocked": true
     }
   ]
 }

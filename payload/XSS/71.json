@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "<iframe src=javascript:alert(1)>",
       "Body": "<iframe src=javascript:alert(1)>",
       "ARGS": "<iframe src=javascript:alert(1)>",
       "URL": "<iframe src=javascript:alert(1)>",
       "Referer": "<iframe src=javascript:alert(1)>",
       "Cookie": "<iframe src=javascript:alert(1)>",
-      "Headers": "<iframe src=javascript:alert(1)>"
+      "Headers": "<iframe src=javascript:alert(1)>",
+      "Blocked": true
     }
   ]
 }

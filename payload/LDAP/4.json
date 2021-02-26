@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "UA": "",
-      "Body": "KikodWlkPSopKSh8KHVpZD0q",
-      "ARGS": "KikodWlkPSopKSh8KHVpZD0q",
+      "Body": "param%RND%=KikodWlkPSopKSh8KHVpZD0q",
+      "ARGS": "param%RND%=KikodWlkPSopKSh8KHVpZD0q",
       "Cookie": "",
       "URL": "",
       "Referer": "",
-      "Headers": ""
+      "Headers": "",
+      "Blocked": true
     }
   ]
 }
