@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "%28prompt%60%60%29",
+      "Body": "param%RND%=a%28prompt%60%60%29",
+      "ARGS": "param%RND%=a%28prompt%60%60%29",
+      "Cookie": "a%28prompt%60%60%29",
+      "URL": "",
+      "Referer": "",
+      "Headers": "a%28prompt%60%60%29",
+      "Blocked": true
+    }
+  ]
+}
