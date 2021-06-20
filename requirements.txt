@@ -6,7 +6,7 @@ idna==2.8
 idna-ssl==1.1.0
 multidict==4.7.4
 prettytable==0.7.2
-requests==2.22.0
+requests==2.25.1
 typing-extensions==3.7.4.1
 urllib3==1.26.5
 yarl==1.4.2
