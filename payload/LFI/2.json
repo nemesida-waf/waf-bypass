@@ -1,0 +1,14 @@
+{
+    "req": [
+      {
+        "UA": "..;a=1/..;a=1/..;a=1/..;a=1/",
+        "Body": "",
+        "ARGS": "",
+        "Cookie": "",
+        "URL": "",
+        "Referer": "",
+        "Headers": "",
+        "Blocked": true
+      }
+    ]
+  }
