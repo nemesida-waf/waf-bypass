@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "alert.call(%2520%2C%20%22XSS%22)%3B",
+      "Body": "param%RND%=alert.call(%2520%2C%20%22XSS%22)%3B",
+      "ARGS": "param%RND%=alert.call(%2520%2C%20%22XSS%22)%3B",
+      "Cookie": "alert.call(%2520%2C%20%22XSS%22)%3B",
+      "URL": "alert.call(%2520%2C%20%22XSS%22)%3B",
+      "Referer": "http://example.com/?alert.call(%2520%2C%20%22XSS%22)%3B",
+      "Headers": "alert.call(%2520%2C%20%22XSS%22)%3B",
+      "Blocked": true
+    }
+  ]
+}

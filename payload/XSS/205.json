@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "confir\x6d.\x63all(null%2525252C1)",
+      "Body": "param%RND%=confir\x6d.\x63all(null%2525252C1)",
+      "ARGS": "param%RND%=confir\x6d.\x63all(null%2525252C1)",
+      "Cookie": "confir\x6d.\x63all(null%2525252C1)",
+      "URL": "confir\x6d.\x63all(null%2525252C1)",
+      "Referer": "http://example.com/?confir\x6d.\x63all(null%2525252C1)",
+      "Headers": "confir\x6d.\x63all(null%2525252C1)",
+      "Blocked": true
+    }
+  ]
+}
