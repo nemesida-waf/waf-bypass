@@ -1,13 +1,13 @@
 {
   "req": [
     {
-      "UA": "confirm.call(null,1)",
-      "Body": "param%RND%=confirm.call(null,1)",
-      "ARGS": "param%RND%=confirm.call(null,1)",
-      "Cookie": "confirm.call(null,1)",
-      "URL": "confirm.call(null,1)",
-      "Referer": "http://example.com/?confirm.call(null,1)",
-      "Headers": "confirm.call(null,1)",
+      "UA": "prompt.call(null,1)",
+      "Body": "param%RND%=prompt.call(null,1)",
+      "ARGS": "param%RND%=prompt.call(null,1)",
+      "Cookie": "prompt.call(null,1)",
+      "URL": "prompt.call(null,1)",
+      "Referer": "http://example.com/?prompt.call(null,1)",
+      "Headers": "prompt.call(null,1)",
       "Blocked": true
     }
   ]

