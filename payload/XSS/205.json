@@ -1,13 +1,13 @@
 {
   "req": [
     {
-      "UA": "confir\x6d.\x63all(null%2525252C1)",
-      "Body": "param%RND%=confir\x6d.\x63all(null%2525252C1)",
-      "ARGS": "param%RND%=confir\x6d.\x63all(null%2525252C1)",
-      "Cookie": "confir\x6d.\x63all(null%2525252C1)",
-      "URL": "confir\x6d.\x63all(null%2525252C1)",
-      "Referer": "http://example.com/?confir\x6d.\x63all(null%2525252C1)",
-      "Headers": "confir\x6d.\x63all(null%2525252C1)",
+      "UA": "alert.apply(null, [1])",
+      "Body": "param%RND%=alert.apply(null, [1])",
+      "ARGS": "param%RND%=alert.apply(null, [1])",
+      "Cookie": "alert.apply(null, [1])",
+      "URL": "alert.apply(null, [1])",
+      "Referer": "http://example.com/?alert.apply(null, [1])",
+      "Headers": "alert.apply(null, [1])",
       "Blocked": true
     }
   ]
