@@ -16,12 +16,14 @@ from urllib.parse import urljoin
 
 
 class WAFBypass:
-    def __init__(self, host, proxy):
+    def __init__(self, host, proxy, sslverify):
         self.host = host
         if proxy == '':
             self.proxy = {'http': None, 'https': None}
         else:
             self.proxy = {'http': proxy, 'https': proxy}
+        if sslverify == True:
+            self.sslverify = True
         self.session = requests.Session()
         self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
@@ -105,44 +107,44 @@ class WAFBypass:
 
     def test_args(self, request_data):
         request = self.session.get(
-            self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout
+            self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
         )
         self.output('ARGS', request_data, request)
 
     def test_ua(self, request_data):
         request = self.session.get(
-            self.host, headers={'User-Agent': request_data.ua}, proxies=self.proxy, timeout=self.timeout
+            self.host, headers={'User-Agent': request_data.ua}, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
         )
         self.output('UA', request_data, request)
 
     def test_ref(self, request_data):
         request = self.session.get(
-            self.host, headers={'Referer': request_data.ref}, proxies=self.proxy, timeout=self.timeout
+            self.host, headers={'Referer': request_data.ref}, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
         )
         self.output('Referer', request_data, request)
 
     def test_body(self, request_data):
         request = self.session.post(
-            self.host, data=request_data.req_body, proxies=self.proxy, timeout=self.timeout
+            self.host, data=request_data.req_body, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
         )
         self.output('Body', request_data, request)
 
     def test_cookie(self, request_data):
         request = self.session.get(
             self.host, cookies={f"CustomCookie{secrets.token_urlsafe(12)}": request_data.cookie}, proxies=self.proxy,
-            timeout=self.timeout
+            timeout=self.timeout, verify=self.sslverify
         )
         self.output('Cookie', request_data, request)
 
     def test_header(self, request_data):
         request = self.session.get(
-            self.host, headers={f"CustomHeader": request_data.req_header}, proxies=self.proxy, timeout=self.timeout
+            self.host, headers={f"CustomHeader": request_data.req_header}, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
         )
         self.output('Header', request_data, request)
 
     def test_url(self, request_data):
         payload_url = urljoin(self.host, request_data.url)
         request = self.session.get(
-            payload_url, proxies=self.proxy, timeout=self.timeout
+            payload_url, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
         )
         self.output('URL', request_data, request)
