@@ -41,7 +41,7 @@ try:
         args[i] = args[i].lower()
 
     # options
-    args_options = ['host=', 'proxy=']
+    args_options = ['host=', 'proxy=', 'sslverify']
 
     # parsing args
     optlist, values = getopt.getopt(args, '', args_options)
@@ -53,6 +53,8 @@ try:
                 host = 'http://' + host
         elif k == '--proxy':
             proxy = str(v)
+        elif k == '--sslverify':
+            sslverify = False
 
 except Exception as e:
     print('An error occurred while processing the target/proxy: {}'.format(e))
@@ -77,7 +79,7 @@ print('# Proxy: ', proxy)
 print('##')
 print('\n')
 
-test = WAFBypass(host, proxy)
+test = WAFBypass(host, proxy, sslverify)
 
 try:
     test.start_test()
