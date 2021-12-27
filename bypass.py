@@ -19,9 +19,9 @@ class WAFBypass:
     def __init__(self, host, proxy):
         self.host = host
         if proxy == '':
-            self.proxy = {'http': proxy, 'https': proxy}
-        else:
             self.proxy = {'http': None, 'https': None}
+        else:
+            self.proxy = {'http': proxy, 'https': proxy}
         self.session = requests.Session()
         self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
