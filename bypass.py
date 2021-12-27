@@ -14,6 +14,9 @@ from os import walk
 from request import Request
 from urllib.parse import urljoin
 
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 class WAFBypass:
     def __init__(self, host, proxy, sslverify):
@@ -22,8 +25,8 @@ class WAFBypass:
             self.proxy = {'http': None, 'https': None}
         else:
             self.proxy = {'http': proxy, 'https': proxy}
-        if sslverify == True:
-            self.sslverify = True
+        if sslverify == False:
+            self.sslverify = False
         self.session = requests.Session()
         self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
