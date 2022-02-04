@@ -3,8 +3,8 @@
 import logging
 import os
 
-from colorama import Fore as f
-from colorama import Style as s
+from colorama import Fore
+from colorama import Style
 
 
 def read_all_log():
@@ -23,7 +23,7 @@ def read_all_log():
             value = log.split(" : ")[0]
             log_dict[key] = value
     except Exception as e:
-        print(f'{f.RED}Error: {e}. Using file: {log_file}{s.RESET_ALL}')
+        print(f'{Fore.RED}Error: {e}. More details in file {log_file}{Style.RESET_ALL}')
 
     return log_dict
 

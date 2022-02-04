@@ -5,17 +5,17 @@ import os
 import re
 import sys
 
-from urllib3 import connectionpool, poolmanager
-from bypass import WAFBypass
 from requests.exceptions import MissingSchema
+from bypass import WAFBypass
 from table_out import table_payload_zone, table_status_count_accuracy
+from urllib3 import connectionpool, poolmanager
 
 
 def patch_http_connection_pool(**constructor_kwargs):
     """
     This allows to override the default parameters of the
     HTTPConnectionPool constructor.
-    For example, to increase the poolsize to fix problems
+    For example, to increase the pool size to fix problems
     with "HttpConnectionPool is full, discarding connection"
     """
     class MyHTTPConnectionPool(connectionpool.HTTPConnectionPool):
@@ -24,15 +24,23 @@ def patch_http_connection_pool(**constructor_kwargs):
             super(MyHTTPConnectionPool, self).__init__(*args, **kwargs)
     poolmanager.pool_classes_by_scheme['http'] = MyHTTPConnectionPool
 
+    class MyHTTPSConnectionPool(connectionpool.HTTPSConnectionPool):
+        def __init__(self, *args, **kwargs):
+            kwargs.update(constructor_kwargs)
+            super(MyHTTPSConnectionPool, self).__init__(*args, **kwargs)
+    poolmanager.pool_classes_by_scheme['https'] = MyHTTPSConnectionPool
+
 
 # Increasing max pool size
-patch_http_connection_pool(maxsize=100)
+patch_http_connection_pool(maxsize=50)
 
+# Init args
 host = ''
 proxy = ''
 
 # Processing args from cmd
 try:
+
     # read args from input
     args = sys.argv[1:]
 
@@ -41,7 +49,7 @@ try:
         args[i] = args[i].lower()
 
     # options
-    args_options = ['host=', 'proxy=', 'sslverify']
+    args_options = ['host=', 'proxy=']
 
     # parsing args
     optlist, values = getopt.getopt(args, '', args_options)
@@ -53,8 +61,6 @@ try:
                 host = 'http://' + host
         elif k == '--proxy':
             proxy = str(v)
-        elif k == '--sslverify':
-            sslverify = False
 
 except Exception as e:
     print('An error occurred while processing the target/proxy: {}'.format(e))
@@ -79,7 +85,7 @@ print('# Proxy: ', proxy)
 print('##')
 print('\n')
 
-test = WAFBypass(host, proxy, sslverify)
+test = WAFBypass(host, proxy)
 
 try:
     test.start_test()

@@ -6,27 +6,24 @@ import secrets
 
 import requests
 
-from multiprocessing.dummy import Pool as ThreadPool
-from colorama import Fore as f
-from colorama import Style as s
+from colorama import Fore
+from colorama import Style
 from logger import log_all, log_errors
+from multiprocessing.dummy import Pool as ThreadPool
 from os import walk
 from request import Request
-from urllib.parse import urljoin
-
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from urllib.parse import urljoin
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 class WAFBypass:
-    def __init__(self, host, proxy, sslverify):
+    def __init__(self, host, proxy):
         self.host = host
-        if proxy == '':
+        if not proxy:
             self.proxy = {'http': None, 'https': None}
         else:
             self.proxy = {'http': proxy, 'https': proxy}
-        if sslverify == False:
-            self.sslverify = False
         self.session = requests.Session()
         self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
@@ -39,7 +36,8 @@ class WAFBypass:
         work_dir_payload = work_dir + '/payload'
 
         def test_request_data(json_path):
-            """Extracting data from .json, testing it, logging test results
+            """
+            Extracting data from .json, testing it, logging test results
             :type json_path: str
             """
             try:
@@ -60,7 +58,7 @@ class WAFBypass:
                     if request_data.url is not None:
                         self.test_url(request_data)
             except Exception as e:
-                print(f'{f.RED}Error: {e}. Using file: {relative_path}{s.RESET_ALL} {Request(json_path)}')
+                print(f'{Fore.RED}Error: {e}. More details in file {relative_path}{Style.RESET_ALL} {Request(json_path)}')
 
         # Append all .json paths in one list
         all_files_list = []
@@ -70,84 +68,87 @@ class WAFBypass:
                 all_files_list.append(dir_path + '/' + filename)
 
         # Create threads
-        NEEDED_NUMBER_OF_THREADS = 30
-        processes = NEEDED_NUMBER_OF_THREADS - 4
+        needed_number_of_threads = 30
+        processes = needed_number_of_threads - 4
         pool = ThreadPool(processes=processes)
         pool.map(test_request_data, all_files_list)
 
     @staticmethod
     def output(test_type, request_data, request):
+
         def base_str(colour, status_test):
-            print(f'{colour}{request_data.path} in {test_type}: {status_test}{s.RESET_ALL}')
+            print(f'{colour}{request_data.path} in {test_type}: {status_test}{Style.RESET_ALL}')
+
         if request_data.blocked is True or request_data.blocked is None:
             if request.status_code == 403:
                 log_status_test = 'PASSED'
                 dynamic_scan_status = 'PASSED'
                 log_all(request_data.path, test_type, log_status_test)
-                base_str(f.WHITE, dynamic_scan_status)
+                base_str(Fore.WHITE, dynamic_scan_status)
             else:
                 log_status_test = 'FAILED_FN'
                 dynamic_scan_status = 'FAILED'
                 log_all(request_data.path, test_type, log_status_test)
-                base_str(f.RED, dynamic_scan_status)
+                base_str(Fore.RED, dynamic_scan_status)
 
         elif request_data.blocked is False:
             if request.status_code != 403:
                 log_status_test = 'PASSED'
                 dynamic_scan_status = 'PASSED'
                 log_all(request_data.path, test_type, log_status_test)
-                base_str(f.WHITE, dynamic_scan_status)
+                base_str(Fore.WHITE, dynamic_scan_status)
             else:
                 log_status_test = 'FAILED_FP'
                 dynamic_scan_status = 'FAILED'
                 log_all(request_data.path, test_type, log_status_test)
-                base_str(f.RED, dynamic_scan_status)
+                base_str(Fore.RED, dynamic_scan_status)
+
         elif request_data.blocked is not True and request_data.blocked is not None and request_data.blocked is not False:
-            status_test = 'ERROR'
-            log_all(request_data.path, test_type, status_test)
-            log_errors(request_data, test_type, status_test)
-            print(f'{f.RED}Decoding JSON {request_data.path} has failed{s.RESET_ALL}')
+            log_status_test = 'ERROR'
+            log_all(request_data.path, test_type, log_status_test)
+            log_errors(request_data, test_type, log_status_test)
+            print(f'{Fore.RED}Decoding JSON {request_data.path} has failed{Style.RESET_ALL}')
 
     def test_args(self, request_data):
         request = self.session.get(
-            self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
+            self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout, verify=False
         )
         self.output('ARGS', request_data, request)
 
     def test_ua(self, request_data):
         request = self.session.get(
-            self.host, headers={'User-Agent': request_data.ua}, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
+            self.host, headers={'User-Agent': request_data.ua}, proxies=self.proxy, timeout=self.timeout, verify=False
         )
         self.output('UA', request_data, request)
 
     def test_ref(self, request_data):
         request = self.session.get(
-            self.host, headers={'Referer': request_data.ref}, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
+            self.host, headers={'Referer': request_data.ref}, proxies=self.proxy, timeout=self.timeout, verify=False
         )
         self.output('Referer', request_data, request)
 
     def test_body(self, request_data):
         request = self.session.post(
-            self.host, data=request_data.req_body, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
+            self.host, data=request_data.req_body, proxies=self.proxy, timeout=self.timeout, verify=False
         )
         self.output('Body', request_data, request)
 
     def test_cookie(self, request_data):
         request = self.session.get(
             self.host, cookies={f"CustomCookie{secrets.token_urlsafe(12)}": request_data.cookie}, proxies=self.proxy,
-            timeout=self.timeout, verify=self.sslverify
+            timeout=self.timeout, verify=False
         )
         self.output('Cookie', request_data, request)
 
     def test_header(self, request_data):
         request = self.session.get(
-            self.host, headers={f"CustomHeader": request_data.req_header}, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
+            self.host, headers={f"CustomHeader": request_data.req_header}, proxies=self.proxy, timeout=self.timeout, verify=False
         )
         self.output('Header', request_data, request)
 
     def test_url(self, request_data):
         payload_url = urljoin(self.host, request_data.url)
         request = self.session.get(
-            payload_url, proxies=self.proxy, timeout=self.timeout, verify=self.sslverify
+            payload_url, proxies=self.proxy, timeout=self.timeout, verify=False
         )
         self.output('URL', request_data, request)
