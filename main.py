@@ -42,17 +42,17 @@ proxy = ''
 try:
 
     # read args from input
-    args = sys.argv[1:]
+    launch_args = sys.argv[1:]
 
     # input to lowercase
-    for i in range(len(args)):
-        args[i] = args[i].lower()
+    for i in range(len(launch_args)):
+        launch_args[i] = launch_args[i].lower()
 
     # options
-    args_options = ['host=', 'proxy=']
+    launch_args_options = ['host=', 'proxy=']
 
     # parsing args
-    optlist, values = getopt.getopt(args, '', args_options)
+    optlist, values = getopt.getopt(launch_args, '', launch_args_options)
     for k, v in optlist:
         if k == '--host':
             host = str(v)
