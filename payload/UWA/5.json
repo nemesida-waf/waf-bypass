@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "",
+      "Body": "",
+      "ARGS": "",
+      "Cookie": "",
+      "URL": "/db.sql",
+      "Referer": "",
+      "Headers": "",
+      "Blocked": true
+    }
+  ]
+}

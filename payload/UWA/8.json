@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "",
+      "Body": "",
+      "ARGS": "",
+      "Cookie": "",
+      "URL": "/backup/db.gz",
+      "Referer": "",
+      "Headers": "",
+      "Blocked": true
+    }
+  ]
+}
