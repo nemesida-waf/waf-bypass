@@ -3,7 +3,7 @@
     {
       "Type": "ALL",
       "Body": "{\"username\": {\"$gt\":\"\"}, \"password\": {\"$gt\":\"\"}}",
-      "Headers": ""
+      "Blocked": true
     }
   ]
 }

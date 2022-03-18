@@ -4,7 +4,7 @@
       "Type": "ALL",
       "Body": "login%5B%24nin%5D%5B%5D=admin&login%5B%24nin%5D%5B%5D=test&pass%5B%24ne%5D=toto",
       "ARGS": "login%5B%24nin%5D%5B%5D=admin&login%5B%24nin%5D%5B%5D=test&pass%5B%24ne%5D=toto",
-      "Headers": ""
+      "Blocked": true
     }
   ]
 }

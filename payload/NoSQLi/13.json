@@ -3,7 +3,7 @@
     {
       "Type": "ALL",
       "Body": "{\"username\": {\"$ne\": null}, \"password\": {\"$ne\": null}}",
-      "Headers": ""
+      "Blocked": true
     }
   ]
 }

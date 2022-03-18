@@ -3,7 +3,7 @@
     {
       "Type": "ALL",
       "Body": "{\"username\": {\"$eq\": \"admin\"}, \"password\": {\"$regex\": \"^md\" }}",
-      "Headers": ""
+      "Blocked": true
     }
   ]
 }
