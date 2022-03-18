@@ -1,12 +1,9 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "login%RND%=%7B%7B'someString'.toUpperCase()%7D%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "ARGS": "login%RND%=%7B%7B'someString'.toUpperCase()%7D%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "Cookie": "%7B%7B'someString'.toUpperCase()%7D%7D",
-      "URL": "",
-      "Referer": "",
       "Headers": "%7B%7B'someString'.toUpperCase()%7D%7D",
       "Blocked": true
     }

@@ -1,13 +1,7 @@
 {
   "req": [
     {
-      "UA": "",
-      "Body": "",
-      "ARGS": "",
-      "Cookie": "",
       "URL": "/.gitconfig",
-      "Referer": "",
-      "Headers": "",
       "Blocked": true
     }
   ]

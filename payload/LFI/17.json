@@ -1,12 +1,10 @@
 {
     "req": [
       {
-        "UA": "",
         "Body": "param%RND%=QzovV0lORE9XUy9waHAuaW5p",
         "ARGS": "param%RND%=QzovV0lORE9XUy9waHAuaW5p",
         "Cookie": "QzovV0lORE9XUy9waHAuaW5p",
         "URL": "QzovV0lORE9XUy9waHAuaW5p",
-        "Referer": "",
         "Headers": "QzovV0lORE9XUy9waHAuaW5p",
         "Blocked": true
       }

@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "\"onmouseover=alert(1)//",
       "ARGS": "\"onmouseover=alert(1)//",
       "Cookie": "\"onmouseover=alert(1)//",

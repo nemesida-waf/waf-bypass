@@ -5,7 +5,6 @@
       "Body": "param%RND%=${jndi:dns://example.com/}",
       "ARGS": "${jndi:dns://example.com/}",
       "Cookie": "${jndi:dns://example.com/}",
-      "URL": "",
       "Referer": "${jndi:dns://example.com/}",
       "Headers": "${jndi:dns://example.com/}",
       "Blocked": true

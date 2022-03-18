@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "param%RND%=cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
       "ARGS": "param%RND%=cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
       "Cookie": "cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",

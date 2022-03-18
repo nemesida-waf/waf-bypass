@@ -2,12 +2,7 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "",
       "Body": "{\"type\": \"user\",\"name\": \"oops\", \"roles\": [\"_admin\"], \"roles\": [], \"password\":\"apple\"}",
-      "ARGS": "",
-      "Cookie": "",
-      "URL": "",
-      "Referer": "",
       "Headers": ""
     }
   ]

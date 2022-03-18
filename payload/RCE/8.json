@@ -1,13 +1,7 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "param%RND%=I%40kdo9ijegieokf%2Ckinkokdw0&login=admin&_token=ifwkaw-9ri0ofigjo9fgkiwn9df2o0kf0w9tgk30&parm2=fdna9rkif2ndfkigfji89rkfj29rk0hg3j98yh&file=login.php&password=fawikfiawgfiawkgiwaigkoiwg&ls=%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h&list=29dkfaigmkcokwldf3ktgm&id=42243252",
-      "ARGS": "",
-      "Cookie": "",
-      "URL": "",
-      "Referer": "",
-      "Headers": "",
       "Blocked": true
     }
   ]

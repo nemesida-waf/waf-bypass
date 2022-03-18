@@ -5,8 +5,6 @@
       "Body": "param%RND%=a%22%252501onclick%3Dprompt%281%29%3E",
       "ARGS": "param%RND%=a%22%252501onclick%3Dprompt%281%29%3E",
       "Cookie": "a%22%252501onclick%3Dprompt%281%29%3E",
-      "URL": "",
-      "Referer": "",
       "Headers": "a%22%252501onclick%3Dprompt%281%29%3E",
       "Blocked": true
     }

@@ -1,13 +1,8 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "param%RND%=username%5B%24ne%5D=1&password%5B%24ne%5D=1",
       "ARGS": "param%RND%=username%5B%24ne%5D=1&password%5B%24ne%5D=1",
-      "Cookie": "",
-      "URL": "",
-      "Referer": "",
-      "Headers": "",
       "Blocked": true
     }
   ]

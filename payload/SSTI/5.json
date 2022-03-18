@@ -1,12 +1,9 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "login%RND%=%40(1%2B2)&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "ARGS": "login%RND%=%40(1%2B2)&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "Cookie": "%40(1%2B2)",
-      "URL": "",
-      "Referer": "",
       "Headers": "%40(1%2B2)",
       "Blocked": true
     }

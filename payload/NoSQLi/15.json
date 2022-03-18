@@ -2,12 +2,8 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "",
       "Body": "login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
       "ARGS": "login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
-      "Cookie": "",
-      "URL": "",
-      "Referer": "",
       "Headers": ""
     }
   ]

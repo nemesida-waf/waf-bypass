@@ -1,14 +1,8 @@
 {
-    "req": [
-      {
-        "UA": "",
-        "Body": "I cannot print the file. What should I do?",
-        "ARGS": "",
-        "Cookie": "",
-        "URL": "",
-        "Referer": "",
-        "Headers": "",
-        "Blocked": false
-      }
-    ]
-  }
+  "req": [
+    {
+      "Body": "I cannot print the file. What should I do?",
+      "Blocked": false
+    }
+  ]
+}

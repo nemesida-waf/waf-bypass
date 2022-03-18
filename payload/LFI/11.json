@@ -5,7 +5,6 @@
         "Body": "param%RND%=../../../../../../../../boot.ini",
         "ARGS": "param%RND%=../../../../../../../../boot.ini",
         "Cookie": "../../../../../../../../boot.ini",
-        "URL": "",
         "Referer": "../../../../../../../../boot.ini",
         "Headers": "../../../../../../../../boot.ini",
         "Blocked": true

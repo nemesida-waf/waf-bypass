@@ -1,12 +1,10 @@
 {
     "req": [
       {
-        "UA": "",
         "Body": "param%RND%=cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
         "ARGS": "param%RND%=cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
         "Cookie": "cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
         "URL": "cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
-        "Referer": "",
         "Headers": "cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
         "Blocked": true
       }

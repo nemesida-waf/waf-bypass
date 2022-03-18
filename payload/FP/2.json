@@ -1,14 +1,9 @@
 {
-    "req": [
-      {
-        "UA": "",
-        "Body": "select_items=yes",
-        "ARGS": "select_items=yes",
-        "Cookie": "",
-        "URL": "",
-        "Referer": "",
-        "Headers": "",
-        "Blocked": false
-      }
-    ]
-  }
+  "req": [
+    {
+      "Body": "select_items=yes",
+      "ARGS": "select_items=yes",
+      "Blocked": false
+    }
+  ]
+}

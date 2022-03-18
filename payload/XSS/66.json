@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "'>alert(1)</script><script/1='",
       "ARGS": "'>alert(1)</script><script/1='",
       "Cookie": "'>alert(1)</script><script/1='",

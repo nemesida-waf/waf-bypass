@@ -1,12 +1,10 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "param%RND%=JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
       "ARGS": "param%RND%=JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
       "Cookie": "JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
       "URL": "JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
-      "Referer": "",
       "Headers": "JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
       "Blocked": true
     }

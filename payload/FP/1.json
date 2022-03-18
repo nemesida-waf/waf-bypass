@@ -1,14 +1,8 @@
 {
-    "req": [
-      {
-        "UA": "",
-        "Body": "",
-        "ARGS": "",
-        "Cookie": "",
-        "URL": "/selector.png",
-        "Referer": "",
-        "Headers": "",
-        "Blocked": false
-      }
-    ]
-  }
+  "req": [
+    {
+      "URL": "/selector.png",
+      "Blocked": false
+    }
+  ]
+}

@@ -5,8 +5,6 @@
       "Body": "param%RND%=a%27ale%27%2B%27rt%27%28%29",
       "ARGS": "param%RND%=a%27ale%27%2B%27rt%27%28%29",
       "Cookie": "%27ale%27%2B%27rt%27%28%29",
-      "URL": "",
-      "Referer": "",
       "Headers": "%27ale%27%2B%27rt%27%28%29",
       "Blocked": true
     }

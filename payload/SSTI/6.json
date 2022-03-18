@@ -1,12 +1,9 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "login%RND%=%3C%25=%20File.open('%2Fetc%2Fpasswd').read%20%25%3E&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "ARGS": "login%RND%=%3C%25=%20File.open('%2Fetc%2Fpasswd').read%20%25%3E&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "Cookie": "%3C%25=%20File.open('%2Fetc%2Fpasswd').read%20%25%3E",
-      "URL": "",
-      "Referer": "",
       "Headers": "%3C%25=%20File.open('%2Fetc%2Fpasswd').read%20%25%3E",
       "Blocked": true
     }

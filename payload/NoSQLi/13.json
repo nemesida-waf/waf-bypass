@@ -2,12 +2,7 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "",
       "Body": "{\"username\": {\"$ne\": null}, \"password\": {\"$ne\": null}}",
-      "ARGS": "",
-      "Cookie": "",
-      "URL": "",
-      "Referer": "",
       "Headers": ""
     }
   ]

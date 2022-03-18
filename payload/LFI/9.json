@@ -5,7 +5,6 @@
         "Body": "param%RND%=C:/WINDOWS/php.ini",
         "ARGS": "param%RND%=C:/WINDOWS/php.ini",
         "Cookie": "C:/WINDOWS/php.ini",
-        "URL": "",
         "Referer": "C:/WINDOWS/php.ini",
         "Headers": "C:/WINDOWS/php.ini",
         "Blocked": true

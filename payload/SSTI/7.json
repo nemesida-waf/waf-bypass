@@ -1,13 +1,9 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "login%RND%=%7Bphp%7Decho%20%60id%60%3B%7B%2Fphp%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "ARGS": "login%RND%=%7Bphp%7Decho%20%60id%60%3B%7B%2Fphp%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "Cookie": "%7Bphp%7Decho%20%60id%60%3B%7B%2Fphp%7D",
-      "URL": "",
-      "Referer": "",
-      "Headers": "",
       "Blocked": true
     }
   ]

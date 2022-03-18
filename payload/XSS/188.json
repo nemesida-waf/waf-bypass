@@ -5,8 +5,6 @@
       "Body": "param%RND%=%5B1%5D.map%28confirm%29",
       "ARGS": "param%RND%=%5B1%5D.map%28confirm%29",
       "Cookie": "%5B1%5D.map%28confirm%29",
-      "URL": "",
-      "Referer": "",
       "Headers": "%5B1%5D.map%28confirm%29",
       "Blocked": true
     }

@@ -2,12 +2,8 @@
   "req": [
     {
       "Type": "ALL",
-      "UA": "",
       "Body": "username%5B%24ne%5D=toto&password%5B%24ne%5D=toto",
       "ARGS": "username%5B%24ne%5D=toto&password%5B%24ne%5D=toto",
-      "Cookie": "",
-      "URL": "",
-      "Referer": "",
       "Headers": ""
     }
   ]

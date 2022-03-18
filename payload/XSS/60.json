@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "\"onfocus=alert(1)//",
       "ARGS": "\"onfocus=alert(1)//",
       "Cookie": "\"onfocus=alert(1)//",

@@ -1,12 +1,10 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "param%RND%=dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
       "ARGS": "param%RND%=dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
       "Cookie": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
       "URL": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
-      "Referer": "",
       "Headers": "dXNlcm5hbWUlNUIlMjRuZSU1RCUzRDElMjZwYXNzd29yZCU1QiUyNG5lJTVEJTNEMQ==",
       "Blocked": true
     }

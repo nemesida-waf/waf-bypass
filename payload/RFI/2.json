@@ -1,13 +1,7 @@
 {
     "req": [
       {
-        "UA": "",
         "Body": "cGFyYW0xPWFjdGlvbiZwYXJhbTI9cGhwOi8vZmlsdGVyL3JlYWQ9c3RyaW5nLnJvdDEzL3Jlc291cmNl",
-        "ARGS": "",
-        "Cookie": "",
-        "URL": "",
-        "Referer": "",
-        "Headers": "",
         "Blocked": true
       }
     ]

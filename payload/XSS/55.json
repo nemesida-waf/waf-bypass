@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "UA": "",
       "Body": "</pre><svg onload=alert(1)>",
       "ARGS": "</pre><svg onload=alert(1)>",
       "Cookie": "</pre><svg onload=alert(1)>",
