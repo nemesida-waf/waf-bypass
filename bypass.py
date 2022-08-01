@@ -18,12 +18,14 @@ from urllib.parse import urljoin
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 class WAFBypass:
-    def __init__(self, host, proxy):
+    def __init__(self, host, proxy, blockStatuses, headers):
         self.host = host
         if not proxy:
             self.proxy = {'http': None, 'https': None}
         else:
             self.proxy = {'http': proxy, 'https': proxy}
+        self.blockStatuses = blockStatuses
+        self.headers = headers
         self.session = requests.Session()
         self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
@@ -74,13 +76,13 @@ class WAFBypass:
         pool.map(test_request_data, all_files_list)
 
     @staticmethod
-    def output(test_type, request_data, request):
+    def output(test_type, request_data, request, blockStatuses):
 
         def base_str(colour, status_test):
             print(f'{colour}{request_data.path} in {test_type}: {status_test}{Style.RESET_ALL}')
 
         if request_data.blocked is True or request_data.blocked is None:
-            if request.status_code == 403:
+            if request.status_code in blockStatuses:
                 log_status_test = 'PASSED'
                 dynamic_scan_status = 'PASSED'
                 log_all(request_data.path, test_type, log_status_test)
@@ -92,7 +94,7 @@ class WAFBypass:
                 base_str(Fore.RED, dynamic_scan_status)
 
         elif request_data.blocked is False:
-            if request.status_code != 403:
+            if not request.status_code in blockStatuses:
                 log_status_test = 'PASSED'
                 dynamic_scan_status = 'PASSED'
                 log_all(request_data.path, test_type, log_status_test)
@@ -111,44 +113,44 @@ class WAFBypass:
 
     def test_args(self, request_data):
         request = self.session.get(
-            self.host, params=request_data.args, proxies=self.proxy, timeout=self.timeout, verify=False
+            self.host, headers=self.headers, params=request_data.args, proxies=self.proxy, timeout=self.timeout, verify=False
         )
-        self.output('ARGS', request_data, request)
+        self.output('ARGS', request_data, request, self.blockStatuses)
 
     def test_ua(self, request_data):
         request = self.session.get(
-            self.host, headers={'User-Agent': request_data.ua}, proxies=self.proxy, timeout=self.timeout, verify=False
+            self.host, headers={'User-Agent': request_data.ua, **self.headers}, proxies=self.proxy, timeout=self.timeout, verify=False
         )
-        self.output('UA', request_data, request)
+        self.output('UA', request_data, request, self.blockStatuses)
 
     def test_ref(self, request_data):
         request = self.session.get(
-            self.host, headers={'Referer': request_data.ref}, proxies=self.proxy, timeout=self.timeout, verify=False
+            self.host, headers={'Referer': request_data.ref, **self.headers}, proxies=self.proxy, timeout=self.timeout, verify=False
         )
-        self.output('Referer', request_data, request)
+        self.output('Referer', request_data, request, self.blockStatuses)
 
     def test_body(self, request_data):
         request = self.session.post(
-            self.host, data=request_data.req_body, proxies=self.proxy, timeout=self.timeout, verify=False
+            self.host, headers=self.headers, data=request_data.req_body, proxies=self.proxy, timeout=self.timeout, verify=False
         )
-        self.output('Body', request_data, request)
+        self.output('Body', request_data, request, self.blockStatuses)
 
     def test_cookie(self, request_data):
         request = self.session.get(
-            self.host, cookies={f"CustomCookie{secrets.token_urlsafe(12)}": request_data.cookie}, proxies=self.proxy,
+            self.host, headers=self.headers, cookies={f"CustomCookie{secrets.token_urlsafe(12)}": request_data.cookie}, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('Cookie', request_data, request)
+        self.output('Cookie', request_data, request, self.blockStatuses)
 
     def test_header(self, request_data):
         request = self.session.get(
-            self.host, headers={f"CustomHeader": request_data.req_header}, proxies=self.proxy, timeout=self.timeout, verify=False
+            self.host, headers={f"CustomHeader": request_data.req_header, **self.headers}, proxies=self.proxy, timeout=self.timeout, verify=False
         )
-        self.output('Header', request_data, request)
+        self.output('Header', request_data, request, self.blockStatuses)
 
     def test_url(self, request_data):
         payload_url = urljoin(self.host, request_data.url)
         request = self.session.get(
-            payload_url, proxies=self.proxy, timeout=self.timeout, verify=False
+            payload_url, headers=self.headers, proxies=self.proxy, timeout=self.timeout, verify=False
         )
-        self.output('URL', request_data, request)
+        self.output('URL', request_data, request, self.blockStatuses)
