@@ -41,5 +41,11 @@ or
 # python3 /opt/waf-bypass/main.py --host='example.com'
 or
 # python3 /opt/waf-bypass/main.py --host='example.com' --proxy='http://proxy.example.com:3128'
-
 </pre>
+
+### Options
+The --proxy option specifies where to connect to instead of the host.
+ 
+The --block option specifies an HTTP status code expected when the WAF blocks.  Default if none specified is 403.  May be repeated.
+
+The --header option specifies an HTTP header to send with all requests (e.g. for authentication).  May be repeated.
