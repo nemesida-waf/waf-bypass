@@ -70,7 +70,7 @@ class WAFBypass:
                 all_files_list.append(dir_path + '/' + filename)
 
         # Create threads
-        needed_number_of_threads = 30
+        needed_number_of_threads = 5
         processes = needed_number_of_threads - 4
         pool = ThreadPool(processes=processes)
         pool.map(test_request_data, all_files_list)
