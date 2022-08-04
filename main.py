@@ -48,10 +48,6 @@ try:
     # read args from input
     launch_args = sys.argv[1:]
 
-    # input to lowercase
-    for i in range(len(launch_args)):
-        launch_args[i] = launch_args[i].lower()
-
     # options
     launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block=']
 
@@ -64,12 +60,12 @@ try:
             help()
             sys.exit()
         if k == '--host':
-            host = str(v)
+            host = str(v).lower()
             # check host's schema
             if not re.search(r'^http[s]?://', host):
                 host = 'http://' + host
         elif k == '--proxy':
-            proxy = str(v)
+            proxy = str(v).lower()
         elif k == '--header':
             hname, hval = str(v).split(':')
             hname = hname.strip()
