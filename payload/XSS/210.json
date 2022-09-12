@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "",
+      "Body": "param%RND%=Array.prototype.sort.call%60%24%7Balert%7D1337%60",
+      "ARGS": "param%RND%=Array.prototype.sort.call%60%24%7Balert%7D1337%60",
+      "Cookie": "Array.prototype.sort.call%60%24%7Balert%7D1337%60",
+      "URL": "",
+      "Referer": "",
+      "Headers": "Array.prototype.sort.call%60%24%7Balert%7D1337%60",
+      "Blocked": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "",
+      "Body": "param%RND%=%5B%5D.sort.call%60%24%7Balert%7D1337%24%7B0%7D%24%7B1%7D%60",
+      "ARGS": "param%RND%=%5B%5D.sort.call%60%24%7Balert%7D1337%24%7B0%7D%24%7B1%7D%60",
+      "Cookie": "%5B%5D.sort.call%60%24%7Balert%7D1337%24%7B0%7D%24%7B1%7D%60",
+      "URL": "",
+      "Referer": "",
+      "Headers": "%5B%5D.sort.call%60%24%7Balert%7D1337%24%7B0%7D%24%7B1%7D%60",
+      "Blocked": true
+    }
+  ]
+}

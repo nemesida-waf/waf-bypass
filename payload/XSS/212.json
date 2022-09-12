@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "",
+      "Body": "param%RND%=Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
+      "ARGS": "param%RND%=Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
+      "Cookie": "Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
+      "URL": "",
+      "Referer": "",
+      "Headers": "Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
+      "Blocked": true
+    }
+  ]
+}
