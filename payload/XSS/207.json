@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "",
+      "Body": "param%RND%=<A href=%22javascrip%09t&colon;eval.apply`${[jj.className+`(23)`]}`%22 id=jj class=alert>",
+      "ARGS": "param%RND%=<A href=%22javascrip%09t&colon;eval.apply`${[jj.className+`(23)`]}`%22 id=jj class=alert>",
+      "Cookie": "",
+      "URL": "",
+      "Referer": "",
+      "Headers": "",
+      "Blocked": true
+    }
+  ]
+}
