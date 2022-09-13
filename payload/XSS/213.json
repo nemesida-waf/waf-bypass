@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "%22%3E%3Cscript%3Eeval%28new%20URL%28document.location.href%2B%22%23javascript%3Aconfirm%2869%29%22%29.hash.slice%281%29%29%3C%2Fscript%3E",
+      "Body": "%22%3E%3Cscript%3Eeval%28new%20URL%28document.location.href%2B%22%23javascript%3Aconfirm%2869%29%22%29.hash.slice%281%29%29%3C%2Fscript%3E",
+      "ARGS": "%22%3E%3Cscript%3Eeval%28new%20URL%28document.location.href%2B%22%23javascript%3Aconfirm%2869%29%22%29.hash.slice%281%29%29%3C%2Fscript%3E",
+      "Cookie": "%22%3E%3Cscript%3Eeval%28new%20URL%28document.location.href%2B%22%23javascript%3Aconfirm%2869%29%22%29.hash.slice%281%29%29%3C%2Fscript%3E",
+      "URL": "/%22%3E%3Cscript%3Eeval%28new%20URL%28document.location.href%2B%22%23javascript%3Aconfirm%2869%29%22%29.hash.slice%281%29%29%3C%2Fscript%3E",
+      "Referer": "%22%3E%3Cscript%3Eeval%28new%20URL%28document.location.href%2B%22%23javascript%3Aconfirm%2869%29%22%29.hash.slice%281%29%29%3C%2Fscript%3E",
+      "Headers": "%22%3E%3Cscript%3Eeval%28new%20URL%28document.location.href%2B%22%23javascript%3Aconfirm%2869%29%22%29.hash.slice%281%29%29%3C%2Fscript%3E",
+      "Blocked": true
+    }
+  ]
+}
