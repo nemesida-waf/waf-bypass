@@ -12,7 +12,7 @@ from logger import log_all, log_errors
 from multiprocessing.dummy import Pool as ThreadPool
 from os import walk
 from request import Request
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from urllib3.exceptions import InsecureRequestWarning
 from urllib.parse import urljoin
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
