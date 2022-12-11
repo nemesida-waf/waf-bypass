@@ -30,10 +30,12 @@ def patch_http_connection_pool(**constructor_kwargs):
             super(MyHTTPSConnectionPool, self).__init__(*args, **kwargs)
     poolmanager.pool_classes_by_scheme['https'] = MyHTTPSConnectionPool
 
-def help():
+
+def get_help():
     print("Syntax: main.py --host=example.com:80 --proxy='http://proxy.example.com:3128'")
     print("To add an HTTP header to all requests: --header='foo: bar' [--header=...]")
     print("To set HTTP status codes as meaning 'waf blocked': --block=403 [--block=...].  If none given, default is 403.")
+
 
 # Increasing max pool size
 patch_http_connection_pool(maxsize=50)
@@ -53,16 +55,16 @@ try:
 
     # parsing args
     headers = {}
-    blockStatuses = {}
+    block_status = {}
     optlist, values = getopt.getopt(launch_args, '', launch_args_options)
     for k, v in optlist:
         if k == '--help':
-            help()
+            get_help()
             sys.exit()
         if k == '--host':
             host = str(v).lower()
             # check host's schema
-            if not re.search(r'^http[s]?://', host):
+            if not re.search(r'^https?://', host):
                 host = 'http://' + host
         elif k == '--proxy':
             proxy = str(v).lower()
@@ -72,9 +74,9 @@ try:
             hval = hval.strip()
             headers[hname] = hval
         elif k == '--block':
-            blockStatuses[int(v)] = True
-    if len(blockStatuses) == 0:
-        blockStatuses[403] = True
+            block_status[int(v)] = True
+    if len(block_status) == 0:
+        block_status[403] = True
 
 except Exception as e:
     print('An error occurred while processing the target/proxy: {}'.format(e))
@@ -83,7 +85,7 @@ except Exception as e:
 # check host
 if not host:
     print("ERROR: the host is not set.")
-    help()
+    get_help()
     sys.exit()
 
 # create log. dir
@@ -97,14 +99,14 @@ print('\n')
 print('##')
 print('# Target: ', host)
 print('# Proxy: ', proxy)
-if list(blockStatuses.keys())[0] != 403:
-    print('# Block: ', list(blockStatuses.keys())[0])
+if list(block_status.keys())[0] != 403:
+    print('# Block: ', list(block_status.keys())[0])
 if len(headers) > 0:
     print('# Headers: ', headers)
 print('##')
 print('\n')
 
-test = WAFBypass(host, proxy, blockStatuses, headers)
+test = WAFBypass(host, proxy, block_status, headers)
 
 try:
     test.start_test()
