@@ -27,21 +27,16 @@ Run with the command:
 
 <pre>
 # docker run nemesida/waf-bypass --host='example.com'
-or
-# docker run nemesida/waf-bypass --host='example.com' --proxy='http://proxy.example.com:3128'
 </pre>
 
 ### Run source code from GitHub
 <pre>
 # git clone https://github.com/nemesida-waf/waf_bypass.git /opt/waf-bypass/
 # python3 -m pip install -r /opt/waf-bypass/requirements.txt
-
-# python3 /opt/waf-bypass/main.py --host='example.com'
-or
-# python3 /opt/waf-bypass/main.py --host='example.com' --proxy='http://proxy.example.com:3128' --block='222' --header 'Authorization: Basic YWRtaW46YWRtaW4='
+# python3 /opt/waf-bypass/main.py --host='example.com'  
 </pre>
 
 ### Options
-- the '--proxy' option specifies where to connect to instead of the host.
-- the '--block' option specifies an HTTP status code expected when the WAF blocks.  Default if none specified is 403.  May be repeated.
-- the '--header' option specifies an HTTP header to send with all requests (e.g. for authentication).  May be repeated.
+- the <code>'--proxy'</code> option (<code>--proxy='http://proxy.example.com:3128'</code>) specifies where to connect to instead of the host.
+- the <code>'--block'</code> option (<code>--block='222'</code>) specifies an HTTP status code expected when the WAF blocks. Default if none specified is <code>403</code>.  Can be used more than 1 time.
+- the <code>'--header'</code> option (<code>--header 'Authorization: Basic YWRtaW46YWRtaW4='</code>) specifies an HTTP header to send with all requests (e.g. for authentication).  Can be used more than 1 time.
