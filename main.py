@@ -97,7 +97,8 @@ print('\n')
 print('##')
 print('# Target: ', host)
 print('# Proxy: ', proxy)
-print('# Block: ', blockStatuses)
+if list(blockStatuses.keys())[0] != 403:
+    print('# Block: ', list(blockStatuses.keys())[0])
 if len(headers) > 0:
     print('# Headers: ', headers)
 print('##')
