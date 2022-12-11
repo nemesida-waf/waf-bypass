@@ -1,8 +1,6 @@
 # WAF Bypass Tool
 
-WAF Bypass by Nemesida WAF team ([nemesida-waf.com](https://nemesida-waf.com)) and powered by community is an open source tool (Python3) to check any WAF for the number of False Positives/False Negative using predefined payloads (if desired, the set of payloads can be changed). Turn off ban mode before use.
-
-A script developed for internal needs, including for testing Nemesis WAF and Nemesida WAF Free, but you can use it to test any WAF.
+WAF Bypass is developed by Nemesida WAF team ([nemesida-waf.com](https://nemesida-waf.com)) with the participation of community. WAF Bypass is an open source tool (Python3) to check any WAF for the number of False Positives/False Negative using predefined payloads (if desired, the set of payloads can be changed).
 
 ### When using, do not violate the law. We are not responsible for the use of the program.
 
