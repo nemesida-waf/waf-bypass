@@ -97,12 +97,19 @@ except OSError:
 
 print('\n')
 print('##')
-print('# Target: ', host)
-print('# Proxy: ', proxy)
-if list(block_status.keys())[0] != 403:
-    print('# Block: ', list(block_status.keys())[0])
+print('# Target: {}'.format(host))
+
+if len(proxy):
+    print('# Proxy: {}'.format(proxy))
+else:
+    print('# Proxy: not used')
+
+print('# Block status code: {}'.format(list(block_status.keys())[0]))
+
+
 if len(headers) > 0:
-    print('# Headers: ', headers)
+    print('# Headers: {}'.format(headers))
+
 print('##')
 print('\n')
 

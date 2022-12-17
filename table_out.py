@@ -55,9 +55,9 @@ def table_payload_zone():
 
     """Payload-Zone table elements"""
     crossbar = '+' + 51 * '-' + '+' + 46 * '-' + '+'
-    table_header_1 = crossbar + '\n|' + 22 * ' ' + f'{white_br}Payload{reset}' + 22 * ' ' + '|' \
-                                     + 21 * ' ' + f'{white_br}Zone{reset}' + 21 * ' ' + '|\n' + \
-                     crossbar + '\n|' + 44 * ' ' + 'False Positive' + 40 * ' ' + '|' + '\n' + crossbar
+    table_header_1 = crossbar + '\n|' + 22 * ' ' + f'{white_br}Payload{reset}' + 22 * ' ' + '|' + \
+        21 * ' ' + f'{white_br}Zone{reset}' + 21 * ' ' + '|\n' + \
+        crossbar + '\n|' + 44 * ' ' + 'False Positive' + 40 * ' ' + '|' + '\n' + crossbar
     table_header_2 = crossbar + '\n|' + 44 * ' ' + 'False Negative' + 40 * ' ' + '|' + '\n' + crossbar
 
     """Payload-Zone table print"""

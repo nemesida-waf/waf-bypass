@@ -38,5 +38,5 @@ Run with the command:
 
 ### Options
 - the <code>'--proxy'</code> option (<code>--proxy='http://proxy.example.com:3128'</code>) specifies where to connect to instead of the host.
-- the <code>'--block'</code> option (<code>--block='222'</code>) specifies an HTTP status code expected when the WAF blocks. Default if none specified is <code>403</code>.  Can be used more than 1 time.
-- the <code>'--header'</code> option (<code>--header 'Authorization: Basic YWRtaW46YWRtaW4='</code>) specifies an HTTP header to send with all requests (e.g. for authentication).  Can be used more than 1 time.
+- the <code>'--block'</code> option (<code>--block='222'</code>) specifies an HTTP status code expected when the WAF blocks. Default if none specified is <code>403</code>. Can be used more than 1 time.
+- the <code>'--header'</code> option (<code>--header 'Authorization: Basic YWRtaW46YWRtaW4='</code>) specifies an HTTP header to send with all requests (e.g. for authentication). Can be used more than 1 time.
