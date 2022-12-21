@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "Body": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "ARGS": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "Cookie": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "URL": "/'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "Referer": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "Headers": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "Blocked": true
+    }
+  ]
+}
