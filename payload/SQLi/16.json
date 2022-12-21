@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "ARGS": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login2",
+      "Body": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "Headers": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "URL": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "Referer": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "Cookie": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "Blocked": true
+    }
+  ]
+}

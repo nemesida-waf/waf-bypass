@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "%3Cdiv%20id%3D%E2%80%9Dexample%E2%80%9D%20onclick%3D%E2%80%9Drunjs%28%E2%80%98userinput%E2%80%99%29%3Balert%28%E2%80%98test%E2%80%99%29%3B%E2%80%9D%3E",
+      "Body": "%3Cdiv%20id%3D%E2%80%9Dexample%E2%80%9D%20onclick%3D%E2%80%9Drunjs%28%E2%80%98userinput%E2%80%99%29%3Balert%28%E2%80%98test%E2%80%99%29%3B%E2%80%9D%3E",
+      "ARGS": "%3Cdiv%20id%3D%E2%80%9Dexample%E2%80%9D%20onclick%3D%E2%80%9Drunjs%28%E2%80%98userinput%E2%80%99%29%3Balert%28%E2%80%98test%E2%80%99%29%3B%E2%80%9D%3E",
+      "Cookie": "%3Cdiv%20id%3D%E2%80%9Dexample%E2%80%9D%20onclick%3D%E2%80%9Drunjs%28%E2%80%98userinput%E2%80%99%29%3Balert%28%E2%80%98test%E2%80%99%29%3B%E2%80%9D%3E",
+      "URL": "/%3Cdiv%20id%3D%E2%80%9Dexample%E2%80%9D%20onclick%3D%E2%80%9Drunjs%28%E2%80%98userinput%E2%80%99%29%3Balert%28%E2%80%98test%E2%80%99%29%3B%E2%80%9D%3E",
+      "Referer": "%3Cdiv%20id%3D%E2%80%9Dexample%E2%80%9D%20onclick%3D%E2%80%9Drunjs%28%E2%80%98userinput%E2%80%99%29%3Balert%28%E2%80%98test%E2%80%99%29%3B%E2%80%9D%3E",
+      "Headers": "%3Cdiv%20id%3D%E2%80%9Dexample%E2%80%9D%20onclick%3D%E2%80%9Drunjs%28%E2%80%98userinput%E2%80%99%29%3Balert%28%E2%80%98test%E2%80%99%29%3B%E2%80%9D%3E",
+      "Blocked": true
+    }
+  ]
+}

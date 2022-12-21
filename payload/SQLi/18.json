@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "Body": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "ARGS": "(SELECT*FROM(SELECT(SLEEP(10)))a)2",
+      "Headers": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "URL": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "Referer": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "Cookie": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "Blocked": true
+    }
+  ]
+}

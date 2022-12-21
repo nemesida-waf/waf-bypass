@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "UA": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "Body": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "ARGS": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "Headers": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "URL": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "Referer": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "Cookie": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "Blocked": true
+    }
+  ]
+}
