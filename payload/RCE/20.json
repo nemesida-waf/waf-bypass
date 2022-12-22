@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "URL": "cat%c0%a0%c0%afetc%c0%afpasswd",
       "Body": "%RND%=cat%c0%a0%c0%afetc%c0%afpasswd",
       "ARGS": "%RND%=cat%c0%a0%c0%afetc%c0%afpasswd",
       "Cookie": "cat%c0%a0%c0%afetc%c0%afpasswd",
