@@ -43,6 +43,8 @@ patch_http_connection_pool(maxsize=50)
 # Init args
 host = ''
 proxy = ''
+headers = {}
+ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
 
 # Processing args from cmd
 try:
@@ -54,7 +56,6 @@ try:
     launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block=']
 
     # parsing args
-    headers = {}
     block_status = {}
     optlist, values = getopt.getopt(launch_args, '', launch_args_options)
     for k, v in optlist:
@@ -106,14 +107,13 @@ else:
 
 print('# Block status code: {}'.format(list(block_status.keys())[0]))
 
-
 if len(headers) > 0:
     print('# Headers: {}'.format(headers))
 
 print('##')
 print('\n')
 
-test = WAFBypass(host, proxy, block_status, headers)
+test = WAFBypass(host, proxy, block_status, headers, ua)
 
 try:
     test.start_test()

@@ -18,13 +18,14 @@ requests.packages.urllib3.disable_warnings()
 
 class WAFBypass:
     
-    def __init__(self, host, proxy, block_status, headers):
+    def __init__(self, host, proxy, block_status, headers, ua):
         
         # init
         self.host = host
         self.proxy = {'http': proxy, 'https': proxy}
         self.block_status = block_status
         self.headers = headers
+        self.ua = ua
         self.session = requests.Session()
         self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
@@ -146,18 +147,20 @@ class WAFBypass:
 
     def test_url(self, request_data, method):
         url = urljoin(self.host, request_data.url)
+        headers = {'User-Agent': self.ua, **self.headers}
         method = 'get' if not method else method
         request = self.session.request(
-            method, url, headers=self.headers, proxies=self.proxy,
+            method, url, headers=headers, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
         self.output('URL', request_data, request, self.block_status)
 
     def test_args(self, request_data, method):
         params = request_data.args
+        headers = {'User-Agent': self.ua, **self.headers}
         method = 'get' if not method else method
         request = self.session.request(
-            method, self.host, headers=self.headers, params=params, proxies=self.proxy,
+            method, self.host, headers=headers, params=params, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
         self.output('ARGS', request_data, request, self.block_status)
@@ -165,6 +168,7 @@ class WAFBypass:
     def test_body(self, request_data, method, boundary):
         data = request_data.body
         headers = {f"Content-Type": 'multipart/form-data; boundary=' + boundary, **self.headers} if boundary else self.headers
+        headers = {'User-Agent': self.ua, **headers}
         method = 'post' if not method else method
         request = self.session.request(
             method, self.host, headers=headers, data=data, proxies=self.proxy,
@@ -174,9 +178,10 @@ class WAFBypass:
 
     def test_cookie(self, request_data, method):
         cookies = {f"CustomCookie{secrets.token_urlsafe(12)}": request_data.cookie}
+        headers = {'User-Agent': self.ua, **self.headers}
         method = 'get' if not method else method
         request = self.session.request(
-            method, self.host, headers=self.headers, cookies=cookies, proxies=self.proxy,
+            method, self.host, headers=headers, cookies=cookies, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
         self.output('Cookie', request_data, request, self.block_status)
@@ -192,6 +197,7 @@ class WAFBypass:
 
     def test_referer(self, request_data, method):
         headers = {'Referer': request_data.referer, **self.headers}
+        headers = {'User-Agent': self.ua, **headers}
         method = 'get' if not method else method
         request = self.session.request(
             method, self.host, headers=headers, proxies=self.proxy,
@@ -201,6 +207,7 @@ class WAFBypass:
 
     def test_headers(self, request_data, method):
         headers = {f"CustomHeader": request_data.headers, **self.headers}
+        headers = {'User-Agent': self.ua, **headers}
         method = 'get' if not method else method
         request = self.session.request(
             method, self.host, headers=headers, proxies=self.proxy,
