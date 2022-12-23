@@ -40,6 +40,10 @@ class PayloadProcessing:
         headers = self.extract_value(json_data, 'Headers')
         self._headers = None if not headers else headers.replace("%RND%", secrets.token_urlsafe(12))
 
+        # Boundary
+        boundary = self.extract_value(json_data, 'Boundary')
+        self._boundary = None if not boundary else boundary
+
         # Method
         method = self.extract_value(json_data, 'Method')
         self._method = None if not method else method.lower()
@@ -79,6 +83,10 @@ class PayloadProcessing:
     @property
     def headers(self):
         return self._headers
+
+    @property
+    def boundary(self):
+        return self._boundary
 
     @property
     def method(self):

@@ -59,13 +59,12 @@ class WAFBypass:
                         if request_data.body:
                         
                             # processing request
-                            if request_data.headers:
-                                self.test_body(request_data, method, request_data.headers)
+                            if request_data.boundary:
+                                self.test_body(request_data, method, request_data.boundary)
                             else:
                                 boundary = secrets.token_hex(30)  # 60 symbols
-                                headers = 'multipart/form-data; boundary=' + boundary
                                 body = '--' + boundary + request_data.body + '--' + boundary + '--\\x0D\\x0A'
-                                self.test_body(body, method, headers)
+                                self.test_body(body, method, boundary)
 
                     # Other dirs
                     else:
@@ -163,9 +162,9 @@ class WAFBypass:
         )
         self.output('ARGS', request_data, request, self.block_status)
 
-    def test_body(self, request_data, method, headers):
+    def test_body(self, request_data, method, boundary):
         data = request_data.body
-        headers = {f"Content-Type": headers, **self.headers} if headers else self.headers
+        headers = {f"Content-Type": 'multipart/form-data; boundary=' + boundary, **self.headers} if boundary else self.headers
         method = 'post' if not method else method
         request = self.session.request(
             method, self.host, headers=headers, data=data, proxies=self.proxy,

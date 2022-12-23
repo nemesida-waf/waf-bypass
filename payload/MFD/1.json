@@ -2,7 +2,7 @@
   "req": [
     {
       "Body": "--35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e\\x0D\\x0AContent-Disposition: form-data; name=\\x22a64fe46301\\x22\\x0D\\x0A\\x0D\\x0A%27%3E%3Csvg%2Fonload%3Dalert%60xss%60%3E\\x0D\\x0A--35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e--\\x0D\\x0A",
-      "Headers": "Content-Type: multipart/form-data; boundary=35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e",
+      "Boundary": "35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e",
       "Blocked": true
     }
   ]
