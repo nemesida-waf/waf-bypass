@@ -17,7 +17,10 @@ requests.packages.urllib3.disable_warnings()
 
 
 class WAFBypass:
+    
     def __init__(self, host, proxy, block_status, headers):
+        
+        # init
         self.host = host
         self.proxy = {'http': proxy, 'https': proxy}
         self.block_status = block_status
@@ -29,11 +32,14 @@ class WAFBypass:
         self.calls = 0
 
     def start_test(self):
+       
+        # init path
         relative_path = ''
         work_dir = os.path.dirname(os.path.realpath(__file__))
         work_dir_payload = work_dir + '/payload'
 
         def test_request_data(json_path):
+            
             """
             Extracting data from .json, testing it, logging test results
             :type json_path: str
@@ -46,26 +52,44 @@ class WAFBypass:
                     # extract method
                     method = request_data.method
 
-                    if request_data.url:
-                        self.test_url(request_data, method)
+                    # MFD (multipart/form-data) dir
+                    if 'MFD' in json_path:
 
-                    if request_data.args:
-                        self.test_args(request_data, method)
+                        # processing if body exists
+                        if request_data.body:
+                        
+                            # processing request
+                            if request_data.headers:
+                                self.test_body(request_data, method, request_data.headers)
+                            else:
+                                boundary = secrets.token_hex(30)  # 60 symbols
+                                headers = 'multipart/form-data; boundary=' + boundary
+                                body = '--' + boundary + request_data.body + '--' + boundary + '--\\x0D\\x0A'
+                                self.test_body(body, method, headers)
 
-                    if request_data.body:
-                        self.test_body(request_data, method)
+                    # Other dirs
+                    else:
 
-                    if request_data.cookie:
-                        self.test_cookie(request_data, method)
+                        if request_data.url:
+                            self.test_url(request_data, method)
 
-                    if request_data.ua:
-                        self.test_ua(request_data, method)
+                        elif request_data.args:
+                            self.test_args(request_data, method)
 
-                    if request_data.referer:
-                        self.test_referer(request_data, method)
+                        elif request_data.body:
+                            self.test_body(request_data, method, None)
 
-                    if request_data.headers:
-                        self.test_header(request_data, method)
+                        elif request_data.cookie:
+                            self.test_cookie(request_data, method)
+
+                        elif request_data.ua:
+                            self.test_ua(request_data, method)
+
+                        elif request_data.referer:
+                            self.test_referer(request_data, method)
+
+                        elif request_data.headers:
+                            self.test_headers(request_data, method)
 
             except Exception as e:
                 print(f'{Fore.RED}Error: {e}. More details in file {relative_path}{Style.RESET_ALL} {PayloadProcessing(json_path)}')
@@ -130,15 +154,6 @@ class WAFBypass:
         )
         self.output('URL', request_data, request, self.block_status)
 
-    def test_body(self, request_data, method):
-        data = request_data.body
-        method = 'post' if not method else method
-        request = self.session.request(
-            method, self.host, headers=self.headers, data=data, proxies=self.proxy,
-            timeout=self.timeout, verify=False
-        )
-        self.output('Body', request_data, request, self.block_status)
-
     def test_args(self, request_data, method):
         params = request_data.args
         method = 'get' if not method else method
@@ -147,6 +162,16 @@ class WAFBypass:
             timeout=self.timeout, verify=False
         )
         self.output('ARGS', request_data, request, self.block_status)
+
+    def test_body(self, request_data, method, headers):
+        data = request_data.body
+        headers = {f"Content-Type": headers, **self.headers} if headers else self.headers
+        method = 'post' if not method else method
+        request = self.session.request(
+            method, self.host, headers=headers, data=data, proxies=self.proxy,
+            timeout=self.timeout, verify=False
+        )
+        self.output('Body', request_data, request, self.block_status)
 
     def test_cookie(self, request_data, method):
         cookies = {f"CustomCookie{secrets.token_urlsafe(12)}": request_data.cookie}
@@ -175,7 +200,7 @@ class WAFBypass:
         )
         self.output('Referer', request_data, request, self.block_status)
 
-    def test_header(self, request_data, method):
+    def test_headers(self, request_data, method):
         headers = {f"CustomHeader": request_data.headers, **self.headers}
         method = 'get' if not method else method
         request = self.session.request(
