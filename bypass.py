@@ -61,11 +61,13 @@ class WAFBypass:
                         
                             # processing request
                             if request_data.boundary:
-                                self.test_body(request_data, method, request_data.boundary)
+                                self.test_body(request_data.body, request_data, method, request_data.boundary)
                             else:
                                 boundary = secrets.token_hex(30)  # 60 symbols
-                                body = '--' + boundary + request_data.body + '--' + boundary + '--\\x0D\\x0A'
-                                self.test_body(body, method, boundary)
+                                nl = '\r\n'
+                                body_hdrs = 'Content-Disposition: form-data; name="' + secrets.token_urlsafe(5) + '"'
+                                body = '--' + boundary + nl + body_hdrs + nl + nl + request_data.body + nl + '--' + boundary + '--' + nl
+                                self.test_body(body, request_data, method, boundary)
 
                     # Other dirs
                     else:
@@ -77,7 +79,7 @@ class WAFBypass:
                             self.test_args(request_data, method)
 
                         elif request_data.body:
-                            self.test_body(request_data, method, None)
+                            self.test_body(request_data.body, request_data, method, None)
 
                         elif request_data.cookie:
                             self.test_cookie(request_data, method)
@@ -165,8 +167,7 @@ class WAFBypass:
         )
         self.output('ARGS', request_data, request, self.block_status)
 
-    def test_body(self, request_data, method, boundary):
-        data = request_data.body
+    def test_body(self, data, request_data, method, boundary):
         headers = {f"Content-Type": 'multipart/form-data; boundary=' + boundary, **self.headers} if boundary else self.headers
         headers = {'User-Agent': self.ua, **headers}
         method = 'post' if not method else method

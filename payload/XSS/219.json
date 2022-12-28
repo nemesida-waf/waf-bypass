@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "URL": "",
+      "ARGS": "%3Cx%20%20attr%3D%22%0A---%20%0Ax%3D%22%3D%3D%27%3D%27onmouseover%3Dconfirm%60X%60%20style%3D%22display%3Ablock%3Bwidth%3A10px%3Bheight%3A10px%3Bbackground%3A%23%22%3E%0A---%20%0A%22%3E",
+      "Body": "%3Cx%20%20attr%3D%22%0A---%20%0Ax%3D%22%3D%3D%27%3D%27onmouseover%3Dconfirm%60X%60%20style%3D%22display%3Ablock%3Bwidth%3A10px%3Bheight%3A10px%3Bbackground%3A%23%22%3E%0A---%20%0A%22%3E",
+      "Cookie": "%3Cx%20%20attr%3D%22%0A---%20%0Ax%3D%22%3D%3D%27%3D%27onmouseover%3Dconfirm%60X%60%20style%3D%22display%3Ablock%3Bwidth%3A10px%3Bheight%3A10px%3Bbackground%3A%23%22%3E%0A---%20%0A%22%3E",
+      "UA": "%3Cx%20%20attr%3D%22%0A---%20%0Ax%3D%22%3D%3D%27%3D%27onmouseover%3Dconfirm%60X%60%20style%3D%22display%3Ablock%3Bwidth%3A10px%3Bheight%3A10px%3Bbackground%3A%23%22%3E%0A---%20%0A%22%3E",
+      "Referer": "%3Cx%20%20attr%3D%22%0A---%20%0Ax%3D%22%3D%3D%27%3D%27onmouseover%3Dconfirm%60X%60%20style%3D%22display%3Ablock%3Bwidth%3A10px%3Bheight%3A10px%3Bbackground%3A%23%22%3E%0A---%20%0A%22%3E",
+      "Headers": "%3Cx%20%20attr%3D%22%0A---%20%0Ax%3D%22%3D%3D%27%3D%27onmouseover%3Dconfirm%60X%60%20style%3D%22display%3Ablock%3Bwidth%3A10px%3Bheight%3A10px%3Bbackground%3A%23%22%3E%0A---%20%0A%22%3E",
+      "Blocked": true
+    }
+  ]
+}
