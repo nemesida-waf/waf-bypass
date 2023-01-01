@@ -1,13 +1,12 @@
 {
   "req": [
     {
-      "URL": "/#elementor-action:action=lightbox&settings=eyJ0eXBlIjoibnVsbCIsImh0bWwiOiI8c2NyaXB0PmFsZXJ0KCd4c3MnKTwvc2NyaXB0PiJ9Cg==",
-      "ARGS": "",
-      "Body": "",
-      "Cookie": "",
-      "UA": "",
-      "Referer": "",
-      "Headers": "",
+      "URL": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
+      "Body": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
+      "ARGS": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
+      "Cookie": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
+      "UA": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
+      "Referer": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
       "Blocked": true
     }
   ]

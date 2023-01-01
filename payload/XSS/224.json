@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "URL": "%3Csvg%20onload%3Dprompt%2526%2523x000000028%3Bdocument.domain%29%3E%0A%3Csvg%20onload%3D%250Aalert1%3E",
+      "Body": "%3Csvg%20onload%3Dprompt%2526%2523x000000028%3Bdocument.domain%29%3E%0A%3Csvg%20onload%3D%250Aalert1%3E",
+      "ARGS": "%3Csvg%20onload%3Dprompt%2526%2523x000000028%3Bdocument.domain%29%3E%0A%3Csvg%20onload%3D%250Aalert1%3E",
+      "Cookie": "%3Csvg%20onload%3Dprompt%2526%2523x000000028%3Bdocument.domain%29%3E%0A%3Csvg%20onload%3D%250Aalert1%3E",
+      "UA": "%3Csvg%20onload%3Dprompt%2526%2523x000000028%3Bdocument.domain%29%3E%0A%3Csvg%20onload%3D%250Aalert1%3E",
+      "Referer": "%3Csvg%20onload%3Dprompt%2526%2523x000000028%3Bdocument.domain%29%3E%0A%3Csvg%20onload%3D%250Aalert1%3E",
+      "Blocked": true
+    }
+  ]
+}

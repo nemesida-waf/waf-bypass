@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "URL": "%2sscript%2ualert()%2s/script%2u",
+      "Body": "%2sscript%2ualert()%2s/script%2u",
+      "ARGS": "%2sscript%2ualert()%2s/script%2u",
+      "Cookie": "%2sscript%2ualert()%2s/script%2u",
+      "UA": "%2sscript%2ualert()%2s/script%2u",
+      "Referer": "%2sscript%2ualert()%2s/script%2u",
+      "Blocked": true
+    }
+  ]
+}
