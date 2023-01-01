@@ -17,7 +17,10 @@ class PayloadProcessing:
             try:
                 json_data = json.load(f)['req'][0]
             except Exception as e:
-                print('An error occurred while loading file {}: {}'.format(f, e))
+                print(
+                    'An error occurred while loading file {}: file not in JSON format ({})'
+                    .format(json_path, e)
+                )
 
         # URL
         url = self.extract_value(json_data, 'URL')
