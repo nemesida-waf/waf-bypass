@@ -8,9 +8,16 @@ class PayloadProcessing:
     
     def __init__(self, json_path):
         
+        # init
+        json_data = {}
         self._json_path = json_path
-        with open(json_path) as opened_json:
-            json_data = json.load(opened_json)['req'][0]
+
+        # processing JSON file
+        with open(json_path) as f:
+            try:
+                json_data = json.load(f)['req'][0]
+            except Exception as e:
+                print('An error occurred while loading file {}: {}'.format(f, e))
 
         # URL
         url = self.extract_value(json_data, 'URL')
