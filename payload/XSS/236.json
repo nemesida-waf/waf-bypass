@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "URL": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
+      "Body": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
+      "ARGS": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
+      "Cookie": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
+      "UA": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
+      "Referer": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
+      "Blocked": true
+    }
+  ]
+}
