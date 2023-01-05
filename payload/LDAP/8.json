@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "user%RND%=%2A%28%7C%28objectclass=%2A%29",
       "ARGS": "user%RND%=%2A%28%7C%28objectclass=%2A%29",
+      "Body": "user%RND%=%2A%28%7C%28objectclass=%2A%29",
       "Blocked": true
     }
   ]
