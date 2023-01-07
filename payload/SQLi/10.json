@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "param%RND%=JyB1bmlvbiBzZWxlY3QgMSwyLDMsNCw1LDYsNyw4LDksMCwxMQ==",
-      "Blocked": true
+      "BODY": "param%RND%=JyB1bmlvbiBzZWxlY3QgMSwyLDMsNCw1LDYsNyw4LDksMCwxMQ==",
+      "BLOCKED": true
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "req": [
     {
-      "Body": "--35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e\r\nContent-Disposition: form-data; name=\"a64fe46301\"\r\n\r\n%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29\r\n--35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e--\r\n",
-      "Boundary": "35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e",
-      "Blocked": true
+      "BODY": "--35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e\r\nContent-Disposition: form-data; name=\"a64fe46301\"\r\n\r\n%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29\r\n--35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e--\r\n",
+      "BOUNDARY": "35b1fbd536ecdc810894a7679ddae40522c7fa5802d92588d9401ed6fa2e",
+      "BLOCKED": true
     }
   ]
 }

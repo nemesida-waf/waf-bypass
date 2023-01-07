@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "URL": "top[\"al\"+\"ert\"](1)",
-      "ARGS": "top[\"al\"+\"ert\"](1)",
-      "Body": "top[\"al\"+\"ert\"](1)",
-      "Cookie": "top[\"al\"+\"ert\"](1)",
-      "UA": "top[\"al\"+\"ert\"](1)",
-      "Referer": "top[\"al\"+\"ert\"](1)",
-      "Headers": "top[\"al\"+\"ert\"](1)",
-      "Blocked": true
+      "URL": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
+      "ARGS": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
+      "BODY": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
+      "COOKIE": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
+      "USER-AGENT": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
+      "REFERER": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
+      "HEADER": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
+      "BLOCKED": true
     }
   ]
 }

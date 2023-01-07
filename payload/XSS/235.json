@@ -3,11 +3,11 @@
     {
       "URL": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
       "ARGS": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
-      "Body": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
-      "Cookie": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
-      "UA": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
-      "Referer": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
-      "Blocked": true
+      "BODY": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
+      "COOKIE": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
+      "USER-AGENT": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
+      "REFERER": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
+      "BLOCKED": true
     }
   ]
 }

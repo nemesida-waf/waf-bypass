@@ -2,10 +2,10 @@
   "req": [
     {
       "ARGS": "login%RND%%253D%2524%257B%255C%2522freemarker.template.utility.Execute%255C%2522%253Fnew()(%255C%2522id%255C%2522)%257D%2526passw%253Dhij3kfmedfekmkm%2526token%253Dfdawgk2mnjdnwidfkamjn2i%2526sort%253Dtrue",
-      "Body": "login%RND%%253D%2524%257B%255C%2522freemarker.template.utility.Execute%255C%2522%253Fnew()(%255C%2522id%255C%2522)%257D%2526passw%253Dhij3kfmedfekmkm%2526token%253Dfdawgk2mnjdnwidfkamjn2i%2526sort%253Dtrue",
-      "Cookie": "%2524%257B%255C%2522freemarker.template.utility.Execute%255C%2522%253Fnew()(%255C%2522id%255C%2522)%257D",
-      "Headers": "%2524%257B%255C%2522freemarker.template.utility.Execute%255C%2522%253Fnew()(%255C%2522id%255C%2522)%257D",
-      "Blocked": true
+      "BODY": "login%RND%%253D%2524%257B%255C%2522freemarker.template.utility.Execute%255C%2522%253Fnew()(%255C%2522id%255C%2522)%257D%2526passw%253Dhij3kfmedfekmkm%2526token%253Dfdawgk2mnjdnwidfkamjn2i%2526sort%253Dtrue",
+      "COOKIE": "%2524%257B%255C%2522freemarker.template.utility.Execute%255C%2522%253Fnew()(%255C%2522id%255C%2522)%257D",
+      "HEADER": "%2524%257B%255C%2522freemarker.template.utility.Execute%255C%2522%253Fnew()(%255C%2522id%255C%2522)%257D",
+      "BLOCKED": true
     }
   ]
 }

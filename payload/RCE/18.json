@@ -3,12 +3,12 @@
     {
       "URL": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
       "ARGS": "param%RND%=%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
-      "Body": "param%RND%=%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
-      "Cookie": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
-      "UA": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
-      "Referer": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
-      "Headers": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
-      "Blocked": true
+      "BODY": "param%RND%=%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
+      "COOKIE": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
+      "USER-AGENT": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
+      "REFERER": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
+      "HEADER": "%3B%20cat%20%2Fet%e2%80%8b%3F%2F%e2%80%8bpa%e2%80%8b%3F%3Fwd",
+      "BLOCKED": true
     }
   ]
 }

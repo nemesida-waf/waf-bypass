@@ -3,10 +3,10 @@
       {
         "URL": "cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
         "ARGS": "param%RND%=cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
-        "Body": "param%RND%=cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
-        "Cookie": "cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
-        "Headers": "cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
-        "Blocked": true
+        "BODY": "param%RND%=cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
+        "COOKIE": "cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
+        "HEADER": "cGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT1odHRwOi8vZXZpbC5jb20vaW5kZXgucGhw",
+        "BLOCKED": true
       }
     ]
   }

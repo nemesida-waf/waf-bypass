@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<select onchange=alert(1)><option>1<option>2",
-      "Body": "<select onchange=alert(1)><option>1<option>2",
+      "USER-AGENT": "<select onchange=alert(1)><option>1<option>2",
+      "BODY": "<select onchange=alert(1)><option>1<option>2",
       "ARGS": "<select onchange=alert(1)><option>1<option>2",
-      "Cookie": "<select onchange=alert(1)><option>1<option>2",
+      "COOKIE": "<select onchange=alert(1)><option>1<option>2",
       "URL": "<select onchange=alert(1)><option>1<option>2",
-      "Referer": "<select onchange=alert(1)><option>1<option>2",
-      "Headers": "<select onchange=alert(1)><option>1<option>2",
-      "Blocked": true
+      "REFERER": "<select onchange=alert(1)><option>1<option>2",
+      "HEADER": "<select onchange=alert(1)><option>1<option>2",
+      "BLOCKED": true
     }
   ]
 }

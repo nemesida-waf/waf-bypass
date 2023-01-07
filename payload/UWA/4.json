@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/.svn/entries",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

@@ -3,12 +3,12 @@
     {
       "URL": "alert.call(null,1)",
       "ARGS": "param%RND%=alert.call(null,1)",
-      "Body": "param%RND%=alert.call(null,1)",
-      "Cookie": "alert.call(null,1)",
-      "UA": "alert.call(null,1)",
-      "Referer": "http://example.com/?alert.call(null,1)",
-      "Headers": "alert.call(null,1)",
-      "Blocked": true
+      "BODY": "param%RND%=alert.call(null,1)",
+      "COOKIE": "alert.call(null,1)",
+      "USER-AGENT": "alert.call(null,1)",
+      "REFERER": "http://example.com/?alert.call(null,1)",
+      "HEADER": "alert.call(null,1)",
+      "BLOCKED": true
     }
   ]
 }

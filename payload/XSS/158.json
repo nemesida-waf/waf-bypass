@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
-      "Body": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
+      "USER-AGENT": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
+      "BODY": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
       "ARGS": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
-      "Cookie": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
+      "COOKIE": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
       "URL": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
-      "Referer": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
-      "Headers": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
-      "Blocked": true
+      "REFERER": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
+      "HEADER": "<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x",
+      "BLOCKED": true
     }
   ]
 }

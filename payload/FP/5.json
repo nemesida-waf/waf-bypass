@@ -1,9 +1,9 @@
 {
   "req": [
     {
-    "Cookie": "AJi4QfE55OPSE6yKlgB-feWEmifGHEiEaXfTwJDavaEIXd6zE0Eo9GoTGccdgEdNWmi2S1arci_D",
-    "Headers": "00-7c8de2bab19140949a0c7644ed986f00-bda4b0f37b52f5e7-00",
-    "Blocked": false
+    "COOKIE": "AJi4QfE55OPSE6yKlgB-feWEmifGHEiEaXfTwJDavaEIXd6zE0Eo9GoTGccdgEdNWmi2S1arci_D",
+    "HEADER": "00-7c8de2bab19140949a0c7644ed986f00-bda4b0f37b52f5e7-00",
+    "BLOCKED": false
     }
   ]
 }

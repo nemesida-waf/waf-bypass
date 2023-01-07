@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<marquee loop=1 width=0 onfinish=alert(1)>",
-      "Body": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "USER-AGENT": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "BODY": "<marquee loop=1 width=0 onfinish=alert(1)>",
       "ARGS": "<marquee loop=1 width=0 onfinish=alert(1)>",
-      "Cookie": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "COOKIE": "<marquee loop=1 width=0 onfinish=alert(1)>",
       "URL": "<marquee loop=1 width=0 onfinish=alert(1)>",
-      "Referer": "<marquee loop=1 width=0 onfinish=alert(1)>",
-      "Headers": "<marquee loop=1 width=0 onfinish=alert(1)>",
-      "Blocked": true
+      "REFERER": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "HEADER": "<marquee loop=1 width=0 onfinish=alert(1)>",
+      "BLOCKED": true
     }
   ]
 }

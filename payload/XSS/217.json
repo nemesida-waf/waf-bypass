@@ -3,12 +3,12 @@
     {
       "URL": "/'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
       "ARGS": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
-      "Body": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
-      "Cookie": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
-      "UA": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
-      "Referer": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
-      "Headers": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
-      "Blocked": true
+      "BODY": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "COOKIE": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "USER-AGENT": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "REFERER": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "HEADER": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "BLOCKED": true
     }
   ]
 }

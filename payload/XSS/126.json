@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
-      "Body": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
-      "ARGS": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
-      "Cookie": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
-      "URL": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
-      "Referer": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
-      "Headers": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
-      "Blocked": true
+      "USER-AGENT": "<iframe srcdoc=<svg/o&#x6Eload&equser-agentls;alert&lpar;1)&gt;>",
+      "BODY": "<iframe srcdoc=<svg/o&#x6Eload&equser-agentls;alert&lpar;1)&gt;>",
+      "ARGS": "<iframe srcdoc=<svg/o&#x6Eload&equser-agentls;alert&lpar;1)&gt;>",
+      "COOKIE": "<iframe srcdoc=<svg/o&#x6Eload&equser-agentls;alert&lpar;1)&gt;>",
+      "URL": "<iframe srcdoc=<svg/o&#x6Eload&equser-agentls;alert&lpar;1)&gt;>",
+      "REFERER": "<iframe srcdoc=<svg/o&#x6Eload&equser-agentls;alert&lpar;1)&gt;>",
+      "HEADER": "<iframe srcdoc=<svg/o&#x6Eload&equser-agentls;alert&lpar;1)&gt;>",
+      "BLOCKED": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<x contenteditable onfocus=alert(1)>focus this!",
-      "Body": "<x contenteditable onfocus=alert(1)>focus this!",
+      "USER-AGENT": "<x contenteditable onfocus=alert(1)>focus this!",
+      "BODY": "<x contenteditable onfocus=alert(1)>focus this!",
       "ARGS": "<x contenteditable onfocus=alert(1)>focus this!",
-      "Cookie": "<x contenteditable onfocus=alert(1)>focus this!",
+      "COOKIE": "<x contenteditable onfocus=alert(1)>focus this!",
       "URL": "<x contenteditable onfocus=alert(1)>focus this!",
-      "Referer": "<x contenteditable onfocus=alert(1)>focus this!",
-      "Headers": "<x contenteditable onfocus=alert(1)>focus this!",
-      "Blocked": true
+      "REFERER": "<x contenteditable onfocus=alert(1)>focus this!",
+      "HEADER": "<x contenteditable onfocus=alert(1)>focus this!",
+      "BLOCKED": true
     }
   ]
 }

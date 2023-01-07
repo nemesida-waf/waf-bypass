@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
-      "Body": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "USER-AGENT": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "BODY": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
       "ARGS": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
-      "Cookie": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "COOKIE": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
       "URL": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
-      "Referer": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
-      "Headers": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
-      "Blocked": true
+      "REFERER": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "HEADER": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "BLOCKED": true
     }
   ]
 }

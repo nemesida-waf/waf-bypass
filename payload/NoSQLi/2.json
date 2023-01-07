@@ -3,12 +3,12 @@
     {
       "URL": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
       "ARGS": "param%RND%=db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "Body": "param%RND%=db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "Cookie": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "UA": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "Referer": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "Headers": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "Blocked": true
+      "BODY": "param%RND%=db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "COOKIE": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "USER-AGENT": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "REFERER": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "HEADER": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "BLOCKED": true
     }
   ]
 }

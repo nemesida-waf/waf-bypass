@@ -2,13 +2,13 @@
   "req": [
     {
       "ARGS": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
-      "Body": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
-      "Cookie": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
-      "UA": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
-      "Referer": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
-      "Headers": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
+      "BODY": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
+      "COOKIE": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
+      "USER-AGENT": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
+      "REFERER": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
+      "HEADER": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
       "URL": "%2522%253E%253Csvg%2520o%256Enoad%253Dalert%25281%2529%253E",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

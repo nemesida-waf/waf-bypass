@@ -1,8 +1,8 @@
 {
     "req": [
       {
-        "Body": "param%RND%=SUBrZG85aWplZ2llb2tmLGtpbmtva2R3MA==&login=YWRtaW4=&_token=aWZ3a2F3LTlyaTBvZmlnam85ZmdraXduOWRmMm8wa2Ywdzl0Z2szMA==&data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=&parm2=ZmRuYTlya2lmMm5kZmtpZ2ZqaTg5cmtmajI5cmswaGczajk4eWg=&file=bG9naW4ucGhw&password=ZmF3aWtmaWF3Z2ZpYXdrZ2l3YWlna29pd2c=&list=MHdkZmlxLWt0ZmcwOXEwb2ZxamctMDlxa2ZnaW53MGhpbnc0MGktZ2Vma3YwaWUzMGtpdGZpc2VmZzBmMy0wa3NqaDA5a3RnZmlqcmY5M2s=",
-        "Blocked": true
+        "BODY": "param%RND%=SUBrZG85aWplZ2llb2tmLGtpbmtva2R3MA==&login=YWRtaW4=&_token=aWZ3a2F3LTlyaTBvZmlnam85ZmdraXduOWRmMm8wa2Ywdzl0Z2szMA==&data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=&parm2=ZmRuYTlya2lmMm5kZmtpZ2ZqaTg5cmtmajI5cmswaGczajk4eWg=&file=bG9naW4ucGhw&password=ZmF3aWtmaWF3Z2ZpYXdrZ2l3YWlna29pd2c=&list=MHdkZmlxLWt0ZmcwOXEwb2ZxamctMDlxa2ZnaW53MGhpbnc0MGktZ2Vma3YwaWUzMGtpdGZpc2VmZzBmMy0wa3NqaDA5a3RnZmlqcmY5M2s=",
+        "BLOCKED": true
       }
     ]
   }

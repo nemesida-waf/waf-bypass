@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
-      "Body": "admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
-      "Blocked": true
+      "BODY": "admin%2A%29%28%28%7Cuserpassword%3D%2A%29",
+      "BLOCKED": true
     }
   ]
 }

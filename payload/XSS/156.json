@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<body onfocus=alert(1)>",
-      "Body": "<body onfocus=alert(1)>",
+      "USER-AGENT": "<body onfocus=alert(1)>",
+      "BODY": "<body onfocus=alert(1)>",
       "ARGS": "<body onfocus=alert(1)>",
-      "Cookie": "<body onfocus=alert(1)>",
+      "COOKIE": "<body onfocus=alert(1)>",
       "URL": "<body onfocus=alert(1)>",
-      "Referer": "<body onfocus=alert(1)>",
-      "Headers": "<body onfocus=alert(1)>",
-      "Blocked": true
+      "REFERER": "<body onfocus=alert(1)>",
+      "HEADER": "<body onfocus=alert(1)>",
+      "BLOCKED": true
     }
   ]
 }

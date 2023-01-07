@@ -3,12 +3,12 @@
     {
       "URL": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
       "ARGS": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login2",
-      "Body": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
-      "Headers": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
-      "UA": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
-      "Referer": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
-      "Cookie": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
-      "Blocked": true
+      "BODY": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "HEADER": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "USER-AGENT": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "REFERER": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "COOKIE": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
+      "BLOCKED": true
     }
   ]
 }

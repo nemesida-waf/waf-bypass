@@ -3,11 +3,11 @@
   "req": [
     {
       "ARGS": "param%RND%=%28prompt%28%29%29",
-      "Body": "param%RND%=%28prompt%28%29%29",
-      "Cookie": "%28prompt%28%29%29",
-      "UA": "%28prompt%28%29%29",
-      "Headers": "%28prompt%28%29%29",
-      "Blocked": true
+      "BODY": "param%RND%=%28prompt%28%29%29",
+      "COOKIE": "%28prompt%28%29%29",
+      "USER-AGENT": "%28prompt%28%29%29",
+      "HEADER": "%28prompt%28%29%29",
+      "BLOCKED": true
     }
   ]
 }

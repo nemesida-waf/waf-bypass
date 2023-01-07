@@ -3,12 +3,12 @@
     {
       "URL": "<Script>alert(1)</Script>",
       "ARGS": "<Script>alert(1)</Script>",
-      "Body": "<Script>alert(1)</Script>",
-      "Cookie": "<Script>alert(1)</Script>",
-      "UA": "<Script>alert(1)</Script>",
-      "Referer": "<Script>alert(1)</Script>",
-      "Headers": "<Script>alert(1)</Script>",
-      "Blocked": true
+      "BODY": "<Script>alert(1)</Script>",
+      "COOKIE": "<Script>alert(1)</Script>",
+      "USER-AGENT": "<Script>alert(1)</Script>",
+      "REFERER": "<Script>alert(1)</Script>",
+      "HEADER": "<Script>alert(1)</Script>",
+      "BLOCKED": true
     }
   ]
 }

@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/%2e/backup.zip",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

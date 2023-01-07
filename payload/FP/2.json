@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "select_items=yes",
-      "Body": "select_items=yes",
-      "Blocked": false
+      "BODY": "select_items=yes",
+      "BLOCKED": false
     }
   ]
 }

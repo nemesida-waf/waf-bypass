@@ -1,8 +1,8 @@
 {
     "req": [
       {
-        "Body": "password%RND%=fawikfiawgfiawkgiwaigkoiwg&abc=C:/WINDOWS/php.ini&param=I@kdo9ijegieokf,kinkokdw0&login=admin&_token=ifwkaw-9ri0ofigjo9fgkiwn9df2o0kf0w9tgk30&parm2=fdna9rkif2ndfkigfji89rkfj29rk0hg3j98yh",
-        "Blocked": true
+        "BODY": "password%RND%=fawikfiawgfiawkgiwaigkoiwg&abc=C:/WINDOWS/php.ini&param=I@kdo9ijegieokf,kinkokdw0&login=admin&_token=ifwkaw-9ri0ofigjo9fgkiwn9df2o0kf0w9tgk30&parm2=fdna9rkif2ndfkigfji89rkfj29rk0hg3j98yh",
+        "BLOCKED": true
       }
     ]
   }

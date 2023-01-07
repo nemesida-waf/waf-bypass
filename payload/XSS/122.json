@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<form><input formaction=javascript:alert(1) type=image value=click>",
-      "Body": "<form><input formaction=javascript:alert(1) type=image value=click>",
+      "USER-AGENT": "<form><input formaction=javascript:alert(1) type=image value=click>",
+      "BODY": "<form><input formaction=javascript:alert(1) type=image value=click>",
       "ARGS": "<form><input formaction=javascript:alert(1) type=image value=click>",
-      "Cookie": "<form><input formaction=javascript:alert(1) type=image value=click>",
+      "COOKIE": "<form><input formaction=javascript:alert(1) type=image value=click>",
       "URL": "<form><input formaction=javascript:alert(1) type=image value=click>",
-      "Referer": "<form><input formaction=javascript:alert(1) type=image value=click>",
-      "Headers": "<form><input formaction=javascript:alert(1) type=image value=click>",
-      "Blocked": true
+      "REFERER": "<form><input formaction=javascript:alert(1) type=image value=click>",
+      "HEADER": "<form><input formaction=javascript:alert(1) type=image value=click>",
+      "BLOCKED": true
     }
   ]
 }

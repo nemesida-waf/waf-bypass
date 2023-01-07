@@ -3,12 +3,12 @@
     {
       "URL": "[1].find(alert('1'))",
       "ARGS": "[1].find(alert('1'))",
-      "Body": "[1].find(alert('1'))",
-      "Cookie": "[1].find(alert('1'))",
-      "UA": "[1].find(alert('1'))",
-      "Referer": "[1].find(alert('1'))",
-      "Headers": "[1].find(alert('1'))",
-      "Blocked": true
+      "BODY": "[1].find(alert('1'))",
+      "COOKIE": "[1].find(alert('1'))",
+      "USER-AGENT": "[1].find(alert('1'))",
+      "REFERER": "[1].find(alert('1'))",
+      "HEADER": "[1].find(alert('1'))",
+      "BLOCKED": true
     }
   ]
 }

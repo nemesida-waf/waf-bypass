@@ -2,12 +2,12 @@
     "req": [
       {
         "ARGS": "param%RND%=C:/WINDOWS/Repair/SAM",
-        "Body": "param%RND%=C:/WINDOWS/Repair/SAM",
-        "Cookie": "C:/WINDOWS/Repair/SAM",
-        "UA": "C:/WINDOWS/Repair/SAM",
-        "Referer": "C:/WINDOWS/Repair/SAM",
-        "Headers": "C:/WINDOWS/Repair/SAM",
-        "Blocked": true
+        "BODY": "param%RND%=C:/WINDOWS/Repair/SAM",
+        "COOKIE": "C:/WINDOWS/Repair/SAM",
+        "USER-AGENT": "C:/WINDOWS/Repair/SAM",
+        "REFERER": "C:/WINDOWS/Repair/SAM",
+        "HEADER": "C:/WINDOWS/Repair/SAM",
+        "BLOCKED": true
       }
     ]
   }

@@ -3,12 +3,12 @@
     {
       "URL": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
       "ARGS": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
-      "Body": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
-      "Headers": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
-      "UA": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
-      "Referer": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
-      "Cookie": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
-      "Blocked": true
+      "BODY": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "HEADER": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "USER-AGENT": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "REFERER": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "COOKIE": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
+      "BLOCKED": true
     }
   ]
 }

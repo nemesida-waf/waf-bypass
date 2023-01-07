@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "x%27%20or%20name%28%29%3D%27username%27%20or%20%27x%27%3D%27y",
-      "Body": "x%27%20or%20name%28%29%3D%27username%27%20or%20%27x%27%3D%27y",
-      "Blocked": true
+      "BODY": "x%27%20or%20name%28%29%3D%27username%27%20or%20%27x%27%3D%27y",
+      "BLOCKED": true
     }
   ]
 }

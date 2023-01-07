@@ -2,12 +2,12 @@
     "req": [
       {
         "ARGS": "param%RND%=C:/WINNT/win.ini",
-        "Body": "param%RND%=C:/WINNT/win.ini",
-        "Cookie": "C:/WINNT/win.ini",
-        "UA": "C:/WINNT/win.ini",
-        "Referer": "C:/WINNT/win.ini",
-        "Headers": "C:/WINNT/win.ini",
-        "Blocked": true
+        "BODY": "param%RND%=C:/WINNT/win.ini",
+        "COOKIE": "C:/WINNT/win.ini",
+        "USER-AGENT": "C:/WINNT/win.ini",
+        "REFERER": "C:/WINNT/win.ini",
+        "HEADER": "C:/WINNT/win.ini",
+        "BLOCKED": true
       }
     ]
   }

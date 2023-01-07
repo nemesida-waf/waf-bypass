@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "I cannot print the file. What should I do?",
-      "Blocked": false
+      "BODY": "I cannot print the file. What should I do?",
+      "BLOCKED": false
     }
   ]
 }

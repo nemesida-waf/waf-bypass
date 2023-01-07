@@ -2,10 +2,10 @@
   "req": [
     {
       "ARGS": "param%RND%=Array.prototype.sort.call%60%24%7Balert%7D1337%60",
-      "Body": "param%RND%=Array.prototype.sort.call%60%24%7Balert%7D1337%60",
-      "Cookie": "Array.prototype.sort.call%60%24%7Balert%7D1337%60",
-      "Headers": "Array.prototype.sort.call%60%24%7Balert%7D1337%60",
-      "Blocked": true
+      "BODY": "param%RND%=Array.prototype.sort.call%60%24%7Balert%7D1337%60",
+      "COOKIE": "Array.prototype.sort.call%60%24%7Balert%7D1337%60",
+      "HEADER": "Array.prototype.sort.call%60%24%7Balert%7D1337%60",
+      "BLOCKED": true
     }
   ]
 }

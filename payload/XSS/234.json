@@ -3,11 +3,11 @@
     {
       "URL": "/(A('onerror=%22alert%601%60%22testabcd))/",
       "ARGS": "/(A('onerror=%22alert%601%60%22testabcd))/",
-      "Body": "/(A('onerror=%22alert%601%60%22testabcd))/",
-      "Cookie": "/(A('onerror=%22alert%601%60%22testabcd))/",
-      "UA": "/(A('onerror=%22alert%601%60%22testabcd))/",
-      "Referer": "/(A('onerror=%22alert%601%60%22testabcd))/",
-      "Blocked": true
+      "BODY": "/(A('onerror=%22alert%601%60%22testabcd))/",
+      "COOKIE": "/(A('onerror=%22alert%601%60%22testabcd))/",
+      "USER-AGENT": "/(A('onerror=%22alert%601%60%22testabcd))/",
+      "REFERER": "/(A('onerror=%22alert%601%60%22testabcd))/",
+      "BLOCKED": true
     }
   ]
 }

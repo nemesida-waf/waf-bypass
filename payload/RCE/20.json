@@ -2,10 +2,10 @@
   "req": [
     {
       "ARGS": "%RND%=%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
-      "Body": "%RND%=%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
-      "Cookie": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
-      "Referer": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
-      "Blocked": true
+      "BODY": "%RND%=%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
+      "COOKIE": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
+      "REFERER": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
+      "BLOCKED": true
     }
   ]
 }

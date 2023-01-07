@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "\"><svg onload=alert(1)>?a=reader",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

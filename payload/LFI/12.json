@@ -3,12 +3,12 @@
       {
         "URL": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
         "ARGS": "param%RND%=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
-        "Body": "param%RND%=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
-        "Cookie": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
-        "UA": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
-        "Referer": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
-        "Headers": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
-        "Blocked": true
+        "BODY": "param%RND%=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
+        "COOKIE": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
+        "USER-AGENT": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
+        "REFERER": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
+        "HEADER": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
+        "BLOCKED": true
       }
     ]
   }

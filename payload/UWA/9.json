@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/settings.php.swp",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

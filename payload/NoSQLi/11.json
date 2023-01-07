@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "username%5B%24ne%5D=toto&password%5B%24regex%5D=m.%7B2%7D",
-      "Body": "username%5B%24ne%5D=toto&password%5B%24regex%5D=m.%7B2%7D",
-      "Blocked": true
+      "BODY": "username%5B%24ne%5D=toto&password%5B%24regex%5D=m.%7B2%7D",
+      "BLOCKED": true
     }
   ]
 }

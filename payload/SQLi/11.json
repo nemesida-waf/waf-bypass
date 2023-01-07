@@ -3,10 +3,10 @@
     {
       "URL": "KiF1bmlvbiovIC8qIXNlbGVjdCovIDEsMiwzLDQsNSw2LDcsOCw5LDA=",
       "ARGS": "param%RND%=KiF1bmlvbiovIC8qIXNlbGVjdCovIDEsMiwzLDQsNSw2LDcsOCw5LDA=",
-      "Body": "param%RND%=KiF1bmlvbiovIC8qIXNlbGVjdCovIDEsMiwzLDQsNSw2LDcsOCw5LDA=",
-      "Cookie": "KiF1bmlvbiovIC8qIXNlbGVjdCovIDEsMiwzLDQsNSw2LDcsOCw5LDA=",
-      "Headers": "KiF1bmlvbiovIC8qIXNlbGVjdCovIDEsMiwzLDQsNSw2LDcsOCw5LDA=",
-      "Blocked": true
+      "BODY": "param%RND%=KiF1bmlvbiovIC8qIXNlbGVjdCovIDEsMiwzLDQsNSw2LDcsOCw5LDA=",
+      "COOKIE": "KiF1bmlvbiovIC8qIXNlbGVjdCovIDEsMiwzLDQsNSw2LDcsOCw5LDA=",
+      "HEADER": "KiF1bmlvbiovIC8qIXNlbGVjdCovIDEsMiwzLDQsNSw2LDcsOCw5LDA=",
+      "BLOCKED": true
     }
   ]
 }

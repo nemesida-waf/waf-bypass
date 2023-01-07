@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "{\"username\": {\"$gt\":\"\"}, \"password\": {\"$gt\":\"\"}}",
-      "Blocked": true
+      "BODY": "{\"username\": {\"$gt\":\"\"}, \"password\": {\"$gt\":\"\"}}",
+      "BLOCKED": true
     }
   ]
 }

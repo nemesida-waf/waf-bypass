@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<isindex action=javascript:alert(1) type=submit value=click>",
-      "Body": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "USER-AGENT": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "BODY": "<isindex action=javascript:alert(1) type=submit value=click>",
       "ARGS": "<isindex action=javascript:alert(1) type=submit value=click>",
-      "Cookie": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "COOKIE": "<isindex action=javascript:alert(1) type=submit value=click>",
       "URL": "<isindex action=javascript:alert(1) type=submit value=click>",
-      "Referer": "<isindex action=javascript:alert(1) type=submit value=click>",
-      "Headers": "<isindex action=javascript:alert(1) type=submit value=click>",
-      "Blocked": true
+      "REFERER": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "HEADER": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "BLOCKED": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "Body": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "USER-AGENT": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "BODY": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "ARGS": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "Cookie": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "COOKIE": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "URL": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "Referer": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "Headers": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "Blocked": true
+      "REFERER": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "HEADER": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "BLOCKED": true
     }
   ]
 }

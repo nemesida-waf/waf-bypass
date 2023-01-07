@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/.suspected",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

@@ -3,12 +3,12 @@
     {
       "URL": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
       "ARGS": "param%RND%=%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "Body": "param%RND%=%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "Cookie": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "UA": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "Referer": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "Headers": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
-      "Blocked": true
+      "BODY": "param%RND%=%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
+      "COOKIE": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
+      "USER-AGENT": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
+      "REFERER": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
+      "HEADER": "%3B%20cat%24u%2B%2Fetc%24u%2Fpasswd%24u",
+      "BLOCKED": true
     }
   ]
 }

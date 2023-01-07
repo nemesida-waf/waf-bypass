@@ -1,9 +1,9 @@
 {
   "req": [
     {
-      "Body": "--2e0bd22b8ae17e5687c77788f2e006d0f78c57e6fedf361f1162d1be1099\r\nContent-Disposition: form-data; name=\"ed32f426c3\"\r\n\r\nABC\r\n--2e0bd22b8ae17e5687c77788f2e006d0f78c57e6fedf361f1162d1be1099\r\nContent-Disposition: form-data; name=\"ed32f426c3\"\r\n\r\nJyBPUiAxPTEtLQ==\r\n--2e0bd22b8ae17e5687c77788f2e006d0f78c57e6fedf361f1162d1be1099--",
-      "Boundary": "2e0bd22b8ae17e5687c77788f2e006d0f78c57e6fedf361f1162d1be1099",
-      "Blocked": true
+      "BODY": "--2e0bd22b8ae17e5687c77788f2e006d0f78c57e6fedf361f1162d1be1099\r\nContent-Disposition: form-data; name=\"ed32f426c3\"\r\n\r\nABC\r\n--2e0bd22b8ae17e5687c77788f2e006d0f78c57e6fedf361f1162d1be1099\r\nContent-Disposition: form-data; name=\"ed32f426c3\"\r\n\r\nJyBPUiAxPTEtLQ==\r\n--2e0bd22b8ae17e5687c77788f2e006d0f78c57e6fedf361f1162d1be1099--",
+      "BOUNDARY": "2e0bd22b8ae17e5687c77788f2e006d0f78c57e6fedf361f1162d1be1099",
+      "BLOCKED": true
     }
   ]
 }

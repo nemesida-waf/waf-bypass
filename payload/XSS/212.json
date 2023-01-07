@@ -2,10 +2,10 @@
   "req": [
     {
       "ARGS": "param%RND%=Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
-      "Body": "param%RND%=Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
-      "Cookie": "Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
-      "Headers": "Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
-      "Blocked": true
+      "BODY": "param%RND%=Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
+      "COOKIE": "Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
+      "HEADER": "Function%60%24%24%7B%24%7B%60%24%7B%60%24%7B%60alert%7D%28%7D1%7D%29%60%7D%60%60%60",
+      "BLOCKED": true
     }
   ]
 }

@@ -3,10 +3,10 @@
     {
       "URL": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
       "ARGS": "param%RND%=PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
-      "Body": "param%RND%=PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
-      "Cookie": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
-      "Headers": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
-      "Blocked": true
+      "BODY": "param%RND%=PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
+      "COOKIE": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
+      "HEADER": "PCEtLSNlY2hvIHZhcj0iRE9DVU1FTlRfTkFNRSIgLS0+",
+      "BLOCKED": true
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "req": [
     {
-      "Body": "p%RND%=<svg 1='&q='onload='/*&r=*/alert(1)'>",
+      "BODY": "p%RND%=<svg 1='&q='onload='/*&r=*/alert(1)'>",
       "ARGS": "p%RND%=<svg 1='&q='onload='/*&r=*/alert(1)'>",
-      "Cookie": "<svg 1='&q='onload='/*&r=*/alert(1)'>",
+      "COOKIE": "<svg 1='&q='onload='/*&r=*/alert(1)'>",
       "URL": "<svg 1='&q='onload='/*&r=*/alert(1)'>",
-      "Referer": "<svg 1='&q='onload='/*&r=*/alert(1)'>",
-      "Blocked": true
+      "REFERER": "<svg 1='&q='onload='/*&r=*/alert(1)'>",
+      "BLOCKED": true
     }
   ]
 }

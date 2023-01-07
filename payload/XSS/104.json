@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "eval(URL.slice(-8)) #alert(1)",
-      "Body": "eval(URL.slice(-8)) #alert(1)",
-      "ARGS": "eval(URL.slice(-8)) #alert(1)",
-      "Cookie": "eval(URL.slice(-8)) #alert(1)",
-      "URL": "eval(URL.slice(-8)) #alert(1)",
-      "Referer": "eval(URL.slice(-8)) #alert(1)",
-      "Headers": "eval(URL.slice(-8)) #alert(1)",
-      "Blocked": true
+      "USER-AGENT": "eval(url.slice(-8)) #alert(1)",
+      "BODY": "eval(url.slice(-8)) #alert(1)",
+      "ARGS": "eval(url.slice(-8)) #alert(1)",
+      "COOKIE": "eval(url.slice(-8)) #alert(1)",
+      "URL": "eval(url.slice(-8)) #alert(1)",
+      "REFERER": "eval(url.slice(-8)) #alert(1)",
+      "HEADER": "eval(url.slice(-8)) #alert(1)",
+      "BLOCKED": true
     }
   ]
 }

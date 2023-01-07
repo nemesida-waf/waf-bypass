@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "eval(location.hash.slice(1)) #alert(1)",
-      "Body": "eval(location.hash.slice(1)) #alert(1)",
+      "USER-AGENT": "eval(location.hash.slice(1)) #alert(1)",
+      "BODY": "eval(location.hash.slice(1)) #alert(1)",
       "ARGS": "eval(location.hash.slice(1)) #alert(1)",
-      "Cookie": "eval(location.hash.slice(1)) #alert(1)",
+      "COOKIE": "eval(location.hash.slice(1)) #alert(1)",
       "URL": "eval(location.hash.slice(1)) #alert(1)",
-      "Referer": "eval(location.hash.slice(1)) #alert(1)",
-      "Headers": "eval(location.hash.slice(1)) #alert(1)",
-      "Blocked": true
+      "REFERER": "eval(location.hash.slice(1)) #alert(1)",
+      "HEADER": "eval(location.hash.slice(1)) #alert(1)",
+      "BLOCKED": true
     }
   ]
 }

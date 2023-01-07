@@ -3,13 +3,13 @@
     {
       "URL": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
       "ARGS": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
-      "Body": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
-      "Cookie": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
-      "UA": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
-      "Referer": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
-      "Headers": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
-      "Method": "HEAD",
-      "Blocked": true
+      "BODY": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
+      "COOKIE": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
+      "USER-AGENT": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
+      "REFERER": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
+      "HEADER": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
+      "METHOD": "HEAD",
+      "BLOCKED": true
     }
   ]
 }

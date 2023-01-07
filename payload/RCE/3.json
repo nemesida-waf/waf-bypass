@@ -2,11 +2,11 @@
   "req": [
     {
       "ARGS": "param%RND%=%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
-      "Body": "param%RND%=%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
-      "Cookie": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
-      "UA": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
-      "Headers": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
-      "Blocked": true
+      "BODY": "param%RND%=%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "COOKIE": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "USER-AGENT": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "HEADER": "%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
+      "BLOCKED": true
     }
   ]
 }

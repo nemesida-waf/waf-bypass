@@ -4,11 +4,11 @@
     {
       "URL": "\"autofocus=alert(1)//",
       "ARGS": "\"autofocus=alert(1)//",
-      "Body": "\"autofocus=alert(1)//",
-      "Cookie": "\"autofocus=alert(1)//",
-      "Referer": "\"autofocus=alert(1)//",
-      "Headers": "\"autofocus=alert(1)//",
-      "Blocked": true
+      "BODY": "\"autofocus=alert(1)//",
+      "COOKIE": "\"autofocus=alert(1)//",
+      "REFERER": "\"autofocus=alert(1)//",
+      "HEADER": "\"autofocus=alert(1)//",
+      "BLOCKED": true
     }
   ]
 }

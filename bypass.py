@@ -175,17 +175,17 @@ class WAFBypass:
             method, self.host, headers=headers, data=data, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('Body', request_data, request, self.block_status)
+        self.output('BODY', request_data, request, self.block_status)
 
     def test_cookie(self, request_data, method):
-        cookies = {f"CustomCookie{secrets.token_urlsafe(12)}": request_data.cookie}
+        cookies = {f"WBC-{secrets.token_urlsafe(6)}": request_data.cookie}
         headers = {'User-Agent': self.ua, **self.headers}
         method = 'get' if not method else method
         request = self.session.request(
             method, self.host, headers=headers, cookies=cookies, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('Cookie', request_data, request, self.block_status)
+        self.output('COOKIE', request_data, request, self.block_status)
 
     def test_ua(self, request_data, method):
         headers = {'User-Agent': request_data.ua, **self.headers}
@@ -194,24 +194,24 @@ class WAFBypass:
             method, self.host, headers=headers, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('User-Agent', request_data, request, self.block_status)
+        self.output('USER-AGENT', request_data, request, self.block_status)
 
     def test_referer(self, request_data, method):
         headers = {'Referer': request_data.referer, **self.headers}
-        headers = {'User-Agent': self.ua, **headers}
+        headers = {'User-agent': self.ua, **headers}
         method = 'get' if not method else method
         request = self.session.request(
             method, self.host, headers=headers, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('Referer', request_data, request, self.block_status)
+        self.output('REFERER', request_data, request, self.block_status)
 
     def test_headers(self, request_data, method):
-        headers = {f"CustomHeader": request_data.headers, **self.headers}
+        headers = {f"WBH-{secrets.token_urlsafe(6)}": request_data.headers, **self.headers}
         headers = {'User-Agent': self.ua, **headers}
         method = 'get' if not method else method
         request = self.session.request(
             method, self.host, headers=headers, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('Headers', request_data, request, self.block_status)
+        self.output('HEADERS', request_data, request, self.block_status)

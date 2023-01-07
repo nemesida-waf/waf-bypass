@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "param%RND%=KikodWlkPSopKSh8KHVpZD0q",
-      "Body": "param%RND%=KikodWlkPSopKSh8KHVpZD0q",
-      "Blocked": true
+      "BODY": "param%RND%=KikodWlkPSopKSh8KHVpZD0q",
+      "BLOCKED": true
     }
   ]
 }

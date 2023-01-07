@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "%2A%29%29%2500",
-      "Body": "%2A%29%29%2500",
-      "Blocked": true
+      "BODY": "%2A%29%29%2500",
+      "BLOCKED": true
     }
   ]
 }

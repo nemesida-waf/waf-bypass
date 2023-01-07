@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<input autofocus onblur=alert(1)>",
-      "Body": "<input autofocus onblur=alert(1)>",
+      "USER-AGENT": "<input autofocus onblur=alert(1)>",
+      "BODY": "<input autofocus onblur=alert(1)>",
       "ARGS": "<input autofocus onblur=alert(1)>",
-      "Cookie": "<input autofocus onblur=alert(1)>",
+      "COOKIE": "<input autofocus onblur=alert(1)>",
       "URL": "<input autofocus onblur=alert(1)>",
-      "Referer": "<input autofocus onblur=alert(1)>",
-      "Headers": "<input autofocus onblur=alert(1)>",
-      "Blocked": true
+      "REFERER": "<input autofocus onblur=alert(1)>",
+      "HEADER": "<input autofocus onblur=alert(1)>",
+      "BLOCKED": true
     }
   ]
 }

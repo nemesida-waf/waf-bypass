@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<audio src onloadstart=alert(1)>",
-      "Body": "<audio src onloadstart=alert(1)>",
+      "USER-AGENT": "<audio src onloadstart=alert(1)>",
+      "BODY": "<audio src onloadstart=alert(1)>",
       "ARGS": "<audio src onloadstart=alert(1)>",
-      "Cookie": "<audio src onloadstart=alert(1)>",
+      "COOKIE": "<audio src onloadstart=alert(1)>",
       "URL": "<audio src onloadstart=alert(1)>",
-      "Referer": "<audio src onloadstart=alert(1)>",
-      "Headers": "<audio src onloadstart=alert(1)>",
-      "Blocked": true
+      "REFERER": "<audio src onloadstart=alert(1)>",
+      "HEADER": "<audio src onloadstart=alert(1)>",
+      "BLOCKED": true
     }
   ]
 }

@@ -2,10 +2,10 @@
   "req": [
     {
       "ARGS": "login%RND%=%24%7B7*7%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
-      "Body": "login%RND%=%24%7B7*7%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
-      "Cookie": "%24%7B7*7%7D",
-      "Headers": "%24%7B7*7%7D",
-      "Blocked": true
+      "BODY": "login%RND%=%24%7B7*7%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
+      "COOKIE": "%24%7B7*7%7D",
+      "HEADER": "%24%7B7*7%7D",
+      "BLOCKED": true
     }
   ]
 }

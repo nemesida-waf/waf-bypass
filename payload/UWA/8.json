@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/backup/db.gz",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

@@ -3,10 +3,10 @@
     {
       "URL": "PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
       "ARGS": "param%RND%=PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
-      "Body": "param%RND%=PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
-      "Cookie": "PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
-      "Headers": "PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
-      "Blocked": true
+      "BODY": "param%RND%=PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
+      "COOKIE": "PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
+      "HEADER": "PGJvZHkgb25mb2N1cz1hbGVydCgxKT4=",
+      "BLOCKED": true
     }
   ]
 }

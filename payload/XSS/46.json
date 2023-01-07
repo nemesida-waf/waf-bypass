@@ -1,12 +1,12 @@
 {
   "req": [
     {
-      "Body": "<base href='http://example.com'><a href='/test'>TEST</a>",
+      "BODY": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "ARGS": "<base href='http://example.com'><a href='/test'>TEST</a>",
-      "Cookie": "<base href='http://example.com'><a href='/test'>TEST</a>",
+      "COOKIE": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "URL": "<base href='http://example.com'><a href='/test'>TEST</a>",
-      "Referer": "<base href='http://example.com'><a href='/test'>TEST</a>",
-      "Blocked": true
+      "REFERER": "<base href='http://example.com'><a href='/test'>TEST</a>",
+      "BLOCKED": true
     }
   ]
 }

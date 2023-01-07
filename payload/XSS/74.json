@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<script src=//brutelogic.com.br/1.js>",
-      "Body": "<script src=//brutelogic.com.br/1.js>",
+      "USER-AGENT": "<script src=//brutelogic.com.br/1.js>",
+      "BODY": "<script src=//brutelogic.com.br/1.js>",
       "ARGS": "<script src=//brutelogic.com.br/1.js>",
-      "Cookie": "<script src=//brutelogic.com.br/1.js>",
+      "COOKIE": "<script src=//brutelogic.com.br/1.js>",
       "URL": "<script src=//brutelogic.com.br/1.js>",
-      "Referer": "<script src=//brutelogic.com.br/1.js>",
-      "Headers": "<script src=//brutelogic.com.br/1.js>",
-      "Blocked": true
+      "REFERER": "<script src=//brutelogic.com.br/1.js>",
+      "HEADER": "<script src=//brutelogic.com.br/1.js>",
+      "BLOCKED": true
     }
   ]
 }

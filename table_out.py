@@ -3,12 +3,11 @@
 from prettytable import PrettyTable
 from logger import logger_stat, write_log_stat
 from collections import OrderedDict
-from colorama import Fore as f
-from colorama import Style as s
+from colorama import Fore, Style
 
 
 def table_payload_zone():
-    red, green, yellow, white_br, reset = f.RED, f.GREEN, f.YELLOW, s.BRIGHT, s.RESET_ALL
+    red, green, yellow, white_br, reset = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
     directory = '/tmp/waf-bypass-log/'
     passed, failed_fn, failed_fp, errors = write_log_stat()
 
@@ -32,8 +31,8 @@ def table_payload_zone():
         for i in passed_or_failed:
             source, zone = i.split(" in ")
             formatted_zone = zone.strip('\n')
-            if formatted_zone in ('Body', 'ARGS', 'Referer', 'UA', 'Cookie', 'Header', 'URL'):
-                dictionary.setdefault(source, []).append(formatted_zone.lower())
+            if formatted_zone in ('URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER'):
+                dictionary.setdefault(source, []).append(formatted_zone.upper())
 
         b = OrderedDict(sorted(dictionary.items(), key=lambda t: t[0]))
 
@@ -70,7 +69,7 @@ def table_payload_zone():
 
 
 def table_status_count_accuracy():
-    r, g, y, w, n = f.RED, f.GREEN, f.YELLOW, s.BRIGHT, s.RESET_ALL
+    r, g, y, w, n = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
 
     count_of_passed = logger_stat()['PASSED']
     count_of_failed_fn = logger_stat()['FAILED_FN']

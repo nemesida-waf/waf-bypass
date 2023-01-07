@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
-      "Body": "login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
-      "Blocked": true
+      "BODY": "login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
+      "BLOCKED": true
     }
   ]
 }

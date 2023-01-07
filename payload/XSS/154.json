@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<body onload=alert(1)>",
-      "Body": "<body onload=alert(1)>",
+      "USER-AGENT": "<body onload=alert(1)>",
+      "BODY": "<body onload=alert(1)>",
       "ARGS": "<body onload=alert(1)>",
-      "Cookie": "<body onload=alert(1)>",
+      "COOKIE": "<body onload=alert(1)>",
       "URL": "<body onload=alert(1)>",
-      "Referer": "<body onload=alert(1)>",
-      "Headers": "<body onload=alert(1)>",
-      "Blocked": true
+      "REFERER": "<body onload=alert(1)>",
+      "HEADER": "<body onload=alert(1)>",
+      "BLOCKED": true
     }
   ]
 }

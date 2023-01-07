@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/.gitconfig",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

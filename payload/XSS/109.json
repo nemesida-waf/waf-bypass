@@ -2,14 +2,14 @@
 {
   "req": [
     {
-      "URL": "&lt;svg/onload&equals;alert(1)&gt;",
-      "ARGS": "&lt;svg/onload&equals;alert(1)&gt;",
-      "Body": "&lt;svg/onload&equals;alert(1)&gt;",
-      "Headers": "&lt;svg/onload&equals;alert(1)&gt;",
-      "Cookie": "&lt;svg/onload&equals;alert(1)&gt;",
-      "UA": "&lt;svg/onload&equals;alert(1)&gt;",
-      "Referer": "&lt;svg/onload&equals;alert(1)&gt;",
-      "Blocked": true
+      "URL": "&lt;svg/onload&equser-agentls;alert(1)&gt;",
+      "ARGS": "&lt;svg/onload&equser-agentls;alert(1)&gt;",
+      "BODY": "&lt;svg/onload&equser-agentls;alert(1)&gt;",
+      "HEADER": "&lt;svg/onload&equser-agentls;alert(1)&gt;",
+      "COOKIE": "&lt;svg/onload&equser-agentls;alert(1)&gt;",
+      "USER-AGENT": "&lt;svg/onload&equser-agentls;alert(1)&gt;",
+      "REFERER": "&lt;svg/onload&equser-agentls;alert(1)&gt;",
+      "BLOCKED": true
     }
   ]
 }

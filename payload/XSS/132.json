@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<x oncontextmenu=alert(1)>right click this!",
-      "Body": "<x oncontextmenu=alert(1)>right click this!",
+      "USER-AGENT": "<x oncontextmenu=alert(1)>right click this!",
+      "BODY": "<x oncontextmenu=alert(1)>right click this!",
       "ARGS": "<x oncontextmenu=alert(1)>right click this!",
-      "Cookie": "<x oncontextmenu=alert(1)>right click this!",
+      "COOKIE": "<x oncontextmenu=alert(1)>right click this!",
       "URL": "<x oncontextmenu=alert(1)>right click this!",
-      "Referer": "<x oncontextmenu=alert(1)>right click this!",
-      "Headers": "<x oncontextmenu=alert(1)>right click this!",
-      "Blocked": true
+      "REFERER": "<x oncontextmenu=alert(1)>right click this!",
+      "HEADER": "<x oncontextmenu=alert(1)>right click this!",
+      "BLOCKED": true
     }
   ]
 }

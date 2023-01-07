@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<svg onload=alert&lpar;1&rpar;>",
-      "Body": "<svg onload=alert&lpar;1&rpar;>",
+      "USER-AGENT": "<svg onload=alert&lpar;1&rpar;>",
+      "BODY": "<svg onload=alert&lpar;1&rpar;>",
       "ARGS": "<svg onload=alert&lpar;1&rpar;>",
-      "Cookie": "<svg onload=alert&lpar;1&rpar;>",
-      "Referer": "<svg onload=alert&lpar;1&rpar;>",
-      "Headers": "<svg onload=alert&lpar;1&rpar;>",
+      "COOKIE": "<svg onload=alert&lpar;1&rpar;>",
+      "REFERER": "<svg onload=alert&lpar;1&rpar;>",
+      "HEADER": "<svg onload=alert&lpar;1&rpar;>",
       "URL": "<svg onload=alert&lpar;1&rpar;>",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

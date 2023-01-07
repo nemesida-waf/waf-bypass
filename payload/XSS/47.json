@@ -1,12 +1,12 @@
 {
   "req": [
     {
-      "Body": "<svg><script href=data:,alert(1) />",
+      "BODY": "<svg><script href=data:,alert(1) />",
       "ARGS": "<svg><script href=data:,alert(1) />",
-      "Cookie": "<svg><script href=data:,alert(1) />",
+      "COOKIE": "<svg><script href=data:,alert(1) />",
       "URL": "<svg><script href=data:,alert(1) />",
-      "Referer": "<svg><script href=data:,alert(1) />",
-      "Blocked": true
+      "REFERER": "<svg><script href=data:,alert(1) />",
+      "BLOCKED": true
     }
   ]
 }

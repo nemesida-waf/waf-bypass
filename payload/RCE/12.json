@@ -2,12 +2,12 @@
   "req": [
     {
       "ARGS": "${jndi:dns://example.com/}",
-      "Body": "param%RND%=${jndi:dns://example.com/}",
-      "Cookie": "${jndi:dns://example.com/}",
-      "UA": "${jndi:dns://example.com/}",
-      "Referer": "${jndi:dns://example.com/}",
-      "Headers": "${jndi:dns://example.com/}",
-      "Blocked": true
+      "BODY": "param%RND%=${jndi:dns://example.com/}",
+      "COOKIE": "${jndi:dns://example.com/}",
+      "USER-AGENT": "${jndi:dns://example.com/}",
+      "REFERER": "${jndi:dns://example.com/}",
+      "HEADER": "${jndi:dns://example.com/}",
+      "BLOCKED": true
     }
   ]
 }

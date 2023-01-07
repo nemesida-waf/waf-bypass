@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "param%RND%=admin%2A%29%28%28%7Cuserpassword=%2A%29",
-      "Body": "param%RND%=admin%2A%29%28%28%7Cuserpassword=%2A%29",
-      "Blocked": true
+      "BODY": "param%RND%=admin%2A%29%28%28%7Cuserpassword=%2A%29",
+      "BLOCKED": true
     }
   ]
 }

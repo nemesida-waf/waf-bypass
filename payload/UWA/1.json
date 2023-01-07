@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/.git",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

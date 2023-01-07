@@ -1,13 +1,13 @@
 {
   "req": [
     {
-      "Body": "</iframe><svg onload=alert(1)>",
+      "BODY": "</iframe><svg onload=alert(1)>",
       "ARGS": "</iframe><svg onload=alert(1)>",
-      "Cookie": "</iframe><svg onload=alert(1)>",
+      "COOKIE": "</iframe><svg onload=alert(1)>",
       "URL": "</iframe><svg onload=alert(1)>",
-      "Referer": "</iframe><svg onload=alert(1)>",
-      "Headers": "</iframe><svg onload=alert(1)>",
-      "Blocked": true
+      "REFERER": "</iframe><svg onload=alert(1)>",
+      "HEADER": "</iframe><svg onload=alert(1)>",
+      "BLOCKED": true
     }
   ]
 }

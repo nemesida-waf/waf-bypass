@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "{\"username\": {\"$ne\": null}, \"password\": {\"$ne\": null}}",
-      "Blocked": true
+      "BODY": "{\"username\": {\"$ne\": null}, \"password\": {\"$ne\": null}}",
+      "BLOCKED": true
     }
   ]
 }

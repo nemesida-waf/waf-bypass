@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<form action=javascript:alert(1)><input type=submit>",
-      "Body": "<form action=javascript:alert(1)><input type=submit>",
+      "USER-AGENT": "<form action=javascript:alert(1)><input type=submit>",
+      "BODY": "<form action=javascript:alert(1)><input type=submit>",
       "ARGS": "<form action=javascript:alert(1)><input type=submit>",
-      "Cookie": "<form action=javascript:alert(1)><input type=submit>",
+      "COOKIE": "<form action=javascript:alert(1)><input type=submit>",
       "URL": "<form action=javascript:alert(1)><input type=submit>",
-      "Referer": "<form action=javascript:alert(1)><input type=submit>",
-      "Headers": "<form action=javascript:alert(1)><input type=submit>",
-      "Blocked": true
+      "REFERER": "<form action=javascript:alert(1)><input type=submit>",
+      "HEADER": "<form action=javascript:alert(1)><input type=submit>",
+      "BLOCKED": true
     }
   ]
 }

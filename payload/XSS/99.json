@@ -3,12 +3,12 @@
     {
       "URL": "top[/al/.source+/ert/.source](1)",
       "ARGS": "top[/al/.source+/ert/.source](1)",
-      "Body": "top[/al/.source+/ert/.source](1)",
-      "Cookie": "top[/al/.source+/ert/.source](1)",
-      "UA": "top[/al/.source+/ert/.source](1)",
-      "Referer": "top[/al/.source+/ert/.source](1)",
-      "Headers": "top[/al/.source+/ert/.source](1)",
-      "Blocked": true
+      "BODY": "top[/al/.source+/ert/.source](1)",
+      "COOKIE": "top[/al/.source+/ert/.source](1)",
+      "USER-AGENT": "top[/al/.source+/ert/.source](1)",
+      "REFERER": "top[/al/.source+/ert/.source](1)",
+      "HEADER": "top[/al/.source+/ert/.source](1)",
+      "BLOCKED": true
     }
   ]
 }

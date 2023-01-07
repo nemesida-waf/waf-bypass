@@ -2,12 +2,12 @@
     "req": [
       {
         "ARGS": "param%RND%=C:/WINDOWS/php.ini",
-        "Body": "param%RND%=C:/WINDOWS/php.ini",
-        "Cookie": "C:/WINDOWS/php.ini",
-        "UA": "C:/WINDOWS/php.ini",
-        "Referer": "C:/WINDOWS/php.ini",
-        "Headers": "C:/WINDOWS/php.ini",
-        "Blocked": true
+        "BODY": "param%RND%=C:/WINDOWS/php.ini",
+        "COOKIE": "C:/WINDOWS/php.ini",
+        "USER-AGENT": "C:/WINDOWS/php.ini",
+        "REFERER": "C:/WINDOWS/php.ini",
+        "HEADER": "C:/WINDOWS/php.ini",
+        "BLOCKED": true
       }
     ]
   }

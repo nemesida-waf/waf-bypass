@@ -3,12 +3,12 @@
     {
       "URL": "alert.call(%2520%2C%20%22XSS%22)%3B",
       "ARGS": "param%RND%=alert.call(%2520%2C%20%22XSS%22)%3B",
-      "Body": "param%RND%=alert.call(%2520%2C%20%22XSS%22)%3B",
-      "Cookie": "alert.call(%2520%2C%20%22XSS%22)%3B",
-      "UA": "alert.call(%2520%2C%20%22XSS%22)%3B",
-      "Referer": "http://example.com/?alert.call(%2520%2C%20%22XSS%22)%3B",
-      "Headers": "alert.call(%2520%2C%20%22XSS%22)%3B",
-      "Blocked": true
+      "BODY": "param%RND%=alert.call(%2520%2C%20%22XSS%22)%3B",
+      "COOKIE": "alert.call(%2520%2C%20%22XSS%22)%3B",
+      "USER-AGENT": "alert.call(%2520%2C%20%22XSS%22)%3B",
+      "REFERER": "http://example.com/?alert.call(%2520%2C%20%22XSS%22)%3B",
+      "HEADER": "alert.call(%2520%2C%20%22XSS%22)%3B",
+      "BLOCKED": true
     }
   ]
 }

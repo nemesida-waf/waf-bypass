@@ -3,11 +3,11 @@
     {
       "URL": "'onload=alert(1)><svg/1='",
       "ARGS": "'onload=alert(1)><svg/1='",
-      "Body": "'onload=alert(1)><svg/1='",
-      "Cookie": "'onload=alert(1)><svg/1='",
-      "Referer": "'onload=alert(1)><svg/1='",
-      "Headers": "'onload=alert(1)><svg/1='",
-      "Blocked": true
+      "BODY": "'onload=alert(1)><svg/1='",
+      "COOKIE": "'onload=alert(1)><svg/1='",
+      "REFERER": "'onload=alert(1)><svg/1='",
+      "HEADER": "'onload=alert(1)><svg/1='",
+      "BLOCKED": true
     }
   ]
 }

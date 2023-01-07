@@ -1,13 +1,13 @@
 {
   "req": [
     {
-      "Body": "</xmp><svg onload=alert(1)>",
+      "BODY": "</xmp><svg onload=alert(1)>",
       "ARGS": "</xmp><svg onload=alert(1)>",
-      "Cookie": "</xmp><svg onload=alert(1)>",
+      "COOKIE": "</xmp><svg onload=alert(1)>",
       "URL": "</xmp><svg onload=alert(1)>",
-      "Referer": "</xmp><svg onload=alert(1)>",
-      "Headers": "</xmp><svg onload=alert(1)>",
-      "Blocked": true
+      "REFERER": "</xmp><svg onload=alert(1)>",
+      "HEADER": "</xmp><svg onload=alert(1)>",
+      "BLOCKED": true
     }
   ]
 }

@@ -2,8 +2,8 @@
   "req": [
     {
       "ARGS": "user%RND%=%2A%29%29%00",
-      "Body": "user%RND%=%2A%29%29%00",
-      "Blocked": true
+      "BODY": "user%RND%=%2A%29%29%00",
+      "BLOCKED": true
     }
   ]
 }

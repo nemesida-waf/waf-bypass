@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/db.sql",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<img src=1 onerror=alert(1)>",
-      "Body": "<img src=1 onerror=alert(1)>",
+      "USER-AGENT": "<img src=1 onerror=alert(1)>",
+      "BODY": "<img src=1 onerror=alert(1)>",
       "ARGS": "<img src=1 onerror=alert(1)>",
-      "Cookie": "<img src=1 onerror=alert(1)>",
+      "COOKIE": "<img src=1 onerror=alert(1)>",
       "URL": "<img src=1 onerror=alert(1)>",
-      "Referer": "<img src=1 onerror=alert(1)>",
-      "Headers": "<img src=1 onerror=alert(1)>",
-      "Blocked": true
+      "REFERER": "<img src=1 onerror=alert(1)>",
+      "HEADER": "<img src=1 onerror=alert(1)>",
+      "BLOCKED": true
     }
   ]
 }

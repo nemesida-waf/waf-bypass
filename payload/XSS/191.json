@@ -2,11 +2,11 @@
   "req": [
     {
       "ARGS": "param%RND%=prompt%26lpar%3B1%26rpar%3B",
-      "Body": "param%RND%=prompt%26lpar%3B1%26rpar%3B",
-      "Cookie": "prompt%26lpar%3B1%26rpar%3B",
-      "UA": "prompt%26lpar%3B1%26rpar%3B",
-      "Headers": "prompt%26lpar%3B1%26rpar%3B",
-      "Blocked": true
+      "BODY": "param%RND%=prompt%26lpar%3B1%26rpar%3B",
+      "COOKIE": "prompt%26lpar%3B1%26rpar%3B",
+      "USER-AGENT": "prompt%26lpar%3B1%26rpar%3B",
+      "HEADER": "prompt%26lpar%3B1%26rpar%3B",
+      "BLOCKED": true
     }
   ]
 }

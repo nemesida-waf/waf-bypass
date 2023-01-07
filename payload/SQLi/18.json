@@ -3,12 +3,12 @@
     {
       "URL": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
       "ARGS": "(SELECT*FROM(SELECT(SLEEP(10)))a)2",
-      "Body": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
-      "Headers": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
-      "Cookie": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
-      "UA": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
-      "Referer": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
-      "Blocked": true
+      "BODY": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "HEADER": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "COOKIE": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "USER-AGENT": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "REFERER": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "BLOCKED": true
     }
   ]
 }

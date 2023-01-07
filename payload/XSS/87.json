@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
-      "Body": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
+      "USER-AGENT": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
+      "BODY": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
       "ARGS": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
-      "Cookie": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
+      "COOKIE": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
       "URl": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
-      "Referer": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
-      "Headers": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
-      "Blocked": true
+      "REFERER": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
+      "HEADER": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
+      "BLOCKED": true
     }
   ]
 }

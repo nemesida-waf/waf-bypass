@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/selector.png",
-      "Blocked": false
+      "BLOCKED": false
     }
   ]
 }

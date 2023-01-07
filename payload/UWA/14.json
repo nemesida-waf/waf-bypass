@@ -2,7 +2,7 @@
   "req": [
     {
       "URL": "/%2e/dmp.sql",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

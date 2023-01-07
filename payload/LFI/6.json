@@ -2,12 +2,12 @@
     "req": [
       {
         "ARGS": "param%RND%=C:/WINDOWS/win.ini",
-        "Body": "param%RND%=C:/WINDOWS/win.ini",
-        "Cookie": "C:/WINDOWS/win.ini",
-        "UA": "C:/WINDOWS/win.ini",
-        "Referer": "C:/WINDOWS/win.ini",
-        "Headers": "C:/WINDOWS/win.ini",
-        "Blocked": true
+        "BODY": "param%RND%=C:/WINDOWS/win.ini",
+        "COOKIE": "C:/WINDOWS/win.ini",
+        "USER-AGENT": "C:/WINDOWS/win.ini",
+        "REFERER": "C:/WINDOWS/win.ini",
+        "HEADER": "C:/WINDOWS/win.ini",
+        "BLOCKED": true
       }
     ]
   }

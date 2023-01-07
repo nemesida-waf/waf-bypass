@@ -3,12 +3,12 @@
     {
       "URL": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
       "ARGS": "param%RND%=%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
-      "Body": "param%RND%=%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
-      "Cookie": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
-      "UA": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
-      "Referer": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
-      "Headers": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
-      "Blocked": true
+      "BODY": "param%RND%=%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
+      "COOKIE": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
+      "USER-AGENT": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
+      "REFERER": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
+      "HEADER": "%3B%20cat%20%2Fet%3F%2Fpa%3Fswd",
+      "BLOCKED": true
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "UA": "<form><button formaction=javascript:alert(1)>click",
-      "Body": "<form><button formaction=javascript:alert(1)>click",
+      "USER-AGENT": "<form><button formaction=javascript:alert(1)>click",
+      "BODY": "<form><button formaction=javascript:alert(1)>click",
       "ARGS": "<form><button formaction=javascript:alert(1)>click",
-      "Cookie": "<form><button formaction=javascript:alert(1)>click",
+      "COOKIE": "<form><button formaction=javascript:alert(1)>click",
       "URL": "<form><button formaction=javascript:alert(1)>click",
-      "Referer": "<form><button formaction=javascript:alert(1)>click",
-      "Headers": "<form><button formaction=javascript:alert(1)>click",
-      "Blocked": true
+      "REFERER": "<form><button formaction=javascript:alert(1)>click",
+      "HEADER": "<form><button formaction=javascript:alert(1)>click",
+      "BLOCKED": true
     }
   ]
 }

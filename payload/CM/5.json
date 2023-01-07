@@ -3,13 +3,13 @@
     {
       "URL": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
       "ARGS": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
-      "Body": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
-      "Cookie": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
-      "UA": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
-      "Referer": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
-      "Headers": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
-      "Method": "SPST",
-      "Blocked": true
+      "BODY": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
+      "COOKIE": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
+      "USER-AGENT": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
+      "REFERER": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
+      "HEADER": "%3Bcat%252B%252Fe%253F%253F%252Fpa%253F%253F%253Fd",
+      "METHOD": "SPST",
+      "BLOCKED": true
     }
   ]
 }

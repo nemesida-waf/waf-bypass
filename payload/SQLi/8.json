@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "param%RND%=I%40kdo9ijegieokf%2Ckinkokdw0&login=admin&_token=ifwkaw-9ri0ofigjo9fgkiwn9df2o0kf0w9tgk30&parm2=fdna9rkif2ndfkigfji89rkfj29rk0hg3j98yh&qw=un%5C%22%2C%5C%22ion%20se%5C%22%2C%5C%22lect%201%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C0%2C11&file=login.php&password=fawikfiawgfiawkgiwaigkoiwg&list=29dkfaigmkcokwldf3ktgm&id=42243252",
-      "Blocked": true
+      "BODY": "param%RND%=I%40kdo9ijegieokf%2Ckinkokdw0&login=admin&_token=ifwkaw-9ri0ofigjo9fgkiwn9df2o0kf0w9tgk30&parm2=fdna9rkif2ndfkigfji89rkfj29rk0hg3j98yh&qw=un%5C%22%2C%5C%22ion%20se%5C%22%2C%5C%22lect%201%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C0%2C11&file=login.php&password=fawikfiawgfiawkgiwaigkoiwg&list=29dkfaigmkcokwldf3ktgm&id=42243252",
+      "BLOCKED": true
     }
   ]
 }

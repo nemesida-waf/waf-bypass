@@ -3,12 +3,12 @@
     {
       "URL": "top['al\\145rt'](1)",
       "ARGS": "top['al\\145rt'](1)",
-      "Body": "top['al\\145rt'](1)",
-      "Cookie": "top['al\\145rt'](1)",
-      "UA": "top['al\\145rt'](1)",
-      "Referer": "top['al\\145rt'](1)",
-      "Headers": "top['al\\145rt'](1)",
-      "Blocked": true
+      "BODY": "top['al\\145rt'](1)",
+      "COOKIE": "top['al\\145rt'](1)",
+      "USER-AGENT": "top['al\\145rt'](1)",
+      "REFERER": "top['al\\145rt'](1)",
+      "HEADER": "top['al\\145rt'](1)",
+      "BLOCKED": true
     }
   ]
 }

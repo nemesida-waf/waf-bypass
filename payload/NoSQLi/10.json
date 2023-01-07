@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "{\"username\": {\"$eq\": \"admin\"}, \"password\": {\"$regex\": \"^md\" }}",
-      "Blocked": true
+      "BODY": "{\"username\": {\"$eq\": \"admin\"}, \"password\": {\"$regex\": \"^md\" }}",
+      "BLOCKED": true
     }
   ]
 }

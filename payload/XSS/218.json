@@ -3,12 +3,12 @@
     {
       "URL": "/%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
       "ARGS": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
-      "Body": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
-      "Cookie": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
-      "UA": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
-      "Referer": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
-      "Headers": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
-      "Blocked": true
+      "BODY": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
+      "COOKIE": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
+      "USER-AGENT": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
+      "REFERER": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
+      "HEADER": "%3Ca%20href%3D%22https%3A%2F%2Fexample.com%2F%250aalert%281%29%22%20onclick%3D%22protocol%3D%27javascript%3A%27%22%3Ea%3C%2Fa%3E",
+      "BLOCKED": true
     }
   ]
 }

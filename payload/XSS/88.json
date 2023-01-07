@@ -3,13 +3,13 @@
   "req": [
     {
       "ARGS": "<script/x>alert(1)</script>",
-      "Body": "<script/x>alert(1)</script>",
-      "Cookie": "<script/x>alert(1)</script>",
-      "UA": "<script/x>alert(1)</script>",
-      "Referer": "<script/x>alert(1)</script>",
-      "Headers": "<script/x>alert(1)</script>",
+      "BODY": "<script/x>alert(1)</script>",
+      "COOKIE": "<script/x>alert(1)</script>",
+      "USER-AGENT": "<script/x>alert(1)</script>",
+      "REFERER": "<script/x>alert(1)</script>",
+      "HEADER": "<script/x>alert(1)</script>",
       "URL": "<script/x>alert(1)</script>",
-      "Blocked": true
+      "BLOCKED": true
     }
   ]
 }

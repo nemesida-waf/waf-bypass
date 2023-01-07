@@ -1,14 +1,14 @@
 {
   "req": [
     {
-      "Body": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
-      "UA": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
+      "BODY": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
+      "USER-AGENT": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
       "ARGS": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
-      "Cookie": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
+      "COOKIE": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
       "URL": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
-      "Referer": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
-      "Headers": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
-      "Blocked": true
+      "REFERER": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
+      "HEADER": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
+      "BLOCKED": true
     }
   ]
 }

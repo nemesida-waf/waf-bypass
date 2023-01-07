@@ -3,12 +3,12 @@
     {
       "URL": "top[8680439..toString(30)](1)",
       "ARGS": "top[8680439..toString(30)](1)",
-      "Body": "top[8680439..toString(30)](1)",
-      "Cookie": "top[8680439..toString(30)](1)",
-      "UA": "top[8680439..toString(30)](1)",
-      "Referer": "top[8680439..toString(30)](1)",
-      "Headers": "top[8680439..toString(30)](1)",
-      "Blocked": true
+      "BODY": "top[8680439..toString(30)](1)",
+      "COOKIE": "top[8680439..toString(30)](1)",
+      "USER-AGENT": "top[8680439..toString(30)](1)",
+      "REFERER": "top[8680439..toString(30)](1)",
+      "HEADER": "top[8680439..toString(30)](1)",
+      "BLOCKED": true
     }
   ]
 }

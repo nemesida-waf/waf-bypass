@@ -3,11 +3,11 @@
     {
       "URL": "\"onmouseover=alert(1)//",
       "ARGS": "\"onmouseover=alert(1)//",
-      "Body": "\"onmouseover=alert(1)//",
-      "Cookie": "\"onmouseover=alert(1)//",
-      "Referer": "\"onmouseover=alert(1)//",
-      "Headers": "\"onmouseover=alert(1)//",
-      "Blocked": true
+      "BODY": "\"onmouseover=alert(1)//",
+      "COOKIE": "\"onmouseover=alert(1)//",
+      "REFERER": "\"onmouseover=alert(1)//",
+      "HEADER": "\"onmouseover=alert(1)//",
+      "BLOCKED": true
     }
   ]
 }

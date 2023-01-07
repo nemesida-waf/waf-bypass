@@ -3,11 +3,11 @@
     {
       "URL": "*/alert(1)</script><script>/*",
       "ARGS": "*/alert(1)</script><script>/*",
-      "Body": "*/alert(1)</script><script>/*",
-      "Cookie": "*/alert(1)</script><script>/*",
-      "Referer": "*/alert(1)</script><script>/*",
-      "Headers": "*/alert(1)</script><script>/*",
-      "Blocked": true
+      "BODY": "*/alert(1)</script><script>/*",
+      "COOKIE": "*/alert(1)</script><script>/*",
+      "REFERER": "*/alert(1)</script><script>/*",
+      "HEADER": "*/alert(1)</script><script>/*",
+      "BLOCKED": true
     }
   ]
 }

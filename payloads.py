@@ -22,44 +22,44 @@ class PayloadProcessing:
                     .format(json_path, e)
                 )
 
-        # URL
+        # url
         url = self.extract_value(json_data, 'URL')
-        self._url = None if not url else url.replace("%RND%", secrets.token_urlsafe(12))
+        self._url = None if not url else url.replace("%RND%", secrets.token_urlsafe(6))
 
-        # ARGS
+        # args
         args = self.extract_value(json_data, 'ARGS')
-        self._args = None if not args else args.replace("%RND%", secrets.token_urlsafe(12))
+        self._args = None if not args else args.replace("%RND%", secrets.token_urlsafe(6))
 
-        # Body
-        body = self.extract_value(json_data, 'Body')
-        self._body = None if not body else body.replace("%RND%", secrets.token_urlsafe(12))
+        # body
+        body = self.extract_value(json_data, 'BODY')
+        self._body = None if not body else body.replace("%RND%", secrets.token_urlsafe(6))
 
-        # Cookie
-        cookie = self.extract_value(json_data, 'Cookie')
-        self._cookie = None if not cookie else cookie.replace("%RND%", secrets.token_urlsafe(12))
+        # cookie
+        cookie = self.extract_value(json_data, 'COOKIE')
+        self._cookie = None if not cookie else cookie.replace("%RND%", secrets.token_urlsafe(6))
 
-        # UA
-        ua = self.extract_value(json_data, 'UA')
-        self._ua = None if not ua else ua.replace("%RND%", secrets.token_urlsafe(12))
+        # ua
+        ua = self.extract_value(json_data, 'USER-AGENT')
+        self._ua = None if not ua else ua.replace("%RND%", secrets.token_urlsafe(6))
 
-        # Referer
-        referer = self.extract_value(json_data, 'Referer')
-        self._referer = None if not referer else referer.replace("%RND%", secrets.token_urlsafe(12))
+        # referer
+        referer = self.extract_value(json_data, 'REFERER')
+        self._referer = None if not referer else referer.replace("%RND%", secrets.token_urlsafe(6))
 
-        # Headers
-        headers = self.extract_value(json_data, 'Headers')
-        self._headers = None if not headers else headers.replace("%RND%", secrets.token_urlsafe(12))
+        # header
+        headers = self.extract_value(json_data, 'HEADER')
+        self._headers = None if not headers else headers.replace("%RND%", secrets.token_urlsafe(6))
 
-        # Boundary
-        boundary = self.extract_value(json_data, 'Boundary')
+        # boundary
+        boundary = self.extract_value(json_data, 'BOUNDARY')
         self._boundary = None if not boundary else boundary
 
-        # Method
-        method = self.extract_value(json_data, 'Method')
+        # method
+        method = self.extract_value(json_data, 'METHOD')
         self._method = None if not method else method.lower()
 
-        # Blocked (True if not set)
-        blocked = self.extract_value(json_data, 'Blocked')
+        # blocked
+        blocked = self.extract_value(json_data, 'BLOCKED')
         self._blocked = blocked if isinstance(blocked, bool) else True
 
     @property

