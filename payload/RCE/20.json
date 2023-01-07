@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "%RND%=cat%c0%a0%c0%afetc%c0%afpasswd",
-      "ARGS": "%RND%=cat%c0%a0%c0%afetc%c0%afpasswd",
+      "Body": "%RND%=%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
+      "ARGS": "%RND%=%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
       "Cookie": "cat%c0%a0%c0%afetc%c0%afpasswd",
       "Referer": "cat%c0%a0%c0%afetc%c0%afpasswd",
       "Blocked": true
