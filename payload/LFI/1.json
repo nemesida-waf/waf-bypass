@@ -1,10 +1,10 @@
 {
     "req": [
       {
-        "UA": "../../../../../../../..//etc/passwd",
-        "Body": "param%RND%=../../../../../../../..//etc/passwd",
         "ARGS": "param%RND%=../../../../../../../..//etc/passwd",
+        "Body": "param%RND%=../../../../../../../..//etc/passwd",
         "Cookie": "../../../../../../../..//etc/passwd",
+        "UA": "../../../../../../../..//etc/passwd",
         "Referer": "../../../../../../../..//etc/passwd",
         "Headers": "../../../../../../../..//etc/passwd",
         "Blocked": true
