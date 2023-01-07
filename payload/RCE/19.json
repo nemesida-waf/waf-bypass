@@ -1,10 +1,10 @@
 {
   "req": [
     {
-      "Body": "cat%c0%a0%c0%afetc%c0%afpasswd",
-      "ARGS": "cat%c0%a0%c0%afetc%c0%afpasswd",
-      "Cookie": "cat%c0%a0%c0%afetc%c0%afpasswd",
-      "Referer": "cat%c0%a0%c0%afetc%c0%afpasswd",
+      "Body": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
+      "ARGS": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
+      "Cookie": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
+      "Referer": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
       "Blocked": true
     }
   ]
