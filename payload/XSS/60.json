@@ -1,10 +1,10 @@
 {
   "req": [
     {
-      "Body": "\"onfocus=alert(1)//",
-      "ARGS": "\"onfocus=alert(1)//",
-      "Cookie": "\"onfocus=alert(1)//",
       "URL": "\"onfocus=alert(1)//",
+      "ARGS": "\"onfocus=alert(1)//",
+      "Body": "\"onfocus=alert(1)//",
+      "Cookie": "\"onfocus=alert(1)//",
       "Referer": "\"onfocus=alert(1)//",
       "Headers": "\"onfocus=alert(1)//",
       "Blocked": true

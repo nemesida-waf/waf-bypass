@@ -1,12 +1,9 @@
 {
   "req": [
     {
-      "UA": "",
-      "Body": "param%RND%=%3CA%20href%3D%22javascrip%2509t%26colon%3Beval.apply%60%24%7B%5Bjj.className%2B%60%2823%29%60%5D%7D%60%22%20id%3Djj%20class%3Dalert%3E",
       "ARGS": "param%RND%=%3CA%20href%3D%22javascrip%2509t%26colon%3Beval.apply%60%24%7B%5Bjj.className%2B%60%2823%29%60%5D%7D%60%22%20id%3Djj%20class%3Dalert%3E",
+      "Body": "param%RND%=%3CA%20href%3D%22javascrip%2509t%26colon%3Beval.apply%60%24%7B%5Bjj.className%2B%60%2823%29%60%5D%7D%60%22%20id%3Djj%20class%3Dalert%3E",
       "Cookie": "%3CA%20href%3D%22javascrip%2509t%26colon%3Beval.apply%60%24%7B%5Bjj.className%2B%60%2823%29%60%5D%7D%60%22%20id%3Djj%20class%3Dalert%3E",
-      "URL": "",
-      "Referer": "",
       "Headers": "%3CA%20href%3D%22javascrip%2509t%26colon%3Beval.apply%60%24%7B%5Bjj.className%2B%60%2823%29%60%5D%7D%60%22%20id%3Djj%20class%3Dalert%3E",
       "Blocked": true
     }

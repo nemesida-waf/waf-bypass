@@ -2,8 +2,8 @@
   "req": [
     {
       "URL": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
-      "Body": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
       "ARGS": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
+      "Body": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
       "Cookie": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
       "UA": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
       "Referer": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",

@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "login%RND%=%24%7Bclass.getClassLoader()%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "ARGS": "login%RND%=%24%7Bclass.getClassLoader()%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
+      "Body": "login%RND%=%24%7Bclass.getClassLoader()%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "Blocked": true
     }
   ]

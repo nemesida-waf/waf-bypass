@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "Body": "login%RND%=${T(java.lang.System).getenv()}&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "ARGS": "login%RND%=${T(java.lang.System).getenv()}&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
+      "Body": "login%RND%=${T(java.lang.System).getenv()}&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "Cookie": "${T(java.lang.System).getenv()}",
       "Headers": "${T(java.lang.System).getenv()}",
       "Blocked": true

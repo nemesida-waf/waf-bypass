@@ -2,8 +2,8 @@
   "req": [
     {
       "URL": "<svg on onload=(alert)(document.domain)>",
-      "Body": "<svg on onload=(alert)(document.domain)>",
       "ARGS": "<svg on onload=(alert)(document.domain)>",
+      "Body": "<svg on onload=(alert)(document.domain)>",
       "Cookie": "<svg on onload=(alert)(document.domain)>",
       "UA": "<svg on onload=(alert)(document.domain)>",
       "Referer": "<svg on onload=(alert)(document.domain)>",

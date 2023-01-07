@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "Body": "{\"username\": {\"$gt\":\"\"}, \"password\": {\"$gt\":\"\"}}",
       "Blocked": true
     }

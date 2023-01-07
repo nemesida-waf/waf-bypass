@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "Body": "{\"username\": {\"$eq\": \"admin\"}, \"password\": {\"$regex\": \"^md\" }}",
       "Blocked": true
     }

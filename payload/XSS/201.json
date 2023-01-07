@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "UA": "alert.call(null,1)",
-      "Body": "param%RND%=alert.call(null,1)",
-      "ARGS": "param%RND%=alert.call(null,1)",
-      "Cookie": "alert.call(null,1)",
       "URL": "alert.call(null,1)",
+      "ARGS": "param%RND%=alert.call(null,1)",
+      "Body": "param%RND%=alert.call(null,1)",
+      "Cookie": "alert.call(null,1)",
+      "UA": "alert.call(null,1)",
       "Referer": "http://example.com/?alert.call(null,1)",
       "Headers": "alert.call(null,1)",
       "Blocked": true

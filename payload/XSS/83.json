@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "UA": "<Script>alert(1)</Script>",
-      "Body": "<Script>alert(1)</Script>",
-      "ARGS": "<Script>alert(1)</Script>",
-      "Cookie": "<Script>alert(1)</Script>",
       "URL": "<Script>alert(1)</Script>",
+      "ARGS": "<Script>alert(1)</Script>",
+      "Body": "<Script>alert(1)</Script>",
+      "Cookie": "<Script>alert(1)</Script>",
+      "UA": "<Script>alert(1)</Script>",
       "Referer": "<Script>alert(1)</Script>",
       "Headers": "<Script>alert(1)</Script>",
       "Blocked": true

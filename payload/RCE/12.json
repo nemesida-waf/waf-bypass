@@ -1,10 +1,10 @@
 {
   "req": [
     {
-      "UA": "${jndi:dns://example.com/}",
-      "Body": "param%RND%=${jndi:dns://example.com/}",
       "ARGS": "${jndi:dns://example.com/}",
+      "Body": "param%RND%=${jndi:dns://example.com/}",
       "Cookie": "${jndi:dns://example.com/}",
+      "UA": "${jndi:dns://example.com/}",
       "Referer": "${jndi:dns://example.com/}",
       "Headers": "${jndi:dns://example.com/}",
       "Blocked": true

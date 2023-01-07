@@ -1,9 +1,9 @@
 {
   "req": [
     {
-      "Body": "p%RND%=<svg/1='&q='onload=alert(1)>",
-      "ARGS": "p%RND%=<svg/1='&q='onload=alert(1)>",
       "URL": "<svg/1='&q='onload=alert(1)>",
+      "ARGS": "p%RND%=<svg/1='&q='onload=alert(1)>",
+      "Body": "p%RND%=<svg/1='&q='onload=alert(1)>",
       "Referer": "<svg/1='&q='onload=alert(1)>",
       "Cookie": "<svg/1='&q='onload=alert(1)>",
       "Blocked": true

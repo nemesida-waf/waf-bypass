@@ -1,7 +1,6 @@
 {
   "req": [
     {
-      "Type": "ALL",
       "Body": "{\"username\": {\"$ne\": null}, \"password\": {\"$ne\": null}}",
       "Blocked": true
     }

@@ -1,10 +1,10 @@
 {
   "req": [
     {
-      "Body": "'onload=alert(1)><svg/1='",
-      "ARGS": "'onload=alert(1)><svg/1='",
-      "Cookie": "'onload=alert(1)><svg/1='",
       "URL": "'onload=alert(1)><svg/1='",
+      "ARGS": "'onload=alert(1)><svg/1='",
+      "Body": "'onload=alert(1)><svg/1='",
+      "Cookie": "'onload=alert(1)><svg/1='",
       "Referer": "'onload=alert(1)><svg/1='",
       "Headers": "'onload=alert(1)><svg/1='",
       "Blocked": true
