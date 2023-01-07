@@ -1,7 +1,7 @@
 {
   "req": [
     {
-      "URL": "/cat%20%2Fet%3F%2Fpa%3F%3Fwd/../",
+      "URL": "/%3Bcat%20%2Fet%3F%2Fpa%3F%3Fwd/../",
       "Blocked": true
     }
   ]
