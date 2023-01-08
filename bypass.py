@@ -79,7 +79,7 @@ class WAFBypass:
                             self.test_args(request_data, json_path, method)
 
                         elif request_data.body:
-                            self.test_body(request_data, json_path, method, None)
+                            self.test_body(request_data.body, json_path, method, None)
 
                         elif request_data.cookie:
                             self.test_cookie(request_data, json_path, method)
@@ -94,7 +94,7 @@ class WAFBypass:
                             self.test_headers(request_data, json_path, method)
 
             except Exception as e:
-                print(f'{Fore.RED}An error occurred while processing file {relative_path}: {e}{Style.RESET_ALL}')
+                print(f'{Fore.YELLOW}An error occurred while processing file {relative_path}: {e}{Style.RESET_ALL}')
 
         # Append all .json paths in one list
         all_files_list = []
@@ -108,8 +108,8 @@ class WAFBypass:
         pool.map(test_request_data, all_files_list)
 
     @staticmethod
-    def output_processing(json_path, test_type, error):
-        print(f"{Fore.RED}An error occurred while processing file {json_path} in {test_type}: {error}{Style.RESET_ALL}")
+    def output_processing(test_type, json_path, error):
+        print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {test_type}: {error}{Style.RESET_ALL}")
 
     def test_url(self, request_data, json_path, method):
         url = urljoin(self.host, request_data.url)
