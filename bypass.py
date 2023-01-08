@@ -10,7 +10,7 @@ from colorama import Style
 from multiprocessing.dummy import Pool as ThreadPool
 from urllib.parse import urljoin
 
-from payloads import PayloadProcessing
+from payloads import get_payload
 from tables import get_result_details, table_get_result_accuracy
 
 requests.packages.urllib3.disable_warnings()
@@ -28,8 +28,6 @@ class WAFBypass:
         self.ua = ua
         self.timeout = timeout
         self.threads = threads
-        self.session = requests.Session()
-        self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
         self.wb_result = {}
         self.calls = 0
@@ -37,6 +35,7 @@ class WAFBypass:
         # init
         status_1, status_2, status_3, status_4 = 'PASSED', 'ERROR', 'FP', 'FN'
         self.statuses = ['', status_1, status_2, status_3, status_4]
+        self.zones = ['URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER']
 
     def start(self):
        
@@ -45,59 +44,72 @@ class WAFBypass:
         work_dir = os.path.dirname(os.path.realpath(__file__))
         work_dir_payload = work_dir + '/payload'
 
-        def test_request_data(json_path):
-            
-            """
-            Extracting data from .json, testing it, logging test results
-            :type json_path: str
-            """
+        def test_payload(json_path):
             try:
 
-                request_data = PayloadProcessing(json_path)
-                if request_data:
-
+                payload = get_payload(json_path)
+                if payload:
+                    
                     # extract method
-                    method = request_data.method
+                    method = payload['METHOD']
 
-                    # MFD (multipart/form-data) dir
-                    if 'MFD' in json_path:
+                    # processing the payload of each zone
+                    for z in payload:
 
-                        # processing if body exists
-                        if request_data.body:
-                        
+                        # skip specific zone (e.g. boundary, method etc.)
+                        if z not in self.zones:
+                            continue
+
+                        # skip empty
+                        if not payload[z]:
+                            continue
+
+                        # MFD (multipart/form-data) dir
+                        # (BODY processing only)
+                        if z == 'BODY' and payload['BODY'] and '/MFD/' in json_path:
+
                             # processing request
-                            if request_data.boundary:
-                                self.test_body(request_data, json_path, method, request_data.body, request_data.boundary)
+                            if z == 'BOUNDARY':
+                                k, v = test_body(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method, payload['BODY'], payload['BOUNDARY'])
+                                self.wb_result[k] = v
                             else:
                                 boundary = secrets.token_hex(30)  # 60 symbols
                                 nl = '\r\n'
                                 body_hdrs = 'Content-Disposition: form-data; name="' + secrets.token_urlsafe(5) + '"'
-                                body = '--' + boundary + nl + body_hdrs + nl + nl + request_data.body + nl + '--' + boundary + '--' + nl
-                                self.test_body(request_data, json_path, method, body, boundary)
+                                body = '--' + boundary + nl + body_hdrs + nl + nl + payload['BODY'] + nl + '--' + boundary + '--' + nl
+                                k, v = test_body(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method, body, boundary)
+                                self.wb_result[k] = v
 
-                    # Other dirs
-                    else:
+                        # Other dirs
+                        else:
 
-                        if request_data.url:
-                            self.test_url(request_data, json_path, method)
+                            if z == 'URL':
+                                k, v = test_url(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method)
+                                self.wb_result[k] = v
 
-                        elif request_data.args:
-                            self.test_args(request_data, json_path, method)
+                            elif z == 'ARGS':
+                                k, v = test_args(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method)
+                                self.wb_result[k] = v
 
-                        elif request_data.body:
-                            self.test_body(request_data, json_path, method, request_data.body, None)
+                            elif z == 'BODY':
+                                k, v = test_body(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method, payload['BODY'], None)
+                                self.wb_result[k] = v
 
-                        elif request_data.cookie:
-                            self.test_cookie(request_data, json_path, method)
+                            elif z == 'COOKIE':
+                                k, v = test_cookie(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method)
+                                self.wb_result[k] = v
 
-                        elif request_data.ua:
-                            self.test_ua(request_data, json_path, method)
+                            elif z == 'USER-AGENT':
+                                k, v = test_ua(self.host, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method)
+                                self.wb_result[k] = v
 
-                        elif request_data.referer:
-                            self.test_referer(request_data, json_path, method)
+                            elif z == 'REFERER':
+                                k, v = test_referer(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method)
+                                self.wb_result[k] = v
 
-                        elif request_data.headers:
-                            self.test_headers(request_data, json_path, method)
+                            elif z == 'HEADER':
+                                k, v = test_headers(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method)
+                                self.wb_result[k] = v
 
             except Exception as e:
                 print(f'{Fore.YELLOW}An error occurred while processing file {relative_path}: {e}{Style.RESET_ALL}')
@@ -111,161 +123,183 @@ class WAFBypass:
 
         # Multithreading
         pool = ThreadPool(processes=self.threads)
-        pool.map(test_request_data, all_files_list)
+        pool.map(test_payload, all_files_list)
 
         table_get_result_accuracy(self.wb_result, self.statuses)
         get_result_details(self.wb_result, self.statuses)
+    
 
-    @staticmethod
-    def test_error_processing(self, z, json_path, error):
-        self.wb_result[str(json_path) + ':' + z] = self.statuses[2]
+def test_url(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
+    
+    z = 'URL'
+    url = urljoin(host, payload[z])
+    headers = {'User-Agent': ua, **headers}
+    method = 'get' if not method else method
+    
+    try:
+
+        s = init_session()
+        result = s.request(method, url, headers=headers, proxies=proxy, timeout=timeout, verify=False)
+        
+        k = str(str(json_path) + ':' + z)
+        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+
+    except Exception as error:
+        k = str(str(json_path) + ':' + z)
+        v = statuses[2]
         print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
-    @staticmethod
-    def test_result_processing(self, blocked, status_code):
+    return k, v
+
+
+def test_args(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
+    
+    z = 'ARGS'
+    params = payload[z]
+    headers = {'User-Agent': ua, **headers}
+    method = 'get' if not method else method
+    
+    try:
         
-        if blocked:
-            status = self.statuses[1] if status_code in self.block_code else self.statuses[4]
-        else:
-            status = self.statuses[1] if status_code not in self.block_code else self.statuses[3]
+        s = init_session()
+        result = s.request(method, host, headers=headers, params=params, proxies=proxy, timeout=timeout, verify=False)
+
+        k = str(str(json_path) + ':' + z)
+        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+
+    except Exception as error:
+        k = str(str(json_path) + ':' + z)
+        v = statuses[2]
+        print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+
+    return k, v
+
+
+def test_body(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method, data, boundary):
+    
+    z = 'BODY'
+    headers = {f"Content-Type": 'multipart/form-data; boundary=' + boundary, **headers} if boundary else headers
+    headers = {'User-Agent': ua, **headers}
+    method = 'post' if not method else method
+    
+    try:
         
-        return status
+        s = init_session()
+        result = s.request(method, host, headers=headers, data=data, proxies=proxy, timeout=timeout, verify=False)
 
-    def test_url(self, request_data, json_path, method):
+        k = str(str(json_path) + ':' + z)
+        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+
+    except Exception as error:
+        k = str(str(json_path) + ':' + z)
+        v = statuses[2]
+        print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+
+    return k, v
+
+
+def test_cookie(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
+    
+    z = 'COOKIE'
+    cookies = {f"WBC-{secrets.token_urlsafe(6)}": payload[z]}
+    headers = {'User-Agent': ua, **headers}
+    method = 'get' if not method else method
+    
+    try:
         
-        z = 'URL'
-        url = urljoin(self.host, request_data.url)
-        headers = {'User-Agent': self.ua, **self.headers}
-        method = 'get' if not method else method
+        s = init_session()
+        result = s.request(method, host, headers=headers, cookies=cookies, proxies=proxy, timeout=timeout, verify=False)
+
+        k = str(str(json_path) + ':' + z)
+        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+
+    except Exception as error:
+        k = str(str(json_path) + ':' + z)
+        v = statuses[2]
+        print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+
+    return k, v
+
+
+def test_ua(host, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
+    
+    z = 'USER-AGENT'
+    headers = {'User-Agent': payload[z], **headers}
+    method = 'get' if not method else method
+    
+    try:
         
-        try:
+        s = init_session()
+        result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
 
-            result = self.session.request(
-                method, url, headers=headers, proxies=self.proxy,
-                timeout=self.timeout, verify=False
-            )
-            
-            status = self.test_result_processing(self, request_data.blocked, result.status_code)
-            self.wb_result[str(json_path) + ':' + z] = status
-            
-        except Exception as error:
-            self.test_error_processing(self, z, json_path, error)
+        k = str(str(json_path) + ':' + z)
+        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
 
-    def test_args(self, request_data, json_path, method):
+    except Exception as error:
+        k = str(str(json_path) + ':' + z)
+        v = statuses[2]
+        print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+
+    return k, v
+
+
+def test_referer(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
+    
+    z = 'REFERER'
+    headers = {'Referer': payload['REFERER'], **headers}
+    headers = {'User-Agent': ua, **headers}
+    method = 'get' if not method else method
+    
+    try:
+    
+        s = init_session()
+        result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
+
+        k = str(str(json_path) + ':' + z)
+        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+
+    except Exception as error:
+        k = str(str(json_path) + ':' + z)
+        v = statuses[2]
+        print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+
+    return k, v
+
+
+def test_headers(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
+    
+    z = 'HEADER'
+    headers = {f"WBH-{secrets.token_urlsafe(6)}": payload[z], **headers}
+    headers = {'User-Agent': ua, **headers}
+    method = 'get' if not method else method
+    
+    try:
         
-        z = 'ARGS'
-        params = request_data.args
-        headers = {'User-Agent': self.ua, **self.headers}
-        method = 'get' if not method else method
-        
-        try:
-            
-            result = self.session.request(
-                method, self.host, headers=headers, params=params, proxies=self.proxy,
-                timeout=self.timeout, verify=False
-            )
+        s = init_session()
+        result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
 
-            status = self.test_result_processing(self, request_data.blocked, result.status_code)
-            self.wb_result[str(json_path) + ':' + z] = status
+        k = str(str(json_path) + ':' + z)
+        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
 
-        except Exception as error:
-            self.test_error_processing(self, z, json_path, error)
+    except Exception as error:
+        k = str(str(json_path) + ':' + z)
+        v = statuses[2]
+        print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
-    def test_body(self, request_data, json_path, method, data, boundary):
-        
-        z = 'BODY'
-        headers = {f"Content-Type": 'multipart/form-data; boundary=' + boundary, **self.headers} if boundary else self.headers
-        headers = {'User-Agent': self.ua, **headers}
-        method = 'post' if not method else method
-        
-        try:
-            
-            result = self.session.request(
-                method, self.host, headers=headers, data=data, proxies=self.proxy,
-                timeout=self.timeout, verify=False
-            )
+    return k, v
 
-            status = self.test_result_processing(self, request_data.blocked, result.status_code)
-            self.wb_result[str(json_path) + ':' + z] = status
 
-        except Exception as error:
-            self.test_error_processing(self, z, json_path, error)
+def init_session():
+    s = requests.Session()
+    s.trust_env = False
+    return s
 
-    def test_cookie(self, request_data, json_path, method):
-        
-        z = 'COOKIE'
-        cookies = {f"WBC-{secrets.token_urlsafe(6)}": request_data.cookie}
-        headers = {'User-Agent': self.ua, **self.headers}
-        method = 'get' if not method else method
-        
-        try:
-            
-            result = self.session.request(
-                method, self.host, headers=headers, cookies=cookies, proxies=self.proxy,
-                timeout=self.timeout, verify=False
-            )
 
-            status = self.test_result_processing(self, request_data.blocked, result.status_code)
-            self.wb_result[str(json_path) + ':' + z] = status
-
-        except Exception as error:
-            self.test_error_processing(self, z, json_path, error)
-
-    def test_ua(self, request_data, json_path, method):
-        
-        z = 'USER-AGENT'
-        headers = {'User-Agent': request_data.ua, **self.headers}
-        method = 'get' if not method else method
-        
-        try:
-            
-            result = self.session.request(
-                method, self.host, headers=headers, proxies=self.proxy,
-                timeout=self.timeout, verify=False
-            )
-
-            status = self.test_result_processing(self, request_data.blocked, result.status_code)
-            self.wb_result[str(json_path) + ':' + z] = status
-
-        except Exception as error:
-            self.test_error_processing(self, z, json_path, error)
-
-    def test_referer(self, request_data, json_path, method):
-        
-        z = 'REFERER'
-        headers = {'Referer': request_data.referer, **self.headers}
-        headers = {'User-Agent': self.ua, **headers}
-        method = 'get' if not method else method
-        
-        try:
-        
-            result = self.session.request(
-                method, self.host, headers=headers, proxies=self.proxy,
-                timeout=self.timeout, verify=False
-            )
-
-            status = self.test_result_processing(self, request_data.blocked, result.status_code)
-            self.wb_result[str(json_path) + ':' + z] = status
-
-        except Exception as error:
-            self.test_error_processing(self, z, json_path, error)
-
-    def test_headers(self, request_data, json_path, method):
-        
-        z = 'HEADER'
-        headers = {f"WBH-{secrets.token_urlsafe(6)}": request_data.headers, **self.headers}
-        headers = {'User-Agent': self.ua, **headers}
-        method = 'get' if not method else method
-        
-        try:
-            
-            result = self.session.request(
-                method, self.host, headers=headers, proxies=self.proxy,
-                timeout=self.timeout, verify=False
-            )
-
-            status = self.test_result_processing(self, request_data.blocked, result.status_code)
-            self.wb_result[str(json_path) + ':' + z] = status
-
-        except Exception as error:
-            self.test_error_processing(self, z, json_path, error)
+def test_result_processing(blocked, statuses, block_code, status_code):
+    
+    if blocked:
+        status = statuses[1] if status_code in block_code else statuses[4]
+    else:
+        status = statuses[1] if status_code not in block_code else statuses[3]
+    
+    return status

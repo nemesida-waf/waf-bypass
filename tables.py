@@ -1,53 +1,44 @@
 #!/usr/bin/env python3
 
-from collections import OrderedDict
 from colorama import Fore, Style
 from prettytable import PrettyTable
-from stats import get_stats, get_details
+
+
+def get_stats(wb_result, status):    
+    return [k for k, v in wb_result.items() if v == status]
 
 
 def get_result_details(wb_result, statuses):
+    
+    fp = [k for k, v in wb_result.items() if v == statuses[3]]
+    fn = [k for k, v in wb_result.items() if v == statuses[4]]
 
-    red, green, yellow, white_br, reset = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
-    passed, failed_fn, failed_fp, errors = get_details(wb_result, statuses)
+    fp.sort()
+    fn.sort()
 
-    def items_processing(passed_or_failed):
-        dictionary = {}
-        table = PrettyTable(['Payload', 'Zone'])
+    def items_processing(data, status):
+        
+        if not len(data):
+            return ''
 
-        for i in passed_or_failed:
-            source, zone = i.split(" in ")
-            formatted_zone = zone.strip('\n')
-            if formatted_zone in ('URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER'):
-                dictionary.setdefault(source, []).append(formatted_zone.upper())
+        if status == 'FP':
+            table = PrettyTable([15 * ' ' + 'FALSE POSITIVE PAYLOAD' + 15 * ' ', 15 * ' ' + 'ZONE' + 15 * ' '])
+        elif status == 'FN':
+            table = PrettyTable([15 * ' ' + 'FALSE NEGATIVE PAYLOAD' + 15 * ' ', 15 * ' ' + 'ZONE' + 15 * ' '])
+        else:
+            table = PrettyTable([15 * ' ' + 'PAYLOAD' + 15 * ' ', 15 * ' ' + 'ZONE' + 15 * ' '])
 
-        b = OrderedDict(sorted(dictionary.items(), key=lambda t: t[0]))
+        for item in data:
+            k = item.split(':')[0]
+            v = item.split(':')[1]
+            table.add_row([k, v])
 
-        for key, value in b.items():
-            value_str = ' '.join(value)
-            table.add_row([key, value_str])
-
-        return dictionary
-
-    def add_line_to_get_result_details(dictionary_selected, colour):
-        for payload_path, value in dictionary_selected.items():
-            all_zone_arguments = ' '.join(value)
-            print('|{:^51}'.format(payload_path) + '|' + '{:^55}'.format(colour + all_zone_arguments + reset) + '|')
-
-    """ Payload-Zone table elements """
-    crossbar = '+' + 51 * '-' + '+' + 46 * '-' + '+'
-    table_header_1 = crossbar + '\n|' + 22 * ' ' + f'{white_br}Payload{reset}' + 22 * ' ' + '|' + \
-        21 * ' ' + f'{white_br}Zone{reset}' + 21 * ' ' + '|\n' + \
-        crossbar + '\n|' + 44 * ' ' + 'False Positive' + 40 * ' ' + '|' + '\n' + crossbar
-    table_header_2 = crossbar + '\n|' + 44 * ' ' + 'False Negative' + 40 * ' ' + '|' + '\n' + crossbar
+        print(table)
 
     """ Payload-Zone table print """
     print('\n')
-    print(table_header_1)
-    add_line_to_get_result_details(items_processing(failed_fp), red)
-    print(table_header_2)
-    add_line_to_get_result_details(items_processing(failed_fn), red)
-    print(crossbar)
+    items_processing(fp, statuses[3])
+    items_processing(fn, statuses[4])
     """ End of the table """
 
 
@@ -57,23 +48,24 @@ def table_get_result_accuracy(wb_result, statuses):
 
     count_of_passed = len(get_stats(wb_result, statuses[1]))
     count_of_errors = len(get_stats(wb_result, statuses[2]))
-    count_of_failed_fp = len(get_stats(wb_result, statuses[3]))
-    count_of_failed_fn = len(get_stats(wb_result, statuses[4]))
+    count_of_fp = len(get_stats(wb_result, statuses[3]))
+    count_of_fn = len(get_stats(wb_result, statuses[4]))
+    count_of_failed = count_of_fn + count_of_fp
+    count_of_all = count_of_passed + count_of_failed + count_of_errors
 
-    failed_sum = count_of_failed_fn + count_of_failed_fp
-    sum_all = count_of_passed + failed_sum + count_of_errors
+    passed_accuracy = round((count_of_passed/count_of_all)*100, 2) if count_of_all != 0 else '0.00'
+    failed_accuracy = round((count_of_failed/count_of_all)*100, 2) if count_of_all != 0 else '0.00'
+    errors_accuracy = round((count_of_errors/count_of_all)*100, 2) if count_of_all != 0 else '0.00'
 
-    passed_accuracy = round((count_of_passed/sum_all)*100, 2) if sum_all != 0 else '0.00'
-    failed_accuracy = round((failed_sum/sum_all)*100, 2) if sum_all != 0 else '0.00'
-    errors_accuracy = round((count_of_errors/sum_all)*100, 2) if sum_all != 0 else '0.00'
-
-    table = PrettyTable([f'Status', f'Count', f'Accuracy'])
+    table = PrettyTable([f'STATUS', f'COUNT', f'ACCURACY'])
+    table.title = f'{w}SUMMARY{n}'
+    table.align[f'STATUS'] = "l"
+    
     table.add_row([f'PASSED', f'{g}{count_of_passed}{n}', f'{g}{passed_accuracy}%{n}'])
-    table.add_row([f'FAILED', f'{r}{failed_sum}{n}', f'{r}{failed_accuracy}%{n}'])
+    if count_of_failed > 0:
+        table.add_row([f'FAILED', f'{r}{count_of_failed}{n}', f'{r}{failed_accuracy}%{n}'])
     if count_of_errors > 0:
         table.add_row([f'ERROR', f'{y}{count_of_errors}{n}', f'{y}{errors_accuracy}%{n}'])
-    table.title = f'{w}Summary{n}'
-    table.align[f'Status'] = "l"
-
+    
     print('\n')
     print(table)
