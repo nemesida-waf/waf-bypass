@@ -75,4 +75,5 @@ def table_status_count_accuracy():
     table.title = f'{w}Summary{n}'
     table.align[f'Status'] = "l"
 
+    print('\n')
     print(table)
