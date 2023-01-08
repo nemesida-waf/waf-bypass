@@ -32,10 +32,13 @@ def patch_http_connection_pool(**constructor_kwargs):
 
 
 def get_help():
-    print("Syntax: main.py --host=example.com:80 --proxy='http://proxy.example.com:3128'")
-    print("To add an HTTP header to all requests: --header='foo: bar' [--header=...]")
-    print("To set HTTP status codes as meaning 'waf blocked': --block=403 [--block=...].  If none given, default is 403.")
-
+    print("Syntax: ./main.py --host=example.com:80 [optional args]")
+    print("--proxy      - set proxy-server (e.g. --proxy='http://1.2.3.4:3128)") 
+    print("--header     - add the HTTP header to all requests (e.g. --header='Authorization: Basic YWRtaW46YWRtaW4=')")
+    print("--block-code - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403)")
+    print("--threads    - set the number of parallel scan threads (e.g. --threads=10, default: 4)")
+    print("--timeout    - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
+    
 
 # Increasing max pool size
 patch_http_connection_pool(maxsize=50)
@@ -43,6 +46,8 @@ patch_http_connection_pool(maxsize=50)
 # Init args
 host = ''
 proxy = ''
+threads = 5
+timeout = 30
 headers = {}
 ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
 
@@ -56,28 +61,41 @@ try:
     launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block=']
 
     # parsing args
-    block_status = {}
+    block_code = {}
     optlist, values = getopt.getopt(launch_args, '', launch_args_options)
+    
     for k, v in optlist:
+        
         if k == '--help':
             get_help()
             sys.exit()
+        
         if k == '--host':
             host = str(v).lower()
             # check host's schema
             if not re.search(r'^https?://', host):
                 host = 'http://' + host
+        
         elif k == '--proxy':
             proxy = str(v).lower()
+        
         elif k == '--header':
             hname, hval = str(v).split(':')
             hname = hname.strip()
             hval = hval.strip()
             headers[hname] = hval
-        elif k == '--block':
-            block_status[int(v)] = True
-    if len(block_status) == 0:
-        block_status[403] = True
+        
+        elif k == '--block-code':
+            block_code[int(v)] = True
+
+        elif k == '--threads':
+            threads = int(v)
+
+        elif k == '--timeout':
+            timeout = int(v)
+    
+    if len(block_code) == 0:
+        block_code[403] = True
 
 except Exception as e:
     print('An error occurred while processing the target/proxy: {}'.format(e))
@@ -105,7 +123,7 @@ if len(proxy):
 else:
     print('# Proxy: not used')
 
-print('# Block status code: {}'.format(list(block_status.keys())[0]))
+print('# Block status code: {}'.format(list(block_code.keys())[0]))
 
 if len(headers) > 0:
     print('# Headers: {}'.format(headers))
@@ -113,7 +131,7 @@ if len(headers) > 0:
 print('##')
 print('\n')
 
-test = WAFBypass(host, proxy, block_status, headers, ua)
+test = WAFBypass(host, proxy, block_code, headers, ua, timeout, threads)
 
 try:
     test.start_test()

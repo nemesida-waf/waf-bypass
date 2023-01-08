@@ -1,6 +1,6 @@
 # WAF Bypass Tool
 
-WAF Bypass is developed by Nemesida WAF team ([nemesida-waf.com](https://nemesida-waf.com)) with the participation of community. WAF Bypass is an open source tool (Python3) to check any WAF for the number of False Positives/False Negative using predefined payloads (if desired, the set of payloads can be changed).
+WAF Bypass is developed by Nemesida WAF team ([nemesida-waf.com](https://nemesida-waf.com)) with the participation of community. WAF Bypass is an open source tool (Python3) to check any WAF for the number of False Positives/False Negative using predefined payloads (if desired, the set of payloads can be changed). Check your WAF before an attacker does.
 
 ### When using, do not violate the law. We are not responsible for the use of the program.
 
@@ -54,6 +54,13 @@ Run with the command:
 </pre>
 
 ### Options
-- the <code>'--proxy'</code> option (<code>--proxy='http://proxy.example.com:3128'</code>) specifies where to connect to instead of the host.
-- the <code>'--block'</code> option (<code>--block='222'</code>) specifies an HTTP status code expected when the WAF blocks. Default if none specified is <code>403</code>. Can be used more than 1 time.
-- the <code>'--header'</code> option (<code>--header 'Authorization: Basic YWRtaW46YWRtaW4='</code>) specifies an HTTP header to send with all requests (e.g. for authentication). Can be used more than 1 time.
+
+- <code>'--proxy'</code> (<code>--proxy='http://proxy.example.com:3128'</code>) - option allows to specify where to connect to instead of the host.
+
+- <code>'--header'</code> (<code>--header 'Authorization: Basic YWRtaW46YWRtaW4='</code>) - option allows to specify the HTTP header to send with all requests (e.g. for authentication). Multiple use is allowed.
+
+- <code>'--block-code'</code> (<code>--block-code='222'</code>) - option allows you to specify the HTTP status code to expect when the WAF is blocked. (default is <code>403</code>). Multiple use is allowed.
+
+- <code>'--threads'</code> (<code>--threads=10</code>) - option allows to specify the number of parallel scan threads (default is <code>10</code>).
+
+- <code>'--timeout'</code> (<code>--timeout=10</code>) - option allows to specify a request processing timeout in sec. (default is <code>30</code>).

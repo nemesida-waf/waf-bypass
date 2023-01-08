@@ -18,18 +18,19 @@ requests.packages.urllib3.disable_warnings()
 
 class WAFBypass:
     
-    def __init__(self, host, proxy, block_status, headers, ua):
+    def __init__(self, host, proxy, block_code, headers, ua, timeout, threads):
         
         # init
         self.host = host
         self.proxy = {'http': proxy, 'https': proxy}
-        self.block_status = block_status
+        self.block_code = block_code
         self.headers = headers
         self.ua = ua
         self.session = requests.Session()
         self.session.trust_env = False
         self.name_pattern = re.compile(r'\d+\.json')
-        self.timeout = 150
+        self.timeout = timeout
+        self.threads = threads
         self.calls = 0
 
     def start_test(self):
@@ -103,21 +104,19 @@ class WAFBypass:
                 relative_path = os.path.join(dir_path, filename)
                 all_files_list.append(dir_path + '/' + filename)
 
-        # Create threads
-        needed_number_of_threads = 10
-        processes = needed_number_of_threads - 4
-        pool = ThreadPool(processes=processes)
+        # Multithreading
+        pool = ThreadPool(processes=self.threads)
         pool.map(test_request_data, all_files_list)
 
     @staticmethod
-    def output(test_type, request_data, request, block_status):
+    def output(test_type, request_data, request, block_code):
 
         def base_str(colour, status_test):
             print(f"{colour}{request_data.json_path} in {test_type}: {status_test}{Style.RESET_ALL}")
 
         if request_data.blocked:
 
-            if request.status_code in block_status:
+            if request.status_code in block_code:
                 log_status_test = 'PASSED'
                 dynamic_scan_status = 'PASSED'
                 log_all(request_data.json_path, test_type, log_status_test)
@@ -130,7 +129,7 @@ class WAFBypass:
 
         elif not request_data.blocked:
 
-            if request.status_code not in block_status:
+            if request.status_code not in block_code:
                 log_status_test = 'PASSED'
                 dynamic_scan_status = 'PASSED'
                 log_all(request_data.json_path, test_type, log_status_test)
@@ -155,7 +154,7 @@ class WAFBypass:
             method, url, headers=headers, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('URL', request_data, request, self.block_status)
+        self.output('URL', request_data, request, self.block_code)
 
     def test_args(self, request_data, method):
         params = request_data.args
@@ -165,7 +164,7 @@ class WAFBypass:
             method, self.host, headers=headers, params=params, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('ARGS', request_data, request, self.block_status)
+        self.output('ARGS', request_data, request, self.block_code)
 
     def test_body(self, data, request_data, method, boundary):
         headers = {f"Content-Type": 'multipart/form-data; boundary=' + boundary, **self.headers} if boundary else self.headers
@@ -175,7 +174,7 @@ class WAFBypass:
             method, self.host, headers=headers, data=data, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('BODY', request_data, request, self.block_status)
+        self.output('BODY', request_data, request, self.block_code)
 
     def test_cookie(self, request_data, method):
         cookies = {f"WBC-{secrets.token_urlsafe(6)}": request_data.cookie}
@@ -185,7 +184,7 @@ class WAFBypass:
             method, self.host, headers=headers, cookies=cookies, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('COOKIE', request_data, request, self.block_status)
+        self.output('COOKIE', request_data, request, self.block_code)
 
     def test_ua(self, request_data, method):
         headers = {'User-Agent': request_data.ua, **self.headers}
@@ -194,17 +193,17 @@ class WAFBypass:
             method, self.host, headers=headers, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('USER-AGENT', request_data, request, self.block_status)
+        self.output('USER-AGENT', request_data, request, self.block_code)
 
     def test_referer(self, request_data, method):
         headers = {'Referer': request_data.referer, **self.headers}
-        headers = {'User-agent': self.ua, **headers}
+        headers = {'User-Agent': self.ua, **headers}
         method = 'get' if not method else method
         request = self.session.request(
             method, self.host, headers=headers, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('REFERER', request_data, request, self.block_status)
+        self.output('REFERER', request_data, request, self.block_code)
 
     def test_headers(self, request_data, method):
         headers = {f"WBH-{secrets.token_urlsafe(6)}": request_data.headers, **self.headers}
@@ -214,4 +213,4 @@ class WAFBypass:
             method, self.host, headers=headers, proxies=self.proxy,
             timeout=self.timeout, verify=False
         )
-        self.output('HEADERS', request_data, request, self.block_status)
+        self.output('HEADERS', request_data, request, self.block_code)
