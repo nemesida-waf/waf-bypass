@@ -4,7 +4,7 @@ WAF Bypass is developed by Nemesida WAF team ([nemesida-waf.com](https://nemesid
 
 ### When using, do not violate the law. We are not responsible for the use of the program.
 
-![WAF Bypass Script](https://camo.githubusercontent.com/9ccddb9274eefa8bbe31cc1b0df79782ea6a92d5985b8eeab093a2cd83ad834a/68747470733a2f2f686162726173746f726167652e6f72672f776562742f73642f756a2f39312f7364756a39317333752d5f356a653970666b6e64306577696c6a732e706e67)
+<img align="left" src="https://user-images.githubusercontent.com/99513957/211177749-44f0b3b3-2ecc-486e-a4d3-87b1df5ed1a2.png">
 
 There are attacks for which it is impossible to create a signature, while not increasing the number of false positives. Therefore, it is absolutely normal that Nemesida WAF Free bypass the attack, and the commercial version of Nemesida WAF Free blocks. For example, we can execute the <code>cat /etc/passwd</code> command in the following ways:
 
