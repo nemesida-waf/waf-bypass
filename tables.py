@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
-from prettytable import PrettyTable
-from logger import logger_stat, write_log_stat
 from collections import OrderedDict
 from colorama import Fore, Style
+from prettytable import PrettyTable
+from stats import get_stats, get_details
 
 
-def table_payload_zone(processing_result, statuses):
+def get_result_details(wb_result, statuses):
 
     red, green, yellow, white_br, reset = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
-    passed, failed_fn, failed_fp, errors = write_log_stat(processing_result, statuses)
+    passed, failed_fn, failed_fp, errors = get_details(wb_result, statuses)
 
     def items_processing(passed_or_failed):
         dictionary = {}
@@ -29,7 +29,7 @@ def table_payload_zone(processing_result, statuses):
 
         return dictionary
 
-    def add_line_to_table_payload_zone(dictionary_selected, colour):
+    def add_line_to_get_result_details(dictionary_selected, colour):
         for payload_path, value in dictionary_selected.items():
             all_zone_arguments = ' '.join(value)
             print('|{:^51}'.format(payload_path) + '|' + '{:^55}'.format(colour + all_zone_arguments + reset) + '|')
@@ -44,21 +44,21 @@ def table_payload_zone(processing_result, statuses):
     """ Payload-Zone table print """
     print('\n')
     print(table_header_1)
-    add_line_to_table_payload_zone(items_processing(failed_fp), red)
+    add_line_to_get_result_details(items_processing(failed_fp), red)
     print(table_header_2)
-    add_line_to_table_payload_zone(items_processing(failed_fn), red)
+    add_line_to_get_result_details(items_processing(failed_fn), red)
     print(crossbar)
     """ End of the table """
 
 
-def table_status_count_accuracy(processing_result, statuses):
+def table_get_result_accuracy(wb_result, statuses):
 
     r, g, y, w, n = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
 
-    count_of_passed = logger_stat(processing_result, statuses[1])
-    count_of_errors = logger_stat(processing_result, statuses[2])
-    count_of_failed_fp = logger_stat(processing_result, statuses[3])
-    count_of_failed_fn = logger_stat(processing_result, statuses[4])
+    count_of_passed = len(get_stats(wb_result, statuses[1]))
+    count_of_errors = len(get_stats(wb_result, statuses[2]))
+    count_of_failed_fp = len(get_stats(wb_result, statuses[3]))
+    count_of_failed_fn = len(get_stats(wb_result, statuses[4]))
 
     failed_sum = count_of_failed_fn + count_of_failed_fp
     sum_all = count_of_passed + failed_sum + count_of_errors
