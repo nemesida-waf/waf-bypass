@@ -1,70 +1,62 @@
 #!/usr/bin/env python3
 
-import os
 from colorama import Fore, Style
 
 
-def read_all_log():
-    
-    log_dict = dict()
-    directory = '/tmp/waf-bypass-log/'
-    log_file = directory + 'all.log'
-    
-    if not os.path.exists(log_file):
-        os.mknod(log_file)
+def read_all_log(processing_result):   
 
-    with open(log_file, 'r') as opened_log:
-        logs = opened_log.readlines()
-
+    # init
+    ret = {}
+    
     try:
-        for log in logs:
-            key = log.split(" : ")[1]
-            value = log.split(" : ")[0]
-            log_dict[key] = value
+        for result in processing_result:
+            k = result.split(" : ")[1]
+            v = result.split(" : ")[0]
+            ret[k] = v
     except Exception as e:
-        print(f'{Fore.RED}Error: {e}. More details in file {log_file}{Style.RESET_ALL}')
+        print(f'{Fore.RED}An error occurred while processing result: {e}{Style.RESET_ALL}')
 
-    return log_dict
+    return ret
 
 
-def write_log_stat():
+def write_log_stat(processing_result, statuses):
     
-    test = read_all_log()
-    passed_log, failed_fn_log, failed_fp_log, error_log = [], [], [], []
+    test = read_all_log(processing_result)
+    passed, fn, fp, error = [], [], [], []
 
     for key, value in test.items():
-        if value == 'PASSED':
-            passed_log.append(key)
-        elif value == 'FAILED_FN':
-            failed_fn_log.append(key)
-        elif value == 'FAILED_FP':
-            failed_fp_log.append(key)
-        elif value == 'ERROR':
-            error_log.append(key)
+        if value == statuses[1]:
+            passed.append(key)
+        elif value == statuses[2]:
+            error.append(key)
+        elif value == statuses[3]:
+            fp.append(key)
+        elif value == statuses[4]:
+            fn.append(key)
     
-    return passed_log, failed_fn_log, failed_fp_log, error_log
+    return passed, fn, fp, error
 
 
-def logger_stat():
+def logger_stat(processing_result, statuses):
     
-    count_passed, count_failed_fn, count_failed_fp, count_error = 0, 0, 0, 0
-    stat_req = dict()
+    count_passed, count_fn, count_fp, count_error = 0, 0, 0, 0
+    ret = dict()
 
-    items_stat = read_all_log()
+    items_stat = read_all_log(processing_result)
     for item in items_stat.values():
         
-        if item == 'PASSED':
+        if item == statuses[1]:
             count_passed += 1
-        elif item == 'FAILED_FN':
-            count_failed_fn += 1
-        elif item == 'FAILED_FP':
-            count_failed_fp += 1
-        elif item == 'ERROR':
+        elif item == statuses[2]:
             count_error += 1
+        elif item == statuses[3]:
+            count_fp += 1
+        elif item == statuses[4]:
+            count_fn += 1
+        
+        ret[statuses[1]] = count_passed
+        ret[statuses[2]] = count_error
+        ret[statuses[4]] = count_fn
+        ret[statuses[3]] = count_fp
 
-        stat_req['PASSED'] = count_passed
-        stat_req['FAILED_FN'] = count_failed_fn
-        stat_req['FAILED_FP'] = count_failed_fp
-        stat_req['ERROR'] = count_error
-    
-    return stat_req
+    return ret

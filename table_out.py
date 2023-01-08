@@ -6,10 +6,10 @@ from collections import OrderedDict
 from colorama import Fore, Style
 
 
-def table_payload_zone():
+def table_payload_zone(processing_result, statuses):
 
     red, green, yellow, white_br, reset = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
-    passed, failed_fn, failed_fp, errors = write_log_stat()
+    passed, failed_fn, failed_fp, errors = write_log_stat(processing_result, statuses)
 
     def items_processing(passed_or_failed):
         dictionary = {}
@@ -51,14 +51,14 @@ def table_payload_zone():
     """ End of the table """
 
 
-def table_status_count_accuracy():
+def table_status_count_accuracy(processing_result, statuses):
 
     r, g, y, w, n = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
 
-    count_of_passed = logger_stat()['PASSED']
-    count_of_failed_fn = logger_stat()['FAILED_FN']
-    count_of_failed_fp = logger_stat()['FAILED_FP']
-    count_of_errors = logger_stat()['ERROR']
+    count_of_passed = logger_stat(processing_result, statuses[1])
+    count_of_errors = logger_stat(processing_result, statuses[2])
+    count_of_failed_fp = logger_stat(processing_result, statuses[3])
+    count_of_failed_fn = logger_stat(processing_result, statuses[4])
 
     failed_sum = count_of_failed_fn + count_of_failed_fp
     sum_all = count_of_passed + failed_sum + count_of_errors

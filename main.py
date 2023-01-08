@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
 import getopt
-import os
 import re
 import sys
 
 from requests.exceptions import MissingSchema
 from bypass import WAFBypass
-from table_out import table_payload_zone, table_status_count_accuracy
 from urllib3 import connectionpool, poolmanager
 
 
@@ -51,6 +49,7 @@ proxy = ''
 threads = 5
 timeout = 30
 headers = {}
+processing_result = {}
 ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
 
 # Processing args from cmd
@@ -109,13 +108,6 @@ if not host:
     get_help()
     sys.exit()
 
-# create log. dir
-try:
-    log_dir = '/tmp/waf-bypass-log/'
-    os.mkdir(log_dir)
-except OSError:
-    pass
-
 print('\n')
 print('##')
 print('# Target: {}'.format(host))
@@ -132,12 +124,10 @@ if len(headers) > 0:
 
 print('##')
 
-test = WAFBypass(host, proxy, block_code, headers, ua, timeout, threads)
+waf_bypass = WAFBypass(host, proxy, headers, ua, block_code, timeout, threads)
 
 try:
-    test.start_test()
-    table_status_count_accuracy()
-    table_payload_zone()
+    waf_bypass.start()
 except KeyboardInterrupt:
     print('\nKeyboard Interrupt')
 
