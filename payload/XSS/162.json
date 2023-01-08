@@ -1,13 +1,13 @@
 {
   "req": [
     {
-      "USER-AGENT": "<body onresize=alert(1)>press F12!",
-      "BODY": "<body onresize=alert(1)>press F12!",
-      "ARGS": "<body onresize=alert(1)>press F12!",
-      "COOKIE": "<body onresize=alert(1)>press F12!",
-      "URL": "<body onresize=alert(1)>press F12!",
-      "REFERER": "<body onresize=alert(1)>press F12!",
-      "HEADER": "<body onresize=alert(1)>press F12!",
+      "USER-AGENT": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
+      "BODY": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
+      "ARGS": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
+      "COOKIE": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
+      "URL": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
+      "REFERER": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
+      "HEADER": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
       "BLOCKED": true
     }
   ]

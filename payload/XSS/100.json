@@ -2,12 +2,12 @@
 {
   "req": [
     {
-      "URL": "al\\u0065rt(1)",
-      "ARGS": "al\\u0065rt(1)",
-      "BODY": "al\\u0065rt(1)",
-      "COOKIE": "al\\u0065rt(1)",
-      "REFERER": "al\\u0065rt(1)",
-      "HEADER": "al\\u0065rt(1)",
+      "URL": "al%5Cu0065rt%281%29",
+      "ARGS": "al%5Cu0065rt%281%29",
+      "BODY": "al%5Cu0065rt%281%29",
+      "COOKIE": "al%5Cu0065rt%281%29",
+      "REFERER": "al%5Cu0065rt%281%29",
+      "HEADER": "al%5Cu0065rt%281%29",
       "BLOCKED": true
     }
   ]

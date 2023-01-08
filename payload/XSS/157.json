@@ -1,13 +1,13 @@
 {
   "req": [
     {
-      "USER-AGENT": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
-      "BODY": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
-      "ARGS": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
-      "COOKIE": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
-      "URL": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
-      "REFERER": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
-      "HEADER": "<body onhashchange=alert(1)><a href=%23x>click this!#x",
+      "USER-AGENT": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
+      "BODY": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
+      "ARGS": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
+      "COOKIE": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
+      "URL": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
+      "REFERER": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
+      "HEADER": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
       "BLOCKED": true
     }
   ]

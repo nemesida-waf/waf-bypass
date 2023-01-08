@@ -1,13 +1,13 @@
 {
   "req": [
     {
-      "USER-AGENT": "<select onchange=alert(1)><option>1<option>2",
-      "BODY": "<select onchange=alert(1)><option>1<option>2",
-      "ARGS": "<select onchange=alert(1)><option>1<option>2",
-      "COOKIE": "<select onchange=alert(1)><option>1<option>2",
-      "URL": "<select onchange=alert(1)><option>1<option>2",
-      "REFERER": "<select onchange=alert(1)><option>1<option>2",
-      "HEADER": "<select onchange=alert(1)><option>1<option>2",
+      "USER-AGENT": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
+      "BODY": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
+      "ARGS": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
+      "COOKIE": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
+      "URL": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
+      "REFERER": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
+      "HEADER": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
       "BLOCKED": true
     }
   ]
