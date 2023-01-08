@@ -42,6 +42,7 @@ def table_payload_zone():
     table_header_2 = crossbar + '\n|' + 44 * ' ' + 'False Negative' + 40 * ' ' + '|' + '\n' + crossbar
 
     """ Payload-Zone table print """
+    print('')
     print(table_header_1)
     add_line_to_table_payload_zone(items_processing(failed_fp), red)
     print(table_header_2)
@@ -51,6 +52,7 @@ def table_payload_zone():
 
 
 def table_status_count_accuracy():
+
     r, g, y, w, n = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
 
     count_of_passed = logger_stat()['PASSED']
