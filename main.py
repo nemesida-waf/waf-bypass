@@ -60,7 +60,7 @@ try:
     launch_args = sys.argv[1:]
 
     # options
-    launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block-code=', 'threads', 'timeout']
+    launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block-code=', 'threads=', 'timeout=']
 
     # parsing args
     block_code = {}
