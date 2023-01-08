@@ -116,6 +116,7 @@ try:
 except OSError:
     pass
 
+print('\n')
 print('##')
 print('# Target: {}'.format(host))
 
