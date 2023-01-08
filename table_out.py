@@ -67,10 +67,11 @@ def table_status_count_accuracy():
     failed_accuracy = round((failed_sum/sum_all)*100, 2) if sum_all != 0 else '0.00'
     errors_accuracy = round((count_of_errors/sum_all)*100, 2) if sum_all != 0 else '0.00'
 
-    table = PrettyTable([f'Status',     f'Count',                       f'Accuracy'])
-    table.add_row(      [f'PASSED',     f'{g}{count_of_passed}{n}',     f'{g}{passed_accuracy}%{n}'])
-    table.add_row(      [f'FAILED',     f'{r}{failed_sum}{n}',          f'{r}{failed_accuracy}%{n}'])
-    table.add_row(      [f'ERROR',      f'{y}{count_of_errors}{n}',     f'{y}{errors_accuracy}%{n}'])
+    table = PrettyTable([f'Status', f'Count', f'Accuracy'])
+    table.add_row([f'PASSED', f'{g}{count_of_passed}{n}', f'{g}{passed_accuracy}%{n}'])
+    table.add_row([f'FAILED', f'{r}{failed_sum}{n}', f'{r}{failed_accuracy}%{n}'])
+    if count_of_errors > 0:
+        table.add_row([f'ERROR', f'{y}{count_of_errors}{n}', f'{y}{errors_accuracy}%{n}'])
     table.title = f'{w}Summary{n}'
     table.align[f'Status'] = "l"
 
