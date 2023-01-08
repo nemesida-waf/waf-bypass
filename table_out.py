@@ -7,26 +7,13 @@ from colorama import Fore, Style
 
 
 def table_payload_zone():
+
     red, green, yellow, white_br, reset = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
-    directory = '/tmp/waf-bypass-log/'
     passed, failed_fn, failed_fp, errors = write_log_stat()
 
     def items_processing(passed_or_failed):
         dictionary = {}
         table = PrettyTable(['Payload', 'Zone'])
-        for i in ['passed.log', 'failed_fn.log', 'failed_fp.log', 'errors.log']:
-            with open(directory + i, 'w') as opened_file:
-                for items in passed_or_failed:
-                    opened_file.writelines(items)
-
-        if passed_or_failed == passed:
-            file_name = 'passed.log'
-        elif passed_or_failed == failed_fn:
-            file_name = 'failed_fn.log'
-        elif passed_or_failed == failed_fp:
-            file_name = 'failed_fp.log'
-        else:
-            file_name = 'errors.log'
 
         for i in passed_or_failed:
             source, zone = i.split(" in ")
@@ -40,11 +27,6 @@ def table_payload_zone():
             value_str = ' '.join(value)
             table.add_row([key, value_str])
 
-        string_table = table.get_string()
-
-        with open(directory + file_name, 'w') as file_pass:
-            file_pass.write(string_table)
-            file_pass.close()
         return dictionary
 
     def add_line_to_table_payload_zone(dictionary_selected, colour):
@@ -52,20 +34,20 @@ def table_payload_zone():
             all_zone_arguments = ' '.join(value)
             print('|{:^51}'.format(payload_path) + '|' + '{:^55}'.format(colour + all_zone_arguments + reset) + '|')
 
-    """Payload-Zone table elements"""
+    """ Payload-Zone table elements """
     crossbar = '+' + 51 * '-' + '+' + 46 * '-' + '+'
     table_header_1 = crossbar + '\n|' + 22 * ' ' + f'{white_br}Payload{reset}' + 22 * ' ' + '|' + \
         21 * ' ' + f'{white_br}Zone{reset}' + 21 * ' ' + '|\n' + \
         crossbar + '\n|' + 44 * ' ' + 'False Positive' + 40 * ' ' + '|' + '\n' + crossbar
     table_header_2 = crossbar + '\n|' + 44 * ' ' + 'False Negative' + 40 * ' ' + '|' + '\n' + crossbar
 
-    """Payload-Zone table print"""
+    """ Payload-Zone table print """
     print(table_header_1)
     add_line_to_table_payload_zone(items_processing(failed_fp), red)
     print(table_header_2)
     add_line_to_table_payload_zone(items_processing(failed_fn), red)
     print(crossbar)
-    """End of the table"""
+    """ End of the table """
 
 
 def table_status_count_accuracy():
