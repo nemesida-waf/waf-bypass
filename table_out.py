@@ -42,7 +42,7 @@ def table_payload_zone():
     table_header_2 = crossbar + '\n|' + 44 * ' ' + 'False Negative' + 40 * ' ' + '|' + '\n' + crossbar
 
     """ Payload-Zone table print """
-    print('')
+    print('\n')
     print(table_header_1)
     add_line_to_table_payload_zone(items_processing(failed_fp), red)
     print(table_header_2)
@@ -74,5 +74,4 @@ def table_status_count_accuracy():
     table.title = f'{w}Summary{n}'
     table.align[f'Status'] = "l"
 
-    print('\n')
     print(table)

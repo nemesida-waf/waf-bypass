@@ -131,7 +131,6 @@ if len(headers) > 0:
     print('# Headers: {}'.format(headers))
 
 print('##')
-print('\n')
 
 test = WAFBypass(host, proxy, block_code, headers, ua, timeout, threads)
 
@@ -145,4 +144,4 @@ except KeyboardInterrupt:
 except MissingSchema:
     print('The protocol is not set for TARGET or PROXY')
 
-print("\n")
+print('\n')
