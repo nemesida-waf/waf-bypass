@@ -32,7 +32,9 @@ def patch_http_connection_pool(**constructor_kwargs):
 
 
 def get_help():
-    print("Syntax: ./main.py --host=example.com:80 [optional args]")
+    print("Usage: python3 /opt/waf-bypass/main.py --host=example.com:80 [OPTION]")
+    print("")
+    print("Mandatory arguments:")
     print("--proxy      - set proxy-server (e.g. --proxy='http://1.2.3.4:3128)") 
     print("--header     - add the HTTP header to all requests (e.g. --header='Authorization: Basic YWRtaW46YWRtaW4=')")
     print("--block-code - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403)")
