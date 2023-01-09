@@ -144,6 +144,10 @@ def test_url(host, ua, headers, proxy, timeout, statuses, block_code, payload, j
         k = str(str(json_path) + ':' + z)
         v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
 
+        if v[0] == statuses[2]:
+            v = v[1]
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+
     except Exception as error:
         k = str(str(json_path) + ':' + z)
         v = statuses[2]
@@ -166,6 +170,10 @@ def test_args(host, ua, headers, proxy, timeout, statuses, block_code, payload, 
 
         k = str(str(json_path) + ':' + z)
         v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+
+        if v[0] == statuses[2]:
+            v = v[1]
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
 
     except Exception as error:
         k = str(str(json_path) + ':' + z)
@@ -190,6 +198,10 @@ def test_body(host, ua, headers, proxy, timeout, statuses, block_code, payload, 
         k = str(str(json_path) + ':' + z)
         v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
 
+        if v[0] == statuses[2]:
+            v = v[1]
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+
     except Exception as error:
         k = str(str(json_path) + ':' + z)
         v = statuses[2]
@@ -213,6 +225,10 @@ def test_cookie(host, ua, headers, proxy, timeout, statuses, block_code, payload
         k = str(str(json_path) + ':' + z)
         v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
 
+        if v[0] == statuses[2]:
+            v = v[1]
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+
     except Exception as error:
         k = str(str(json_path) + ':' + z)
         v = statuses[2]
@@ -234,6 +250,10 @@ def test_ua(host, headers, proxy, timeout, statuses, block_code, payload, json_p
 
         k = str(str(json_path) + ':' + z)
         v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+
+        if v[0] == statuses[2]:
+            v = v[1]
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
 
     except Exception as error:
         k = str(str(json_path) + ':' + z)
@@ -258,6 +278,10 @@ def test_referer(host, ua, headers, proxy, timeout, statuses, block_code, payloa
         k = str(str(json_path) + ':' + z)
         v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
 
+        if v[0] == statuses[2]:
+            v = v[1]
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+
     except Exception as error:
         k = str(str(json_path) + ':' + z)
         v = statuses[2]
@@ -281,6 +305,10 @@ def test_headers(host, ua, headers, proxy, timeout, statuses, block_code, payloa
         k = str(str(json_path) + ':' + z)
         v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
 
+        if v[0] == statuses[2]:
+            v = v[1]
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+
     except Exception as error:
         k = str(str(json_path) + ':' + z)
         v = statuses[2]
@@ -297,9 +325,24 @@ def init_session():
 
 def test_result_processing(blocked, statuses, block_code, status_code):
     
-    if blocked:
-        status = statuses[1] if status_code in block_code else statuses[4]
+    # if status code is not 20x and not in block codes list (403, 222 etc.) 
+    if not str(status_code).startswith('20') and status_code not in block_code:
+        status = [statuses[2], status_code]
+    
     else:
-        status = statuses[1] if status_code not in block_code else statuses[3]
+        
+        if blocked:
+            
+            if status_code in block_code:
+                status = [statuses[1], status_code]
+            else:
+                status = [statuses[4], status_code]
+        
+        else:
+            
+            if status_code not in block_code:
+                status = [statuses[1], status_code]
+            else:
+                status = [statuses[3], status_code]
     
     return status
