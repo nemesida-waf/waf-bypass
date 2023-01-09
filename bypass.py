@@ -68,8 +68,8 @@ class WAFBypass:
                         # (BODY processing only)
                         if z == 'BODY' and payload['BODY'] and '/MFD/' in json_path:
 
-                            # processing request
-                            if z == 'BOUNDARY':
+                            # if boundary is set
+                            if payload['BOUNDARY']:
                                 k, v = test_body(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method, payload['BODY'], payload['BOUNDARY'])
                                 self.wb_result[k] = v
                             else:
