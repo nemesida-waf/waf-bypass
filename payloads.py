@@ -22,31 +22,31 @@ def get_payload(json_path):
 
     # url
     url = jdata.get('URL', None)
-    ret['URL'] = None if not url else url.replace("%RND%", secrets.token_urlsafe(6))
+    ret['URL'] = None if not url else url.replace("%RND%", secrets.token_hex(3))
 
     # args
     args = jdata.get('ARGS', None)
-    ret['ARGS'] = None if not args else args.replace("%RND%", secrets.token_urlsafe(6))
+    ret['ARGS'] = None if not args else args.replace("%RND%", secrets.token_hex(3))
 
     # body
     body = jdata.get('BODY', None)
-    ret['BODY'] = None if not body else body.replace("%RND%", secrets.token_urlsafe(6))
+    ret['BODY'] = None if not body else body.replace("%RND%", secrets.token_hex(3))
 
     # cookie
     cookie = jdata.get('COOKIE', None)
-    ret['COOKIE'] = None if not cookie else cookie.replace("%RND%", secrets.token_urlsafe(6))
+    ret['COOKIE'] = None if not cookie else cookie.replace("%RND%", secrets.token_hex(3))
 
     # ua
     ua = jdata.get('USER-AGENT', None)
-    ret['USER-AGENT'] = None if not ua else ua.replace("%RND%", secrets.token_urlsafe(6))
+    ret['USER-AGENT'] = None if not ua else ua.replace("%RND%", secrets.token_hex(3))
 
     # referer
     referer = jdata.get('REFERER', None)
-    ret['REFERER'] = None if not referer else referer.replace("%RND%", secrets.token_urlsafe(6))
+    ret['REFERER'] = None if not referer else referer.replace("%RND%", secrets.token_hex(3))
 
     # header
     header = jdata.get('HEADER', None)
-    ret['HEADER'] = None if not header else header.replace("%RND%", secrets.token_urlsafe(6))
+    ret['HEADER'] = None if not header else header.replace("%RND%", secrets.token_hex(3))
 
     # boundary
     boundary = jdata.get('BOUNDARY', None)

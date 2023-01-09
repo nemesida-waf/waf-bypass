@@ -108,7 +108,7 @@ class WAFBypass:
                                 self.wb_result[k] = v
 
                             elif z == 'HEADER':
-                                k, v = test_headers(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method)
+                                k, v = test_header(self.host, self.ua, self.headers, self.proxy, self.timeout, self.statuses, self.block_code, payload, json_path, method)
                                 self.wb_result[k] = v
 
             except Exception as e:
@@ -141,7 +141,7 @@ def test_url(host, ua, headers, proxy, timeout, statuses, block_code, payload, j
 
         s = init_session()
         result = s.request(method, url, headers=headers, proxies=proxy, timeout=timeout, verify=False)
-        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        result = processing_result(payload['BLOCKED'], statuses, block_code, result.status_code)
         v = result[0]
 
         if v == statuses[2]:
@@ -166,7 +166,7 @@ def test_args(host, ua, headers, proxy, timeout, statuses, block_code, payload, 
         
         s = init_session()
         result = s.request(method, host, headers=headers, params=params, proxies=proxy, timeout=timeout, verify=False)
-        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        result = processing_result(payload['BLOCKED'], statuses, block_code, result.status_code)
         v = result[0]
 
         if v == statuses[2]:
@@ -191,7 +191,7 @@ def test_body(host, ua, headers, proxy, timeout, statuses, block_code, payload, 
         
         s = init_session()
         result = s.request(method, host, headers=headers, data=data, proxies=proxy, timeout=timeout, verify=False)
-        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        result = processing_result(payload['BLOCKED'], statuses, block_code, result.status_code)
         v = result[0]
 
         if v == statuses[2]:
@@ -207,7 +207,7 @@ def test_body(host, ua, headers, proxy, timeout, statuses, block_code, payload, 
 def test_cookie(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
     
     z = 'COOKIE'
-    cookies = {f"WBC-{secrets.token_urlsafe(6)}": payload[z]}
+    cookies = {f"WBC-{secrets.token_hex(3)}": payload[z]}
     headers = {'User-Agent': ua, **headers}
     method = 'get' if not method else method
     k = str(str(json_path) + ':' + z)
@@ -216,7 +216,7 @@ def test_cookie(host, ua, headers, proxy, timeout, statuses, block_code, payload
         
         s = init_session()
         result = s.request(method, host, headers=headers, cookies=cookies, proxies=proxy, timeout=timeout, verify=False)
-        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        result = processing_result(payload['BLOCKED'], statuses, block_code, result.status_code)
         v = result[0]
 
         if v == statuses[2]:
@@ -240,7 +240,7 @@ def test_ua(host, headers, proxy, timeout, statuses, block_code, payload, json_p
         
         s = init_session()
         result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
-        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        result = processing_result(payload['BLOCKED'], statuses, block_code, result.status_code)
         v = result[0]
 
         if v == statuses[2]:
@@ -265,7 +265,7 @@ def test_referer(host, ua, headers, proxy, timeout, statuses, block_code, payloa
     
         s = init_session()
         result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
-        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        result = processing_result(payload['BLOCKED'], statuses, block_code, result.status_code)
         v = result[0]
 
         if v == statuses[2]:
@@ -278,10 +278,10 @@ def test_referer(host, ua, headers, proxy, timeout, statuses, block_code, payloa
     return k, v
 
 
-def test_headers(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
+def test_header(host, ua, headers, proxy, timeout, statuses, block_code, payload, json_path, method):
     
     z = 'HEADER'
-    headers = {f"WBH-{secrets.token_urlsafe(6)}": payload[z], **headers}
+    headers = {f"WBH-{secrets.token_hex(3)}": payload[z], **headers}
     headers = {'User-Agent': ua, **headers}
     method = 'get' if not method else method
     k = str(str(json_path) + ':' + z)
@@ -290,7 +290,7 @@ def test_headers(host, ua, headers, proxy, timeout, statuses, block_code, payloa
         
         s = init_session()
         result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
-        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        result = processing_result(payload['BLOCKED'], statuses, block_code, result.status_code)
         v = result[0]
 
         if v == statuses[2]:
@@ -309,7 +309,7 @@ def init_session():
     return s
 
 
-def test_result_processing(blocked, statuses, block_code, status_code):
+def processing_result(blocked, statuses, block_code, status_code):
     
     # if status code is not 20x and not in block codes list (403, 222 etc.) 
     if (not str(status_code).startswith('20') or status_code == 404) and status_code not in block_code:
