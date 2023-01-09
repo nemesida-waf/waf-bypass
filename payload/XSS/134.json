@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<x ondblclick=alert(1)>double click this!",
-      "BODY": "<x ondblclick=alert(1)>double click this!",
-      "ARGS": "<x ondblclick=alert(1)>double click this!",
-      "COOKIE": "<x ondblclick=alert(1)>double click this!",
       "URL": "<x ondblclick=alert(1)>double click this!",
+      "ARGS": "<x ondblclick=alert(1)>double click this!",
+      "BODY": "<x ondblclick=alert(1)>double click this!",
+      "COOKIE": "<x ondblclick=alert(1)>double click this!",
+      "USER-AGENT": "<x ondblclick=alert(1)>double click this!",
       "REFERER": "<x ondblclick=alert(1)>double click this!",
       "HEADER": "<x ondblclick=alert(1)>double click this!",
       "BLOCKED": true

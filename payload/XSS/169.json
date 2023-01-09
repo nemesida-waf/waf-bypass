@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<form onsubmit=alert(1)><input type=submit>",
-      "BODY": "<form onsubmit=alert(1)><input type=submit>",
-      "ARGS": "<form onsubmit=alert(1)><input type=submit>",
-      "COOKIE": "<form onsubmit=alert(1)><input type=submit>",
       "URL": "<form onsubmit=alert(1)><input type=submit>",
+      "ARGS": "<form onsubmit=alert(1)><input type=submit>",
+      "BODY": "<form onsubmit=alert(1)><input type=submit>",
+      "COOKIE": "<form onsubmit=alert(1)><input type=submit>",
+      "USER-AGENT": "<form onsubmit=alert(1)><input type=submit>",
       "REFERER": "<form onsubmit=alert(1)><input type=submit>",
       "HEADER": "<form onsubmit=alert(1)><input type=submit>",
       "BLOCKED": true

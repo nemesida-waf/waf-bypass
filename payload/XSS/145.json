@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<x contenteditable onpaste=alert(1)>paste here!",
-      "BODY": "<x contenteditable onpaste=alert(1)>paste here!",
-      "ARGS": "<x contenteditable onpaste=alert(1)>paste here!",
-      "COOKIE": "<x contenteditable onpaste=alert(1)>paste here!",
       "URL": "<x contenteditable onpaste=alert(1)>paste here!",
+      "ARGS": "<x contenteditable onpaste=alert(1)>paste here!",
+      "BODY": "<x contenteditable onpaste=alert(1)>paste here!",
+      "COOKIE": "<x contenteditable onpaste=alert(1)>paste here!",
+      "USER-AGENT": "<x contenteditable onpaste=alert(1)>paste here!",
       "REFERER": "<x contenteditable onpaste=alert(1)>paste here!",
       "HEADER": "<x contenteditable onpaste=alert(1)>paste here!",
       "BLOCKED": true

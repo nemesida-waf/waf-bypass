@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<x contenteditable onkeyup=alert(1)>press any key!",
-      "BODY": "<x contenteditable onkeyup=alert(1)>press any key!",
-      "ARGS": "<x contenteditable onkeyup=alert(1)>press any key!",
-      "COOKIE": "<x contenteditable onkeyup=alert(1)>press any key!",
       "URL": "<x contenteditable onkeyup=alert(1)>press any key!",
+      "ARGS": "<x contenteditable onkeyup=alert(1)>press any key!",
+      "BODY": "<x contenteditable onkeyup=alert(1)>press any key!",
+      "COOKIE": "<x contenteditable onkeyup=alert(1)>press any key!",
+      "USER-AGENT": "<x contenteditable onkeyup=alert(1)>press any key!",
       "REFERER": "<x contenteditable onkeyup=alert(1)>press any key!",
       "HEADER": "<x contenteditable onkeyup=alert(1)>press any key!",
       "BLOCKED": true

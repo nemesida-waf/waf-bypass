@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<svg onload=\"alert(1)\"",
-      "BODY": "<svg onload=\"alert(1)\"",
-      "ARGS": "<svg onload=\"alert(1)\"",
-      "COOKIE": "<svg onload=\"alert(1)\"",
       "URL": "<svg onload=\"alert(1)\"",
+      "ARGS": "<svg onload=\"alert(1)\"",
+      "BODY": "<svg onload=\"alert(1)\"",
+      "COOKIE": "<svg onload=\"alert(1)\"",
+      "USER-AGENT": "<svg onload=\"alert(1)\"",
       "REFERER": "<svg onload=\"alert(1)\"",
       "HEADER": "<svg onload=\"alert(1)\"",
       "BLOCKED": true

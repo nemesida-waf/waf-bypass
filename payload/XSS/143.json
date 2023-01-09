@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<x onmouseover=alert(1)>hover this!",
-      "BODY": "<x onmouseover=alert(1)>hover this!",
-      "ARGS": "<x onmouseover=alert(1)>hover this!",
-      "COOKIE": "<x onmouseover=alert(1)>hover this!",
       "URL": "<x onmouseover=alert(1)>hover this!",
+      "ARGS": "<x onmouseover=alert(1)>hover this!",
+      "BODY": "<x onmouseover=alert(1)>hover this!",
+      "COOKIE": "<x onmouseover=alert(1)>hover this!",
+      "USER-AGENT": "<x onmouseover=alert(1)>hover this!",
       "REFERER": "<x onmouseover=alert(1)>hover this!",
       "HEADER": "<x onmouseover=alert(1)>hover this!",
       "BLOCKED": true

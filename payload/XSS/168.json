@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<keygen autofocus onfocus=alert(1)>",
-      "BODY": "<keygen autofocus onfocus=alert(1)>",
-      "ARGS": "<keygen autofocus onfocus=alert(1)>",
-      "COOKIE": "<keygen autofocus onfocus=alert(1)>",
       "URL": "<keygen autofocus onfocus=alert(1)>",
+      "ARGS": "<keygen autofocus onfocus=alert(1)>",
+      "BODY": "<keygen autofocus onfocus=alert(1)>",
+      "COOKIE": "<keygen autofocus onfocus=alert(1)>",
+      "USER-AGENT": "<keygen autofocus onfocus=alert(1)>",
       "REFERER": "<keygen autofocus onfocus=alert(1)>",
       "HEADER": "<keygen autofocus onfocus=alert(1)>",
       "BLOCKED": true

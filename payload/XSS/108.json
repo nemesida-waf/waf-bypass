@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
-      "BODY": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
-      "ARGS": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
-      "COOKIE": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
       "URL": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
+      "ARGS": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
+      "BODY": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
+      "COOKIE": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
+      "USER-AGENT": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
       "REFERER": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
       "HEADER": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
       "BLOCKED": true

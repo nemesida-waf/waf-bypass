@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<body onorientationchange=alert(1)>",
-      "BODY": "<body onorientationchange=alert(1)>",
-      "ARGS": "<body onorientationchange=alert(1)>",
-      "COOKIE": "<body onorientationchange=alert(1)>",
       "URL": "<body onorientationchange=alert(1)>",
+      "ARGS": "<body onorientationchange=alert(1)>",
+      "BODY": "<body onorientationchange=alert(1)>",
+      "COOKIE": "<body onorientationchange=alert(1)>",
+      "USER-AGENT": "<body onorientationchange=alert(1)>",
       "REFERER": "<body onorientationchange=alert(1)>",
       "HEADER": "<body onorientationchange=alert(1)>",
       "BLOCKED": true

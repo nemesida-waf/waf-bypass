@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
-      "BODY": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
-      "ARGS": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
-      "COOKIE": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "URL": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
+      "ARGS": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
+      "BODY": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
+      "COOKIE": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
+      "USER-AGENT": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "REFERER": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "HEADER": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "BLOCKED": true

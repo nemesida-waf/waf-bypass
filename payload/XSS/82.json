@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<Svg OnLoad=alert(1)>",
-      "BODY": "<Svg OnLoad=alert(1)>",
-      "ARGS": "<Svg OnLoad=alert(1)>",
-      "COOKIE": "<Svg OnLoad=alert(1)>",
       "URL": "<Svg OnLoad=alert(1)>",
+      "ARGS": "<Svg OnLoad=alert(1)>",
+      "BODY": "<Svg OnLoad=alert(1)>",
+      "COOKIE": "<Svg OnLoad=alert(1)>",
+      "USER-AGENT": "<Svg OnLoad=alert(1)>",
       "REFERER": "<Svg OnLoad=alert(1)>",
       "HEADER": "<Svg OnLoad=alert(1)>",
       "BLOCKED": true

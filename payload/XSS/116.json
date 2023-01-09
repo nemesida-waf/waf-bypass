@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<a href=javascript:alert(1)>click",
-      "BODY": "<a href=javascript:alert(1)>click",
-      "ARGS": "<a href=javascript:alert(1)>click",
-      "COOKIE": "<a href=javascript:alert(1)>click",
       "URL": "<a href=javascript:alert(1)>click",
+      "ARGS": "<a href=javascript:alert(1)>click",
+      "BODY": "<a href=javascript:alert(1)>click",
+      "COOKIE": "<a href=javascript:alert(1)>click",
+      "USER-AGENT": "<a href=javascript:alert(1)>click",
       "REFERER": "<a href=javascript:alert(1)>click",
       "HEADER": "<a href=javascript:alert(1)>click",
       "BLOCKED": true

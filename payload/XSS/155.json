@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<body onpageshow=alert(1)>",
-      "BODY": "<body onpageshow=alert(1)>",
-      "ARGS": "<body onpageshow=alert(1)>",
-      "COOKIE": "<body onpageshow=alert(1)>",
       "URL": "<body onpageshow=alert(1)>",
+      "ARGS": "<body onpageshow=alert(1)>",
+      "BODY": "<body onpageshow=alert(1)>",
+      "COOKIE": "<body onpageshow=alert(1)>",
+      "USER-AGENT": "<body onpageshow=alert(1)>",
       "REFERER": "<body onpageshow=alert(1)>",
       "HEADER": "<body onpageshow=alert(1)>",
       "BLOCKED": true

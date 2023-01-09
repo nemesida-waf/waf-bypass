@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
-      "BODY": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
-      "ARGS": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
-      "COOKIE": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
       "URL": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
+      "ARGS": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
+      "BODY": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
+      "COOKIE": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
+      "USER-AGENT": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
       "REFERER": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
       "HEADER": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
       "BLOCKED": true

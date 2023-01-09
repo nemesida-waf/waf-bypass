@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<x contenteditable onfocus=alert(1)>focus this!",
-      "BODY": "<x contenteditable onfocus=alert(1)>focus this!",
-      "ARGS": "<x contenteditable onfocus=alert(1)>focus this!",
-      "COOKIE": "<x contenteditable onfocus=alert(1)>focus this!",
       "URL": "<x contenteditable onfocus=alert(1)>focus this!",
+      "ARGS": "<x contenteditable onfocus=alert(1)>focus this!",
+      "BODY": "<x contenteditable onfocus=alert(1)>focus this!",
+      "COOKIE": "<x contenteditable onfocus=alert(1)>focus this!",
+      "USER-AGENT": "<x contenteditable onfocus=alert(1)>focus this!",
       "REFERER": "<x contenteditable onfocus=alert(1)>focus this!",
       "HEADER": "<x contenteditable onfocus=alert(1)>focus this!",
       "BLOCKED": true

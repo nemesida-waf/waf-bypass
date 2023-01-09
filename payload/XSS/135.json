@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<x ondrag=alert(1)>drag this!",
-      "BODY": "<x ondrag=alert(1)>drag this!",
-      "ARGS": "<x ondrag=alert(1)>drag this!",
-      "COOKIE": "<x ondrag=alert(1)>drag this!",
       "URL": "<x ondrag=alert(1)>drag this!",
+      "ARGS": "<x ondrag=alert(1)>drag this!",
+      "BODY": "<x ondrag=alert(1)>drag this!",
+      "COOKIE": "<x ondrag=alert(1)>drag this!",
+      "USER-AGENT": "<x ondrag=alert(1)>drag this!",
       "REFERER": "<x ondrag=alert(1)>drag this!",
       "HEADER": "<x ondrag=alert(1)>drag this!",
       "BLOCKED": true

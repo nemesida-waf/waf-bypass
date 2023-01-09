@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<isindex action=javascript:alert(1) type=submit value=click>",
-      "BODY": "<isindex action=javascript:alert(1) type=submit value=click>",
-      "ARGS": "<isindex action=javascript:alert(1) type=submit value=click>",
-      "COOKIE": "<isindex action=javascript:alert(1) type=submit value=click>",
       "URL": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "ARGS": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "BODY": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "COOKIE": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "USER-AGENT": "<isindex action=javascript:alert(1) type=submit value=click>",
       "REFERER": "<isindex action=javascript:alert(1) type=submit value=click>",
       "HEADER": "<isindex action=javascript:alert(1) type=submit value=click>",
       "BLOCKED": true

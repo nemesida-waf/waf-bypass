@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "alert.apply(null, [1])",
-      "BODY": "param%RND%=alert.apply(null, [1])",
-      "ARGS": "param%RND%=alert.apply(null, [1])",
-      "COOKIE": "alert.apply(null, [1])",
       "URL": "alert.apply(null, [1])",
+      "ARGS": "param%RND%=alert.apply(null, [1])",
+      "BODY": "param%RND%=alert.apply(null, [1])",
+      "COOKIE": "alert.apply(null, [1])",
+      "USER-AGENT": "alert.apply(null, [1])",
       "REFERER": "http://example.com/?alert.apply(null, [1])",
       "HEADER": "alert.apply(null, [1])",
       "BLOCKED": true

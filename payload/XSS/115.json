@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<embed src=javascript:alert(1)>",
-      "BODY": "<embed src=javascript:alert(1)>",
-      "ARGS": "<embed src=javascript:alert(1)>",
-      "COOKIE": "<embed src=javascript:alert(1)>",
       "URL": "<embed src=javascript:alert(1)>",
+      "ARGS": "<embed src=javascript:alert(1)>",
+      "BODY": "<embed src=javascript:alert(1)>",
+      "COOKIE": "<embed src=javascript:alert(1)>",
+      "USER-AGENT": "<embed src=javascript:alert(1)>",
       "REFERER": "<embed src=javascript:alert(1)>",
       "HEADER": "<embed src=javascript:alert(1)>",
       "BLOCKED": true

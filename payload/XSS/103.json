@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
-      "BODY": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
-      "ARGS": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
-      "COOKIE": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
       "URL": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "ARGS": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "BODY": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "COOKIE": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
+      "USER-AGENT": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
       "REFERER": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
       "HEADER": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
       "BLOCKED": true

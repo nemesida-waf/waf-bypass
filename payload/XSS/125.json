@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<object data=javascript:alert(1)>",
-      "BODY": "<object data=javascript:alert(1)>",
-      "ARGS": "<object data=javascript:alert(1)>",
-      "COOKIE": "<object data=javascript:alert(1)>",
       "URL": "<object data=javascript:alert(1)>",
+      "ARGS": "<object data=javascript:alert(1)>",
+      "BODY": "<object data=javascript:alert(1)>",
+      "COOKIE": "<object data=javascript:alert(1)>",
+      "USER-AGENT": "<object data=javascript:alert(1)>",
       "REFERER": "<object data=javascript:alert(1)>",
       "HEADER": "<object data=javascript:alert(1)>",
       "BLOCKED": true

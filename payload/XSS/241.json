@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "URL": "%3Csvg%3E%3Cstyle%3E%20%20%20%20%3Cscript%3Ealert%281%29%3C%2Fscript%3E%3C%2Fstyle%3E%3C%2Fsvg%3E",
+      "ARGS": "%3Csvg%3E%3Cstyle%3E%20%20%20%20%3Cscript%3Ealert%281%29%3C%2Fscript%3E%3C%2Fstyle%3E%3C%2Fsvg%3E",
+      "BODY": "%3Csvg%3E%3Cstyle%3E%20%20%20%20%3Cscript%3Ealert%281%29%3C%2Fscript%3E%3C%2Fstyle%3E%3C%2Fsvg%3E",
+      "COOKIE": "%3Csvg%3E%3Cstyle%3E%20%20%20%20%3Cscript%3Ealert%281%29%3C%2Fscript%3E%3C%2Fstyle%3E%3C%2Fsvg%3E",
+      "USER-AGENT": "%3Csvg%3E%3Cstyle%3E%20%20%20%20%3Cscript%3Ealert%281%29%3C%2Fscript%3E%3C%2Fstyle%3E%3C%2Fsvg%3E",
+      "REFERER": "%3Csvg%3E%3Cstyle%3E%20%20%20%20%3Cscript%3Ealert%281%29%3C%2Fscript%3E%3C%2Fstyle%3E%3C%2Fsvg%3E",
+      "BLOCKED": true
+    }
+  ]
+}

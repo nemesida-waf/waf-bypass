@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<math><brute xlink:href=javascript:alert(1)>click",
-      "BODY": "<math><brute xlink:href=javascript:alert(1)>click",
-      "ARGS": "<math><brute xlink:href=javascript:alert(1)>click",
-      "COOKIE": "<math><brute xlink:href=javascript:alert(1)>click",
       "URL": "<math><brute xlink:href=javascript:alert(1)>click",
+      "ARGS": "<math><brute xlink:href=javascript:alert(1)>click",
+      "BODY": "<math><brute xlink:href=javascript:alert(1)>click",
+      "COOKIE": "<math><brute xlink:href=javascript:alert(1)>click",
+      "USER-AGENT": "<math><brute xlink:href=javascript:alert(1)>click",
       "REFERER": "<math><brute xlink:href=javascript:alert(1)>click",
       "HEADER": "<math><brute xlink:href=javascript:alert(1)>click",
       "BLOCKED": true

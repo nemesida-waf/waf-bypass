@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "BODY": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "ARGS": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
-      "COOKIE": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "URL": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "ARGS": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "BODY": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "COOKIE": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
+      "USER-AGENT": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "REFERER": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "HEADER": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "BLOCKED": true

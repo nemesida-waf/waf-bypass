@@ -1,10 +1,10 @@
 {
   "req": [
     {
-      "BODY": "</textarea><svg onload=alert(1)>",
-      "ARGS": "</textarea><svg onload=alert(1)>",
-      "COOKIE": "</textarea><svg onload=alert(1)>",
       "URL": "</textarea><svg onload=alert(1)>",
+      "ARGS": "</textarea><svg onload=alert(1)>",
+      "BODY": "</textarea><svg onload=alert(1)>",
+      "COOKIE": "</textarea><svg onload=alert(1)>",
       "REFERER": "</textarea><svg onload=alert(1)>",
       "HEADER": "</textarea><svg onload=alert(1)>",
       "BLOCKED": true

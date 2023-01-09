@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "eval(url.slice(-8)) #alert(1)",
-      "BODY": "eval(url.slice(-8)) #alert(1)",
-      "ARGS": "eval(url.slice(-8)) #alert(1)",
-      "COOKIE": "eval(url.slice(-8)) #alert(1)",
       "URL": "eval(url.slice(-8)) #alert(1)",
+      "ARGS": "eval(url.slice(-8)) #alert(1)",
+      "BODY": "eval(url.slice(-8)) #alert(1)",
+      "COOKIE": "eval(url.slice(-8)) #alert(1)",
+      "USER-AGENT": "eval(url.slice(-8)) #alert(1)",
       "REFERER": "eval(url.slice(-8)) #alert(1)",
       "HEADER": "eval(url.slice(-8)) #alert(1)",
       "BLOCKED": true

@@ -1,10 +1,10 @@
 {
   "req": [
     {
-      "BODY": "</iframe><svg onload=alert(1)>",
-      "ARGS": "</iframe><svg onload=alert(1)>",
-      "COOKIE": "</iframe><svg onload=alert(1)>",
       "URL": "</iframe><svg onload=alert(1)>",
+      "ARGS": "</iframe><svg onload=alert(1)>",
+      "BODY": "</iframe><svg onload=alert(1)>",
+      "COOKIE": "</iframe><svg onload=alert(1)>",
       "REFERER": "</iframe><svg onload=alert(1)>",
       "HEADER": "</iframe><svg onload=alert(1)>",
       "BLOCKED": true
