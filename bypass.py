@@ -135,21 +135,19 @@ def test_url(host, ua, headers, proxy, timeout, statuses, block_code, payload, j
     url = urljoin(host, payload[z])
     headers = {'User-Agent': ua, **headers}
     method = 'get' if not method else method
+    k = str(str(json_path) + ':' + z)
     
     try:
 
         s = init_session()
         result = s.request(method, url, headers=headers, proxies=proxy, timeout=timeout, verify=False)
-        
-        k = str(str(json_path) + ':' + z)
-        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        v = result[0]
 
-        if v[0] == statuses[2]:
-            v = v[1]
-            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+        if v == statuses[2]:
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
 
     except Exception as error:
-        k = str(str(json_path) + ':' + z)
         v = statuses[2]
         print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
@@ -162,21 +160,19 @@ def test_args(host, ua, headers, proxy, timeout, statuses, block_code, payload, 
     params = payload[z]
     headers = {'User-Agent': ua, **headers}
     method = 'get' if not method else method
+    k = str(str(json_path) + ':' + z)
     
     try:
         
         s = init_session()
         result = s.request(method, host, headers=headers, params=params, proxies=proxy, timeout=timeout, verify=False)
+        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        v = result[0]
 
-        k = str(str(json_path) + ':' + z)
-        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
-
-        if v[0] == statuses[2]:
-            v = v[1]
-            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+        if v == statuses[2]:
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
 
     except Exception as error:
-        k = str(str(json_path) + ':' + z)
         v = statuses[2]
         print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
@@ -189,21 +185,19 @@ def test_body(host, ua, headers, proxy, timeout, statuses, block_code, payload, 
     headers = {f"Content-Type": 'multipart/form-data; boundary=' + boundary, **headers} if boundary else headers
     headers = {'User-Agent': ua, **headers}
     method = 'post' if not method else method
+    k = str(str(json_path) + ':' + z)
     
     try:
         
         s = init_session()
         result = s.request(method, host, headers=headers, data=data, proxies=proxy, timeout=timeout, verify=False)
+        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        v = result[0]
 
-        k = str(str(json_path) + ':' + z)
-        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
-
-        if v[0] == statuses[2]:
-            v = v[1]
-            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+        if v == statuses[2]:
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
 
     except Exception as error:
-        k = str(str(json_path) + ':' + z)
         v = statuses[2]
         print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
@@ -216,21 +210,19 @@ def test_cookie(host, ua, headers, proxy, timeout, statuses, block_code, payload
     cookies = {f"WBC-{secrets.token_urlsafe(6)}": payload[z]}
     headers = {'User-Agent': ua, **headers}
     method = 'get' if not method else method
+    k = str(str(json_path) + ':' + z)
     
     try:
         
         s = init_session()
         result = s.request(method, host, headers=headers, cookies=cookies, proxies=proxy, timeout=timeout, verify=False)
+        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        v = result[0]
 
-        k = str(str(json_path) + ':' + z)
-        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
-
-        if v[0] == statuses[2]:
-            v = v[1]
-            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+        if v == statuses[2]:
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
 
     except Exception as error:
-        k = str(str(json_path) + ':' + z)
         v = statuses[2]
         print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
@@ -242,21 +234,19 @@ def test_ua(host, headers, proxy, timeout, statuses, block_code, payload, json_p
     z = 'USER-AGENT'
     headers = {'User-Agent': payload[z], **headers}
     method = 'get' if not method else method
+    k = str(str(json_path) + ':' + z)
     
     try:
         
         s = init_session()
         result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
+        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        v = result[0]
 
-        k = str(str(json_path) + ':' + z)
-        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
-
-        if v[0] == statuses[2]:
-            v = v[1]
-            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+        if v == statuses[2]:
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
 
     except Exception as error:
-        k = str(str(json_path) + ':' + z)
         v = statuses[2]
         print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
@@ -269,21 +259,19 @@ def test_referer(host, ua, headers, proxy, timeout, statuses, block_code, payloa
     headers = {'Referer': payload['REFERER'], **headers}
     headers = {'User-Agent': ua, **headers}
     method = 'get' if not method else method
+    k = str(str(json_path) + ':' + z)
     
     try:
     
         s = init_session()
         result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
+        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        v = result[0]
 
-        k = str(str(json_path) + ':' + z)
-        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
-
-        if v[0] == statuses[2]:
-            v = v[1]
-            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+        if v == statuses[2]:
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
 
     except Exception as error:
-        k = str(str(json_path) + ':' + z)
         v = statuses[2]
         print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
@@ -296,21 +284,19 @@ def test_headers(host, ua, headers, proxy, timeout, statuses, block_code, payloa
     headers = {f"WBH-{secrets.token_urlsafe(6)}": payload[z], **headers}
     headers = {'User-Agent': ua, **headers}
     method = 'get' if not method else method
+    k = str(str(json_path) + ':' + z)
     
     try:
         
         s = init_session()
         result = s.request(method, host, headers=headers, proxies=proxy, timeout=timeout, verify=False)
+        result = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
+        v = result[0]
 
-        k = str(str(json_path) + ':' + z)
-        v = test_result_processing(payload['BLOCKED'], statuses, block_code, result.status_code)
-
-        if v[0] == statuses[2]:
-            v = v[1]
-            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {v}{Style.RESET_ALL}")
+        if v == statuses[2]:
+            print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
 
     except Exception as error:
-        k = str(str(json_path) + ':' + z)
         v = statuses[2]
         print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
 
@@ -328,21 +314,10 @@ def test_result_processing(blocked, statuses, block_code, status_code):
     # if status code is not 20x and not in block codes list (403, 222 etc.) 
     if not str(status_code).startswith('20') and status_code not in block_code:
         status = [statuses[2], status_code]
-    
     else:
-        
         if blocked:
-            
-            if status_code in block_code:
-                status = [statuses[1], status_code]
-            else:
-                status = [statuses[4], status_code]
-        
+            status = [statuses[1], status_code] if status_code in block_code else [statuses[4], status_code]        
         else:
-            
-            if status_code not in block_code:
-                status = [statuses[1], status_code]
-            else:
-                status = [statuses[3], status_code]
+            status = [statuses[1], status_code] if status_code not in block_code else [statuses[3], status_code]
     
     return status
