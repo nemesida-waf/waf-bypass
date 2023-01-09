@@ -313,7 +313,7 @@ def test_result_processing(blocked, statuses, block_code, status_code):
     
     # if status code is not 20x and not in block codes list (403, 222 etc.) 
     if (not str(status_code).startswith('20') or status_code == 404) and status_code not in block_code:
-        status = [statuses[2], status_code + ' RESPONSE CODE']
+        status = [statuses[2], str(status_code) + ' RESPONSE CODE']
     else:
         if blocked:
             status = [statuses[1], status_code] if status_code in block_code else [statuses[4], status_code]        
