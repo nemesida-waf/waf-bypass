@@ -8,6 +8,31 @@ def get_stats(wb_result, status):
     return [k for k, v in wb_result.items() if v == status]
 
 
+def fx_table_processing(fx):
+    
+    # init
+    res = {}
+
+    # skip empty list
+    if not len(fx):
+        return res
+    
+    # list processing
+    for item in fx:
+        k = item.split(':')[0]
+        v = item.split(':')[1]
+        if k not in res:
+            res[k] = []
+        res[k].append(v)
+    
+    # dictionary processing
+    for k, v in res.items():
+        res[k] = '|'.join(v)
+
+    # return result
+    return res
+
+
 def get_result_details(wb_result, statuses):
     
     fp = [k for k, v in wb_result.items() if v == statuses[3]]
@@ -16,21 +41,25 @@ def get_result_details(wb_result, statuses):
     fp.sort()
     fn.sort()
 
-    def items_processing(data, status):
+    fp = fx_table_processing(fp)
+    fn = fx_table_processing(fn)
+
+    def items_processing(fx, status):
         
-        if not len(data):
+        if not len(fx):
             return ''
 
         if status == 'FP':
-            table = PrettyTable([15 * ' ' + 'FALSE POSITIVE PAYLOAD' + 15 * ' ', 15 * ' ' + 'ZONE' + 15 * ' '])
+            table = PrettyTable([10 * ' ' + 'FALSE POSITIVE PAYLOAD' + 10 * ' ', 25 * ' ' + 'ZONE' + 25 * ' '])
+            table.align['FALSE POSITIVE PAYLOAD'] = 'l'
         elif status == 'FN':
-            table = PrettyTable([15 * ' ' + 'FALSE NEGATIVE PAYLOAD' + 15 * ' ', 15 * ' ' + 'ZONE' + 15 * ' '])
+            table = PrettyTable([10 * ' ' + 'FALSE NEGATIVE PAYLOAD' + 10 * ' ', 25 * ' ' + 'ZONE' + 25 * ' '])
+            table.align['FALSE NEGATIVE PAYLOAD'] = 'l'
         else:
-            table = PrettyTable([15 * ' ' + 'PAYLOAD' + 15 * ' ', 15 * ' ' + 'ZONE' + 15 * ' '])
+            table = PrettyTable([10 * ' ' + 'PAYLOAD' + 10 * ' ', 25 * ' ' + 'ZONE' + 25 * ' '])
+            table.align['PAYLOAD'] = 'l'
 
-        for item in data:
-            k = item.split(':')[0]
-            v = item.split(':')[1]
+        for k, v in fx.items():
             table.add_row([k, v])
 
         print(table)
