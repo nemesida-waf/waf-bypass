@@ -1,11 +1,11 @@
 {
   "req": [
     {
-      "USER-AGENT": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
+      "URL": "/%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
       "ARGS": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
       "BODY": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
       "COOKIE": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
-      "URL": "/%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
+      "USER-AGENT": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
       "REFERER": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
       "HEADER": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
       "BLOCKED": true

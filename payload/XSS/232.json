@@ -7,6 +7,7 @@
       "COOKIE": "%27%22%3E%3Csvg%2Fonload%3Dalert%28%29%3E%7B%7B7%2A7%7D%7D",
       "USER-AGENT": "%27%22%3E%3Csvg%2Fonload%3Dalert%28%29%3E%7B%7B7%2A7%7D%7D",
       "REFERER": "%27%22%3E%3Csvg%2Fonload%3Dalert%28%29%3E%7B%7B7%2A7%7D%7D",
+      "HEADER": "%27%22%3E%3Csvg%2Fonload%3Dalert%28%29%3E%7B%7B7%2A7%7D%7D",
       "BLOCKED": true
     }
   ]

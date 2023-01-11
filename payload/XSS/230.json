@@ -9,6 +9,7 @@
       "COOKIE": "let%20a%20%3D%20document.createElement%28%27a%27%29%3B%0Aa.href%3D%27http%3A%2F%2Fexample.com%2F%250aalert%281%29%2F%2F%27%3B%0Aa.protocol%3D%27javascript%3A%27%3B%0Adocument.body.append%28a%29%3B%0Ahttp%3A%2F%2Fa.click%28%29%3B",
       "USER-AGENT": "let%20a%20%3D%20document.createElement%28%27a%27%29%3B%0Aa.href%3D%27http%3A%2F%2Fexample.com%2F%250aalert%281%29%2F%2F%27%3B%0Aa.protocol%3D%27javascript%3A%27%3B%0Adocument.body.append%28a%29%3B%0Ahttp%3A%2F%2Fa.click%28%29%3B",
       "REFERER": "let%20a%20%3D%20document.createElement%28%27a%27%29%3B%0Aa.href%3D%27http%3A%2F%2Fexample.com%2F%250aalert%281%29%2F%2F%27%3B%0Aa.protocol%3D%27javascript%3A%27%3B%0Adocument.body.append%28a%29%3B%0Ahttp%3A%2F%2Fa.click%28%29%3B",
+      "HEADER": "let%20a%20%3D%20document.createElement%28%27a%27%29%3B%0Aa.href%3D%27http%3A%2F%2Fexample.com%2F%250aalert%281%29%2F%2F%27%3B%0Aa.protocol%3D%27javascript%3A%27%3B%0Adocument.body.append%28a%29%3B%0Ahttp%3A%2F%2Fa.click%28%29%3B",
       "BLOCKED": true
     }
   ]

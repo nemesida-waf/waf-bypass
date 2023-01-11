@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "URL": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",
+      "ARGS": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",
+      "BODY": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",
+      "COOKIE": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",
+      "USER-AGENT": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",
+      "REFERER": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",
+      "HEADER": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",
+      "BLOCKED": true
+    }
+  ]
+}

@@ -7,6 +7,7 @@
       "COOKIE": "<svg on onload=(alert)(document.domain)>",
       "USER-AGENT": "<svg on onload=(alert)(document.domain)>",
       "REFERER": "<svg on onload=(alert)(document.domain)>",
+      "HEADER": "<svg on onload=(alert)(document.domain)>",
       "BLOCKED": true
     }
   ]

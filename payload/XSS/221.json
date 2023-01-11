@@ -7,6 +7,7 @@
       "COOKIE": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
       "USER-AGENT": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
       "REFERER": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
+      "HEADER": "%3Cscript%EF%BF%BD%3Ealert%EF%BF%BD%281%EF%BF%BD%29%20%EF%BF%BD%2F%EF%BF%BD%3E",
       "BLOCKED": true
     }
   ]

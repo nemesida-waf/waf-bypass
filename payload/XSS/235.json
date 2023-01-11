@@ -7,6 +7,7 @@
       "COOKIE": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
       "USER-AGENT": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
       "REFERER": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
+      "HEADER": "/Orders/(A(%22onerror='alert%60xss%60'testabcd))/Login.aspx?ReturnUrl=/Orders",
       "BLOCKED": true
     }
   ]
