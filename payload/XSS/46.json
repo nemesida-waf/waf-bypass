@@ -5,7 +5,7 @@
       "ARGS": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "BODY": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "COOKIE": "<base href='http://example.com'><a href='/test'>TEST</a>",
-      "REFERER": "<base href='http://example.com'><a href='/test'>TEST</a>",
+      "HEADER": "<base href='http://example.com'><a href='/test'>TEST</a>",
       "BLOCKED": true
     }
   ]
