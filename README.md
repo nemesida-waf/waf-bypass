@@ -16,20 +16,21 @@ ec'h'o 'cat /etc/examplewd' | sed 's/example/pass/g' | bash
 </pre>
 
 ### Payloads type and description
-- CM (Custom HTTP Method)
-- FP (False Positive)
-- LDAP (LDAP Injection etc.)
-- LFI (Local File Include)
-- MFD (multipart/form-data)
-- NoSQLi (NoSQL injection)
-- OR (Open Redirect)
-- RCE (Remote Code Execution)
-- RFI (Remote File Inclusion)
-- SQLi (SQL injection)
-- SSI (Server-Side Includes)
-- SSTI (Server-Side Template Injection)
-- UWA (Unwanted Access)
-- XSS (Cross-Site Scripting)
+- FP (False Positive payloads)
+- API (API testing payloads)
+- CM (Custom HTTP Method payloads)
+- LDAP (LDAP Injection etc. payloads)
+- LFI (Local File Include payloads)
+- MFD (multipart/form-data payloads)
+- NoSQLi (NoSQL injection payloads)
+- OR (Open Redirect payloads)
+- RCE (Remote Code Execution payloads)
+- RFI (Remote File Inclusion payloads)
+- SQLi (SQL injection payloads)
+- SSI (Server-Side Includes payloads)
+- SSTI (Server-Side Template Injection payloads)
+- UWA (Unwanted Access payloads)
+- XSS (Cross-Site Scripting payloads)
 
 ## How to run
 
