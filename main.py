@@ -122,7 +122,11 @@ else:
 print('# Block status code: {}'.format(list(block_code.keys())[0]))
 
 if len(headers) > 0:
-    print('# Headers: {}'.format(headers))
+    for k, v in headers.items():
+        if k.lower() == 'user-agent':
+            print('# {}: {}'.format(k, v))
+        else:    
+            print('# Headers ({}): {}'.format(k, v))
 
 print('##')
 
