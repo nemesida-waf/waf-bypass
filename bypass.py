@@ -63,10 +63,12 @@ class WAFBypass:
         def test_payload(json_path):
             try:
                 
-                # init
-                body = ''
-                headers = {}
+                # extract payload data
                 payload = get_payload(json_path)
+
+                # init
+                body = payload['BODY']
+                headers = {}
 
                 # if payload is empty
                 if not payload:
@@ -86,9 +88,7 @@ class WAFBypass:
 
                         # if boundary is set
                         if payload['BOUNDARY']:
-
-                            # set body/headers
-                            body = payload['BODY']
+                            # set headers
                             headers['Content-Disposition'] = 'multipart/form-data; boundary=' + payload['BOUNDARY']
 
                         else:
