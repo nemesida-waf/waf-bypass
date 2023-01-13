@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "URL": "/id/1 union select user from password",
+      "ARGS": "id=1 union select user from password",
+      "BODY": "{\"id\": \"1 union select user from password\"}",
+      "COOKIE": "1 union select user from password",
+      "USER-AGENT": "1 union select user from password",
+      "REFERER": "1 union select user from password",
+      "HEADER": "1 union select user from password",
+      "BLOCKED": true
+    }
+  ]
+}

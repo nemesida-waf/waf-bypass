@@ -40,17 +40,19 @@ def get_help():
     print("--timeout    - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
     
 
-# Increasing max pool size
+# increasing max pool size
 patch_http_connection_pool(maxsize=50)
 
-# Init args
+# init params
 host = ''
 proxy = ''
+headers = {}
 threads = 5
 timeout = 30
-headers = {}
 wb_result = {}
-ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+
+# set user-agent
+headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
 
 # Processing args from cmd
 try:
@@ -124,7 +126,7 @@ if len(headers) > 0:
 
 print('##')
 
-waf_bypass = WAFBypass(host, proxy, headers, ua, block_code, timeout, threads)
+waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads)
 
 try:
     waf_bypass.start()
