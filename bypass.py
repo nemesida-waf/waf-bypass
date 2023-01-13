@@ -65,7 +65,7 @@ class WAFBypass:
                 
                 # init
                 body = ''
-                headers = self.headers
+                headers = {}
                 payload = get_payload(json_path)
 
                 # if payload is empty
@@ -183,6 +183,7 @@ class WAFBypass:
         try:
 
             host = urljoin(self.host, payload[z])
+            headers = {**self.headers, **headers}
 
             s = init_session()
             result = s.request(method, host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
@@ -201,6 +202,8 @@ class WAFBypass:
     def test_args(self, json_path, z, payload, method, headers):
         try:
             
+            headers = {**self.headers, **headers}
+
             s = init_session()
             result = s.request(method, self.host, headers=headers, params=payload[z], proxies=self.proxy, timeout=self.timeout, verify=False)
             result = processing_result(payload['BLOCKED'], self.statuses, self.block_code, result.status_code)
@@ -217,6 +220,8 @@ class WAFBypass:
 
     def test_body(self, json_path, z, payload, method, body, headers):
         try:
+
+            headers = {**self.headers, **headers}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, data=body, proxies=self.proxy, timeout=self.timeout, verify=False)
@@ -235,8 +240,9 @@ class WAFBypass:
     def test_cookie(self, json_path, z, payload, method, headers):
         try:
             
+            headers = {**self.headers, **headers}
             cookies = {f"WBC-{secrets.token_hex(3)}": payload[z]}
-            
+
             s = init_session()
             result = s.request(method, self.host, headers=headers, cookies=cookies, proxies=self.proxy, timeout=self.timeout, verify=False)
             result = processing_result(payload['BLOCKED'], self.statuses, self.block_code, result.status_code)
@@ -254,7 +260,7 @@ class WAFBypass:
     def test_ua(self, json_path, z, payload, method, headers):
         try:
             
-            headers = {'User-Agent': payload[z], **headers}
+            headers = {**self.headers, **headers, 'User-Agent': payload[z]}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
@@ -272,8 +278,8 @@ class WAFBypass:
 
     def test_referer(self, json_path, z, payload, method, headers):
         try:
-        
-            headers = {'Referer': payload['REFERER'], **headers}
+
+            headers = {**self.headers, **headers, 'Referer': payload[z]}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
@@ -291,8 +297,8 @@ class WAFBypass:
 
     def test_header(self, json_path, z, payload, method, headers):            
         try:
-            
-            headers = {f"WBH-{secrets.token_hex(3)}": payload[z], **headers}
+
+            headers = {**self.headers, **headers, f"WBH-{secrets.token_hex(3)}": payload[z]}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
