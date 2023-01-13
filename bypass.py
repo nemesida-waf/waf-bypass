@@ -62,104 +62,104 @@ class WAFBypass:
 
         def test_payload(json_path):
             try:
-
-                # extract the payload
-                payload = get_payload(json_path)
                 
-                # if payload is not empty
-                if payload:
+                # init
+                body = ''
+                headers = self.headers
+                payload = get_payload(json_path)
+
+                # if payload is empty
+                if not payload:
+                    print(f"{Fore.YELLOW}No payloads found during processing file {json_path}{Style.RESET_ALL}")
+                    return
                     
-                    # processing the payload of each zone
-                    for z in payload:
+                # API dir processing
+                if '/API/' in json_path:
+                    # (add a JSON header)
+                    headers['Content-Type'] = 'application/json'
 
-                        # skip specific zone (e.g. boundary, method etc.)
-                        if z not in self.zones:
-                            continue
+                # MFD (multipart/form-data) dir processing
+                elif '/MFD/' in json_path:
+                    
+                    # if BODY is set
+                    if payload['BODY']:
 
-                        # skip empty
-                        if not payload[z]:
-                            continue
+                        # if boundary is set
+                        if payload['BOUNDARY']:
 
-                        # reset the method
-                        default_method = 'post' if z == 'BODY' else 'get'
-                        method = default_method if not payload['METHOD'] else payload['METHOD']
+                            # set body/headers
+                            body = payload['BODY']
+                            headers['Content-Disposition'] = 'multipart/form-data; boundary=' + payload['BOUNDARY']
 
-                        # reset the body/headers
-                        body = ''
-                        headers = self.headers
-
-                        # API dir processing
-                        if '/API/' in json_path:
-                            # (add a JSON header)
-                            headers['Content-Type'] = 'application/json'
-
-                        # MFD (multipart/form-data) dir processing
-                        elif '/MFD/' in json_path:
+                        else:
                             
-                            # if BODY is set
-                            if payload['BODY']:
+                            # header/boundary processing
+                            boundary = secrets.token_hex(30)  # 60 symbols
+                            nl = '\r\n'
+                            body_cont_disp = 'Content-Disposition: form-data; name="' + secrets.token_urlsafe(5) + '"'
 
-                                # if boundary is set
-                                if payload['BOUNDARY']:
+                            # set body/headers
+                            body = '--' + boundary + nl + body_cont_disp + nl + nl + payload['BODY'] \
+                                   + nl + '--' + boundary + '--' + nl
+                            headers['Content-Disposition'] = 'multipart/form-data; boundary=' + boundary
 
-                                    # set body/boundary/headers
-                                    body = payload['BODY']
-                                    headers['Content-Disposition'] = 'multipart/form-data; boundary=' + payload['BOUNDARY']
+                    else:
+                        print(f"{Fore.YELLOW}An error occurred while processing payload from file {json_path}: empty BODY{Style.RESET_ALL}")
+                        return
+                
+                # processing the payload of each zone
+                for z in payload:
 
-                                else:
-                                    
-                                    # header/body processing
-                                    boundary = secrets.token_hex(30)  # 60 symbols
-                                    nl = '\r\n'
-                                    body_cont_disp = 'Content-Disposition: form-data; name="' + secrets.token_urlsafe(5) + '"'
-                                    body = '--' + boundary + nl + body_cont_disp + nl + nl + payload['BODY'] + nl + '--' + boundary + '--' + nl
-                                    
-                                    # set body/boundary/headers
-                                    body = body
-                                    headers['Content-Disposition'] = 'multipart/form-data; boundary=' + boundary
+                    # skip specific zone (e.g. boundary, method etc.)
+                    if z not in self.zones:
+                        continue
 
-                            else:
-                                print(f"{Fore.YELLOW}An error occurred while processing payload from file {json_path}: empty BODY{Style.RESET_ALL}")
-                                return
+                    # skip empty
+                    if not payload[z]:
+                        continue
 
-                        ##
-                        # Processing the payloads
-                        ##
+                    # reset the method
+                    default_method = 'post' if z == 'BODY' else 'get'
+                    method = default_method if not payload['METHOD'] else payload['METHOD']
 
-                        if z == 'URL':
-                            k = str(str(json_path) + ':' + z)
-                            v = self.test_url(json_path, z, payload, method, headers)
-                            self.wb_result[k] = v
+                    ##
+                    # Processing the payloads
+                    ##
 
-                        elif z == 'ARGS':
-                            k = str(str(json_path) + ':' + z)
-                            v = self.test_args(json_path, z, payload, method, headers)
-                            self.wb_result[k] = v
+                    if z == 'URL':
+                        k = str(str(json_path) + ':' + z)
+                        v = self.test_url(json_path, z, payload, method, headers)
+                        self.wb_result[k] = v
 
-                        elif z == 'BODY':
-                            k = str(str(json_path) + ':' + z)
-                            v = self.test_body(json_path, z, payload, method, body, headers)
-                            self.wb_result[k] = v
+                    elif z == 'ARGS':
+                        k = str(str(json_path) + ':' + z)
+                        v = self.test_args(json_path, z, payload, method, headers)
+                        self.wb_result[k] = v
 
-                        elif z == 'COOKIE':
-                            k = str(str(json_path) + ':' + z)
-                            v = self.test_cookie(json_path, z, payload, method, headers)
-                            self.wb_result[k] = v
+                    elif z == 'BODY':
+                        k = str(str(json_path) + ':' + z)
+                        v = self.test_body(json_path, z, payload, method, body, headers)
+                        self.wb_result[k] = v
 
-                        elif z == 'USER-AGENT':
-                            k = str(str(json_path) + ':' + z)
-                            v = self.test_ua(json_path, z, payload, method, headers)
-                            self.wb_result[k] = v
+                    elif z == 'COOKIE':
+                        k = str(str(json_path) + ':' + z)
+                        v = self.test_cookie(json_path, z, payload, method, headers)
+                        self.wb_result[k] = v
 
-                        elif z == 'REFERER':
-                            k = str(str(json_path) + ':' + z)
-                            v = self.test_referer(json_path, z, payload, method, headers)
-                            self.wb_result[k] = v
+                    elif z == 'USER-AGENT':
+                        k = str(str(json_path) + ':' + z)
+                        v = self.test_ua(json_path, z, payload, method, headers)
+                        self.wb_result[k] = v
 
-                        elif z == 'HEADER':
-                            k = str(str(json_path) + ':' + z)
-                            v = self.test_header(json_path, z, payload, method, headers)
-                            self.wb_result[k] = v
+                    elif z == 'REFERER':
+                        k = str(str(json_path) + ':' + z)
+                        v = self.test_referer(json_path, z, payload, method, headers)
+                        self.wb_result[k] = v
+
+                    elif z == 'HEADER':
+                        k = str(str(json_path) + ':' + z)
+                        v = self.test_header(json_path, z, payload, method, headers)
+                        self.wb_result[k] = v
 
             except Exception as e:
                 print(f'{Fore.YELLOW}An error occurred while processing file {relative_path}: {e}{Style.RESET_ALL}')
