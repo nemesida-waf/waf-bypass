@@ -247,9 +247,9 @@ class WAFBypass:
         try:
 
             if v[0] in ['FP', 'FN']:
-                self.wb_result[v[0]].append({k: v[1]})
+                self.wb_result[v].append({k.split(':')[0]: k.split(':')[1]})
             else:
-                self.wb_result['FX'].append({k: v[1]})
+                self.wb_result['FX'].append({k.split(':')[0]: k.split(':')[1]})
         
         except Exception as e:
             print(
