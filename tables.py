@@ -3,34 +3,11 @@
 from colorama import Fore, Style
 from prettytable import PrettyTable
 
+from bypass import fx_processing
+
 
 def get_stats(wb_result, status):    
     return [k for k, v in wb_result.items() if v == status]
-
-
-def fx_table_processing(fx):
-    
-    # init
-    res = {}
-
-    # skip empty list
-    if not len(fx):
-        return res
-    
-    # list processing
-    for item in fx:
-        k = item.split(':')[0]
-        v = item.split(':')[1]
-        if k not in res:
-            res[k] = []
-        res[k].append(v)
-    
-    # dictionary processing
-    for k, v in res.items():
-        res[k] = '|'.join(v)
-
-    # return result
-    return res
 
 
 def table_get_result_details(wb_result):
@@ -41,8 +18,8 @@ def table_get_result_details(wb_result):
     fp.sort()
     fn.sort()
 
-    fp = fx_table_processing(fp)
-    fn = fx_table_processing(fn)
+    fp = fx_processing(fp)
+    fn = fx_processing(fn)
 
     def items_processing(fx, status):
         

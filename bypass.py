@@ -22,6 +22,31 @@ def init_session():
     return s
 
 
+def fx_processing(fx):
+    
+    # init
+    res = {}
+
+    # skip empty list
+    if not len(fx):
+        return res
+    
+    # list processing
+    for item in fx:
+        k = item.split(':')[0]
+        v = item.split(':')[1]
+        if k not in res:
+            res[k] = []
+        res[k].append(v)
+    
+    # dictionary processing
+    for k, v in res.items():
+        res[k] = '|'.join(v)
+
+    # return result
+    return res
+
+
 def processing_result(blocked, block_code, status_code):
     
     # if status code is not 20x and not in block codes list (403, 222 etc.) 
@@ -51,7 +76,7 @@ class WAFBypass:
         self.wb_result_json = wb_result_json
 
         # init statuses
-        self.statuses = ['PASSED', 'ERROR', 'FP', 'FN', 'FX']
+        self.statuses = ['PASSED', 'ERROR', 'FP', 'FN', 'FALSE']
         self.zones = ['URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER']
 
         # add extra keys for JSON format
@@ -241,9 +266,14 @@ class WAFBypass:
         # Processing result
         if self.wb_result_json:
 
-            # del FX if empty
-            if not self.wb_result['FX']:
-                del self.wb_result['FX']
+            # processing FX (convert list of 'payload:zone' to list of dict. 'payload:z1|z2')
+            self.wb_result['FP'] = fx_processing(self.wb_result['FP'])
+            self.wb_result['FN'] = fx_processing(self.wb_result['FN'])
+            self.wb_result['FALSE'] = fx_processing(self.wb_result['FALSE'])
+
+            # del FALSE if empty
+            if not self.wb_result['FALSE']:
+                del self.wb_result['FALSE']
 
             # print JSON
             print(json.dumps(self.wb_result))
@@ -260,9 +290,9 @@ class WAFBypass:
             if v == 'PASSED':
                 return
             if v in ['FP', 'FN']:
-                self.wb_result[v].append({k.split(':')[0]: k.split(':')[1]})
+                self.wb_result[v].append(k)
             else:
-                self.wb_result['FX'].append({k.split(':')[0]: k.split(':')[1]})
+                self.wb_result['FALSE'].append(k)
         
         except Exception as e:
             print(
