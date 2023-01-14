@@ -47,6 +47,37 @@ def fx_processing(fx):
     return res
 
 
+def json_processing(result):
+    
+    # processing FX (convert list of 'payload:zone' to list of dict. 'payload:z1|z2')
+    result['FP'] = fx_processing(result['FP'])
+    result['FN'] = fx_processing(result['FN'])
+    result['FALSE'] = fx_processing(result['FALSE'])
+
+    # delete empty keys
+    for k in result.keys():
+        if len(result[k]) < 1:
+            del result[k]
+
+    # print result in JSON
+    print(json.dumps(result))
+
+
+def table_processing(result):
+
+    # print summary table
+    table_get_result_summary(result)
+
+    # print details table
+    fp = [k for k, v in result.items() if v == 'FP']
+    fn = [k for k, v in result.items() if v == 'FN']
+    fp.sort()
+    fn.sort()
+    fp = fx_processing(fp)
+    fn = fx_processing(fn)
+    table_get_result_details(fp, fn)
+
+
 def processing_result(blocked, block_code, status_code):
     
     # if status code is not 20x and not in block codes list (403, 222 etc.) 
@@ -272,33 +303,9 @@ class WAFBypass:
 
         # Processing result
         if self.wb_result_json:
-
-            # processing FX (convert list of 'payload:zone' to list of dict. 'payload:z1|z2')
-            self.wb_result['FP'] = fx_processing(self.wb_result['FP'])
-            self.wb_result['FN'] = fx_processing(self.wb_result['FN'])
-            self.wb_result['FALSE'] = fx_processing(self.wb_result['FALSE'])
-
-            # delete empty keys
-            for item in self.wb_result.items():
-                if not self.wb_result[item]:
-                    del self.wb_result[item]
-
-            # print JSON
-            print(json.dumps(self.wb_result))
-
+            json_processing(self.wb_result)
         else:
-            
-            # print summary table
-            table_get_result_summary(self.wb_result)
-
-            # print details table
-            fp = [k for k, v in self.wb_result.items() if v == 'FP']
-            fn = [k for k, v in self.wb_result.items() if v == 'FN']
-            fp.sort()
-            fn.sort()
-            fp = fx_processing(fp)
-            fn = fx_processing(fn)
-            table_get_result_details(fp, fn)
+            table_processing(self.wb_result)
 
     def test_resp_status_processing(self, k, v):
         try:
