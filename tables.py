@@ -33,7 +33,7 @@ def fx_table_processing(fx):
     return res
 
 
-def get_result_details(wb_result, statuses):
+def table_get_result_details(wb_result, statuses):
     
     fp = [k for k, v in wb_result.items() if v == statuses[3]]
     fn = [k for k, v in wb_result.items() if v == statuses[4]]
@@ -71,7 +71,7 @@ def get_result_details(wb_result, statuses):
     """ End of the table """
 
 
-def table_get_result_accuracy(wb_result, statuses):
+def table_get_result_summary(wb_result, statuses):
 
     r, g, y, w, n = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
 

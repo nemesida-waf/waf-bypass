@@ -10,7 +10,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 from urllib.parse import urljoin
 
 from payloads import get_payload
-from tables import get_result_details, table_get_result_accuracy
+from tables import table_table_get_result_details, table_get_result_summary
 
 requests.packages.urllib3.disable_warnings()
 
@@ -194,8 +194,8 @@ class WAFBypass:
         pool = ThreadPool(processes=self.threads)
         pool.map(send_payload, all_files_list)
 
-        table_get_result_accuracy(self.wb_result, self.statuses)
-        get_result_details(self.wb_result, self.statuses)
+        table_get_result_summary(self.wb_result, self.statuses)
+        table_get_result_details(self.wb_result, self.statuses)
 
     def test_noblocked(self, method, headers):
         try:
@@ -220,7 +220,7 @@ class WAFBypass:
                 print(
                     '{}'
                     'An error occurred while processing test request to {}: access blocked ({})'
-                    '(the auto-ban policy might be enabled)'
+                    ' (the auto-ban policy might be enabled)'
                     '{}'
                     .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
                 )
