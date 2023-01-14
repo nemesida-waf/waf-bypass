@@ -10,7 +10,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 from urllib.parse import urljoin
 
 from payloads import get_payload
-from tables import table_table_get_result_details, table_get_result_summary
+from tables import table_get_result_details, table_get_result_summary
 
 requests.packages.urllib3.disable_warnings()
 
