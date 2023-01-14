@@ -106,12 +106,12 @@ try:
         block_code[403] = True
 
 except Exception as e:
-    print('An error occurred while processing the target/proxy: {}'.format(e))
+    print('An error occurred while processing the TARGET/PROXY: {}'.format(e))
     sys.exit()
 
 # check host
 if not host:
-    print("ERROR: the host is not set.")
+    print('An error occurred: the TARGET is not set')
     get_help()
     sys.exit()
 
@@ -120,33 +120,33 @@ if not wb_result_json:
 
     print('\n')
     print('##')
-    print('# Target: {}'.format(host))
+    print('# TARGET: {}'.format(host))
 
     if len(proxy):
-        print('# Proxy: {}'.format(proxy))
+        print('# PROXY: {}'.format(proxy))
     else:
-        print('# Proxy: not used')
+        print('# PROXY: not used')
 
-    print('# Block status code: {}'.format(list(block_code.keys())[0]))
+    print('# BLOCK STATUS CODE: {}'.format(list(block_code.keys())[0]))
 
     if len(headers) > 0:
         for k, v in headers.items():
             if k.lower() == 'user-agent':
-                print('# {}: {}'.format(k, v))
+                print('# {}: {}'.format(k.upper(), v))
             else:    
-                print('# Headers ({}): {}'.format(k, v))
+                print('# HEADERS ({}): {}'.format(k, v))
 
     print('##')
 
 # update result dictionary
 else:
-    
-    wb_result['target'] = host
-    wb_result['proxy'] = proxy
-    wb_result['headers'] = headers
-    wb_result['block_code'] = list(block_code.keys())
-    wb_result['threads'] = threads
-    wb_result['timeout'] = timeout
+
+    wb_result['TARGET'] = host
+    wb_result['PROXY'] = proxy
+    wb_result['HEADERS'] = headers
+    wb_result['BLOCK_CODE'] = list(block_code.keys())
+    wb_result['THREADS'] = threads
+    wb_result['TIMEOUT'] = timeout
 
 # launch WAF Bypass
 waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json)
@@ -157,6 +157,7 @@ except KeyboardInterrupt:
     print('\nKeyboard Interrupt')
 
 except MissingSchema:
-    print('The protocol is not set for TARGET or PROXY')
+    print('An error occurred: protocol is not set for TARGET or PROXY')
 
-print('\n')
+if not wb_result_json:
+    print('\n')
