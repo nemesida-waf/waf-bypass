@@ -76,7 +76,14 @@ class WAFBypass:
         self.wb_result_json = wb_result_json
 
         # init statuses
-        self.statuses = ['PASSED', 'ERROR', 'FP', 'FN', 'FALSE']
+        self.statuses = [
+            'PASSED',  # OK
+            'ERROR',   # incorrect response code
+            'FAIL',    # request failed (e.g.: cannot connect to server etc.)
+            'FP',      # False Positive
+            'FN',      # False Negative
+            'FALSE'    # Not the FP and not the FN
+        ]
         self.zones = ['URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER']
 
         # add extra keys for JSON format
@@ -317,7 +324,7 @@ class WAFBypass:
                 .format(json_path, z, result[1])
             
             if self.wb_result_json:
-                self.wb_result['error'].append(err)
+                self.wb_result['ERROR'].append(err)
             else:
                 print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
         
@@ -335,7 +342,7 @@ class WAFBypass:
             err = 'An error occurred while processing file {} in {}: {}'.format(json_path, z, error)
             
             if self.wb_result_json:
-                self.wb_result['fail'].append(err)
+                self.wb_result['FAIL'].append(err)
             else:
                 print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
         
