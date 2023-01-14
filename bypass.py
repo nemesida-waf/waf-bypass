@@ -50,7 +50,7 @@ class WAFBypass:
         self.wb_result_json = wb_result_json
 
         # init statuses
-        self.statuses = ['PASSED', 'ERROR', 'FP', 'FN']
+        self.statuses = ['PASSED', 'ERROR', 'FP', 'FN', 'FX']
         self.zones = ['URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER']
 
         # add extra keys for JSON format
