@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import json
 import os
 import requests
 import secrets
@@ -238,7 +239,7 @@ class WAFBypass:
         pool.map(send_payload, all_files_list)
 
         if self.wb_result_json:
-            print(self.wb_result)
+            print(json.dumps(self.wb_result))
         else:
             table_get_result_summary(self.wb_result)
             table_get_result_details(self.wb_result)
@@ -246,7 +247,7 @@ class WAFBypass:
     def test_resp_status_processing(self, k, v):
         try:
 
-            if v[0] in ['FP', 'FN']:
+            if v in ['FP', 'FN']:
                 self.wb_result[v].append({k.split(':')[0]: k.split(':')[1]})
             else:
                 self.wb_result['FX'].append({k.split(':')[0]: k.split(':')[1]})
