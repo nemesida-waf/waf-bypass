@@ -3,23 +3,12 @@
 from colorama import Fore, Style
 from prettytable import PrettyTable
 
-from bypass import fx_processing
-
 
 def get_stats(wb_result, status):    
     return [k for k, v in wb_result.items() if v == status]
 
 
-def table_get_result_details(wb_result):
-    
-    fp = [k for k, v in wb_result.items() if v == 'FP']
-    fn = [k for k, v in wb_result.items() if v == 'FN']
-
-    fp.sort()
-    fn.sort()
-
-    fp = fx_processing(fp)
-    fn = fx_processing(fn)
+def table_get_result_details(fp, fn):
 
     def items_processing(fx, status):
         

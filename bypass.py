@@ -280,9 +280,17 @@ class WAFBypass:
 
         else:
             
-            # print as table
+            # print summary table
             table_get_result_summary(self.wb_result)
-            table_get_result_details(self.wb_result)
+
+            # print details table
+            fp = [k for k, v in self.wb_result.items() if v == 'FP']
+            fn = [k for k, v in self.wb_result.items() if v == 'FN']
+            fp.sort()
+            fn.sort()
+            fp = fx_processing(fp)
+            fn = fx_processing(fn)
+            table_get_result_details(fp, fn)
 
     def test_resp_status_processing(self, k, v):
         try:
