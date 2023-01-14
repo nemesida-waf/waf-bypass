@@ -238,9 +238,19 @@ class WAFBypass:
         pool = ThreadPool(processes=self.threads)
         pool.map(send_payload, all_files_list)
 
+        # Processing result
         if self.wb_result_json:
+
+            # del FX if empty
+            if not self.wb_result['FX']:
+                del self.wb_result['FX']
+
+            # print JSON
             print(json.dumps(self.wb_result))
+
         else:
+            
+            # print as table
             table_get_result_summary(self.wb_result)
             table_get_result_details(self.wb_result)
 
