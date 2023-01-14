@@ -115,28 +115,32 @@ if not host:
     get_help()
     sys.exit()
 
-print('\n')
-print('##')
-print('# Target: {}'.format(host))
+# print basic info
+if not wb_result_json:
 
-if len(proxy):
-    print('# Proxy: {}'.format(proxy))
+    print('\n')
+    print('##')
+    print('# Target: {}'.format(host))
+
+    if len(proxy):
+        print('# Proxy: {}'.format(proxy))
+    else:
+        print('# Proxy: not used')
+
+    print('# Block status code: {}'.format(list(block_code.keys())[0]))
+
+    if len(headers) > 0:
+        for k, v in headers.items():
+            if k.lower() == 'user-agent':
+                print('# {}: {}'.format(k, v))
+            else:    
+                print('# Headers ({}): {}'.format(k, v))
+
+    print('##')
+
+# update result dictionary
 else:
-    print('# Proxy: not used')
-
-print('# Block status code: {}'.format(list(block_code.keys())[0]))
-
-if len(headers) > 0:
-    for k, v in headers.items():
-        if k.lower() == 'user-agent':
-            print('# {}: {}'.format(k, v))
-        else:    
-            print('# Headers ({}): {}'.format(k, v))
-
-print('##')
-
-# update result
-if wb_result_json:
+    
     wb_result['target'] = host
     wb_result['proxy'] = proxy
     wb_result['headers'] = headers

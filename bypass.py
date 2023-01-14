@@ -49,13 +49,14 @@ class WAFBypass:
         self.wb_result = wb_result
         self.wb_result_json = wb_result_json
 
-        # add extra keys for JSON format
-        if self.wb_result_json:
-            self.wb_result['error'] = []
-
         # init statuses
         self.statuses = ['PASSED', 'ERROR', 'FP', 'FN']
         self.zones = ['URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER']
+
+        # add extra keys for JSON format
+        if self.wb_result_json:
+            for k in self.statuses:
+                self.wb_result[k] = []
 
     def start(self):
        
