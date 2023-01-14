@@ -247,6 +247,8 @@ class WAFBypass:
     def test_resp_status_processing(self, k, v):
         try:
 
+            if v == 'PASSED':
+                return
             if v in ['FP', 'FN']:
                 self.wb_result[v].append({k.split(':')[0]: k.split(':')[1]})
             else:
