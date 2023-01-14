@@ -33,10 +33,10 @@ def fx_table_processing(fx):
     return res
 
 
-def table_get_result_details(wb_result, statuses):
+def table_get_result_details(wb_result):
     
-    fp = [k for k, v in wb_result.items() if v == statuses[3]]
-    fn = [k for k, v in wb_result.items() if v == statuses[4]]
+    fp = [k for k, v in wb_result.items() if v == 'FP']
+    fn = [k for k, v in wb_result.items() if v == 'FN']
 
     fp.sort()
     fn.sort()
@@ -66,19 +66,19 @@ def table_get_result_details(wb_result, statuses):
 
     """ Payload-Zone table print """
     print('\n')
-    items_processing(fp, statuses[3])
-    items_processing(fn, statuses[4])
+    items_processing(fp, 'FP')
+    items_processing(fn, 'FN')
     """ End of the table """
 
 
-def table_get_result_summary(wb_result, statuses):
+def table_get_result_summary(wb_result):
 
     r, g, y, w, n = Fore.RED, Fore.GREEN, Fore.YELLOW, Style.BRIGHT, Style.RESET_ALL
 
-    count_of_passed = len(get_stats(wb_result, statuses[1]))
-    count_of_errors = len(get_stats(wb_result, statuses[2]))
-    count_of_fp = len(get_stats(wb_result, statuses[3]))
-    count_of_fn = len(get_stats(wb_result, statuses[4]))
+    count_of_passed = len(get_stats(wb_result, 'PASSED'))
+    count_of_errors = len(get_stats(wb_result, 'ERROR'))
+    count_of_fp = len(get_stats(wb_result, 'FP'))
+    count_of_fn = len(get_stats(wb_result, 'FN'))
     count_of_failed = count_of_fn + count_of_fp
     count_of_all = count_of_passed + count_of_failed + count_of_errors
 

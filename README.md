@@ -65,3 +65,5 @@ Run with the command:
 - <code>'--threads'</code> (<code>--threads=15</code>) - option allows to specify the number of parallel scan threads (default is <code>10</code>).
 
 - <code>'--timeout'</code> (<code>--timeout=10</code>) - option allows to specify a request processing timeout in sec. (default is <code>30</code>).
+
+- <code>'--json'</code> - an option that allows you to display the result of the work in JSON format.

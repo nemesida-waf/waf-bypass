@@ -38,6 +38,7 @@ def get_help():
     print("--block-code - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403)")
     print("--threads    - set the number of parallel scan threads (e.g. --threads=10, default: 4)")
     print("--timeout    - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
+    print("--json       - display the result of the work in JSON format")
     
 
 # increasing max pool size
@@ -45,11 +46,12 @@ patch_http_connection_pool(maxsize=50)
 
 # init params
 host = ''
-proxy = ''
+proxy = {}
 headers = {}
 threads = 5
 timeout = 30
 wb_result = {}
+wb_result_json = False
 
 # set user-agent
 headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
@@ -61,7 +63,7 @@ try:
     launch_args = sys.argv[1:]
 
     # options
-    launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block-code=', 'threads=', 'timeout=']
+    launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block-code=', 'threads=', 'timeout=', 'json']
 
     # parsing args
     block_code = {}
@@ -96,6 +98,9 @@ try:
 
         elif k == '--timeout':
             timeout = int(v)
+
+        elif k == '--json':
+            wb_result_json = True
     
     if len(block_code) == 0:
         block_code[403] = True
@@ -130,7 +135,17 @@ if len(headers) > 0:
 
 print('##')
 
-waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads)
+# update result
+if wb_result_json:
+    wb_result['target'] = host
+    wb_result['proxy'] = proxy
+    wb_result['headers'] = headers
+    wb_result['block_code'] = list(block_code.keys())
+    wb_result['threads'] = threads
+    wb_result['timeout'] = timeout
+
+# launch WAF Bypass
+waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json)
 
 try:
     waf_bypass.start()
