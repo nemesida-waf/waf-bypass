@@ -278,9 +278,10 @@ class WAFBypass:
             self.wb_result['FN'] = fx_processing(self.wb_result['FN'])
             self.wb_result['FALSE'] = fx_processing(self.wb_result['FALSE'])
 
-            # del FALSE if empty
-            if not self.wb_result['FALSE']:
-                del self.wb_result['FALSE']
+            # delete empty keys
+            for item in self.wb_result.items():
+                if not self.wb_result[item]:
+                    del self.wb_result[item]
 
             # print JSON
             print(json.dumps(self.wb_result))
