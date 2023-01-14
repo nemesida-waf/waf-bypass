@@ -33,12 +33,12 @@ def get_help():
     print("Usage: python3 /opt/waf-bypass/main.py --host=example.com:80 [OPTION]")
     print("")
     print("Mandatory arguments:")
-    print("--proxy      - set proxy-server (e.g. --proxy='http://1.2.3.4:3128)") 
-    print("--header     - add the HTTP header to all requests (e.g. --header='Authorization: Basic YWRtaW46YWRtaW4=')")
-    print("--block-code - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403)")
-    print("--threads    - set the number of parallel scan threads (e.g. --threads=10, default: 4)")
-    print("--timeout    - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
-    print("--json       - display the result of the work in JSON format")
+    print("--proxy       - set proxy-server (e.g. --proxy='http://1.2.3.4:3128)") 
+    print("--header      - add the HTTP header to all requests (e.g. --header='Authorization: Basic YWRtaW46YWRtaW4=')")
+    print("--block-code  - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403)")
+    print("--threads     - set the number of parallel scan threads (e.g. --threads=10, default: 4)")
+    print("--timeout     - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
+    print("--json-format - display the result of the work in JSON format")
     
 
 # increasing max pool size
