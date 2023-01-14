@@ -60,7 +60,7 @@ class WAFBypass:
         work_dir = os.path.dirname(os.path.realpath(__file__))
         work_dir_payload = work_dir + '/payload'
 
-        def test_payload(json_path):
+        def send_payload(json_path):
             try:
                 
                 # extract payload data
@@ -72,9 +72,17 @@ class WAFBypass:
 
                 # if payload is empty
                 if not payload:
-                    print(f"{Fore.YELLOW}No payloads found during processing file {json_path}{Style.RESET_ALL}")
+                    print(
+                        '{}'
+                        'No payloads found during processing file {}: no payload found'
+                        '{}'
+                        .format(Fore.YELLOW, json_path, Style.RESET_ALL)
+                    )
                     return
-                    
+                
+                # no-blocked validation without payload
+                self.test_noblocked('get', headers)
+
                 # API dir processing
                 if '/API/' in json_path:
                     # (add a JSON header)
@@ -104,7 +112,12 @@ class WAFBypass:
                             headers['Content-Disposition'] = 'multipart/form-data; boundary=' + boundary
 
                     else:
-                        print(f"{Fore.YELLOW}An error occurred while processing payload from file {json_path}: empty BODY{Style.RESET_ALL}")
+                        print(
+                            '{}'
+                            'An error occurred while processing payload from file {}: empty BODY'
+                            '{}'
+                            .format(Fore.YELLOW, json_path, Style.RESET_ALL)
+                        )
                         return
                 
                 # processing the payload of each zone
@@ -162,7 +175,12 @@ class WAFBypass:
                         self.wb_result[k] = v
 
             except Exception as e:
-                print(f'{Fore.YELLOW}An error occurred while processing file {relative_path}: {e}{Style.RESET_ALL}')
+                print(
+                    '{}'
+                    'An error occurred while processing payload from file {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, relative_path, e, Style.RESET_ALL)
+                )
                 return
 
         # Append all .json paths in one list
@@ -174,10 +192,46 @@ class WAFBypass:
 
         # Multithreading
         pool = ThreadPool(processes=self.threads)
-        pool.map(test_payload, all_files_list)
+        pool.map(send_payload, all_files_list)
 
         table_get_result_accuracy(self.wb_result, self.statuses)
         get_result_details(self.wb_result, self.statuses)
+
+    def test_noblocked(self, method, headers):
+        try:
+
+            headers = {**self.headers, **headers}
+
+            s = init_session()
+            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
+            result = processing_result(False, self.statuses, self.block_code, result.status_code)
+
+            # check status code
+            if result[0] == self.statuses[1]:
+                return
+            elif result[0] == self.statuses[2]:
+                print(
+                    '{}'
+                    'An incorrect response was received while processing test request to {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
+                )
+            else:
+                print(
+                    '{}'
+                    'An error occurred while processing test request to {}: access blocked ({})'
+                    '(the auto-ban policy might be enabled)'
+                    '{}'
+                    .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
+                )
+
+        except Exception as error:
+            print(
+                '{}'
+                'An incorrect response was received while test request: {}'
+                '{}'
+                .format(Fore.YELLOW, error, Style.RESET_ALL)
+            )
 
     def test_url(self, json_path, z, payload, method, headers):            
         try:
@@ -191,11 +245,21 @@ class WAFBypass:
             v = result[0]
 
             if v == self.statuses[2]:
-                print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
+                print(
+                    '{}'
+                    'An incorrect response was received while processing request from file {} in {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, json_path, z, result[1], Style.RESET_ALL)
+                )
 
         except Exception as error:
             v = self.statuses[2]
-            print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+            print(
+                '{}'
+                'An error occurred while processing file {} in {}: {}'
+                '{}'
+                .format(Fore.YELLOW, json_path, z, error, Style.RESET_ALL)
+            )
 
         return v
 
@@ -210,11 +274,21 @@ class WAFBypass:
             v = result[0]
 
             if v == self.statuses[2]:
-                print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
+                print(
+                    '{}'
+                    'An incorrect response was received while processing request from file {} in {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, json_path, z, result[1], Style.RESET_ALL)
+                )
 
         except Exception as error:
             v = self.statuses[2]
-            print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+            print(
+                '{}'
+                'An error occurred while processing file {} in {}: {}'
+                '{}'
+                .format(Fore.YELLOW, json_path, z, error, Style.RESET_ALL)
+            )
 
         return v
 
@@ -229,11 +303,21 @@ class WAFBypass:
             v = result[0]
 
             if v == self.statuses[2]:
-                print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
+                print(
+                    '{}'
+                    'An incorrect response was received while processing request from file {} in {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, json_path, z, result[1], Style.RESET_ALL)
+                )
 
         except Exception as error:
             v = self.statuses[2]
-            print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+            print(
+                '{}'
+                'An error occurred while processing file {} in {}: {}'
+                '{}'
+                .format(Fore.YELLOW, json_path, z, error, Style.RESET_ALL)
+            )
 
         return v
 
@@ -249,11 +333,21 @@ class WAFBypass:
             v = result[0]
 
             if v == self.statuses[2]:
-                print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
+                print(
+                    '{}'
+                    'An incorrect response was received while processing request from file {} in {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, json_path, z, result[1], Style.RESET_ALL)
+                )
 
         except Exception as error:
             v = self.statuses[2]
-            print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+            print(
+                '{}'
+                'An error occurred while processing file {} in {}: {}'
+                '{}'
+                .format(Fore.YELLOW, json_path, z, error, Style.RESET_ALL)
+            )
 
         return v
 
@@ -268,11 +362,21 @@ class WAFBypass:
             v = result[0]
 
             if v == self.statuses[2]:
-                print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
+                print(
+                    '{}'
+                    'An incorrect response was received while processing request from file {} in {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, json_path, z, result[1], Style.RESET_ALL)
+                )
 
         except Exception as error:
             v = self.statuses[2]
-            print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+            print(
+                '{}'
+                'An error occurred while processing file {} in {}: {}'
+                '{}'
+                .format(Fore.YELLOW, json_path, z, error, Style.RESET_ALL)
+            )
 
         return v
 
@@ -287,11 +391,21 @@ class WAFBypass:
             v = result[0]
 
             if v == self.statuses[2]:
-                print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
+                print(
+                    '{}'
+                    'An incorrect response was received while processing request from file {} in {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, json_path, z, result[1], Style.RESET_ALL)
+                )
 
         except Exception as error:
             v = self.statuses[2]
-            print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+            print(
+                '{}'
+                'An error occurred while processing file {} in {}: {}'
+                '{}'
+                .format(Fore.YELLOW, json_path, z, error, Style.RESET_ALL)
+            )
 
         return v
 
@@ -306,10 +420,20 @@ class WAFBypass:
             v = result[0]
 
             if v == self.statuses[2]:
-                print(f"{Fore.YELLOW}An incorrect response was received while processing request from file {json_path} in {z}: {result[1]}{Style.RESET_ALL}")
+                print(
+                    '{}'
+                    'An incorrect response was received while processing request from file {} in {}: {}'
+                    '{}'
+                    .format(Fore.YELLOW, json_path, z, result[1], Style.RESET_ALL)
+                )
 
         except Exception as error:
             v = self.statuses[2]
-            print(f"{Fore.YELLOW}An error occurred while processing file {json_path} in {z}: {error}{Style.RESET_ALL}")
+            print(
+                '{}'
+                'An error occurred while processing file {} in {}: {}'
+                '{}'
+                .format(Fore.YELLOW, json_path, z, error, Style.RESET_ALL)
+            )
 
         return v
