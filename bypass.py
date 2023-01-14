@@ -55,7 +55,7 @@ def json_processing(result):
     result['FALSE'] = fx_processing(result['FALSE'])
 
     # delete empty keys
-    for k in result.keys():
+    for k in result.copy().keys():
         if len(result[k]) < 1:
             del result[k]
 
