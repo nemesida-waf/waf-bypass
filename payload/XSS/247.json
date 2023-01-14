@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "URL": "%3Cscript%3Ealert%26Tab%3b%281%29",
+      "ARGS": "%3Cscript%3Ealert%26Tab%3b%281%29",
+      "BODY": "%3Cscript%3Ealert%26Tab%3b%281%29",
+      "COOKIE": "%3Cscript%3Ealert%26Tab%3b%281%29",
+      "USER-AGENT": "%3Cscript%3Ealert%26Tab%3b%281%29",
+      "REFERER": "%3Cscript%3Ealert%26Tab%3b%281%29",
+      "HEADER": "%3Cscript%3Ealert%26Tab%3b%281%29",
+      "BLOCKED": true
+    }
+  ]
+}

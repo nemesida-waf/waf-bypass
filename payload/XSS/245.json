@@ -1,0 +1,14 @@
+{
+  "req": [
+    {
+      "URL": "`${class x extends `${alert`1337`}`{}}`{}",
+      "ARGS": "`${class x extends `${alert`1337`}`{}}`{}",
+      "BODY": "`${class x extends `${alert`1337`}`{}}`{}",
+      "COOKIE": "`${class x extends `${alert`1337`}`{}}`{}",
+      "USER-AGENT": "`${class x extends `${alert`1337`}`{}}`{}",
+      "REFERER": "`${class x extends `${alert`1337`}`{}}`{}",
+      "HEADER": "`${class x extends `${alert`1337`}`{}}`{}",
+      "BLOCKED": true
+    }
+  ]
+}
