@@ -66,4 +66,4 @@ Run with the command:
 
 - <code>'--timeout'</code> (<code>--timeout=10</code>) - option allows to specify a request processing timeout in sec. (default is <code>30</code>).
 
-- <code>'--json'</code> - an option that allows you to display the result of the work in JSON format.
+- <code>'--json-format'</code> - an option that allows you to display the result of the work in JSON format (useful for integrating the tool with security platforms).

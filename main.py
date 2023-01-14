@@ -63,7 +63,7 @@ try:
     launch_args = sys.argv[1:]
 
     # options
-    launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block-code=', 'threads=', 'timeout=', 'json']
+    launch_args_options = ['help', 'host=', 'proxy=', 'header=', 'block-code=', 'threads=', 'timeout=', 'json-format']
 
     # parsing args
     block_code = {}
@@ -99,7 +99,7 @@ try:
         elif k == '--timeout':
             timeout = int(v)
 
-        elif k == '--json':
+        elif k == '--json-format':
             wb_result_json = True
     
     if len(block_code) == 0:
