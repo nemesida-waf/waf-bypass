@@ -70,7 +70,7 @@ For MFD (multipart/form-data) payloads located in this directory, you must speci
 
 If a <code>BOUNDARY</code> is specified, then the content of the <code>BODY</code> must be formatted in accordance with the RFC, but this allows for multiple payloads in <code>BODY</code> a separated by <code>BOUNDARY</code>.
 
-Other zones are allowed in this directory (e.g.: URL, ARGS etc.). Regardless of the zone, header <code>'Content-Type: multipart/form-data; boundary=...'</code> will be added to all requests.
+Other zones are allowed in this directory (e.g.: <code>URL</code>, <code>ARGS</code> etc.). Regardless of the zone, header <code>'Content-Type: multipart/form-data; boundary=...'</code> will be added to all requests.
 
 
 ## How to run
