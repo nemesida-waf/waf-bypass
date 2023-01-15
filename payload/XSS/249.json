@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "ARGS": "<noscript><p title=\"</noscript><img src=x onerror=alert(document.domain)>\">",
+      "BODY": "<noscript><p title=\"</noscript><img src=x onerror=alert(document.domain)>\">",
+      "COOKIE": "<noscript><p title=\"</noscript><img src=x onerror=alert(document.domain)>\">",
+      "USER-AGENT": "<noscript><p title=\"</noscript><img src=x onerror=alert(document.domain)>\">",
+      "REFERER": "<noscript><p title=\"</noscript><img src=x onerror=alert(document.domain)>\">",
+      "HEADER": "<noscript><p title=\"</noscript><img src=x onerror=alert(document.domain)>\">",
+      "BLOCKED": true
+    }
+  ]
+}
