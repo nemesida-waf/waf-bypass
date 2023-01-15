@@ -56,6 +56,10 @@ def get_payload(json_path):
     method = jdata.get('METHOD', None)
     ret['METHOD'] = None if not method else method.lower()
 
+    # json
+    is_json = jdata.get('JSON', None)
+    ret['JSON'] = is_json if isinstance(is_json, bool) else False
+
     # blocked
     blocked = jdata.get('BLOCKED', None)
     ret['BLOCKED'] = blocked if isinstance(blocked, bool) else True

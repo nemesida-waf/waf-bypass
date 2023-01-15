@@ -2,6 +2,7 @@
   "req": [
     {
       "BODY": "{\"username\": {\"$eq\": \"admin\"}, \"password\": {\"$regex\": \"^md\" }}",
+      "JSON": true,
       "BLOCKED": true
     }
   ]

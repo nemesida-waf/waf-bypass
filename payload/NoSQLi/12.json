@@ -2,6 +2,7 @@
   "req": [
     {
       "BODY": "{\"username\": {\"$gt\":\"\"}, \"password\": {\"$gt\":\"\"}}",
+      "JSON": true,
       "BLOCKED": true
     }
   ]

@@ -152,6 +152,11 @@ class WAFBypass:
                 # no-blocked validation without payload
                 self.test_noblocked('get', headers)
 
+                # JSON parameter processing
+                if payload['JSON']:
+                    # (add a JSON header)
+                    headers['Content-Type'] = 'application/json'
+
                 # API dir processing
                 if '/API/' in json_path:
                     # (add a JSON header)
@@ -166,19 +171,16 @@ class WAFBypass:
                         # if boundary is set
                         if payload['BOUNDARY']:
                             # set headers
-                            headers['Content-Disposition'] = 'multipart/form-data; boundary=' + payload['BOUNDARY']
+                            headers['Content-Type'] = 'multipart/form-data; boundary=' + payload['BOUNDARY']
 
                         else:
                             
-                            # header/boundary processing
-                            boundary = secrets.token_hex(30)  # 60 symbols
-                            nl = '\r\n'
-                            body_cont_disp = 'Content-Disposition: form-data; name="' + secrets.token_urlsafe(5) + '"'
-
                             # set body/headers
-                            body = '--' + boundary + nl + body_cont_disp + nl + nl + payload['BODY'] \
-                                   + nl + '--' + boundary + '--' + nl
-                            headers['Content-Disposition'] = 'multipart/form-data; boundary=' + boundary
+                            boundary = secrets.token_hex(30)  # 60 symbols                            
+                            body = '--' + boundary + '\r\n' \
+                                + 'Content-Disposition: form-data; name="' + secrets.token_urlsafe(5) + '"' \
+                                + '\r\n\r\n' + payload['BODY'] + '\r\n' + '--' + boundary + '--' + '\r\n'
+                            headers['Content-Type'] = 'multipart/form-data; boundary=' + boundary
 
                     else:
                         print(
