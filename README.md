@@ -2,21 +2,9 @@
 
 WAF bypass is an open source tool to analyze the security of any WAF for False Positives and False Negatives using predefined and customizable payloads. Check your WAF before an attacker does. WAF Bypass Tool is developed by Nemesida WAF team ([nemesida-waf.com](https://nemesida-waf.com)) with the participation of community.
 
-### When using, do not violate the law. We are not responsible for the use of the program.
-
-<img align="left" src="https://user-images.githubusercontent.com/99513957/211177749-44f0b3b3-2ecc-486e-a4d3-87b1df5ed1a2.png">
-
-There are attacks for which it is impossible to create a signature, while not increasing the number of false positives. Therefore, it is absolutely normal that Nemesida WAF Free bypass the attack, and the commercial version of Nemesida WAF Free blocks. For example, we can execute the <code>cat /etc/passwd</code> command in the following ways:
-
-<pre>
-%2f???%2f??t%20%2f???%2fp??s??
-cat+/e't'c/pa'ss'wd
-e'c'ho 'swd test pentest' | awk '{print "cat /etc/pas"$1}' | bash
-ec'h'o 'cat /etc/examplewd' | sed 's/example/pass/g' | bash
-</pre>
-
-
 ## How to run
+
+> It is forbidden to use for illegal and illegal purposes. Don't break the law. We are not responsible for possible risks associated with the use of this software.
 
 ### Run from Docker
 The latest waf-bypass always available via the [Docker Hub](https://hub.docker.com/r/nemesida/waf-bypass). It can be easily pulled via the following command:
@@ -51,6 +39,9 @@ Run with the command:
 - <code>'--timeout'</code> (<code>--timeout=10</code>) - option allows to specify a request processing timeout in sec. (default is <code>30</code>).
 
 - <code>'--json-format'</code> - an option that allows you to display the result of the work in JSON format (useful for integrating the tool with security platforms).
+
+<img align="left" src="https://user-images.githubusercontent.com/99513957/211177749-44f0b3b3-2ecc-486e-a4d3-87b1df5ed1a2.png">
+
 
 ## Payloads
 
