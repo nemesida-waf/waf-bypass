@@ -1,0 +1,9 @@
+{
+  "req": [
+    {
+      "ARGS": "path=http://example.com/admin",
+      "BODY": "path=http://example.com/admin",
+      "BLOCKED": true
+    }
+  ]
+}
