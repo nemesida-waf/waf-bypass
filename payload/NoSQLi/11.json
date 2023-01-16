@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "ARGS": "username%5B%24ne%5D=toto&password%5B%24regex%5D=m.%7B2%7D",
-      "BODY": "username%5B%24ne%5D=toto&password%5B%24regex%5D=m.%7B2%7D",
+      "ARGS": "username[$ne]=toto&password[$regex]=m.{2}",
+      "BODY": "username[$ne]=toto&password[$regex]=m.{2}",
       "BLOCKED": true
     }
   ]

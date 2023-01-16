@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "ARGS": "login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
-      "BODY": "login%5B%24gt%5D=admin&login%5B%24lt%5D=test&pass%5B%24ne%5D=1",
+      "ARGS": "login%255B%2524gt%255D%3Dadmin%26login%255B%2524lt%255D%3Dtest%26pass%255B%2524ne%255D%3D1",
+      "BODY": "llogin%255B%2524gt%255D%3Dadmin%26login%255B%2524lt%255D%3Dtest%26pass%255B%2524ne%255D%3D1",
       "BLOCKED": true
     }
   ]

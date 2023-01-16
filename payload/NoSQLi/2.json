@@ -1,13 +1,13 @@
 {
   "req": [
     {
-      "URL": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "ARGS": "param%RND%=db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "BODY": "param%RND%=db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "COOKIE": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "USER-AGENT": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "REFERER": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
-      "HEADER": "db.collection.find%28%20%7B%20%24where%3A%20function%28%29%20%7B%20%0A%20%20%20%20return%20%28this.name%20==%20%24userData%29%20%7D%20%7D%20%29%3B",
+      "URL": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
+      "ARGS": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
+      "BODY": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
+      "COOKIE": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
+      "USER-AGENT": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
+      "REFERER": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
+      "HEADER": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
       "BLOCKED": true
     }
   ]

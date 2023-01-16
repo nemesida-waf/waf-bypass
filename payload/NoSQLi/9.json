@@ -2,8 +2,8 @@
   "req": [
     {
       "URL": "JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
-      "ARGS": "param%RND%=JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
-      "BODY": "param%RND%=JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
+      "ARGS": "JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
+      "BODY": "JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
       "COOKIE": "JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
       "HEADER": "JyAmJiB0aGlzLnBhc3N3b3JkLm1hdGNoKC8uKi8pLy8rJTAw",
       "BLOCKED": true

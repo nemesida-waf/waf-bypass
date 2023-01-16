@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "ARGS": "username%5B%24ne%5D=toto&password%5B%24ne%5D=toto",
-      "BODY": "username%5B%24ne%5D=toto&password%5B%24ne%5D=toto",
+      "ARGS": "username%255B%2524ne%255D%3Dtoto%26password%255B%2524ne%255D%3Dtoto",
+      "BODY": "username%255B%2524ne%255D%3Dtoto%26password%255B%2524ne%255D%3Dtoto",
       "BLOCKED": true
     }
   ]
