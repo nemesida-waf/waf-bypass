@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "ARGS": "path=http://example.com/admin",
-      "BODY": "path=http://example.com/admin",
+      "ARGS": "path=http://localhost/admin",
+      "BODY": "path=http://localhost/admin",
       "BLOCKED": true
     }
   ]
