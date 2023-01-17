@@ -42,6 +42,8 @@ Run with the command:
 
 - <code>'--json-format'</code> - an option that allows you to display the result of the work in JSON format (useful for integrating the tool with security platforms).
 
+- <code>'--details'</code> - display the False Positive and False Negative payloads.
+
 
 ## Payloads
 

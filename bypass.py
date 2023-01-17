@@ -57,19 +57,21 @@ def json_processing(result):
     print(json.dumps(result))
 
 
-def table_processing(result):
+def table_processing(result, details):
 
     # print summary table
     table_get_result_summary(result)
 
-    # print details table
-    fp = [k for k, v in result.items() if v == 'FP']
-    fn = [k for k, v in result.items() if v == 'FN']
-    fp.sort()
-    fn.sort()
-    fp = fx_processing(fp)
-    fn = fx_processing(fn)
-    table_get_result_details(fp, fn)
+    # print FP/FN tables
+    if details:
+
+        fp = [k for k, v in result.items() if v == 'FP']
+        fn = [k for k, v in result.items() if v == 'FN']
+        fp.sort()
+        fn.sort()
+        fp = fx_processing(fp)
+        fn = fx_processing(fn)
+        table_get_result_details(fp, fn)
 
 
 def processing_result(blocked, block_code, status_code):
@@ -88,7 +90,7 @@ def processing_result(blocked, block_code, status_code):
 
 class WAFBypass:
 
-    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json):
+    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details):
         
         # init
         self.host = host
@@ -99,6 +101,7 @@ class WAFBypass:
         self.threads = threads
         self.wb_result = wb_result
         self.wb_result_json = wb_result_json
+        self.details = details
 
         # init statuses
         self.statuses = [
@@ -300,7 +303,7 @@ class WAFBypass:
         if self.wb_result_json:
             json_processing(self.wb_result)
         else:
-            table_processing(self.wb_result)
+            table_processing(self.wb_result, self.details)
 
     def test_resp_status_processing(self, k, v):
         try:
