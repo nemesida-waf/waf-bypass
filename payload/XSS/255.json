@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "ARGS": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
+      "BODY": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
+      "COOKIE": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
+      "USER-AGENT": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
+      "REFERER": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
+      "HEADER": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
+      "BLOCKED": true
+    }
+  ]
+}

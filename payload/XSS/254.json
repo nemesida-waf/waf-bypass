@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "ARGS": "<iframe %00 src=%E2%80%9D&Tab;javascript:prompt(1)&Tab;%E2%80%9D%00>",
+      "BODY": "<iframe %00 src=%E2%80%9D&Tab;javascript:prompt(1)&Tab;%E2%80%9D%00>",
+      "COOKIE": "<iframe %00 src=%E2%80%9D&Tab;javascript:prompt(1)&Tab;%E2%80%9D%00>",
+      "USER-AGENT": "<iframe %00 src=%E2%80%9D&Tab;javascript:prompt(1)&Tab;%E2%80%9D%00>",
+      "REFERER": "<iframe %00 src=%E2%80%9D&Tab;javascript:prompt(1)&Tab;%E2%80%9D%00>",
+      "HEADER": "<iframe %00 src=%E2%80%9D&Tab;javascript:prompt(1)&Tab;%E2%80%9D%00>",
+      "BLOCKED": true
+    }
+  ]
+}

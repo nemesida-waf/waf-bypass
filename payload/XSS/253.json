@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "ARGS": "<img/src=`%00`%20onerror=this.onerror=confirm(1)",
+      "BODY": "<img/src=`%00`%20onerror=this.onerror=confirm(1)",
+      "COOKIE": "<img/src=`%00`%20onerror=this.onerror=confirm(1)",
+      "USER-AGENT": "<img/src=`%00`%20onerror=this.onerror=confirm(1)",
+      "REFERER": "<img/src=`%00`%20onerror=this.onerror=confirm(1)",
+      "HEADER": "<img/src=`%00`%20onerror=this.onerror=confirm(1)",
+      "BLOCKED": true
+    }
+  ]
+}

@@ -52,11 +52,6 @@ def json_processing(result):
     # processing FX (convert list of 'payload:zone' to list of dict. 'payload:z1|z2')
     result['FP'] = fx_processing(result['FP'])
     result['FN'] = fx_processing(result['FN'])
-    result['FALSE'] = fx_processing(result['FALSE'])
-
-    # delete FALSE is empty
-    if not result['FALSE']:
-        del result['FALSE']
 
     # print result in JSON
     print(json.dumps(result))
@@ -109,10 +104,9 @@ class WAFBypass:
         self.statuses = [
             'PASSED',  # OK
             'ERROR',   # incorrect response code
-            'FAILED',    # request failed (e.g.: cannot connect to server etc.)
+            'FAILED',  # request failed (e.g.: cannot connect to server etc.)
             'FP',      # False Positive
             'FN',      # False Negative
-            'FALSE'    # Not the FP and not the FN
         ]
         self.zones = ['URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER']
 
@@ -133,11 +127,7 @@ class WAFBypass:
                 
                 # extract payload data
                 payload = get_payload(json_path)
-
-                # init
-                body = payload['BODY']
-                headers = {}
-
+                
                 # if payload is empty
                 if not payload:
                     err = 'No payloads found during processing file {}: no payload found'.format(json_path)
@@ -148,6 +138,10 @@ class WAFBypass:
                         .format(Fore.YELLOW, err, Style.RESET_ALL)
                     )
                     return
+
+                # init
+                body = payload['BODY']
+                headers = {}
                 
                 # no-blocked validation without payload
                 self.test_noblocked('get', headers)
@@ -313,10 +307,15 @@ class WAFBypass:
 
             if v == 'PASSED':
                 return
-            if v in ['FP', 'FN']:
+            elif v in ['FP', 'FN']:
                 self.wb_result[v].append(k)
             else:
-                self.wb_result['FALSE'].append(k)
+                print(
+                    '{}'
+                    'An error occurred while processing request status: {} ({}) not in PASSED/FP/FN'
+                    '{}'
+                    .format(Fore.YELLOW, v, k, Style.RESET_ALL)
+                )
         
         except Exception as e:
             print(

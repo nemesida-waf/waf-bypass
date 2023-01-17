@@ -1,0 +1,13 @@
+{
+  "req": [
+    {
+      "ARGS": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
+      "BODY": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
+      "COOKIE": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
+      "USER-AGENT": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
+      "REFERER": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
+      "HEADER": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
+      "BLOCKED": true
+    }
+  ]
+}

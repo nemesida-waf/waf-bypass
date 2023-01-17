@@ -118,7 +118,7 @@ if not host:
 # print basic info
 if not wb_result_json:
 
-    print('\n')
+    print('')
     print('##')
     print('# TARGET: {}'.format(host))
 
@@ -160,4 +160,4 @@ except MissingSchema:
     print('An error occurred: protocol is not set for TARGET or PROXY')
 
 if not wb_result_json:
-    print('\n')
+    print('')
