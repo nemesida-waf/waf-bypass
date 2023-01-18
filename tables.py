@@ -54,8 +54,8 @@ def table_get_result_summary(wb_result):
     payloads_summary_dict = {}
     payloads_summary_list_fp = []
     payloads_summary_list_fn = []
-    table_headers_fn = ['PAYLOAD TYPE', 10 * ' ' + 'PASSED', 10 * ' ' + 'BYPASSED', 10 * ' ' + 'ERROR']
-    table_headers_fp = ['TOTAL', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'ERROR']
+    table_headers_fn = [7 * ' ' + 'PAYLOAD TYPE', 10 * ' ' + 'PASSED', 10 * ' ' + 'BYPASSED', 10 * ' ' + 'ERROR']
+    table_headers_fp = [14 * ' ' + 'TOTAL', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'ERROR']
 
     # get payloads type list
     payloads_type_list = list(set(['/'.join(k.split(':')[0].split('/')[:-1]) for k in wb_result.keys()]))
