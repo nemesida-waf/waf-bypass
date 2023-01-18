@@ -1,0 +1,9 @@
+{
+  "req": [
+    {
+      "ARGS": "{\"operationName\":\"pages\",\"variables\":{\"offset\":0,\"limit\":10,\"sortc\":\"name OR SLEEP(10)\",\"sortrev\":false},\"query\":\"query pages($offset: Int!, $limit: Int!, $sortc: String, $sortrev: Boolean) {\n  pages(offset: $offset, limit: $limit, sortc: $sortColumn, sortReverse: $sortReverse) {\n    id\n    n\n    __typen\n  }\n  me {\n    firstN\n    lastN\n    usern\n    __typen\n  }\n  components {\n    title\n    __typen\n  }\n  templates {\n    title\n    __typen\n  }\n  fonts {\n    n\n    __typen\n  }\n  partners {\n    id\n    n\n    banners {\n      n\n      __typen\n    }\n    __typen\n  }\n}\n\"}",
+      "BODY": "{\"operationName\":\"pages\",\"variables\":{\"offset\":0,\"limit\":10,\"sortc\":\"name OR SLEEP(10)\",\"sortrev\":false},\"query\":\"query pages($offset: Int!, $limit: Int!, $sortc: String, $sortrev: Boolean) {\n  pages(offset: $offset, limit: $limit, sortc: $sortColumn, sortReverse: $sortReverse) {\n    id\n    n\n    __typen\n  }\n  me {\n    firstN\n    lastN\n    usern\n    __typen\n  }\n  components {\n    title\n    __typen\n  }\n  templates {\n    title\n    __typen\n  }\n  fonts {\n    n\n    __typen\n  }\n  partners {\n    id\n    n\n    banners {\n      n\n      __typen\n    }\n    __typen\n  }\n}\n\"}",
+      "BLOCKED": true
+    }
+  ]
+}

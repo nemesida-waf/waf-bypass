@@ -1,0 +1,9 @@
+{
+  "req": [
+    {
+      "ARGS": "{__type (name: \"User\") {name fields{name type{name kind ofType{name kind}}}}}",
+      "BODY": "{__type (name: \"User\") {name fields{name type{name kind ofType{name kind}}}}}",
+      "BLOCKED": true
+    }
+  ]
+}
