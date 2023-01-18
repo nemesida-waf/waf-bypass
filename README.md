@@ -55,7 +55,7 @@ Depending on the purpose, payloads are located in the appropriate folders:
 
 - API (API testing payloads)
 - CM (Custom HTTP Method payloads)
-- GraphQL (Graph testing payloads)
+- GraphQL (GraphQL testing payloads)
 - LDAP (LDAP Injection etc. payloads)
 - LFI (Local File Include payloads)
 - MFD (multipart/form-data payloads)
