@@ -88,6 +88,7 @@ def table_get_result_summary(wb_result):
             error
         ])
 
+    tp.banner('SUMMARY BY TYPE ', style='banner')
     tp.table(payloads_summary_list, table_headers)
 
     ##
@@ -97,7 +98,7 @@ def table_get_result_summary(wb_result):
     # init
     summ = 0
     payloads_summary_list = []
-    table_headers = ['TOTAL CHECKS', 'PASSED', 'NOT PASSED', 'FALSE POSITIVE', 'FALSE NEGATIVE', 'ERROR']
+    table_headers = ['TOTAL', 'PASSED', 'NOT PASSED', 'FALSE POSITIVE', 'FALSE NEGATIVE', 'ERROR']
 
     i = len([k for k, v in wb_result.items() if v == 'PASSED'])
     passed = str(i) + ' (' + get_percent_str(i, len(wb_result)) + '%)'
@@ -127,6 +128,7 @@ def table_get_result_summary(wb_result):
         error
     ])
 
+    tp.banner('TOTAL SUMMARY ', style='banner')
     tp.table(payloads_summary_list, table_headers)
 
     # summary validation
