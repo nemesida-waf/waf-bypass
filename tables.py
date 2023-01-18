@@ -9,7 +9,7 @@ def get_stats(wb_result, status):
 
 
 def get_percent_str(i, a):
-    return str(round((i/a)*100, 2) if a != 0 else '0.00')
+    return round((i/a)*100, 2) if a != 0 else 0.00
 
 
 def table_get_result_details(fp, fn):
@@ -79,9 +79,15 @@ def table_get_result_summary(wb_result):
         v = payloads_summary_dict[k]
 
         total = v[0]
-        passed = str(v[1]) + ' (' + get_percent_str(v[1], v[0]) + '%)'
-        fx = str(v[2]) + ' (' + get_percent_str(v[2], v[0]) + '%)'
-        error = str(v[3]) + ' (' + get_percent_str(v[3], v[0]) + '%)'
+
+        prcnt = get_percent_str(v[1], v[0])
+        passed = str(v[1]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
+
+        prcnt = get_percent_str(v[2], v[0])
+        fx = str(v[2]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
+
+        prcnt = get_percent_str(v[3], v[0])
+        error = str(v[3]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
         
         if k == 'FP':
             payloads_summary_list_fp.append([total, passed, fx, error])
@@ -92,11 +98,11 @@ def table_get_result_summary(wb_result):
     # Print FP/FN tables
     ##
 
-    tp.banner('FALSE NEGATIVE ', style='banner')
+    tp.banner('FALSE NEGATIVE TEST ', style='banner')
     tp.table(payloads_summary_list_fn, table_headers_fn)
 
     print('')
-    tp.banner('FALSE POSITIVE ', style='banner')
+    tp.banner('FALSE POSITIVE TEST ', style='banner')
     tp.table(payloads_summary_list_fp, table_headers_fp)
 
     ##
@@ -109,23 +115,28 @@ def table_get_result_summary(wb_result):
     table_headers = ['TOTAL PAYLOADS', 5 * ' ' + 'PASSED', 5 * ' ' + 'NOT PASSED', 5 * ' ' + 'FALSE POSITIVE', 5 * ' ' + 'FALSE NEGATIVE', 5 * ' ' + 'ERROR']
 
     i = len([k for k, v in wb_result.items() if v == 'PASSED'])
-    passed = str(i) + ' (' + get_percent_str(i, len(wb_result)) + '%)'
+    prcnt = get_percent_str(i, len(wb_result))
+    passed = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
     
     i = len([k for k, v in wb_result.items() if v == 'ERROR'])
-    error = str(i) + ' (' + get_percent_str(i, len(wb_result)) + '%)'
+    prcnt = get_percent_str(i, len(wb_result))
+    error = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
 
     i = len([k for k, v in wb_result.items() if v == 'FP'])
-    fp = str(i) + ' (' + get_percent_str(i, len(wb_result)) + '%)'
+    prcnt = get_percent_str(i, len(wb_result))
+    fp = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
 
     i = len([k for k, v in wb_result.items() if v == 'FN'])
-    fn = str(i) + ' (' + get_percent_str(i, len(wb_result)) + '%)'
+    prcnt = get_percent_str(i, len(wb_result))
+    fn = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
 
     i = len(wb_result) - len([k for k, v in wb_result.items() if v == 'PASSED'])
-    not_passed = str(i) + ' (' + get_percent_str(i, len(wb_result)) + '%)'
+    prcnt = get_percent_str(i, len(wb_result))
+    not_passed = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
 
     payloads_summary_list.append([
         len(wb_result.items()),
