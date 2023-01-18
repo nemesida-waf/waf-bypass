@@ -1,6 +1,6 @@
 # WAF Bypass Tool
 
-WAF bypass is an open source tool to analyze the security of any WAF for False Positives and False Negatives using predefined and customizable payloads. Check your WAF before an attacker does. WAF Bypass Tool is developed by Nemesida WAF team ([nemesida-waf.com](https://nemesida-waf.com)) with the participation of community.
+WAF bypass is an open source tool to analyze the security of any WAF for False Positives and False Negatives using predefined and customizable payloads. Check your WAF before an attacker does. WAF Bypass Tool is developed by Nemesida WAF team with the participation of community.
 
 ![WAF Bypass](https://user-images.githubusercontent.com/99513957/213011405-1f3d1cda-a106-4b21-897f-5db37cd7693b.png)
 
