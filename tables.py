@@ -119,7 +119,7 @@ def table_get_result_summary(wb_result):
     not_passed = str(i) + ' (' + get_percent_str(i, len(wb_result)) + '%)'
 
     payloads_summary_list.append([
-        str(len(wb_result.items())) + ' (100%)',
+        len(wb_result.items()),
         passed,
         not_passed,
         fp,

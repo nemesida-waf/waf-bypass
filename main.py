@@ -35,6 +35,7 @@ def get_help():
     print("Mandatory arguments:")
     print("--proxy       - set proxy-server (e.g. --proxy='http://1.2.3.4:3128)") 
     print("--header      - add the HTTP header to all requests (e.g. --header='Authorization: Basic YWRtaW46YWRtaW4=')")
+    print("--user-agent  - set the HTTP User-Agent to send with all requests, except when the User-Agent is set by the payload (e.g. --user-agent='MyUserAgent 1/1')")
     print("--block-code  - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403)")
     print("--threads     - set the number of parallel scan threads (e.g. --threads=10, default: 4)")
     print("--timeout     - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
@@ -66,7 +67,7 @@ try:
 
     # options
     launch_args_options = [
-        'help', 'host=', 'proxy=', 'header=', 'block-code=', 'threads=', 'timeout=', 'json-format', 'details'
+        'help', 'host=', 'proxy=', 'header=', 'user-agent=', 'block-code=', 'threads=', 'timeout=', 'json-format', 'details'
     ]
 
     # parsing args
@@ -93,6 +94,9 @@ try:
             hname = hname.strip()
             hval = hval.strip()
             headers[hname] = hval
+
+        elif k == '--user-agent':
+            headers['User-Agent'] = v
         
         elif k == '--block-code':
             block_code[int(v)] = True
@@ -128,12 +132,8 @@ if not wb_result_json:
     print('')
     print('##')
     print('# TARGET: {}'.format(host))
-
-    if len(proxy):
-        print('# PROXY: {}'.format(proxy))
-    else:
-        print('# PROXY: not used')
-
+    print('# PROXY: {}'.format(proxy)) if len(proxy) else print('# PROXY: NOT USED')
+    print('# THREADS: {}'.format(threads))
     print('# BLOCK STATUS CODE: {}'.format(list(block_code.keys())[0]))
 
     if len(headers) > 0:
