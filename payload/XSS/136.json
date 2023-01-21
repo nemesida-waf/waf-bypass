@@ -8,6 +8,7 @@
       "USER-AGENT": "<x contenteditable onfocus=alert(1)>focus this!",
       "REFERER": "<x contenteditable onfocus=alert(1)>focus this!",
       "HEADER": "<x contenteditable onfocus=alert(1)>focus this!",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

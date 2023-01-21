@@ -8,6 +8,7 @@
       "USER-AGENT": "'\"</Script><Html /Onmouseover=(alert)(1) //",
       "REFERER": "'\"</Script><Html /Onmouseover=(alert)(1) //",
       "HEADER": "'\"</Script><Html /Onmouseover=(alert)(1) //",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

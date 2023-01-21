@@ -7,7 +7,8 @@
         "USER-AGENT": "C:/WINDOWS/php.ini",
         "REFERER": "C:/WINDOWS/php.ini",
         "HEADER": "C:/WINDOWS/php.ini",
-        "BLOCKED": true
+        "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
       }
     ]
   }

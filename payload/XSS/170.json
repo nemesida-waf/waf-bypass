@@ -8,6 +8,7 @@
       "USER-AGENT": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
       "REFERER": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
       "HEADER": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

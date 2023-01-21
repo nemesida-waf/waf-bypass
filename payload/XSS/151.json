@@ -8,6 +8,7 @@
       "USER-AGENT": "%3Chtml%20ontouchend%3Dalert%281%29%3E",
       "REFERER": "%3Chtml%20ontouchend%3Dalert%281%29%3E",
       "HEADER": "%3Chtml%20ontouchend%3Dalert%281%29%3E",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

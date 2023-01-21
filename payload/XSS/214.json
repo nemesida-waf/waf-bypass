@@ -8,6 +8,7 @@
       "USER-AGENT": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
       "REFERER": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
       "HEADER": "%5B1%2C2%2C3%5D.with%280%2Calert%29.shift%28%29%281%29",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

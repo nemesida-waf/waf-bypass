@@ -3,6 +3,7 @@
     {
       "ARGS": "param%RND%=<A href=%22javascrip%09t&colon;eval.apply`${[jj.className+`(23)`]}`%22 id=jj class=alert>",
       "BODY": "param%RND%=<A href=%22javascrip%09t&colon;eval.apply`${[jj.className+`(23)`]}`%22 id=jj class=alert>",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

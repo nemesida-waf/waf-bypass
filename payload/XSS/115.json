@@ -8,6 +8,7 @@
       "USER-AGENT": "<embed src=javascript:alert(1)>",
       "REFERER": "<embed src=javascript:alert(1)>",
       "HEADER": "<embed src=javascript:alert(1)>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

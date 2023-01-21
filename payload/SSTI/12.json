@@ -5,6 +5,7 @@
       "BODY": "login%RND%=%7B%24smarty.version%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "COOKIE": "%7B%24smarty.version%7D",
       "HEADER": "%7B%24smarty.version%7D",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
+import base64
 import json
 import os
 import requests
 import secrets
+import urllib.parse
 
 from colorama import Fore
 from colorama import Style
+from html import escape
 from multiprocessing.dummy import Pool as ThreadPool
 from urllib.parse import urljoin
 
@@ -88,6 +91,28 @@ def processing_result(blocked, block_code, status_code):
     return status
 
 
+def payload_encoding(payload, encode):
+    try:
+
+        if encode.upper() == 'PLAIN':
+            return payload
+        elif encode.upper() == 'HTML-ENTITY':
+            return escape(payload)
+        elif encode.upper() == 'UTF-16':
+            return ''.join([hex(ord(x)).replace('0x', '\\u00') for x in payload])
+        elif encode.upper() == 'BASE64':
+            return base64.b64encode(urllib.parse.quote_plus(payload).encode('UTF-8')).decode('UTF-8')
+    
+    except Exception as e:
+        print(
+            '{}'
+            'An error occurred while encoding payload ({}) with {}: {}'
+            '{}'
+            .format(Fore.YELLOW, payload, encode, e, Style.RESET_ALL)
+        )
+        return payload
+
+
 class WAFBypass:
 
     def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details):
@@ -143,27 +168,45 @@ class WAFBypass:
                     return
 
                 # init
+                encode_list = payload['ENCODE']
                 body = payload['BODY']
                 headers = {}
-                
+
                 # no-blocked validation without payload
                 self.test_noblocked('get', headers)
 
                 # JSON parameter processing
                 if payload['JSON']:
-                    # (add a JSON header)
+
+                    # add a JSON header
                     headers['Content-Type'] = 'application/json'
+
+                    # check ENCODE
+                    if payload['ENCODE']:
+                        print(
+                                '{}'
+                                'An error occurred while processing payload from file {}:'
+                                ' simultaneous use of "JSON" and "ENCODE" is prohibited'
+                                '{}'
+                                .format(Fore.YELLOW, json_path, Style.RESET_ALL)
+                            )
+                        return
 
                 # API dir processing
                 if '/API/' in json_path:
-                    # (add a JSON header)
+                    # add a JSON header
                     headers['Content-Type'] = 'application/json'
+                    # reset encode
+                    encode_list = []
 
                 # MFD (multipart/form-data) dir processing
                 elif '/MFD/' in json_path:
                     
                     # if BODY is set
                     if payload['BODY']:
+
+                        # reset encode
+                        encode_list = []
 
                         # if boundary is set
                         if payload['BOUNDARY']:
@@ -173,7 +216,7 @@ class WAFBypass:
                         else:
                             
                             # set body/headers
-                            boundary = secrets.token_hex(30)  # 60 symbols                            
+                            boundary = secrets.token_hex(30)  # 60 symbols
                             body = '--' + boundary + '\r\n' \
                                 + 'Content-Disposition: form-data; name="' + secrets.token_urlsafe(5) + '"' \
                                 + '\r\n\r\n' + payload['BODY'] + '\r\n' + '--' + boundary + '--' + '\r\n'
@@ -187,7 +230,10 @@ class WAFBypass:
                             .format(Fore.YELLOW, json_path, Style.RESET_ALL)
                         )
                         return
-                
+
+                # encode list processing
+                encode_list.append('PLAIN')
+
                 # processing the payload of each zone
                 for z in payload:
 
@@ -207,75 +253,105 @@ class WAFBypass:
                     # Processing the payloads
                     ##
 
-                    if z == 'URL':
-                        
-                        k = str(str(json_path) + ':' + z)
-                        v = self.test_url(json_path, z, payload, method, headers)
-                        
-                        if self.wb_result_json:
-                            self.test_resp_status_processing(k, v)
-                        else:
-                            self.wb_result[k] = v
+                    for encode in encode_list:
 
-                    elif z == 'ARGS':
-                        
-                        k = str(str(json_path) + ':' + z)
-                        v = self.test_args(json_path, z, payload, method, headers)
-                        
-                        if self.wb_result_json:
-                            self.test_resp_status_processing(k, v)
-                        else:
-                            self.wb_result[k] = v
+                        if z == 'URL':
+                            
+                            if encode == 'PLAIN':
+                                k = str(str(json_path) + ':' + str(z))
+                            else:
+                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
 
-                    elif z == 'BODY':
-                        
-                        k = str(str(json_path) + ':' + z)
-                        v = self.test_body(json_path, z, payload, method, body, headers)
-                        
-                        if self.wb_result_json:
-                            self.test_resp_status_processing(k, v)
-                        else:
-                            self.wb_result[k] = v
+                            v = self.test_url(json_path, z, payload, method, headers, encode)
+                            
+                            if self.wb_result_json:
+                                self.test_resp_status_processing(k, v)
+                            else:
+                                self.wb_result[k] = v
 
-                    elif z == 'COOKIE':
-                        
-                        k = str(str(json_path) + ':' + z)
-                        v = self.test_cookie(json_path, z, payload, method, headers)
-                        
-                        if self.wb_result_json:
-                            self.test_resp_status_processing(k, v)
-                        else:
-                            self.wb_result[k] = v
+                        elif z == 'ARGS':
+                            
+                            if encode == 'PLAIN':
+                                k = str(str(json_path) + ':' + str(z))
+                            else:
+                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
 
-                    elif z == 'USER-AGENT':
-                        
-                        k = str(str(json_path) + ':' + z)
-                        v = self.test_ua(json_path, z, payload, method, headers)
-                        
-                        if self.wb_result_json:
-                            self.test_resp_status_processing(k, v)
-                        else:
-                            self.wb_result[k] = v
+                            v = self.test_args(json_path, z, payload, method, headers, encode)
+                            
+                            if self.wb_result_json:
+                                self.test_resp_status_processing(k, v)
+                            else:
+                                self.wb_result[k] = v
 
-                    elif z == 'REFERER':
-                        
-                        k = str(str(json_path) + ':' + z)
-                        v = self.test_referer(json_path, z, payload, method, headers)
-                        
-                        if self.wb_result_json:
-                            self.test_resp_status_processing(k, v)
-                        else:
-                            self.wb_result[k] = v
+                        elif z == 'BODY':
+                            
+                            if encode == 'PLAIN':
+                                k = str(str(json_path) + ':' + str(z))
+                            else:
+                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
 
-                    elif z == 'HEADER':
-                        
-                        k = str(str(json_path) + ':' + z)
-                        v = self.test_header(json_path, z, payload, method, headers)
-                        
-                        if self.wb_result_json:
-                            self.test_resp_status_processing(k, v)
-                        else:
-                            self.wb_result[k] = v
+                            v = self.test_body(json_path, z, payload, method, body, headers, encode)
+                            
+                            if self.wb_result_json:
+                                self.test_resp_status_processing(k, v)
+                            else:
+                                self.wb_result[k] = v
+
+                        elif z == 'COOKIE':
+                            
+                            if encode == 'PLAIN':
+                                k = str(str(json_path) + ':' + str(z))
+                            else:
+                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+
+                            v = self.test_cookie(json_path, z, payload, method, headers, encode)
+                            
+                            if self.wb_result_json:
+                                self.test_resp_status_processing(k, v)
+                            else:
+                                self.wb_result[k] = v
+
+                        elif z == 'USER-AGENT':
+                            
+                            if encode == 'PLAIN':
+                                k = str(str(json_path) + ':' + str(z))
+                            else:
+                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+
+                            v = self.test_ua(json_path, z, payload, method, headers, encode)
+                            
+                            if self.wb_result_json:
+                                self.test_resp_status_processing(k, v)
+                            else:
+                                self.wb_result[k] = v
+
+                        elif z == 'REFERER':
+                            
+                            if encode == 'PLAIN':
+                                k = str(str(json_path) + ':' + str(z))
+                            else:
+                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+
+                            v = self.test_referer(json_path, z, payload, method, headers, encode)
+                            
+                            if self.wb_result_json:
+                                self.test_resp_status_processing(k, v)
+                            else:
+                                self.wb_result[k] = v
+
+                        elif z == 'HEADER':
+                            
+                            if encode == 'PLAIN':
+                                k = str(str(json_path) + ':' + str(z))
+                            else:
+                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+
+                            v = self.test_header(json_path, z, payload, method, headers, encode)
+                            
+                            if self.wb_result_json:
+                                self.test_resp_status_processing(k, v)
+                            else:
+                                self.wb_result[k] = v
 
             except Exception as e:
                 err = 'An error occurred while processing payload from file {}: {}'.format(relative_path, e)
@@ -400,10 +476,12 @@ class WAFBypass:
             else:
                 print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
 
-    def test_url(self, json_path, z, payload, method, headers):            
+    def test_url(self, json_path, z, payload, method, headers, encode):            
         try:
 
-            host = urljoin(self.host, payload[z])
+            # init
+            encoded_payload = payload_encoding(payload[z], encode)
+            host = urljoin(self.host, encoded_payload)
             headers = {**self.headers, **headers}
 
             s = init_session()
@@ -420,13 +498,15 @@ class WAFBypass:
 
         return v
 
-    def test_args(self, json_path, z, payload, method, headers):
+    def test_args(self, json_path, z, payload, method, headers, encode):
         try:
             
+            # init
+            encoded_payload = payload_encoding(payload[z], encode)
             headers = {**self.headers, **headers}
 
             s = init_session()
-            result = s.request(method, self.host, headers=headers, params=payload[z], proxies=self.proxy, timeout=self.timeout, verify=False)
+            result = s.request(method, self.host, headers=headers, params=encoded_payload, proxies=self.proxy, timeout=self.timeout, verify=False)
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
@@ -439,13 +519,15 @@ class WAFBypass:
 
         return v
 
-    def test_body(self, json_path, z, payload, method, body, headers):
+    def test_body(self, json_path, z, payload, method, body, headers, encode):
         try:
 
+            # init
+            encoded_payload = payload_encoding(body, encode)
             headers = {**self.headers, **headers}
 
             s = init_session()
-            result = s.request(method, self.host, headers=headers, data=body, proxies=self.proxy, timeout=self.timeout, verify=False)
+            result = s.request(method, self.host, headers=headers, data=encoded_payload, proxies=self.proxy, timeout=self.timeout, verify=False)
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
@@ -458,11 +540,13 @@ class WAFBypass:
 
         return v
 
-    def test_cookie(self, json_path, z, payload, method, headers):
+    def test_cookie(self, json_path, z, payload, method, headers, encode):
         try:
             
+            # init
+            encoded_payload = payload_encoding(payload[z], encode)
             headers = {**self.headers, **headers}
-            cookies = {f"WBC-{secrets.token_hex(3)}": payload[z]}
+            cookies = {f"WBC-{secrets.token_hex(3)}": encoded_payload}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, cookies=cookies, proxies=self.proxy, timeout=self.timeout, verify=False)
@@ -478,10 +562,12 @@ class WAFBypass:
 
         return v
 
-    def test_ua(self, json_path, z, payload, method, headers):
+    def test_ua(self, json_path, z, payload, method, headers, encode):
         try:
             
-            headers = {**self.headers, **headers, 'User-Agent': payload[z]}
+            # init
+            encoded_payload = payload_encoding(payload[z], encode)
+            headers = {**self.headers, **headers, 'User-Agent': encoded_payload}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
@@ -497,10 +583,12 @@ class WAFBypass:
 
         return v
 
-    def test_referer(self, json_path, z, payload, method, headers):
+    def test_referer(self, json_path, z, payload, method, headers, encode):
         try:
 
-            headers = {**self.headers, **headers, 'Referer': payload[z]}
+            # init
+            encoded_payload = payload_encoding(payload[z], encode)
+            headers = {**self.headers, **headers, 'Referer': encoded_payload}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
@@ -516,10 +604,12 @@ class WAFBypass:
 
         return v
 
-    def test_header(self, json_path, z, payload, method, headers):            
+    def test_header(self, json_path, z, payload, method, headers, encode):            
         try:
 
-            headers = {**self.headers, **headers, f"WBH-{secrets.token_hex(3)}": payload[z]}
+            # init
+            encoded_payload = payload_encoding(payload[z], encode)
+            headers = {**self.headers, **headers, f"WBH-{secrets.token_hex(3)}": encoded_payload}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)

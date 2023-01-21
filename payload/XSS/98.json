@@ -8,6 +8,7 @@
       "USER-AGENT": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
       "REFERER": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
       "HEADER": "top%5B%5C%22al%5C%22%2B%5C%22ert%5C%22%5D%281%29",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

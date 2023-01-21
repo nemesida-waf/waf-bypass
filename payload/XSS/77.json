@@ -2,6 +2,7 @@
   "req": [
     {
       "URL": "\"><svg onload=alert(1)>?a=reader",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

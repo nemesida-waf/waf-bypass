@@ -8,6 +8,7 @@
       "USER-AGENT": "%3C%21--%23exec%20cmd=%22cd%20%2Froot%2Fdir%2F%22%3E",
       "REFERER": "%3C%21--%23exec%20cmd=%22cd%20%2Froot%2Fdir%2F%22%3E",
       "HEADER": "%3C%21--%23exec%20cmd=%22cd%20%2Froot%2Fdir%2F%22%3E",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

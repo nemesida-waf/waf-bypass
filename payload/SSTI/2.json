@@ -5,6 +5,7 @@
       "BODY": "login%RND%=%3C%25=%207%20*%207%20%25%3E&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "COOKIE": "%3C%25=%207%20*%207%20%25%3E",
       "HEADER": "%3C%25=%207%20*%207%20%25%3E",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

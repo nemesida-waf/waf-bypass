@@ -7,6 +7,7 @@
       "USER-AGENT": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
       "REFERER": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
       "HEADER": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

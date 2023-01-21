@@ -8,6 +8,7 @@
       "USER-AGENT": "<script src=//brutelogic.com.br/1.js>",
       "REFERER": "<script src=//brutelogic.com.br/1.js>",
       "HEADER": "<script src=//brutelogic.com.br/1.js>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

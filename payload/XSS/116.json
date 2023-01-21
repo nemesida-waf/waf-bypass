@@ -8,6 +8,7 @@
       "USER-AGENT": "<a href=javascript:alert(1)>click",
       "REFERER": "<a href=javascript:alert(1)>click",
       "HEADER": "<a href=javascript:alert(1)>click",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

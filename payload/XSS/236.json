@@ -8,6 +8,7 @@
       "USER-AGENT": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
       "REFERER": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
       "HEADER": "(A(%22onerror='alert%601%60'testabcd))/Login.aspx?ReturnUrl=%2f",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

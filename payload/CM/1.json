@@ -1,9 +1,0 @@
-{
-  "req": [
-    {
-      "BODY": "param%RND%=dGVzdA==",
-      "METHOD": "SPST",
-      "BLOCKED": false
-    }
-  ]
-}

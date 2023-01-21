@@ -7,6 +7,7 @@
       "COOKIE": "\"onfocus=alert(1)//",
       "REFERER": "\"onfocus=alert(1)//",
       "HEADER": "\"onfocus=alert(1)//",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

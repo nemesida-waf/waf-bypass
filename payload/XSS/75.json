@@ -8,6 +8,7 @@
       "USER-AGENT": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
       "REFERER": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
       "HEADER": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

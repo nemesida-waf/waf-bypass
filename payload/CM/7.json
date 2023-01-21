@@ -9,6 +9,7 @@
       "REFERER": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
       "HEADER": "%3Bcat%2B%2Fe%3F%3F%2Fpa%3F%3F%3Fd",
       "METHOD": "HEAD",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

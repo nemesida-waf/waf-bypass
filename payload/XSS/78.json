@@ -8,6 +8,7 @@
       "USER-AGENT": "{{constructor.constructor('alert(1)')()}}",
       "REFERER": "{{constructor.constructor('alert(1)')()}}",
       "HEADER": "{{constructor.constructor('alert(1)')()}}",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

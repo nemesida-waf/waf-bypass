@@ -8,6 +8,7 @@
       "USER-AGENT": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
       "REFERER": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
       "HEADER": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

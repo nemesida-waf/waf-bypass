@@ -8,6 +8,7 @@
       "USER-AGENT": "x%3Dnew%20XMLHttpRequest%28%29%3B%20http%3A%2F%2Fx.open%28%27GET%27%2C%27%2Fphpinfo%27%2C0%29%3B%20x.send%28%29%3Bregex%3D%2FCOOKIE%27.%2Av%22%3E%28.%2A%3F%29%3C%2Fm%3B%20alert%28x.responseText.match%28regex%29%5B1%5D%29%3B",
       "REFERER": "x%3Dnew%20XMLHttpRequest%28%29%3B%20http%3A%2F%2Fx.open%28%27GET%27%2C%27%2Fphpinfo%27%2C0%29%3B%20x.send%28%29%3Bregex%3D%2FCOOKIE%27.%2Av%22%3E%28.%2A%3F%29%3C%2Fm%3B%20alert%28x.responseText.match%28regex%29%5B1%5D%29%3B",
       "HEADER": "x%3Dnew%20XMLHttpRequest%28%29%3B%20http%3A%2F%2Fx.open%28%27GET%27%2C%27%2Fphpinfo%27%2C0%29%3B%20x.send%28%29%3Bregex%3D%2FCOOKIE%27.%2Av%22%3E%28.%2A%3F%29%3C%2Fm%3B%20alert%28x.responseText.match%28regex%29%5B1%5D%29%3B",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

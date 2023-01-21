@@ -8,6 +8,7 @@
       "USER-AGENT": "top[8680439..toString(30)](1)",
       "REFERER": "top[8680439..toString(30)](1)",
       "HEADER": "top[8680439..toString(30)](1)",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

@@ -8,6 +8,7 @@
       "USER-AGENT": "<img src=1 onerror=alert(1)>",
       "REFERER": "<img src=1 onerror=alert(1)>",
       "HEADER": "<img src=1 onerror=alert(1)>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

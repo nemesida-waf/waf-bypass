@@ -8,6 +8,7 @@
       "USER-AGENT": "<Script>alert(1)</Script>",
       "REFERER": "<Script>alert(1)</Script>",
       "HEADER": "<Script>alert(1)</Script>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

@@ -6,6 +6,7 @@
       "COOKIE": "a%22%252501onclick%3Dprompt%281%29%3E",
       "USER-AGENT": "%22%252501onclick%3Dprompt%281%29%3E",
       "HEADER": "a%22%252501onclick%3Dprompt%281%29%3E",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

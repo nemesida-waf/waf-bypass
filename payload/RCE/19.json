@@ -5,6 +5,7 @@
       "BODY": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
       "COOKIE": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
       "REFERER": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

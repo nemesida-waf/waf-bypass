@@ -6,6 +6,7 @@
       "BODY": "param%RND%=PHggb25tb3VzZW91dD1hbGVydCgxKT5ob3ZlciB0aGlzIQ==",
       "COOKIE": "PHggb25tb3VzZW91dD1hbGVydCgxKT5ob3ZlciB0aGlzIQ==",
       "HEADER": "PHggb25tb3VzZW91dD1hbGVydCgxKT5ob3ZlciB0aGlzIQ==",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

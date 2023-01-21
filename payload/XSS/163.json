@@ -8,6 +8,7 @@
       "USER-AGENT": "<body onhelp=alert(1)>press F1!",
       "REFERER": "<body onhelp=alert(1)>press F1!",
       "HEADER": "<body onhelp=alert(1)>press F1!",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

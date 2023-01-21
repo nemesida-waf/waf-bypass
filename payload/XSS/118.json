@@ -8,6 +8,7 @@
       "USER-AGENT": "<form action=javascript:alert(1)><input type=submit>",
       "REFERER": "<form action=javascript:alert(1)><input type=submit>",
       "HEADER": "<form action=javascript:alert(1)><input type=submit>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

@@ -8,6 +8,7 @@
       "USER-AGENT": "<x contenteditable onkeydown=alert(1)>press any key!",
       "REFERER": "<x contenteditable onkeydown=alert(1)>press any key!",
       "HEADER": "<x contenteditable onkeydown=alert(1)>press any key!",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

@@ -8,6 +8,7 @@
       "USER-AGENT": "`${class x extends `${alert`1337`}`{}}`{}",
       "REFERER": "`${class x extends `${alert`1337`}`{}}`{}",
       "HEADER": "`${class x extends `${alert`1337`}`{}}`{}",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

@@ -8,6 +8,7 @@
       "USER-AGENT": "<isindex action=javascript:alert(1) type=submit value=click>",
       "REFERER": "<isindex action=javascript:alert(1) type=submit value=click>",
       "HEADER": "<isindex action=javascript:alert(1) type=submit value=click>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

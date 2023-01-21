@@ -5,6 +5,7 @@
       "BODY": "login%RND%=${T(java.lang.System).getenv()}&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "COOKIE": "${T(java.lang.System).getenv()}",
       "HEADER": "${T(java.lang.System).getenv()}",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

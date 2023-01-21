@@ -8,6 +8,7 @@
       "USER-AGENT": "\"o<x>nmouseover=alert<x>(1)//",
       "REFERER": "\"o<x>nmouseover=alert<x>(1)//",
       "HEADER": "\"o<x>nmouseover=alert<x>(1)//",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

@@ -75,17 +75,21 @@ Depending on the purpose, payloads are located in the appropriate folders:
 
 When compiling a payload, the following zones, method and options are used:
 
-- URL        - request's path (e.g.: <code>/my_payload</code>)
-- ARGS       - request's query (e.g.: <code>my_payload</code> or <code>param1=my_payload1&param2=my_payload2</code>)
-- BODY       - request's body (e.g.: <code>my_payload</code> or <code>param1=my_payload1&param2=my_payload2</code>)
-- COOKIE     - request's cookie (e.g.: <code>my_payload</code>)
-- USER-AGENT - request's user-agent (e.g.: <code>my_payload</code>)
-- REFERER    - request's referer (e.g.: <code>my_payload</code> or <code>http://example.com/my_payload</code>)
-- HEADER     - request's header (e.g.: <code>my_payload</code>)
-- METHOD     - request's method (e.g. GET, POST, HEAD etc.)
+- URL (type: str)        - request's path (e.g.: <code>/my_payload</code>)
+- ARGS (type: str)       - request's query (e.g.: <code>my_payload</code> or <code>param1=my_payload1&param2=my_payload2</code>)
+- BODY (type: str)       - request's body (e.g.: <code>my_payload</code> or <code>param1=my_payload1&param2=my_payload2</code>)
+- COOKIE (type: str)     - request's cookie (e.g.: <code>my_payload</code>)
+- USER-AGENT (type: str) - request's user-agent (e.g.: <code>my_payload</code>)
+- REFERER (type: str)    - request's referer (e.g.: <code>my_payload</code> or <code>http://example.com/my_payload</code>)
+- HEADER (type: str)     - request's header (e.g.: <code>my_payload</code>)
+- METHOD (type: str)     - request's method (e.g. GET, POST, HEAD etc.)
 
-- JSON - specifies that the request's body should be in JSON format
-- BLOCKED - specifies that the request should be blocked (FN testing) or not (FP)
+- BOUNDARY (type: str)   - specifies the contents of the request's boundary (e.g. <code>35b1fbd5</code>). Applicable only to payloads in the MFD directory.
+- ENCODE (type: str)     - specifies the type of additional payload encoding (<code>Base64</code>, <code>HTML-ENTITY</code>, <code>UTF-16</code>) in addition to the current one used in the payload (e.g. <code>UTF-16</code> or <code>Base64 UTF-16</code>). Not applicable to payloads in API and MFD directories.
+
+
+- JSON (type: bool)      - specifies that the request's body should be in JSON format (type: boolean)
+- BLOCKED (type: bool)   - specifies that the request should be blocked (FN testing) or not (FP) (type: boolean)
 
 Except for some cases described below, the zones are independent of each other and are tested separately (those if 2 zones are specified - the script will send 2 requests - alternately checking one and the second zone).
 

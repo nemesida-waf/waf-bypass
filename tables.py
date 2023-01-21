@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import tableprint as tp
-from prettytable import PrettyTable
 
 
 def get_stats(wb_result, status):    
@@ -19,24 +18,16 @@ def table_get_result_details(fp, fn):
         if not fx:
             return ''
 
-        # set col_2
-        col_1 = 'FALSE POSITIVE PAYLOAD' if status == 'FP' else 'FALSE NEGATIVE PAYLOAD'
-        col_1 = 15 * ' ' + col_1 + 15 * ' '
-        col_2 = 'ZONE'
+        # print header
+        print('')
+        fx_type = '>> FALSE POSITIVE PAYLOAD:' if status == 'FP' else '>> FALSE NEGATIVE PAYLOAD:'
+        print(fx_type)
 
-        # set table's headers
-        table = PrettyTable()
-        table.field_names = [col_1, col_2]
-        table.align[col_1] = 'l'
-
-        # set table's body
+        # print payloads
         for k, v in fx.items():
-            table.add_row([k, v])
-
-        print(table)
+            print('  {} in zone {}'.format(k, v))
 
     # FX details table
-    print('')
     get_result_details(fp, 'FP')
     get_result_details(fn, 'FN')
 

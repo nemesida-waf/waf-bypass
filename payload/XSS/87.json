@@ -8,6 +8,7 @@
       "USER-AGENT": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
       "REFERER": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
       "HEADER": "<SCRIPT SRC=//BRUTELOGIC.COM.BR/1></SCRIPT>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

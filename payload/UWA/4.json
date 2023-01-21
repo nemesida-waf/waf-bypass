@@ -2,6 +2,7 @@
   "req": [
     {
       "URL": "/.svn/entries",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

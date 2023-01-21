@@ -8,6 +8,7 @@
       "COOKIE": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
       "USER-AGENT": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
       "REFERER": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

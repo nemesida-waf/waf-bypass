@@ -7,6 +7,7 @@
       "USER-AGENT": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
       "REFERER": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
       "HEADER": "<input/onmouseover=%E2%80%9DjavaSCRIPT&colon;confirm&lpar;1&rpar;%E2%80%9D",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

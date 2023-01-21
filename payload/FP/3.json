@@ -2,6 +2,7 @@
   "req": [
     {
       "BODY": "I cannot print the file. What should I do?",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": false
     }
   ]

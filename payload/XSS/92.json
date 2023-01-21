@@ -8,6 +8,7 @@
       "USER-AGENT": "<svg onload=alert&lpar;1&rpar;>",
       "REFERER": "<svg onload=alert&lpar;1&rpar;>",
       "HEADER": "<svg onload=alert&lpar;1&rpar;>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

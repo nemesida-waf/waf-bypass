@@ -8,6 +8,7 @@
       "USER-AGENT": "/(A('onerror=%22alert%601%60%22testabcd))/",
       "REFERER": "/(A('onerror=%22alert%601%60%22testabcd))/",
       "HEADER": "/(A('onerror=%22alert%601%60%22testabcd))/",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

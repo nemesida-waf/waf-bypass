@@ -2,6 +2,7 @@
   "req": [
     {
       "USER-AGENT": "[FBAN/FB4A;FBAV/302.0.0.45.119;FBBV/268946149;FBDM/{density=2.0,width=720,height=1280};FBLC/ru_RU;FBRV/270254211;FBCR/MegaFon #1;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-J510FN;FBSV/7.1.1;FBOP/19;FBCA/armeabi-v7a:armeabi;]",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": false
     }
   ]

@@ -7,6 +7,7 @@
       "COOKIE": "cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
       "REFERER": "cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
       "HEADER": "cmd=127.0.0.1%2B%2526%2526%2Bls+/etc",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

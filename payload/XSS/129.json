@@ -8,6 +8,7 @@
       "USER-AGENT": "<x contenteditable onblur=alert(1)>lose focus!",
       "REFERER": "<x contenteditable onblur=alert(1)>lose focus!",
       "HEADER": "<x contenteditable onblur=alert(1)>lose focus!",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

@@ -8,6 +8,7 @@
       "USER-AGENT": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
       "REFERER": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
       "HEADER": "%3Cbody%20onhashchange%3Dalert%281%29%3E%3Ca%20href%3D%2523x%3Eclick%20this%21%23x",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

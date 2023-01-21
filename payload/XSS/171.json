@@ -8,6 +8,7 @@
       "USER-AGENT": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "REFERER": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "HEADER": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

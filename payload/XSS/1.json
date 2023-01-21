@@ -8,6 +8,7 @@
       "USER-AGENT": "%3Csvg%2Fonload%3Dalert%28%RND%%29%2F%2F",
       "REFERER": "%3Csvg%2Fonload%3Dalert%28%RND%%29%2F%2F",
       "HEADER": "%3Csvg%2Fonload%3Dalert%28%RND%%29%2F%2F",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

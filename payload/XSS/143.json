@@ -8,6 +8,7 @@
       "USER-AGENT": "<x onmouseover=alert(1)>hover this!",
       "REFERER": "<x onmouseover=alert(1)>hover this!",
       "HEADER": "<x onmouseover=alert(1)>hover this!",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

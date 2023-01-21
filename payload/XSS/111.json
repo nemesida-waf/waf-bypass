@@ -8,6 +8,7 @@
       "URL": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
       "REFERER": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
       "HEADER": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

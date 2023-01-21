@@ -8,6 +8,7 @@
       "REFERER": "setInterval`alert\\x28document.domain\\x29`",
       "HEADER": "setInterval`alert\\x28document.domain\\x29`",
       "URL": "setInterval`alert\\x28document.domain\\x29`",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

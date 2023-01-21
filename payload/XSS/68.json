@@ -6,6 +6,7 @@
       "BODY": "p%RND%=<svg/1='&q='onload=alert(1)>",
       "REFERER": "<svg/1='&q='onload=alert(1)>",
       "COOKIE": "<svg/1='&q='onload=alert(1)>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

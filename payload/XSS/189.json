@@ -6,6 +6,7 @@
       "COOKIE": "%27ale%27%2B%27rt%27%28%29",
       "USER-AGENT": "%27ale%27%2B%27rt%27%28%29",
       "HEADER": "%27ale%27%2B%27rt%27%28%29",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

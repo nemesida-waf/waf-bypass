@@ -3,6 +3,7 @@
     {
       "ARGS": "username%255B%2524ne%255D%3Dtoto%26password%255B%2524ne%255D%3Dtoto",
       "BODY": "username%255B%2524ne%255D%3Dtoto%26password%255B%2524ne%255D%3Dtoto",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

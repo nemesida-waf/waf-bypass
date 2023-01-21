@@ -8,6 +8,7 @@
       "USER-AGENT": "%3B%20cat%20%2Fet%27c%2Fpa%27ss%27wd",
       "REFERER": "%3B%20cat%20%2Fet%27c%2Fpa%27ss%27wd",
       "HEADER": "%3B%20cat%20%2Fet%27c%2Fpa%27ss%27wd",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

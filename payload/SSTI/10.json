@@ -3,6 +3,7 @@
     {
       "ARGS": "login%RND%=%24%7Bclass.getClassLoader()%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "BODY": "login%RND%=%24%7Bclass.getClassLoader()%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

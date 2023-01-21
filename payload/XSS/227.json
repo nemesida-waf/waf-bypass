@@ -8,6 +8,7 @@
       "USER-AGENT": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
       "REFERER": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
       "HEADER": "%252sscript%252ualert%28%271%27%29%252s%2Fscript%252u",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

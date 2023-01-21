@@ -8,7 +8,8 @@
         "USER-AGENT": "%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%2Fetc%2Fpasswd",
         "REFERER": "%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%2Fetc%2Fpasswd",
         "HEADER": "%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%252e%252e%252f%2Fetc%2Fpasswd",
-        "BLOCKED": true
+        "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
       }
     ]
   }

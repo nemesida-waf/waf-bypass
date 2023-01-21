@@ -8,6 +8,7 @@
       "USER-AGENT": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
       "REFERER": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
       "HEADER": "<iframe srcdoc=<svg/o&#x6Eload&equals;alert&lpar;1)&gt;>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

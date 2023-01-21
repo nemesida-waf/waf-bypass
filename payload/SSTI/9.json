@@ -5,6 +5,7 @@
       "BODY": "login%RND%%3D%7B%7B_self.env.registerUndefinedFilterCallback(%C2%ABexec%C2%BB)%7D%7D%7B%7B_self.env.getFilter(%C2%ABid%C2%BB)%7D%7D&passw%3Dhij3kfmedfekmkm&token%3Dfdawgk2mnjdnwidfkamjn2i&sort%3Dtrue",
       "COOKIE": "%7B%7B_self.env.registerUndefinedFilterCallback(%C2%ABexec%C2%BB)%7D%7D%7B%7B_self.env.getFilter(%C2%ABid%C2%BB)%7D%7D",
       "HEADER": "%7B%7B_self.env.registerUndefinedFilterCallback(%C2%ABexec%C2%BB)%7D%7D%7B%7B_self.env.getFilter(%C2%ABid%C2%BB)%7D%7D",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

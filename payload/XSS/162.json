@@ -8,6 +8,7 @@
       "USER-AGENT": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
       "REFERER": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
       "HEADER": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

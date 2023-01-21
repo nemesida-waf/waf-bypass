@@ -8,6 +8,7 @@
       "USER-AGENT": "confirm.call(null,1)",
       "REFERER": "http://example.com/?confirm.call(null,1)",
       "HEADER": "confirm.call(null,1)",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

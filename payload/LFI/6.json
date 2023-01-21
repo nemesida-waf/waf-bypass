@@ -7,7 +7,8 @@
         "USER-AGENT": "C:/WINDOWS/win.ini",
         "REFERER": "C:/WINDOWS/win.ini",
         "HEADER": "C:/WINDOWS/win.ini",
-        "BLOCKED": true
+        "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
       }
     ]
   }

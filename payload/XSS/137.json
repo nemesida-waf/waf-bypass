@@ -8,6 +8,7 @@
       "USER-AGENT": "<x contenteditable oninput=alert(1)>input here!",
       "REFERER": "<x contenteditable oninput=alert(1)>input here!",
       "HEADER": "<x contenteditable oninput=alert(1)>input here!",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

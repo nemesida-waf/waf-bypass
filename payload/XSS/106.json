@@ -8,6 +8,7 @@
       "USER-AGENT": "document.write(decodeURI(location.hash)) #<img/src/onerror=alert(1)>",
       "COOKIE": "document.write(decodeURI(location.hash)) #<img/src/onerror=alert(1)>",
       "HEADER": "document.write(decodeURI(location.hash)) #<img/src/onerror=alert(1)>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

@@ -8,6 +8,7 @@
       "USER-AGENT": "alert.call(%2520%2C%20%22XSS%22)%3B",
       "REFERER": "http://example.com/?alert.call(%2520%2C%20%22XSS%22)%3B",
       "HEADER": "alert.call(%2520%2C%20%22XSS%22)%3B",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

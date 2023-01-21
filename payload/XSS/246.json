@@ -8,6 +8,7 @@
       "USER-AGENT": "<a href=\"j%26Tab%3bavascript%26colon%3ba%26Tab%3blert()\">x</a>",
       "REFERER": "<a href=\"j%26Tab%3bavascript%26colon%3ba%26Tab%3blert()\">x</a>",
       "HEADER": "<a href=\"j%26Tab%3bavascript%26colon%3ba%26Tab%3blert()\">x</a>",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

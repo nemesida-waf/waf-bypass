@@ -8,6 +8,7 @@
       "USER-AGENT": "%3Csvg%3E%3Cscript%20xlink%3Ahref%3Ddata%3A%2Calert%281%29%20%2F%3E",
       "REFERER": "%3Csvg%3E%3Cscript%20xlink%3Ahref%3Ddata%3A%2Calert%281%29%20%2F%3E",
       "HEADER": "%3Csvg%3E%3Cscript%20xlink%3Ahref%3Ddata%3A%2Calert%281%29%20%2F%3E",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

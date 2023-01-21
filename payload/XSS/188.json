@@ -6,6 +6,7 @@
       "COOKIE": "%5B1%5D.map%28confirm%29",
       "USER-AGENT": "%5B1%5D.map%28confirm%29",
       "HEADER": "%5B1%5D.map%28confirm%29",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

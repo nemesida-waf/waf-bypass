@@ -5,6 +5,7 @@
       "BODY": "param%RND%=Array.prototype.sort.call%60%24%7Balert%7D1337%60",
       "COOKIE": "Array.prototype.sort.call%60%24%7Balert%7D1337%60",
       "HEADER": "Array.prototype.sort.call%60%24%7Balert%7D1337%60",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

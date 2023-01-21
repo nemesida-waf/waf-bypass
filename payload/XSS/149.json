@@ -8,6 +8,7 @@
       "USER-AGENT": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
       "REFERER": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
       "HEADER": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

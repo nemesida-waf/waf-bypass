@@ -8,6 +8,7 @@
       "USER-AGENT": "%3Cx%20oncontextmenu%3Dalert%281%29%3Eright%20click%20this%21",
       "REFERER": "%3Cx%20oncontextmenu%3Dalert%281%29%3Eright%20click%20this%21",
       "HEADER": "%3Cx%20oncontextmenu%3Dalert%281%29%3Eright%20click%20this%21",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

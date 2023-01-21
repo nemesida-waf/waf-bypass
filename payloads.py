@@ -56,6 +56,10 @@ def get_payload(json_path):
     method = jdata.get('METHOD', None)
     ret['METHOD'] = None if not method else method.lower()
 
+    # encode
+    encode = jdata.get('ENCODE', None)
+    ret['ENCODE'] = [] if not encode else encode.replace(',', ' ').split()
+
     # json
     is_json = jdata.get('JSON', None)
     ret['JSON'] = is_json if isinstance(is_json, bool) else False

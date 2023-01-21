@@ -8,6 +8,7 @@
       "USER-AGENT": "<x onmousedown=alert(1)>click this!",
       "REFERER": "<x onmousedown=alert(1)>click this!",
       "HEADER": "<x onmousedown=alert(1)>click this!",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

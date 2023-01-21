@@ -8,6 +8,7 @@
       "REFERER": "<iframe src=javascript:alert(1)>",
       "COOKIE": "<iframe src=javascript:alert(1)>",
       "HEADER": "<iframe src=javascript:alert(1)>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

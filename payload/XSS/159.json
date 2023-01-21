@@ -8,6 +8,7 @@
       "USER-AGENT": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "REFERER": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
       "HEADER": "<body onscroll=alert(1)><br><br><br><br><br><br><br><br><br><br><br><br>",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

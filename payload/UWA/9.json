@@ -2,6 +2,7 @@
   "req": [
     {
       "URL": "/settings.php.swp",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

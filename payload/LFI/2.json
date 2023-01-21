@@ -2,7 +2,8 @@
     "req": [
       {
         "USER-AGENT": "..;a=1/..;a=1/..;a=1/..;a=1/",
-        "BLOCKED": true
+        "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
       }
     ]
   }

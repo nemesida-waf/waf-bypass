@@ -8,6 +8,7 @@
       "USER-AGENT": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
       "REFERER": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
       "HEADER": "'''><iframe srcdoc='%26it;script>;prompt`${document.domain`%26it;/script>'>",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
   ]

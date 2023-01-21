@@ -8,6 +8,7 @@
       "USER-AGENT": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
       "REFERER": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
       "HEADER": "<x ng-app>{{constructor.constructor('alert(1)')()}}",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

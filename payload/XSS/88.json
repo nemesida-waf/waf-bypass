@@ -9,6 +9,7 @@
       "REFERER": "<script/x>alert(1)</script>",
       "HEADER": "<script/x>alert(1)</script>",
       "URL": "<script/x>alert(1)</script>",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

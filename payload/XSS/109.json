@@ -9,6 +9,7 @@
       "COOKIE": "&lt;svg/onload&equals;alert(1)&gt;",
       "USER-AGENT": "&lt;svg/onload&equals;alert(1)&gt;",
       "REFERER": "&lt;svg/onload&equals;alert(1)&gt;",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]
