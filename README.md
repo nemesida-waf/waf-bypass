@@ -85,7 +85,7 @@ When compiling a payload, the following zones, method and options are used:
 - METHOD - request's method (e.g. GET, POST, HEAD etc.)
 
 - BOUNDARY - specifies the contents of the request's boundary (e.g. <code>35b1fbd5</code>). Applicable only to payloads in the MFD directory.
-- ENCODE - specifies the type of additional payload encoding (<code>Base64</code>, <code>HTML-ENTITY</code>, <code>UTF-16</code>) in addition to the current one used in the payload (e.g. <code>UTF-16</code> or <code>Base64 UTF-16</code>). Not applicable to payloads in API and MFD directories. Not compatible with option <code>JSON</code>.
+- ENCODE - specifies the type of additional payload encoding (<code>Base64</code>, <code>HTML-ENTITY</code>, <code>UTF-16</code>) in addition to the current one used in the payload (e.g. <code>UTF-16</code> or <code>Base64 UTF-16</code>). Not applicable to payloads in API and MFD directories. Not compatible with option <code>JSON</code>. Applicable only to for <code>ARGS</code>, <code>BODY</code>, <code>COOKIE</code> and <code>HEADER</code> zone.
 
 
 - JSON - specifies that the request's body should be in JSON format

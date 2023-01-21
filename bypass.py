@@ -260,7 +260,7 @@ class WAFBypass:
                             if encode == 'PLAIN':
                                 k = str(str(json_path) + ':' + str(z))
                             else:
-                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+                                continue
 
                             v = self.test_url(json_path, z, payload, method, headers, encode)
                             
@@ -316,7 +316,7 @@ class WAFBypass:
                             if encode == 'PLAIN':
                                 k = str(str(json_path) + ':' + str(z))
                             else:
-                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+                                continue
 
                             v = self.test_ua(json_path, z, payload, method, headers, encode)
                             
@@ -330,7 +330,7 @@ class WAFBypass:
                             if encode == 'PLAIN':
                                 k = str(str(json_path) + ':' + str(z))
                             else:
-                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+                                continue
 
                             v = self.test_referer(json_path, z, payload, method, headers, encode)
                             
