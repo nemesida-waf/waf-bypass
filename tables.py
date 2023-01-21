@@ -28,7 +28,7 @@ def table_get_result_details(fp, fn):
             col_1 = 10 * ' ' + 'PAYLOAD' + 10 * ' '
 
         # set col_2
-        col_2 = 10 * ' ' + 'ZONE' + 25 * ' '
+        col_2 = 25 * ' ' + 'ZONE' + 25 * ' '
 
         # set table's headers
         table = PrettyTable([col_1, col_2])
