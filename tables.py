@@ -19,22 +19,22 @@ def table_get_result_details(fp, fn):
         if not fx:
             return ''
 
+        # set col_1
         if status == 'FP':
-            col_1 = 10 * ' ' + 'FALSE POSITIVE PAYLOAD' + 10 * ' '
-            col_2 = 210 * ' ' + 'ZONE' + 25*' '
-            table = PrettyTable([col_1, col_2])
-            table.align[col_1] = 'l'
+            col_1 = 10 * ' ' + 'FALSE POSITIVE PAYLOAD' + 10 * ' '            
         elif status == 'FN':
             col_1 = 10 * ' ' + 'FALSE NEGATIVE PAYLOAD' + 10 * ' '
-            col_2 = 210 * ' ' + 'ZONE' + 25*' '
-            table = PrettyTable([col_1, col_2])
-            table.align[col_1] = 'l'
         else:
             col_1 = 10 * ' ' + 'PAYLOAD' + 10 * ' '
-            col_2 = 210 * ' ' + 'ZONE' + 25*' '
-            table = PrettyTable([col_1, col_2])
-            table.align[col_1] = 'l'
 
+        # set col_2
+        col_2 = 10 * ' ' + 'ZONE' + 25 * ' '
+
+        # set table's headers
+        table = PrettyTable([col_1, col_2])
+        table.align[col_1] = 'l'
+
+        # set table's body
         for k, v in fx.items():
             table.add_row([k, v])
 
