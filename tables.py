@@ -19,19 +19,14 @@ def table_get_result_details(fp, fn):
         if not fx:
             return ''
 
-        # set col_1
-        if status == 'FP':
-            col_1 = 10 * ' ' + 'FALSE POSITIVE PAYLOAD' + 10 * ' '            
-        elif status == 'FN':
-            col_1 = 10 * ' ' + 'FALSE NEGATIVE PAYLOAD' + 10 * ' '
-        else:
-            col_1 = 10 * ' ' + 'PAYLOAD' + 10 * ' '
-
         # set col_2
-        col_2 = 25 * ' ' + 'ZONE' + 25 * ' '
+        col_1 = 'FALSE POSITIVE PAYLOAD' if status == 'FP' else 'FALSE NEGATIVE PAYLOAD'
+        col_1 = 15 * ' ' + col_1 + 15 * ' '
+        col_2 = 'ZONE'
 
         # set table's headers
-        table = PrettyTable([col_1, col_2])
+        table = PrettyTable()
+        table.field_names = [col_1, col_2]
         table.align[col_1] = 'l'
 
         # set table's body
@@ -112,7 +107,7 @@ def table_get_result_summary(wb_result):
     # init
     total = 0
     payloads_summary_list = []
-    table_headers = ['TOTAL PAYLOADS', 5 * ' ' + 'PASSED', 5 * ' ' + 'NOT PASSED', 5 * ' ' + 'FALSE POSITIVE', 5 * ' ' + 'FALSE NEGATIVE', 5 * ' ' + 'ERROR']
+    table_headers = ['TOTAL PAYLOADS', 'PASSED', 'NOT PASSED', 'FALSE POSITIVE', 'FALSE NEGATIVE', 'ERROR']
 
     i = len([k for k, v in wb_result.items() if v == 'PASSED'])
     prcnt = get_percent_str(i, len(wb_result))
