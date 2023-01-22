@@ -20,7 +20,9 @@ def table_get_result_details(fp, fn):
 
         # print header
         print('')
-        fx_type = '>> FALSE POSITIVE PAYLOAD:' if status == 'FP' else '>> FALSE NEGATIVE PAYLOAD:'
+        print('')
+        fx_type = '>> FALSE POSITIVE PAYLOADS' if status == 'FP' else '>> FALSE NEGATIVE PAYLOADS'
+        print('')
         print(fx_type)
 
         # print payloads
