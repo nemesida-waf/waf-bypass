@@ -99,7 +99,7 @@ def table_get_result_summary(wb_result):
     # init
     total = 0
     payloads_summary_list = []
-    table_headers = ['TOTAL PAYLOADS', 'PASSED', 'NOT PASSED', 'FALSE POSITIVE', 'FALSE NEGATIVE', 'ERROR']
+    table_headers = ['TOTAL PAYLOADS', 'PASSED', 'NOT PASSED', 'FALSED', 'BYPASSED', 'ERROR']
 
     i = len([k for k, v in wb_result.items() if v == 'PASSED'])
     prcnt = get_percent_str(i, len(wb_result))
