@@ -80,10 +80,8 @@ When compiling a payload, the following zones, method and options are used:
 - REFERER - request's referer
 - HEADER - request's header
 - METHOD - request's method
-
 - BOUNDARY - specifies the contents of the request's boundary. Applicable only to payloads in the MFD directory.
 - ENCODE - specifies the type of payload encoding (<code>Base64</code>, <code>HTML-ENTITY</code>, <code>UTF-16</code>) in addition to the encoding for the payload. Multiple values are indicated with a space (e.g. <code>Base64 UTF-16</code>). Applicable only to for <code>ARGS</code>, <code>BODY</code>, <code>COOKIE</code> and <code>HEADER</code> zone. Not applicable to payloads in API and MFD directories. Not compatible with option <code>JSON</code>.
-
 - JSON - specifies that the request's body should be in JSON format
 - BLOCKED - specifies that the request should be blocked (FN testing) or not (FP)
 
