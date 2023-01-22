@@ -1,0 +1,10 @@
+{
+  "req": [
+    {
+      "ARGS": "url=tftp://evil.com:1234/",
+      "BODY": "url=tftp://evil.com:1234/",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

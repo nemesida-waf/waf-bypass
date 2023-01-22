@@ -91,17 +91,92 @@ def processing_result(blocked, block_code, status_code):
     return status
 
 
-def payload_encoding(payload, encode):
+def payload_encoding(z, payload, encode):
     try:
 
         if encode.upper() == 'PLAIN':
             return payload
-        elif encode.upper() == 'HTML-ENTITY':
-            return escape(payload)
-        elif encode.upper() == 'UTF-16':
-            return ''.join([hex(ord(x)).replace('0x', '\\u00') for x in payload])
-        elif encode.upper() == 'BASE64':
-            return base64.b64encode(urllib.parse.quote_plus(payload).encode('UTF-8')).decode('UTF-8')
+        else:
+
+            # init
+            data_list = []
+
+            # split by &
+            if z.upper() in ['ARGS', 'BODY']:
+
+                # processing data list by k/v
+                for item in payload.split('&'):
+                    # k/v
+                    if '=' in item:
+                        # extract k/v
+                        k = item.split('=', 1)[0]
+                        v = item.split('=', 1)[1]
+                        # update data list
+                        data_list.append([k, v])
+                    # k only
+                    else:
+                        # update data list
+                        data_list.append([item])
+
+            if encode.upper() == 'HTML-ENTITY':
+                if not data_list:
+                    return escape(payload)
+                else:
+                    res = []
+                    for item in data_list:
+                        # k/v
+                        if len(item) > 1:
+                            k = str(item[0])
+                            v = escape(str(item[1]))
+                            res.append(k + '=' + v)
+                        # k only
+                        else:
+                            k = escape(str(item))
+                            res.append(k)
+                    return '&'.join(res)
+
+            elif encode.upper() == 'UTF-16':
+                if not data_list:
+                    return ''.join([hex(ord(x)).replace('0x', '\\u00') for x in payload])
+                else:
+                    res = []
+                    for item in data_list:
+                        # k/v
+                        if len(item) > 1:
+                            k = str(item[0])
+                            v = ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item[1])])
+                            res.append(k + '=' + v)
+                        # k only
+                        else:
+                            k = ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item)])
+                            res.append(k)
+                    return '&'.join(res)
+            
+            elif encode.upper() == 'BASE64':
+                if not data_list:
+                    return base64.b64encode(urllib.parse.quote_plus(payload).encode('UTF-8')).decode('UTF-8')
+                else:
+                    res = []
+                    for item in data_list:
+                        # k/v
+                        if len(item) > 1:
+                            k = str(item[0])
+                            v = base64.b64encode(urllib.parse.quote_plus(str(item[1])).encode('UTF-8')).decode('UTF-8')
+                            res.append(k + '=' + v)
+                        # k only
+                        else:
+                            k = base64.b64encode(urllib.parse.quote_plus(str(item)).encode('UTF-8')).decode('UTF-8')
+                            res.append(k)
+                    return '&'.join(res)
+
+            else:
+                print(
+                    '{}'
+                    'An error occurred while encoding payload ({}) with {}: incorrect encoding type'
+                    '{}'
+                    .format(Fore.YELLOW, payload, encode, Style.RESET_ALL)
+                )
+                return payload
     
     except Exception as e:
         print(
@@ -480,7 +555,7 @@ class WAFBypass:
         try:
 
             # init
-            encoded_payload = payload_encoding(payload[z], encode)
+            encoded_payload = payload_encoding(z, payload[z], encode)
             host = urljoin(self.host, encoded_payload)
             headers = {**self.headers, **headers}
 
@@ -502,7 +577,7 @@ class WAFBypass:
         try:
             
             # init
-            encoded_payload = payload_encoding(payload[z], encode)
+            encoded_payload = payload_encoding(z, payload[z], encode)
             headers = {**self.headers, **headers}
 
             s = init_session()
@@ -523,7 +598,7 @@ class WAFBypass:
         try:
 
             # init
-            encoded_payload = payload_encoding(body, encode)
+            encoded_payload = payload_encoding(z, body, encode)
             headers = {**self.headers, **headers}
 
             s = init_session()
@@ -544,7 +619,7 @@ class WAFBypass:
         try:
             
             # init
-            encoded_payload = payload_encoding(payload[z], encode)
+            encoded_payload = payload_encoding(z, payload[z], encode)
             headers = {**self.headers, **headers}
             cookies = {f"WBC-{secrets.token_hex(3)}": encoded_payload}
 
@@ -566,7 +641,7 @@ class WAFBypass:
         try:
             
             # init
-            encoded_payload = payload_encoding(payload[z], encode)
+            encoded_payload = payload_encoding(z, payload[z], encode)
             headers = {**self.headers, **headers, 'User-Agent': encoded_payload}
 
             s = init_session()
@@ -587,7 +662,7 @@ class WAFBypass:
         try:
 
             # init
-            encoded_payload = payload_encoding(payload[z], encode)
+            encoded_payload = payload_encoding(z, payload[z], encode)
             headers = {**self.headers, **headers, 'Referer': encoded_payload}
 
             s = init_session()
@@ -608,7 +683,7 @@ class WAFBypass:
         try:
 
             # init
-            encoded_payload = payload_encoding(payload[z], encode)
+            encoded_payload = payload_encoding(z, payload[z], encode)
             headers = {**self.headers, **headers, f"WBH-{secrets.token_hex(3)}": encoded_payload}
 
             s = init_session()

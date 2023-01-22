@@ -1,0 +1,10 @@
+{
+  "req": [
+    {
+      "ARGS": "url=url=dict://127.0.0.1:6379/CONFIG%20SET%20dbfilename%20file.php",
+      "BODY": "url=url=dict://127.0.0.1:6379/CONFIG%20SET%20dbfilename%20file.php",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

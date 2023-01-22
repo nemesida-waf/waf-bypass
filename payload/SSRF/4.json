@@ -1,0 +1,10 @@
+{
+  "req": [
+    {
+      "ARGS": "url=sftp://evil.com:1234/",
+      "BODY": "url=sftp://evil.com:1234/",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
