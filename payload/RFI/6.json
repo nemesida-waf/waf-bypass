@@ -1,0 +1,14 @@
+{
+    "req": [
+      {
+        "ARGS": "page=php://filter/zlib.deflate/convert.base64-encode/resource=/e\\t\\c/pa\\s\\swd",
+        "BODY": "page=php://filter/zlib.deflate/convert.base64-encode/resource=/e\\t\\c/pa\\s\\swd",
+        "COOKIE": "page=php://filter/zlib.deflate/convert.base64-encode/resource=/e\\t\\c/pa\\s\\swd",
+        "USER-AGENT": "page=php://filter/zlib.deflate/convert.base64-encode/resource=/e\\t\\c/pa\\s\\swd",
+        "REFERER": "page=php://filter/zlib.deflate/convert.base64-encode/resource=/e\\t\\c/pa\\s\\swd",
+        "HEADER": "page=php://filter/zlib.deflate/convert.base64-encode/resource=/e\\t\\c/pa\\s\\swd",
+        "ENCODE": "Base64 UTF-16",
+        "BLOCKED": true
+      }
+    ]
+  }

