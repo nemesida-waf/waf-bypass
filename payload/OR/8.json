@@ -1,0 +1,10 @@
+{
+  "req": [
+    {
+      "ARGS": "url=javascripT://anything%0D%0A%0D%0Awindow.alert(document.cookie)",
+      "BODY": "url=javascripT://anything%0D%0A%0D%0Awindow.alert(document.cookie)",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
