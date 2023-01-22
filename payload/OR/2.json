@@ -1,0 +1,10 @@
+{
+  "req": [
+    {
+      "ARGS": "url=@google.com",
+      "BODY": "url=@google.com",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

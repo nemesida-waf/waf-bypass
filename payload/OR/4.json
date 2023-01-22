@@ -1,0 +1,10 @@
+{
+  "req": [
+    {
+      "ARGS": "url=javascript%3A%2F%2Fhttps%3A%2F%2Fexample.com%2F%3Fz%3D%250Aalert(1)",
+      "BODY": "url=javascript%3A%2F%2Fhttps%3A%2F%2Fexample.com%2F%3Fz%3D%250Aalert(1)",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
