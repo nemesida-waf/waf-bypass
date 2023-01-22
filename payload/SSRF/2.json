@@ -1,8 +1,8 @@
 {
   "req": [
     {
-      "ARGS": "path=http://localhost/admin",
-      "BODY": "path=http://localhost/admin",
+      "ARGS": "url=http://localhost/admin",
+      "BODY": "url=http://localhost/admin",
       "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
