@@ -40,7 +40,7 @@ def get_help():
     print("--threads     - set the number of parallel scan threads (e.g. --threads=10, default: 4)")
     print("--timeout     - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
     print("--json-format - display the result of the work in JSON format")
-    print("--details     - display the False Positive and False Negative payloads")
+    print("--details     - display the False Positive and False Negative payloads (not available in JSON format)")
     
 
 # increasing max pool size

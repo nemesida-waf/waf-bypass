@@ -36,8 +36,8 @@ def fx_processing(fx):
     
     # list processing
     for item in fx:
-        k = item.split(':')[0]
-        v = item.split(':')[1]
+        k = item.split(':', 1)[0]
+        v = item.split(':', 1)[1]
         if k not in res:
             res[k] = []
         res[k].append(v)
@@ -274,7 +274,7 @@ class WAFBypass:
                             if encode == 'PLAIN':
                                 k = str(str(json_path) + ':' + str(z))
                             else:
-                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+                                k = str(str(json_path) + ':' + str(z).upper() + ':' + encode.upper())
 
                             v = self.test_args(json_path, z, payload, method, headers, encode)
                             
@@ -288,7 +288,7 @@ class WAFBypass:
                             if encode == 'PLAIN':
                                 k = str(str(json_path) + ':' + str(z))
                             else:
-                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+                                k = str(str(json_path) + ':' + str(z).upper() + ':' + encode.upper())
 
                             v = self.test_body(json_path, z, payload, method, body, headers, encode)
                             
@@ -302,7 +302,7 @@ class WAFBypass:
                             if encode == 'PLAIN':
                                 k = str(str(json_path) + ':' + str(z))
                             else:
-                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+                                k = str(str(json_path) + ':' + str(z).upper() + ':' + encode.upper())
 
                             v = self.test_cookie(json_path, z, payload, method, headers, encode)
                             
@@ -344,7 +344,7 @@ class WAFBypass:
                             if encode == 'PLAIN':
                                 k = str(str(json_path) + ':' + str(z))
                             else:
-                                k = str(str(json_path) + ':' + str(z) + '(' + encode + ')')
+                                k = str(str(json_path) + ':' + str(z).upper() + ':' + encode.upper())
 
                             v = self.test_header(json_path, z, payload, method, headers, encode)
                             

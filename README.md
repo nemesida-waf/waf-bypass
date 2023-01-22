@@ -44,49 +44,45 @@ Run with the command:
 
 - <code>'--json-format'</code> - an option that allows you to display the result of the work in JSON format (useful for integrating the tool with security platforms).
 
-- <code>'--details'</code> - display the False Positive and False Negative payloads.
-
+- <code>'--details'</code> - display the False Positive and False Negative payloads. Not available in <code>JSON</code> format.
 
 ## Payloads
 
 Depending on the purpose, payloads are located in the appropriate folders:
 
-- FP (False Positive payloads)
-
-- API (API testing payloads)
-- CM (Custom HTTP Method payloads)
-- GraphQL (GraphQL testing payloads)
-- LDAP (LDAP Injection etc. payloads)
-- LFI (Local File Include payloads)
-- MFD (multipart/form-data payloads)
-- NoSQLi (NoSQL injection payloads)
-- OR (Open Redirect payloads)
-- RCE (Remote Code Execution payloads)
-- RFI (Remote File Inclusion payloads)
-- SQLi (SQL injection payloads)
-- SSI (Server-Side Includes payloads)
-- SSRF (Server-side request forgery payloads)
-- SSTI (Server-Side Template Injection payloads)
-- UWA (Unwanted Access payloads)
-- XSS (Cross-Site Scripting payloads)
-
+- FP - False Positive payloads
+- API - API testing payloads
+- CM - Custom HTTP Method payloads
+- GraphQL - GraphQL testing payloads
+- LDAP - LDAP Injection etc. payloads
+- LFI - Local File Include payloads
+- MFD - multipart/form-data payloads
+- NoSQLi - NoSQL injection payloads
+- OR - Open Redirect payloads
+- RCE - Remote Code Execution payloads
+- RFI - Remote File Inclusion payloads
+- SQLi - SQL injection payloads
+- SSI - Server-Side Includes payloads
+- SSRF - Server-side request forgery payloads
+- SSTI - Server-Side Template Injection payloads
+- UWA - Unwanted Access payloads
+- XSS - Cross-Site Scripting payloads
 
 ### Write your own payloads
 
 When compiling a payload, the following zones, method and options are used:
 
-- URL - request's path (e.g.: <code>/my_payload</code>)
-- ARGS - request's query (e.g.: <code>my_payload</code> or <code>param1=my_payload1&param2=my_payload2</code>)
-- BODY - request's body (e.g.: <code>my_payload</code> or <code>param1=my_payload1&param2=my_payload2</code>)
-- COOKIE - request's cookie (e.g.: <code>my_payload</code>)
-- USER-AGENT - request's user-agent (e.g.: <code>my_payload</code>)
-- REFERER - request's referer (e.g.: <code>my_payload</code> or <code>http://example.com/my_payload</code>)
-- HEADER - request's header (e.g.: <code>my_payload</code>)
-- METHOD - request's method (e.g. GET, POST, HEAD etc.)
+- URL - request's path
+- ARGS - request's query
+- BODY - request's body
+- COOKIE - request's cookie
+- USER-AGENT - request's user-agent
+- REFERER - request's referer
+- HEADER - request's header
+- METHOD - request's method
 
-- BOUNDARY - specifies the contents of the request's boundary (e.g. <code>35b1fbd5</code>). Applicable only to payloads in the MFD directory.
-- ENCODE - specifies the type of additional payload encoding (<code>Base64</code>, <code>HTML-ENTITY</code>, <code>UTF-16</code>) in addition to the current one used in the payload (e.g. <code>UTF-16</code> or <code>Base64 UTF-16</code>). Not applicable to payloads in API and MFD directories. Not compatible with option <code>JSON</code>. Applicable only to for <code>ARGS</code>, <code>BODY</code>, <code>COOKIE</code> and <code>HEADER</code> zone.
-
+- BOUNDARY - specifies the contents of the request's boundary. Applicable only to payloads in the MFD directory.
+- ENCODE - specifies the type of payload encoding (<code>Base64</code>, <code>HTML-ENTITY</code>, <code>UTF-16</code>) in addition to the encoding for the payload. Multiple values are indicated with a space (e.g. <code>Base64 UTF-16</code>). Applicable only to for <code>ARGS</code>, <code>BODY</code>, <code>COOKIE</code> and <code>HEADER</code> zone. Not applicable to payloads in API and MFD directories. Not compatible with option <code>JSON</code>.
 
 - JSON - specifies that the request's body should be in JSON format
 - BLOCKED - specifies that the request should be blocked (FN testing) or not (FP)
@@ -97,10 +93,8 @@ For the zones you can use <code>%RND%</code> suffix, which allows you to generat
 
 You can create your own payloads, to do this, create your own folder on the '/payload/' folder, or place the payload in an existing one (e.g.: '/payload/XSS'). Allowed data format is JSON.
 
-
 #### API directory
 API testing payloads located in this directory are automatically appended with a header <code>'Content-Type: application/json'</code>.
-
 
 #### MFD directory
 For MFD (multipart/form-data) payloads located in this directory, you must specify the <code>BODY</code> (required) and <code>BOUNDARY</code> (optional). If <code>BOUNDARY</code> is not set, it will be generated automatically (in this case, only the payload must be specified for the </code>BODY</code>, without additional data (<code>'... Content-Disposition: form-data; ...'</code>).

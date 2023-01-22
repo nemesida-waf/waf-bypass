@@ -42,7 +42,7 @@ def table_get_result_summary(wb_result):
     table_headers_fp = [14 * ' ' + 'TOTAL', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'ERROR']
 
     # get payloads type list
-    payloads_type_list = list(set(['/'.join(k.split(':')[0].split('/')[:-1]) for k in wb_result.keys()]))
+    payloads_type_list = list(set(['/'.join(k.split(':', 1)[0].split('/')[:-1]) for k in wb_result.keys()]))
     
     # create result dictionary by payloads type
     for payloads_type in payloads_type_list:
