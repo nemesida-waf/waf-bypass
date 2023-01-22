@@ -22,8 +22,8 @@ def table_get_result_details(fp, fn):
         print('')
         print('')
         fx_type = '>> FALSE POSITIVE PAYLOADS' if status == 'FP' else '>> FALSE NEGATIVE PAYLOADS'
-        print('')
         print(fx_type)
+        print('')
 
         # print payloads
         for k, v in fx.items():
