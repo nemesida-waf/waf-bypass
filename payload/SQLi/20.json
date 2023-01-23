@@ -1,0 +1,15 @@
+{
+  "req": [
+    {
+      "URL": "name[0+;select+sleep(8);;#++]=user&pass=pass",
+      "ARGS": "name[0+;select+sleep(8);;#++]=user&pass=pass",
+      "BODY": "name[0+;select+sleep(8);;#++]=user&pass=pass",
+      "COOKIE": "name[0+;select+sleep(8);;#++]=user&pass=pass",
+      "USER-AGENT": "name[0+;select+sleep(8);;#++]=user&pass=pass",
+      "REFERER": "name[0+;select+sleep(8);;#++]=user&pass=pass",
+      "HEADER": "name[0+;select+sleep(8);;#++]=user&pass=pass",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

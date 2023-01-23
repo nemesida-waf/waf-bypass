@@ -1,0 +1,15 @@
+{
+  "req": [
+    {
+      "URL": "class x extends `${class x extends `${alert`1337`}`{}}`{}",
+      "ARGS": "class x extends `${class x extends `${alert`1337`}`{}}`{}",
+      "BODY": "class x extends `${class x extends `${alert`1337`}`{}}`{}",
+      "COOKIE": "class x extends `${class x extends `${alert`1337`}`{}}`{}",
+      "USER-AGENT": "class x extends `${class x extends `${alert`1337`}`{}}`{}",
+      "REFERER": "class x extends `${class x extends `${alert`1337`}`{}}`{}",
+      "HEADER": "class x extends `${class x extends `${alert`1337`}`{}}`{}",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
+      "BLOCKED": true
+    }
+  ]
+}
