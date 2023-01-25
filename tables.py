@@ -21,7 +21,7 @@ def table_get_result_details(fp, fn):
         # print header
         print('')
         print('')
-        fx_type = '>> FALSE POSITIVE PAYLOADS' if status == 'FP' else '>> FALSE NEGATIVE PAYLOADS'
+        fx_type = '>> FALSE POSITIVE PAYLOADS' if status == 'FALSED' else '>> FALSE NEGATIVE PAYLOADS'
         print(fx_type)
         print('')
 
@@ -30,8 +30,8 @@ def table_get_result_details(fp, fn):
             print('  {} in zone {}'.format(k, v))
 
     # FX details table
-    get_result_details(fp, 'FP')
-    get_result_details(fn, 'FN')
+    get_result_details(fp, 'FALSED')
+    get_result_details(fn, 'BYPASSED')
 
 
 def table_get_result_summary(wb_result):
@@ -40,8 +40,8 @@ def table_get_result_summary(wb_result):
     payloads_summary_dict = {}
     payloads_summary_list_fp = []
     payloads_summary_list_fn = []
-    table_headers_fn = [7 * ' ' + 'PAYLOAD TYPE', 10 * ' ' + 'PASSED', 10 * ' ' + 'BYPASSED', 10 * ' ' + 'ERROR']
-    table_headers_fp = [14 * ' ' + 'TOTAL', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'ERROR']
+    table_headers_fn = [7 * ' ' + 'PAYLOAD TYPE', 10 * ' ' + 'PASSED', 10 * ' ' + 'BYPASSED', 10 * ' ' + 'FAILED']
+    table_headers_fp = [14 * ' ' + 'TOTAL', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'FAILED']
 
     # get payloads type list
     payloads_type_list = list(set(['/'.join(k.split(':', 1)[0].split('/')[:-1]) for k in wb_result.keys()]))
@@ -50,14 +50,14 @@ def table_get_result_summary(wb_result):
     for payloads_type in payloads_type_list:
         
         k = payloads_type.split('/payload/')[1].split('/')[0]  # leave payload type only
-        k_type = 'FP' if k == 'FP' else 'FN'
+        k_type = 'FALSED' if k == 'FALSED' else 'BYPASSED'
 
         passed = len([k for k, v in wb_result.items() if k.startswith(payloads_type) and v == 'PASSED'])
         fx = len([k for k, v in wb_result.items() if k.startswith(payloads_type) and v == k_type])
-        error = len([k for k, v in wb_result.items() if k.startswith(payloads_type) and v == 'ERROR'])        
-        total = passed + error + fx
+        failed = len([k for k, v in wb_result.items() if k.startswith(payloads_type) and v == 'FAILED'])        
+        total = passed + failed + fx
 
-        payloads_summary_dict[k] = [total, passed, fx, error]
+        payloads_summary_dict[k] = [total, passed, fx, failed]
 
     # create table's body of the payloads
     for k in sorted(payloads_summary_dict.keys()):
@@ -73,15 +73,15 @@ def table_get_result_summary(wb_result):
         fx = str(v[2]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
 
         prcnt = get_percent_str(v[3], v[0])
-        error = str(v[3]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
+        failed = str(v[3]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
         
-        if k == 'FP':
-            payloads_summary_list_fp.append([total, passed, fx, error])
+        if k == 'FALSED':
+            payloads_summary_list_fp.append([total, passed, fx, failed])
         else:
-            payloads_summary_list_fn.append([k, passed, fx, error])
+            payloads_summary_list_fn.append([k, passed, fx, failed])
 
     ##
-    # Print FP/FN tables
+    # Print FALSED/BYPASSED tables
     ##
 
     if payloads_summary_list_fn:
@@ -101,26 +101,26 @@ def table_get_result_summary(wb_result):
     # init
     total = 0
     payloads_summary_list = []
-    table_headers = ['TOTAL PAYLOADS', 'PASSED', 'NOT PASSED', 'FALSED', 'BYPASSED', 'ERROR']
+    table_headers = ['TOTAL PAYLOADS', 'PASSED', 'NOT PASSED', 'FALSED', 'BYPASSED', 'FAILED']
 
     i = len([k for k, v in wb_result.items() if v == 'PASSED'])
     prcnt = get_percent_str(i, len(wb_result))
     passed = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
     
-    i = len([k for k, v in wb_result.items() if v == 'ERROR'])
+    i = len([k for k, v in wb_result.items() if v == 'FAILED'])
     prcnt = get_percent_str(i, len(wb_result))
-    error = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
+    failed = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
 
-    i = len([k for k, v in wb_result.items() if v == 'FP'])
+    i = len([k for k, v in wb_result.items() if v == 'FALSED'])
     prcnt = get_percent_str(i, len(wb_result))
-    fp = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
+    falsed = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
 
-    i = len([k for k, v in wb_result.items() if v == 'FN'])
+    i = len([k for k, v in wb_result.items() if v == 'BYPASSED'])
     prcnt = get_percent_str(i, len(wb_result))
-    fn = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
+    bypassed = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
 
     i = len(wb_result) - len([k for k, v in wb_result.items() if v == 'PASSED'])
@@ -131,9 +131,9 @@ def table_get_result_summary(wb_result):
         len(wb_result.items()),
         passed,
         not_passed,
-        fp,
-        fn,
-        error
+        falsed,
+        bypassed,
+        failed
     ])
 
     print('')
@@ -142,4 +142,4 @@ def table_get_result_summary(wb_result):
 
     # summary validation
     if total != len(wb_result):
-        print('ERROR: Summary processing is incorrect ({} != {})'.format(total, len(wb_result)))
+        print('An error occurred while processing the result: {} != {}'.format(total, len(wb_result)))

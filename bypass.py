@@ -53,8 +53,8 @@ def fx_processing(fx):
 def json_processing(result):
     
     # processing FX (convert list of 'payload:zone' to list of dict. 'payload:z1|z2')
-    result['FP'] = fx_processing(result['FP'])
-    result['FN'] = fx_processing(result['FN'])
+    result['FALSED'] = fx_processing(result['FALSED'])
+    result['BYPASSED'] = fx_processing(result['BYPASSED'])
 
     # print result in JSON
     print(json.dumps(result))
@@ -65,11 +65,11 @@ def table_processing(result, details):
     # print summary table
     table_get_result_summary(result)
 
-    # print FP/FN tables
+    # print FALSED/BYPASSED tables
     if details:
 
-        fp = [k for k, v in result.items() if v == 'FP']
-        fn = [k for k, v in result.items() if v == 'FN']
+        fp = [k for k, v in result.items() if v == 'FALSED']
+        fn = [k for k, v in result.items() if v == 'BYPASSED']
         fp.sort()
         fn.sort()
         fp = fx_processing(fp)
@@ -81,12 +81,12 @@ def processing_result(blocked, block_code, status_code):
     
     # if status code is not 20x and not in block codes list (403, 222 etc.) 
     if (not str(status_code).startswith('20') or status_code == 404) and status_code not in block_code:
-        status = ['ERROR', str(status_code) + ' RESPONSE CODE']
+        status = ['FAILED', str(status_code) + ' RESPONSE CODE']
     else:
         if blocked:
-            status = ['PASSED', status_code] if status_code in block_code else ['FN', status_code]
+            status = ['PASSED', status_code] if status_code in block_code else ['BYPASSED', status_code]
         else:
-            status = ['PASSED', status_code] if status_code not in block_code else ['FP', status_code]
+            status = ['PASSED', status_code] if status_code not in block_code else ['FALSED', status_code]
     
     return status
 
@@ -205,11 +205,10 @@ class WAFBypass:
 
         # init statuses
         self.statuses = [
-            'PASSED',  # OK
-            'ERROR',   # incorrect response code
-            'FAILED',  # request failed (e.g.: cannot connect to server etc.)
-            'FP',      # False Positive
-            'FN',      # False Negative
+            'PASSED',    # OK
+            'FAILED',    # Failed requests (e.g.,cannot connect to server, incorrect response code etc.)
+            'FALSED',    # False Positive
+            'BYPASSED',  # False Negative
         ]
         self.zones = ['URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER']
 
@@ -233,9 +232,9 @@ class WAFBypass:
                 
                 # if payload is empty
                 if not payload:
-                    err = 'No payloads found during processing file {}: no payload found'.format(json_path)
+                    err = 'No payloads found during processing file {}'.format(json_path)
                     if self.wb_result_json:
-                        self.wb_result['error'].append(err)
+                        self.wb_result['FAILED'].append({json_path: 'No payloads found'})
                     print(
                         '{}{}{}'
                         .format(Fore.YELLOW, err, Style.RESET_ALL)
@@ -312,7 +311,7 @@ class WAFBypass:
                 # processing the payload of each zone
                 for z in payload:
 
-                    # skip specific zone (e.g. boundary, method etc.)
+                    # skip specific zone (e.g., boundary, method etc.)
                     if z not in self.zones:
                         continue
 
@@ -429,10 +428,11 @@ class WAFBypass:
                                 self.wb_result[k] = v
 
             except Exception as e:
-                err = 'An error occurred while processing payload from file {}: {}'.format(relative_path, e)
                 if self.wb_result_json:
-                    self.wb_result['error'].append(err)
+                    err = 'An error occurred while processing payload: {}'.format(e)
+                    self.wb_result['FAILED'].append({relative_path: err})
                 else:
+                    err = 'An error occurred while processing payload from file {}: {}'.format(relative_path, e)
                     print(
                         '{}{}{}'
                         .format(Fore.YELLOW, err, Style.RESET_ALL)
@@ -459,14 +459,14 @@ class WAFBypass:
     def test_resp_status_processing(self, k, v):
         try:
 
-            if v == 'PASSED':
+            if v in ['PASSED', 'FAILED']:
                 return
-            elif v in ['FP', 'FN']:
+            elif v in ['FALSED', 'BYPASSED']:
                 self.wb_result[v].append(k)
             else:
                 print(
                     '{}'
-                    'An error occurred while processing request status: {} ({}) not in PASSED/FP/FN'
+                    'An error occurred while processing request status: {} ({}) not in PASSED/FAILED/FALSED/BYPASSED'
                     '{}'
                     .format(Fore.YELLOW, v, k, Style.RESET_ALL)
                 )
@@ -479,15 +479,16 @@ class WAFBypass:
                 .format(Fore.YELLOW, e, Style.RESET_ALL)
             )
 
-    def test_err_resp_code_processing(self, json_path, z, result):
+    def test_err_resp_code_processing(self, json_path, z, encode, result):
         try:
             
-            err = 'An incorrect response was received while processing request from file {} in {}: {}' \
-                .format(json_path, z, result[1])
-            
             if self.wb_result_json:
-                self.wb_result['ERROR'].append(err)
+                z = z if encode == 'PLAIN' else z + ':' + encode
+                err = 'An incorrect response was received while processing request: {}'.format(result[1])
+                self.wb_result['FAILED'].append({json_path + ' in ' + z: err})
             else:
+                err = 'An incorrect response was received while processing request from file {} in {}: {}' \
+                    .format(json_path, z, result[1])
                 print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
         
         except Exception as e:
@@ -498,16 +499,14 @@ class WAFBypass:
                 .format(Fore.YELLOW, e, Style.RESET_ALL)
             )
 
-    def test_fail_response_processing(self, json_path, z, error):
+    def test_fail_response_processing(self, json_path, z, encode, error):
         try:
-            
-            err = 'An error occurred while processing file {} in {}: {}'.format(json_path, z, error)
-            
             if self.wb_result_json:
-                self.wb_result['FAILED'].append(err)
+                z = z if encode == 'PLAIN' else z + ':' + encode
+                self.wb_result['FAILED'].append({json_path + ' in ' + z: str(error)})
             else:
+                err = 'An error occurred while processing file {} in {}: {}'.format(json_path, z, error)
                 print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
-        
         except Exception as e:
             print(
                 '{}'
@@ -528,7 +527,7 @@ class WAFBypass:
             # check status code
             if result[0] == 'PASSED':
                 return
-            elif result[0] == 'ERROR':
+            elif result[0] == 'FAILED':
                 print(
                     '{}'
                     'An incorrect response was received while processing test request to {}: {}'
@@ -545,10 +544,10 @@ class WAFBypass:
                 )
 
         except Exception as error:
-            err = 'An incorrect response was received while test request: {}'.format(error)
             if self.wb_result_json:
-                self.wb_result['error'].append(err)
+                self.wb_result['FAILED'].append({'Test request': str(error)})
             else:
+                err = 'An incorrect response was received while test request: {}'.format(error)
                 print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
 
     def test_url(self, json_path, z, payload, method, headers, encode):            
@@ -564,12 +563,12 @@ class WAFBypass:
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
-            if v == 'ERROR':
-                self.test_err_resp_code_processing(json_path, z, result[1])
+            if v == 'FAILED':
+                self.test_err_resp_code_processing(json_path, z, encode, result[1])
 
         except Exception as error:
-            v = 'ERROR'
-            self.test_fail_response_processing(json_path, z, error)
+            v = 'FAILED'
+            self.test_fail_response_processing(json_path, z, encode, error)
 
         return v
 
@@ -585,12 +584,12 @@ class WAFBypass:
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
-            if v == 'ERROR':
-                self.test_err_resp_code_processing(json_path, z, result[1])
+            if v == 'FAILED':
+                self.test_err_resp_code_processing(json_path, z, encode, result[1])
 
         except Exception as error:
-            v = 'ERROR'
-            self.test_fail_response_processing(json_path, z, error)
+            v = 'FAILED'
+            self.test_fail_response_processing(json_path, z, encode, error)
 
         return v
 
@@ -606,12 +605,12 @@ class WAFBypass:
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
-            if v == 'ERROR':
-                self.test_err_resp_code_processing(json_path, z, result[1])
+            if v == 'FAILED':
+                self.test_err_resp_code_processing(json_path, z, encode, result[1])
 
         except Exception as error:
-            v = 'ERROR'
-            self.test_fail_response_processing(json_path, z, error)
+            v = 'FAILED'
+            self.test_fail_response_processing(json_path, z, encode, error)
 
         return v
 
@@ -628,12 +627,12 @@ class WAFBypass:
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
-            if v == 'ERROR':
-                self.test_err_resp_code_processing(json_path, z, result[1])
+            if v == 'FAILED':
+                self.test_err_resp_code_processing(json_path, z, encode, result[1])
 
         except Exception as error:
-            v = 'ERROR'
-            self.test_fail_response_processing(json_path, z, error)
+            v = 'FAILED'
+            self.test_fail_response_processing(json_path, z, encode, error)
 
         return v
 
@@ -649,12 +648,12 @@ class WAFBypass:
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
-            if v == 'ERROR':
-                self.test_err_resp_code_processing(json_path, z, result[1])
+            if v == 'FAILED':
+                self.test_err_resp_code_processing(json_path, z, encode, result[1])
 
         except Exception as error:
-            v = 'ERROR'
-            self.test_fail_response_processing(json_path, z, error)
+            v = 'FAILED'
+            self.test_fail_response_processing(json_path, z, encode, error)
 
         return v
 
@@ -670,12 +669,12 @@ class WAFBypass:
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
-            if v == 'ERROR':
-                self.test_err_resp_code_processing(json_path, z, result[1])
+            if v == 'FAILED':
+                self.test_err_resp_code_processing(json_path, z, encode, result[1])
 
         except Exception as error:
-            v = 'ERROR'
-            self.test_fail_response_processing(json_path, z, error)
+            v = 'FAILED'
+            self.test_fail_response_processing(json_path, z, encode, error)
 
         return v
 
@@ -691,11 +690,11 @@ class WAFBypass:
             result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
             v = result[0]
 
-            if v == 'ERROR':
-                self.test_err_resp_code_processing(json_path, z, result[1])
+            if v == 'FAILED':
+                self.test_err_resp_code_processing(json_path, z, encode, result[1])
 
         except Exception as error:
-            v = 'ERROR'
-            self.test_fail_response_processing(json_path, z, error)
+            v = 'FAILED'
+            self.test_fail_response_processing(json_path, z, encode, error)
 
         return v
