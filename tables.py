@@ -44,20 +44,18 @@ def table_get_result_summary(wb_result):
     table_headers_fp = [14 * ' ' + 'TOTAL', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'FAILED']
 
     # get payloads type list
-    payloads_type_list = list(set(['/'.join(k.split(':', 1)[0].split('/')[:-1]) for k in wb_result.keys()]))
+    payloads_list = list(set(['/'.join(k.split(':', 1)[0].split('/')[:-1]) for k in wb_result.keys()]))
     
     # create result dictionary by payloads type
-    for payloads_type in payloads_type_list:
+    for payloads in payloads_list:
         
-        k = payloads_type.split('/payload/')[1].split('/')[0]  # leave payload type only
-        k_type = 'FALSED' if k == 'FALSED' else 'BYPASSED'
-
-        passed = len([k for k, v in wb_result.items() if k.startswith(payloads_type) and v == 'PASSED'])
-        fx = len([k for k, v in wb_result.items() if k.startswith(payloads_type) and v == k_type])
-        failed = len([k for k, v in wb_result.items() if k.startswith(payloads_type) and v == 'FAILED'])        
+        payloads_type = payloads.split('/payload/')[1].split('/')[0]  # leave payload type only
+        passed = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == 'PASSED'])
+        failed = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == 'FAILED'])
+        fx = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == payloads_type])
         total = passed + failed + fx
 
-        payloads_summary_dict[k] = [total, passed, fx, failed]
+        payloads_summary_dict[payloads_type] = [total, passed, fx, failed]
 
     # create table's body of the payloads
     for k in sorted(payloads_summary_dict.keys()):
@@ -75,7 +73,7 @@ def table_get_result_summary(wb_result):
         prcnt = get_percent_str(v[3], v[0])
         failed = str(v[3]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
         
-        if k == 'FALSED':
+        if k == 'FP':
             payloads_summary_list_fp.append([total, passed, fx, failed])
         else:
             payloads_summary_list_fn.append([k, passed, fx, failed])
@@ -84,15 +82,13 @@ def table_get_result_summary(wb_result):
     # Print FALSED/BYPASSED tables
     ##
 
-    if payloads_summary_list_fn:
-        print('')
-        tp.banner('FALSE NEGATIVE TEST ', style='banner')
-        tp.table(payloads_summary_list_fn, table_headers_fn)
+    print('')
+    tp.banner('FALSE NEGATIVE TEST ', style='banner')
+    tp.table(payloads_summary_list_fn, table_headers_fn)
 
-    if payloads_summary_list_fp:
-        print('')
-        tp.banner('FALSE POSITIVE TEST ', style='banner')
-        tp.table(payloads_summary_list_fp, table_headers_fp)
+    print('')
+    tp.banner('FALSE POSITIVE TEST ', style='banner')
+    tp.table(payloads_summary_list_fp, table_headers_fp)
 
     ##
     # Add all summary to result
