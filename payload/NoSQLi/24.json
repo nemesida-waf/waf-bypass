@@ -1,0 +1,9 @@
+{
+  "req": [
+    {
+      "BODY": "';sleep(5000);",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

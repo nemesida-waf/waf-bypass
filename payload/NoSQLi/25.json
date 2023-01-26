@@ -1,0 +1,9 @@
+{
+  "req": [
+    {
+      "BODY": "0;return true",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
