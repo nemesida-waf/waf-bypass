@@ -16,17 +16,17 @@ def patch_http_connection_pool(**constructor_kwargs):
     For example, to increase the pool size to fix problems
     with "HttpConnectionPool is full, discarding connection"
     """
-    class MyHTTPConnectionPool(connectionpool.HTTPConnectionPool):
+    class WBHTTPConnectionPool(connectionpool.HTTPConnectionPool):
         def __init__(self, *args, **kwargs):
             kwargs.update(constructor_kwargs)
-            super(MyHTTPConnectionPool, self).__init__(*args, **kwargs)
-    poolmanager.pool_classes_by_scheme['http'] = MyHTTPConnectionPool
+            super(WBHTTPConnectionPool, self).__init__(*args, **kwargs)
+    poolmanager.pool_classes_by_scheme['http'] = WBHTTPConnectionPool
 
-    class MyHTTPSConnectionPool(connectionpool.HTTPSConnectionPool):
+    class WBHTTPSConnectionPool(connectionpool.HTTPSConnectionPool):
         def __init__(self, *args, **kwargs):
             kwargs.update(constructor_kwargs)
-            super(MyHTTPSConnectionPool, self).__init__(*args, **kwargs)
-    poolmanager.pool_classes_by_scheme['https'] = MyHTTPSConnectionPool
+            super(WBHTTPSConnectionPool, self).__init__(*args, **kwargs)
+    poolmanager.pool_classes_by_scheme['https'] = WBHTTPSConnectionPool
 
 
 def get_help():

@@ -50,9 +50,11 @@ def table_get_result_summary(wb_result):
     for payloads in payloads_list:
         
         payloads_type = payloads.split('/payload/')[1].split('/')[0]  # leave payload type only
+        fx_type = 'FALSED' if payloads_type == 'FP' else 'BYPASSED'
+
         passed = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == 'PASSED'])
-        failed = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == 'FAILED'])
-        fx = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == payloads_type])
+        failed = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == 'FAILED']) 
+        fx = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == fx_type])
         total = passed + failed + fx
 
         payloads_summary_dict[payloads_type] = [total, passed, fx, failed]
