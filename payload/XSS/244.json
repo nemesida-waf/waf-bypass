@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",
       "ARGS": "<!--><svg+onload=%27top[%2fal%2f%2esource%2b%2fert%2f%2esource](document.domain)%27>",

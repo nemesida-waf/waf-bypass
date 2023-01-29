@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "<noscript><p title=\"</noscript><img src=x onerror=alert(document.domain)>\">",
       "BODY": "<noscript><p title=\"</noscript><img src=x onerror=alert(document.domain)>\">",

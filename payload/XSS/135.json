@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<x ondrag=alert(1)>drag this!",
       "ARGS": "<x ondrag=alert(1)>drag this!",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "BODY": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",
       "USER-AGENT": "<script src=https://www.google.com/complete/search?client=chrome\\n%26jsonp=alert(1);></script>",

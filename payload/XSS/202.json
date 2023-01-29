@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "confirm.call(null,1)",
       "ARGS": "param%RND%=confirm.call(null,1)",

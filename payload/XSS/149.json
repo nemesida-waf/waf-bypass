@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",
       "ARGS": "<img\\nsrc=data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=\\nonload=alert(1)>",

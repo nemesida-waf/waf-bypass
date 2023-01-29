@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "BODY": "' } ], $comment:'successful MongoDB injection'",
       "ENCODE": "Base64 UTF-16",

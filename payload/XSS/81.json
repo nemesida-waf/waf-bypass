@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "BODY": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",
       "USER-AGENT": "%0D%0ALocation:%0D%0AContent-Type:text/html%0D%0AX-XSS-Protection\\n%3a0%0D%0A%0D%0A%3Cscript%3Ealert(1)%3C/script%3E",

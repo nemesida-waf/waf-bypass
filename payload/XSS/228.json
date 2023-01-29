@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<svg on onload=(alert)(document.domain)>",
       "ARGS": "<svg on onload=(alert)(document.domain)>",

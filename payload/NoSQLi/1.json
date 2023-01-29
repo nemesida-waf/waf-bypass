@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "username[$ne]=1&password[$ne]=1",
       "BODY": "username[$ne]=1&password[$ne]=1",

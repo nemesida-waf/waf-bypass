@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%3Cx%20onclick%3Dalert%281%29%3Eclick%20this%21",
       "ARGS": "%3Cx%20onclick%3Dalert%281%29%3Eclick%20this%21",

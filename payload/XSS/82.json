@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<Svg OnLoad=alert(1)>",
       "ARGS": "<Svg OnLoad=alert(1)>",

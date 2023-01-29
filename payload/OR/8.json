@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=javascripT://anything%0D%0A%0D%0Awindow.alert(document.cookie)",
       "BODY": "url=javascripT://anything%0D%0A%0D%0Awindow.alert(document.cookie)",

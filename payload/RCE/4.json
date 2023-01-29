@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h",
       "ARGS": "param%RND%=%3B%20e%27c%27ho%20%27swd%20test%20pentest%27%20%7Cawk%20%27%7Bprint%20%5C%22cat%20%2Fetc%2Fpas%5C%22%241%7D%27%20%7Cbas%27h",

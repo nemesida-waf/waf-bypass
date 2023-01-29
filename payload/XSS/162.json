@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",
       "ARGS": "%3Cbody%20onresize%3Dalert%281%29%3Epress%20F12%21",

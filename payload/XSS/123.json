@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",
       "ARGS": "<form><input formaction=javascript:alert(1) type=image src=SOURCE>",

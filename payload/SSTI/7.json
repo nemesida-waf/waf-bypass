@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "login%RND%=%7Bphp%7Decho%20%60id%60%3B%7B%2Fphp%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "BODY": "login%RND%=%7Bphp%7Decho%20%60id%60%3B%7B%2Fphp%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",

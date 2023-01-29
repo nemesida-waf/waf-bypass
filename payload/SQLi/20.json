@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "name[0+;select+sleep(8);;#++]=user&pass=pass",
       "ARGS": "name[0+;select+sleep(8);;#++]=user&pass=pass",

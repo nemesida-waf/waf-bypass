@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=netdoc:///etc/passwd",
       "BODY": "url=netdoc:///etc/passwd",

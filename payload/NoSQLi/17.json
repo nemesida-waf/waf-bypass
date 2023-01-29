@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "BODY": "{\"type\": \"user\",\"name\": \"oops\", \"roles\": [\"_admin\"], \"roles\": [], \"password\":\"apple\"}",
       "JSON": true,

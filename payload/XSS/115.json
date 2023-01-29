@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<embed src=javascript:alert(1)>",
       "ARGS": "<embed src=javascript:alert(1)>",

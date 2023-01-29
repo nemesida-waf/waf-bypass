@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<marquee loop=1 width=0 onfinish=alert(1)>",
       "ARGS": "<marquee loop=1 width=0 onfinish=alert(1)>",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "/%2e/backup.zip",
       "ENCODE": "Base64 UTF-16",

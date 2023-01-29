@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "BODY": "db.injection.insert({success:1});",
       "ENCODE": "Base64 UTF-16",

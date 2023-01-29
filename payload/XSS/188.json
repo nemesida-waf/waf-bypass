@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "param%RND%=%5B1%5D.map%28confirm%29",
       "BODY": "param%RND%=%5B1%5D.map%28confirm%29",

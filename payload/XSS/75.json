@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",
       "ARGS": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(1)</x:script>",

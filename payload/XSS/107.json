@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "\"o<x>nmouseover=alert<x>(1)//",
       "ARGS": "\"o<x>nmouseover=alert<x>(1)//",

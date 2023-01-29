@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "%27%20&&%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500",
       "BODY": "%27%20&&%20this.password.match%28%2F.%2A%2F%29%2F%2F%2B%2500",

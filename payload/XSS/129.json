@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<x contenteditable onblur=alert(1)>lose focus!",
       "ARGS": "<x contenteditable onblur=alert(1)>lose focus!",

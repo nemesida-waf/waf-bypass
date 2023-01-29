@@ -1,6 +1,6 @@
 
 {
-  "req": [
+  "payload": [
     {
       "URL": "\"autofocus=alert(1)//",
       "ARGS": "\"autofocus=alert(1)//",

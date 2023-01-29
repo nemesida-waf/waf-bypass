@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "`${class x extends `${alert`1337`}`{}}`{}",
       "ARGS": "`${class x extends `${alert`1337`}`{}}`{}",

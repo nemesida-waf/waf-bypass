@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%3C%21--%23echo%20var=%22DOCUMENT_NAME%22%20--%3E",
       "ARGS": "param%RND%=%3C%21--%23echo%20var=%22DOCUMENT_NAME%22%20--%3E",

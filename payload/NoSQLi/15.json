@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "login%255B%2524gt%255D%3Dadmin%26login%255B%2524lt%255D%3Dtest%26pass%255B%2524ne%255D%3D1",
       "BODY": "llogin%255B%2524gt%255D%3Dadmin%26login%255B%2524lt%255D%3Dtest%26pass%255B%2524ne%255D%3D1",

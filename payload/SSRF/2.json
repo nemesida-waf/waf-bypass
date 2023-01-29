@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=http://localhost/admin",
       "BODY": "url=http://localhost/admin",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "/id/1 union select user from password",
       "ARGS": "id=1 union select user from password",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "param%RND%=apply.call%60%24%7Bnavigation.navigate%7D%24%7Bnavigation%7D%24%7B%5Bname%5D%7D%60",
       "BODY": "param%RND%=apply.call%60%24%7Bnavigation.navigate%7D%24%7Bnavigation%7D%24%7B%5Bname%5D%7D%60",

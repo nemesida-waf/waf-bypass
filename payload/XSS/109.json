@@ -1,6 +1,6 @@
 
 {
-  "req": [
+  "payload": [
     {
       "URL": "&lt;svg/onload&equals;alert(1)&gt;",
       "ARGS": "&lt;svg/onload&equals;alert(1)&gt;",

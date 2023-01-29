@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<isindex formaction=javascript:alert(1) type=submit value=click>",
       "ARGS": "<isindex formaction=javascript:alert(1) type=submit value=click>",

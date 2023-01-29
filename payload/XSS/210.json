@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "param%RND%=Array.prototype.sort.call%60%24%7Balert%7D1337%60",
       "BODY": "param%RND%=Array.prototype.sort.call%60%24%7Balert%7D1337%60",

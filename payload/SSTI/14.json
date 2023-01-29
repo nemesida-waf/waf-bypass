@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "login%RND%=%7B%7B%20someString.toUPPERCASE()%20%7D%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",
       "BODY": "login%RND%=%7B%7B%20someString.toUPPERCASE()%20%7D%7D&passw=hij3kfmedfekmkm&token=fdawgk2mnjdnwidfkamjn2i&sort=true",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "\"onfocus=alert(1)//",
       "ARGS": "\"onfocus=alert(1)//",

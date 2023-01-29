@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<iframe src=javascript:alert(1)>",
       "ARGS": "<iframe src=javascript:alert(1)>",

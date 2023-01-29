@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "prompt.call(null,1)",
       "ARGS": "param%RND%=prompt.call(null,1)",

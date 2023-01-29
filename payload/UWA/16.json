@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "/%2e/config.php.bak",
       "ENCODE": "Base64 UTF-16",

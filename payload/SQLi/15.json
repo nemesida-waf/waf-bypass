@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",
       "ARGS": "%220%5C%22XOR%28if%28now%28%29%3Dsysdate%28%29%2Csleep%289%29%2C0%29%29XOR%5C%22Z",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",
       "ARGS": "db.collection.find( { $where: function() { return (this.name == $userData) } } );",

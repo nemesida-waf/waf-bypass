@@ -1,6 +1,6 @@
 
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "user%RND%=%2A%28%29%7C%26'",
       "BODY": "user%RND%=%2A%28%29%7C%26'",

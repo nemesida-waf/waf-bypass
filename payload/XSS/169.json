@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<form onsubmit=alert(1)><input type=submit>",
       "ARGS": "<form onsubmit=alert(1)><input type=submit>",

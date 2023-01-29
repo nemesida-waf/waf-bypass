@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<input autofocus onblur=alert(1)>",
       "ARGS": "<input autofocus onblur=alert(1)>",

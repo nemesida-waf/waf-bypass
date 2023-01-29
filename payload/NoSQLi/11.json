@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "username[$ne]=toto&password[$regex]=m.{2}",
       "BODY": "username[$ne]=toto&password[$regex]=m.{2}",

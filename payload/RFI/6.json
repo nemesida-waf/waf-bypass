@@ -1,5 +1,5 @@
 {
-    "req": [
+    "payload": [
       {
         "ARGS": "page=php://filter/zlib.deflate/convert.base64-encode/resource=/e\\t\\c/pa\\s\\swd",
         "BODY": "page=php://filter/zlib.deflate/convert.base64-encode/resource=/e\\t\\c/pa\\s\\swd",

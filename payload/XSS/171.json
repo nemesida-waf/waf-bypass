@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",
       "ARGS": "<menu id=x contextmenu=x onshow=alert(1)>right click me!",

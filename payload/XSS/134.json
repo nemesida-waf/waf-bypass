@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<x ondblclick=alert(1)>double click this!",
       "ARGS": "<x ondblclick=alert(1)>double click this!",

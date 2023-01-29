@@ -1,6 +1,6 @@
 
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "<script/x>alert(1)</script>",
       "BODY": "<script/x>alert(1)</script>",

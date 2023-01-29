@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "(SELECT*FROM(SELECT(SLEEP(10)))a)",
       "ARGS": "(SELECT*FROM(SELECT(SLEEP(10)))a)2",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "param%RND%=%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",
       "BODY": "param%RND%=%3B%20cat%20%2Fet%2A%2Fpa%2A%2Awd",

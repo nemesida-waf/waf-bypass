@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%24%7Bjndi%3Adns%3A%2F%2Fexample.com%2Fa%7D",
       "ARGS": "%24%7Bjndi%3Adns%3A%2F%2Fexample.com%2Fa%7D",

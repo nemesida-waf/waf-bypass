@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "<iframe %00 src=%E2%80%9D&Tab;javascript:prompt(1)&Tab;%E2%80%9D%00>",
       "BODY": "<iframe %00 src=%E2%80%9D&Tab;javascript:prompt(1)&Tab;%E2%80%9D%00>",

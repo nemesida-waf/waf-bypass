@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "[1].find(alert('1'))",
       "ARGS": "[1].find(alert('1'))",

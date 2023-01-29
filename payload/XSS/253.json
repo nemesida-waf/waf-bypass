@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "<img/src=`%00`%20onerror=this.onerror=confirm(1)",
       "BODY": "<img/src=`%00`%20onerror=this.onerror=confirm(1)",

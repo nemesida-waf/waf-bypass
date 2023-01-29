@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=sftp://evil.com:1234/",
       "BODY": "url=sftp://evil.com:1234/",

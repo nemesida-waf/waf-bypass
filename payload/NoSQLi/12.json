@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "BODY": "{\"username\": {\"$gt\":\"\"}, \"password\": {\"$gt\":\"\"}}",
       "JSON": true,

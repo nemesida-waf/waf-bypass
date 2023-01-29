@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "/.suspected",
       "ENCODE": "Base64 UTF-16",

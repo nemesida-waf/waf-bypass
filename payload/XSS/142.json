@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<x onmouseout=alert(1)>hover this!",
       "ARGS": "<x onmouseout=alert(1)>hover this!",

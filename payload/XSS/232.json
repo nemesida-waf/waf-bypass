@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%27%22%3E%3Csvg%2Fonload%3Dalert%28%29%3E%7B%7B7%2A7%7D%7D",
       "ARGS": "%27%22%3E%3Csvg%2Fonload%3Dalert%28%29%3E%7B%7B7%2A7%7D%7D",

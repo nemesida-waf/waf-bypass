@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<x oncopy=alert(1)>copy this!",
       "ARGS": "<x oncopy=alert(1)>copy this!",

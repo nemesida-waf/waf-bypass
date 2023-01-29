@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "%0D%0ALocation://x:1%0D%0AContent-Type:text/html%0D%0A%0D%0A\\n%3Cscript%3Ealert(1)%3C/script%3E",
       "BODY": "%0D%0ALocation://x:1%0D%0AContent-Type:text/html%0D%0A%0D%0A\\n%3Cscript%3Ealert(1)%3C/script%3E",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "embedded_submission_form_uuid=1%27%3BSELECT%201%3BSELECT%20pg_sleep(30)%3B--%27",
       "BODY": "embedded_submission_form_uuid=1%27%3BSELECT%201%3BSELECT%20pg_sleep(30)%3B--%27",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<keygen autofocus onfocus=alert(1)>",
       "ARGS": "<keygen autofocus onfocus=alert(1)>",

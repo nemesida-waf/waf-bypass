@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<html ontouchmove=alert(1)>",
       "ARGS": "<html ontouchmove=alert(1)>",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%3C%21--%23exec%20cmd=%5C%22ls%5C%22%20--%3E",
       "ARGS": "param%RND%=%3C%21--%23exec%20cmd=%5C%22ls%5C%22%20--%3E",

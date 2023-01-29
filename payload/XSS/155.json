@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<body onpageshow=alert(1)>",
       "ARGS": "<body onpageshow=alert(1)>",

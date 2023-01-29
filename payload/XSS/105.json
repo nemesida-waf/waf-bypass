@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "eval(location.hash.slice(1)) #alert(1)",
       "ARGS": "eval(location.hash.slice(1)) #alert(1)",

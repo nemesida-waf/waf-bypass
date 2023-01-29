@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "setInterval`alert\\x28document.domain\\x29`",
       "BODY": "setInterval`alert\\x28document.domain\\x29`",

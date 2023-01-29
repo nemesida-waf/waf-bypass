@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login",
       "ARGS": "query=login&username=rrr';SELECT PG_SLEEP(5)--&password=rr&submit=Login2",

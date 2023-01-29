@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<svg/1='&q='onload=alert(1)>",
       "ARGS": "p%RND%=<svg/1='&q='onload=alert(1)>",

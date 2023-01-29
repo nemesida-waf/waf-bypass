@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<form action=javascript:alert(1)><input type=submit>",
       "ARGS": "<form action=javascript:alert(1)><input type=submit>",

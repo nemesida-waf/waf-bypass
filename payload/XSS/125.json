@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<object data=javascript:alert(1)>",
       "ARGS": "<object data=javascript:alert(1)>",

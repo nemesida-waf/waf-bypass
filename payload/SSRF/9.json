@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=dict://127.0.0.1:6379/CONFIG%20SET%20dir%20/var/www/html",
       "BODY": "url=dict://127.0.0.1:6379/CONFIG%20SET%20dir%20/var/www/html",

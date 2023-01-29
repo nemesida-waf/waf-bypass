@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",
       "ARGS": "%3Cselect%20onchange%3Dalert%281%29%3E%3Coption%3E1%3Coption%3E2",

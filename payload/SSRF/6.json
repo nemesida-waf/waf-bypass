@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=ldap://evil.com:11211/%0astats%0aquit",
       "BODY": "url=ldap://evil.com:11211/%0astats%0aquit",

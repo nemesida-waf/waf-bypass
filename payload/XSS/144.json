@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<x onmouseup=alert(1)>click this!",
       "ARGS": "<x onmouseup=alert(1)>click this!",

@@ -1,5 +1,5 @@
 {
-    "req": [
+    "payload": [
       {
         "ARGS": "param%RND%=C:/WINNT/win.ini",
         "BODY": "param%RND%=C:/WINNT/win.ini",

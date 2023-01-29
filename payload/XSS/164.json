@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<marquee onstart=alert(1)>",
       "ARGS": "<marquee onstart=alert(1)>",

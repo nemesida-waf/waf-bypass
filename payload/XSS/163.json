@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<body onhelp=alert(1)>press F1!",
       "ARGS": "<body onhelp=alert(1)>press F1!",

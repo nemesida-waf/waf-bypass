@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "login[$nin][]=admin&login[$nin][]=test&pass[$ne]=toto",
       "BODY": "login[$nin][]=admin&login[$nin][]=test&pass[$ne]=toto",

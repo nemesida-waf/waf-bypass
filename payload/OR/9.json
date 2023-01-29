@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "%0d%0a1Location:https://google.com",
       "BODY": "%0d%0a1Location:https://google.com",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "param%RND%=prompt%26lpar%3B1%26rpar%3B",
       "BODY": "param%RND%=prompt%26lpar%3B1%26rpar%3B",

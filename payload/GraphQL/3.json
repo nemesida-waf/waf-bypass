@@ -1,7 +1,7 @@
 
 
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "{doctors(options: \"{\\\"patients.ssn\\\" :1}\"){firstName lastName id patients{ssn}}}",
       "BODY": "{doctors(options: \"{\\\"patients.ssn\\\" :1}\"){firstName lastName id patients{ssn}}}",

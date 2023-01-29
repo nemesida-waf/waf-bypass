@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "window.x%3D%5B%5D.with%3Bwindow.x%28%29.pop%28%29.alert%281337%29",
       "ARGS": "window.x%3D%5B%5D.with%3Bwindow.x%28%29.pop%28%29.alert%281337%29",

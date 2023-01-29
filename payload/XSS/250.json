@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",
       "BODY": "<svg/onload=eval(atob(%E2%80%98YWxlcnQoZG9jdW1lbnQuY29va2llKQ==%E2%80%99))>",

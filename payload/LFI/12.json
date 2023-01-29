@@ -1,5 +1,5 @@
 {
-    "req": [
+    "payload": [
       {
         "URL": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
         "ARGS": "param%RND%=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",

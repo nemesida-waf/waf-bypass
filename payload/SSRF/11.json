@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=gopher://127.0.0.1:6379/_config%20set%20dbfilename%20reverse.php",
       "BODY": "url=gopher://127.0.0.1:6379/_config%20set%20dbfilename%20reverse.php",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",
       "ARGS": "<svg/onload=innerHTML=location.hash> #<img/src/onerror=alert(1)>",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "ARGS": "url=java%0d%0ascript%0d%0a:alert(0)",
       "BODY": "url=java%0d%0ascript%0d%0a:alert(0)",

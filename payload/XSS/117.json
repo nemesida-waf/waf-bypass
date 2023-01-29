@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<math><brute href=javascript:alert(1)>click",
       "ARGS": "<math><brute href=javascript:alert(1)>click",

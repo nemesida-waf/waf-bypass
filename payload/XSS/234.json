@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "/(A('onerror=%22alert%601%60%22testabcd))/",
       "ARGS": "/(A('onerror=%22alert%601%60%22testabcd))/",

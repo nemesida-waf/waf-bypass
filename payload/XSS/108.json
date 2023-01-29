@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",
       "ARGS": "\"autof<x>ocus o<x>nfocus=alert<x>(1)//",

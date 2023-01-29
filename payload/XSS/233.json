@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "%3Cform%2F%3E%3C%21%3E%3Cdetails%2Fopen%2Fontoggle%3Dalert%281%29%3E%22%0A%40gmail%0A.com",
       "ARGS": "%3Cform%2F%3E%3C%21%3E%3Cdetails%2Fopen%2Fontoggle%3Dalert%281%29%3E%22%0A%40gmail%0A.com",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<a href=javascript:alert(1)>click",
       "ARGS": "<a href=javascript:alert(1)>click",

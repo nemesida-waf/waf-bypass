@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<img src=1 onerror=alert(1)>",
       "ARGS": "<img src=1 onerror=alert(1)>",

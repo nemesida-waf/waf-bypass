@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<Script>alert(1)</Script>",
       "ARGS": "<Script>alert(1)</Script>",

@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "<x contenteditable onkeydown=alert(1)>press any key!",
       "ARGS": "<x contenteditable onkeydown=alert(1)>press any key!",

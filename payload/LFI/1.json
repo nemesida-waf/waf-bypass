@@ -1,5 +1,5 @@
 {
-    "req": [
+    "payload": [
       {
         "ARGS": "param%RND%=../../../../../../../..//etc/passwd",
         "BODY": "param%RND%=../../../../../../../..//etc/passwd",

@@ -12,7 +12,7 @@ def get_payload(json_path):
     # processing JSON file
     with open(json_path) as f:
         try:
-            jdata = json.load(f)['req'][0]
+            jdata = json.load(f)['payload'][0]
         except Exception as e:
             print(
                 'An error occurred while loading file {}: file not in JSON format ({})'

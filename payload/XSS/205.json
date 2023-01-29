@@ -1,5 +1,5 @@
 {
-  "req": [
+  "payload": [
     {
       "URL": "alert.apply(null, [1])",
       "ARGS": "param%RND%=alert.apply(null, [1])",
