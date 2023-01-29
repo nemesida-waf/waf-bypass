@@ -1,0 +1,10 @@
+{
+  "req": [
+    {
+      "ARGS": "<?=`{${~\"\\xa0\\xb8\\xba\\xab\"}[\"\\xa0\"]}`;",
+      "BODY": "<?=`{${~\"\\xa0\\xb8\\xba\\xab\"}[\"\\xa0\"]}`;",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
