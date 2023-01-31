@@ -1,0 +1,12 @@
+{
+  "payload": [
+    {
+      "ARGS": "queryString=aaaa' #{1*1} 'bbb",
+      "BODY": "queryString=aaaa' #{1*1} 'bbb",
+      "COOKIE": "#{1*1}",
+      "HEADER": "#{1*1}",
+      "ENCODE": "Base64 UTF-1",
+      "BLOCKED": true
+    }
+  ]
+}
