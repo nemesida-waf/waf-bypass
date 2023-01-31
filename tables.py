@@ -84,13 +84,15 @@ def table_get_result_summary(wb_result):
     # Print FALSED/BYPASSED tables
     ##
 
-    print('')
-    tp.banner('FALSE NEGATIVE TEST ', style='banner')
-    tp.table(payloads_summary_list_fn, table_headers_fn)
+    if payloads_summary_list_fn:
+        print('')
+        tp.banner('FALSE NEGATIVE TEST ', style='banner')
+        tp.table(payloads_summary_list_fn, table_headers_fn)
 
-    print('')
-    tp.banner('FALSE POSITIVE TEST ', style='banner')
-    tp.table(payloads_summary_list_fp, table_headers_fp)
+    if payloads_summary_list_fp:
+        print('')
+        tp.banner('FALSE POSITIVE TEST ', style='banner')
+        tp.table(payloads_summary_list_fp, table_headers_fp)
 
     ##
     # Add all summary to result
