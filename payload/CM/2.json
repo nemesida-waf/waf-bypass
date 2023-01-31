@@ -1,0 +1,16 @@
+{
+  "payload": [
+    {
+      "URL": "; cat /etc/passwd",
+      "ARGS": "; cat /etc/passwd",
+      "BODY": "; cat /etc/passwd",
+      "COOKIE": "; cat /etc/passwd",
+      "USER-AGENT": "; cat /etc/passwd",
+      "REFERER": "; cat /etc/passwd",
+      "HEADER": "; cat /etc/passwd",
+      "METHOD": "SPST",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

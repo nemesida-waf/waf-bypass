@@ -1,0 +1,16 @@
+{
+  "payload": [
+    {
+      "URL": "${7*7}",
+      "ARGS": "${7*7}",
+      "BODY": "${7*7}",
+      "COOKIE": "${7*7}",
+      "USER-AGENT": "${7*7}",
+      "REFERER": "${7*7}",
+      "HEADER": "${7*7}",
+      "METHOD": "SPST",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
