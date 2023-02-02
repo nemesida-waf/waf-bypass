@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "<%09script%09>alert%09(%09'1'%09)",
+      "ARGS": "<%09script%09>alert%09(%09'1'%09)",
+      "BODY": "<%09script%09>alert%09(%09'1'%09)",
+      "COOKIE": "<%09script%09>alert%09(%09'1'%09)",
+      "USER-AGENT": "<%09script%09>alert%09(%09'1'%09)",
+      "REFERER": "<%09script%09>alert%09(%09'1'%09)",
+      "HEADER": "<%09script%09>alert%09(%09'1'%09)",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
+      "BLOCKED": true
+    }
+  ]
+}
