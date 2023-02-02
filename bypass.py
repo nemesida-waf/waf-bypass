@@ -95,7 +95,7 @@ def processing_result(blocked, block_code, status_code):
 def payload_encoding(z, payload, encode):
     try:
 
-        if encode.upper() == 'PLAIN':
+        if not encode:
             return payload
         else:
 
@@ -191,7 +191,7 @@ def payload_encoding(z, payload, encode):
 
 class WAFBypass:
 
-    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details):
+    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, exclude_dir):
         
         # init
         self.host = host
@@ -203,6 +203,7 @@ class WAFBypass:
         self.wb_result = wb_result
         self.wb_result_json = wb_result_json
         self.details = details
+        self.exclude_dir = exclude_dir
 
         # init statuses
         self.statuses = [
@@ -228,6 +229,10 @@ class WAFBypass:
         def send_payload(json_path):
             try:
                 
+                # skip payload if it in exclude_dir
+                if json_path.split('/payload/', 1)[1].split('/')[0].upper() in self.exclude_dir:
+                    return
+
                 # extract payload data
                 payload = get_payload(json_path)
                 
@@ -307,7 +312,7 @@ class WAFBypass:
                         return
 
                 # encode list processing
-                encode_list.append('PLAIN')
+                encode_list.append('')
 
                 # processing the payload of each zone
                 for z in payload:
@@ -332,8 +337,8 @@ class WAFBypass:
 
                         if z == 'URL':
                             
-                            if encode == 'PLAIN':
-                                k = str(str(json_path) + ':' + str(z))
+                            if not encode:
+                                k = ':'.join([str(json_path), str(z).upper()])
                             else:
                                 continue
 
@@ -346,10 +351,10 @@ class WAFBypass:
 
                         elif z == 'ARGS':
                             
-                            if encode == 'PLAIN':
-                                k = str(str(json_path) + ':' + str(z))
+                            if not encode:
+                                k = ':'.join([str(json_path), str(z).upper()])
                             else:
-                                k = str(str(json_path) + ':' + str(z).upper() + ':' + encode.upper())
+                                k = ':'.join([str(json_path), str(z).upper(), encode.upper()])
 
                             v = self.test_args(json_path, z, payload, method, headers, encode)
                             
@@ -360,10 +365,10 @@ class WAFBypass:
 
                         elif z == 'BODY':
                             
-                            if encode == 'PLAIN':
-                                k = str(str(json_path) + ':' + str(z))
+                            if not encode:
+                                k = ':'.join([str(json_path), str(z).upper()])
                             else:
-                                k = str(str(json_path) + ':' + str(z).upper() + ':' + encode.upper())
+                                k = ':'.join([str(json_path), str(z).upper(), encode.upper()])
 
                             v = self.test_body(json_path, z, payload, method, body, headers, encode)
                             
@@ -374,10 +379,10 @@ class WAFBypass:
 
                         elif z == 'COOKIE':
                             
-                            if encode == 'PLAIN':
-                                k = str(str(json_path) + ':' + str(z))
+                            if not encode:
+                                k = ':'.join([str(json_path), str(z).upper()])
                             else:
-                                k = str(str(json_path) + ':' + str(z).upper() + ':' + encode.upper())
+                                k = ':'.join([str(json_path), str(z).upper(), encode.upper()])
 
                             v = self.test_cookie(json_path, z, payload, method, headers, encode)
                             
@@ -388,8 +393,8 @@ class WAFBypass:
 
                         elif z == 'USER-AGENT':
                             
-                            if encode == 'PLAIN':
-                                k = str(str(json_path) + ':' + str(z))
+                            if not encode:
+                                k = ':'.join([str(json_path), str(z).upper()])
                             else:
                                 continue
 
@@ -402,8 +407,8 @@ class WAFBypass:
 
                         elif z == 'REFERER':
                             
-                            if encode == 'PLAIN':
-                                k = str(str(json_path) + ':' + str(z))
+                            if not encode:
+                                k = ':'.join([str(json_path), str(z).upper()])
                             else:
                                 continue
 
@@ -416,10 +421,10 @@ class WAFBypass:
 
                         elif z == 'HEADER':
                             
-                            if encode == 'PLAIN':
-                                k = str(str(json_path) + ':' + str(z))
+                            if not encode:
+                                k = ':'.join([str(json_path), str(z).upper()])
                             else:
-                                k = str(str(json_path) + ':' + str(z).upper() + ':' + encode.upper())
+                                k = ':'.join([str(json_path), str(z).upper(), encode.upper()])
 
                             v = self.test_header(json_path, z, payload, method, headers, encode)
                             
@@ -484,7 +489,7 @@ class WAFBypass:
         try:
             
             if self.wb_result_json:
-                z = z if encode == 'PLAIN' else z + ':' + encode
+                z = z if not encode else ':'.join([z, encode])
                 err = 'An incorrect response was received while processing request: {}'.format(result[1])
                 self.wb_result['FAILED'].append({json_path.split('/payload/', 1)[1] + ' in ' + z: err})
             else:
@@ -503,7 +508,7 @@ class WAFBypass:
     def test_fail_response_processing(self, json_path, z, encode, error):
         try:
             if self.wb_result_json:
-                z = z if encode == 'PLAIN' else z + ':' + encode
+                z = z if not encode else ':'.join([z, encode])
                 self.wb_result['FAILED'].append({json_path.split('/payload/', 1)[1] + ' in ' + z: str(error)})
             else:
                 err = 'An error occurred while processing file {} in {}: {}'.format(json_path, z, error)
