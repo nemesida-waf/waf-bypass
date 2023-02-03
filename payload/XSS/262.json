@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fangularjs%2F1.1.3%2Fangularjs.min.js%22%3E%3Cdiv%20ng-app%20ng-csp%20id%3Dp%20ng-click%3D%24event.view.alert(1)%3E",
+      "ARGS": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fangularjs%2F1.1.3%2Fangularjs.min.js%22%3E%3Cdiv%20ng-app%20ng-csp%20id%3Dp%20ng-click%3D%24event.view.alert(1)%3E",
+      "BODY": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fangularjs%2F1.1.3%2Fangularjs.min.js%22%3E%3Cdiv%20ng-app%20ng-csp%20id%3Dp%20ng-click%3D%24event.view.alert(1)%3E",
+      "COOKIE": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fangularjs%2F1.1.3%2Fangularjs.min.js%22%3E%3Cdiv%20ng-app%20ng-csp%20id%3Dp%20ng-click%3D%24event.view.alert(1)%3E",
+      "USER-AGENT": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fangularjs%2F1.1.3%2Fangularjs.min.js%22%3E%3Cdiv%20ng-app%20ng-csp%20id%3Dp%20ng-click%3D%24event.view.alert(1)%3E",
+      "REFERER": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fangularjs%2F1.1.3%2Fangularjs.min.js%22%3E%3Cdiv%20ng-app%20ng-csp%20id%3Dp%20ng-click%3D%24event.view.alert(1)%3E",
+      "HEADER": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fangularjs%2F1.1.3%2Fangularjs.min.js%22%3E%3Cdiv%20ng-app%20ng-csp%20id%3Dp%20ng-click%3D%24event.view.alert(1)%3E",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
+      "BLOCKED": true
+    }
+  ]
+}
