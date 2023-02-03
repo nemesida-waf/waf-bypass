@@ -3,6 +3,7 @@
     {
       "ARGS": "user%RND%=%2A%28%7C%28objectclass=%2A%29",
       "BODY": "user%RND%=%2A%28%7C%28objectclass=%2A%29",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

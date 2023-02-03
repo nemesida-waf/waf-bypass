@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "%22%3E%250D%250A%250D%250A%3Cx%20%27%3D%22foo%22%3E%3Cx%20foo%3D%27%3E%3Cimg%20src%3Dx%20onerror%3Djavascript%3Aalert%28%60cloudfrontbypass%60%29%2F%2F%27%3E",
+      "ARGS": "%22%3E%250D%250A%250D%250A%3Cx%20%27%3D%22foo%22%3E%3Cx%20foo%3D%27%3E%3Cimg%20src%3Dx%20onerror%3Djavascript%3Aalert%28%60cloudfrontbypass%60%29%2F%2F%27%3E",
+      "BODY": "%22%3E%250D%250A%250D%250A%3Cx%20%27%3D%22foo%22%3E%3Cx%20foo%3D%27%3E%3Cimg%20src%3Dx%20onerror%3Djavascript%3Aalert%28%60cloudfrontbypass%60%29%2F%2F%27%3E",
+      "COOKIE": "%22%3E%250D%250A%250D%250A%3Cx%20%27%3D%22foo%22%3E%3Cx%20foo%3D%27%3E%3Cimg%20src%3Dx%20onerror%3Djavascript%3Aalert%28%60cloudfrontbypass%60%29%2F%2F%27%3E",
+      "USER-AGENT": "%22%3E%250D%250A%250D%250A%3Cx%20%27%3D%22foo%22%3E%3Cx%20foo%3D%27%3E%3Cimg%20src%3Dx%20onerror%3Djavascript%3Aalert%28%60cloudfrontbypass%60%29%2F%2F%27%3E",
+      "REFERER": "%22%3E%250D%250A%250D%250A%3Cx%20%27%3D%22foo%22%3E%3Cx%20foo%3D%27%3E%3Cimg%20src%3Dx%20onerror%3Djavascript%3Aalert%28%60cloudfrontbypass%60%29%2F%2F%27%3E",
+      "HEADER": "%22%3E%250D%250A%250D%250A%3Cx%20%27%3D%22foo%22%3E%3Cx%20foo%3D%27%3E%3Cimg%20src%3Dx%20onerror%3Djavascript%3Aalert%28%60cloudfrontbypass%60%29%2F%2F%27%3E",
+      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
+      "BLOCKED": true
+    }
+  ]
+}

@@ -3,6 +3,7 @@
     {
       "ARGS": "user%RND%=%2A%28%29%7C%26%27",
       "BODY": "user%RND%=%2A%28%29%7C%26%27",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

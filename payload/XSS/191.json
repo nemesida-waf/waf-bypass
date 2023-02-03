@@ -1,11 +1,11 @@
 {
   "payload": [
     {
-      "ARGS": "param%RND%=prompt%26lpar%3B1%26rpar%3B",
-      "BODY": "param%RND%=prompt%26lpar%3B1%26rpar%3B",
-      "COOKIE": "prompt%26lpar%3B1%26rpar%3B",
-      "USER-AGENT": "prompt%26lpar%3B1%26rpar%3B",
-      "HEADER": "prompt%26lpar%3B1%26rpar%3B",
+      "ARGS": "param%RND%=prompt(1)",
+      "BODY": "param%RND%=prompt(1)",
+      "COOKIE": "prompt(1)",
+      "USER-AGENT": "prompt(1)",
+      "HEADER": "prompt(1)",
       "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
