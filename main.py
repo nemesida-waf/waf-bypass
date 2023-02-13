@@ -140,7 +140,7 @@ if not wb_result_json:
     print('')
     print('##')
     print('# Target:       {}'.format(host))
-    print('# Proxy:        {}'.format(proxy)) if len(proxy) else print('# Proxy:      -')
+    print('# Proxy:        {}'.format(proxy)) if len(proxy) else print('# Proxy:       -')
     print('# Timeout:      {}s'.format(timeout))
     print('# Threads:      {}'.format(threads))
     print('# Block code:   {}'.format(list(block_code.keys())[0]))
