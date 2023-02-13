@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "'%2Balert(0x000123)%2B'",
+      "ARGS": "'%2Balert(0x000123)%2B'",
+      "BODY": "'%2Balert(0x000123)%2B'",
+      "COOKIE": "'%2Balert(0x000123)%2B'",
+      "USER-AGENT": "'%2Balert(0x000123)%2B'",
+      "REFERER": "'%2Balert(0x000123)%2B'",
+      "HEADER": "'%2Balert(0x000123)%2B'",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}

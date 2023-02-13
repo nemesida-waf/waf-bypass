@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "\\\"><script>alert(0x000123)</script>",
+      "ARGS": "\\\"><script>alert(0x000123)</script>",
+      "BODY": "\\\"><script>alert(0x000123)</script>",
+      "COOKIE": "\\\"><script>alert(0x000123)</script>",
+      "USER-AGENT": "\\\"><script>alert(0x000123)</script>",
+      "REFERER": "\\\"><script>alert(0x000123)</script>",
+      "HEADER": "\\\"><script>alert(0x000123)</script>",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}

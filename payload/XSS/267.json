@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "'';!—\"<XSS>=&{()}",
+      "ARGS": "'';!—\"<XSS>=&{()}",
+      "BODY": "'';!—\"<XSS>=&{()}",
+      "COOKIE": "'';!—\"<XSS>=&{()}",
+      "USER-AGENT": "'';!—\"<XSS>=&{()}",
+      "REFERER": "'';!—\"<XSS>=&{()}",
+      "HEADER": "'';!—\"<XSS>=&{()}",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}

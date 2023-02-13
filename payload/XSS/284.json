@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "<scr<script>ipt>alert(0x000123)</script>",
+      "ARGS": "<scr<script>ipt>alert(0x000123)</script>",
+      "BODY": "<scr<script>ipt>alert(0x000123)</script>",
+      "COOKIE": "<scr<script>ipt>alert(0x000123)</script>",
+      "USER-AGENT": "<scr<script>ipt>alert(0x000123)</script>",
+      "REFERER": "<scr<script>ipt>alert(0x000123)</script>",
+      "HEADER": "<scr<script>ipt>alert(0x000123)</script>",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}

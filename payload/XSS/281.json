@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "%22—%R3E%3C/style%3E%3C/script%3E%3Cscript%3E0x94(0x000123)%3C",
+      "ARGS": "%22—%R3E%3C/style%3E%3C/script%3E%3Cscript%3E0x94(0x000123)%3C",
+      "BODY": "%22—%R3E%3C/style%3E%3C/script%3E%3Cscript%3E0x94(0x000123)%3C",
+      "COOKIE": "%22—%R3E%3C/style%3E%3C/script%3E%3Cscript%3E0x94(0x000123)%3C",
+      "USER-AGENT": "%22—%R3E%3C/style%3E%3C/script%3E%3Cscript%3E0x94(0x000123)%3C",
+      "REFERER": "%22—%R3E%3C/style%3E%3C/script%3E%3Cscript%3E0x94(0x000123)%3C",
+      "HEADER": "%22—%R3E%3C/style%3E%3C/script%3E%3Cscript%3E0x94(0x000123)%3C",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}

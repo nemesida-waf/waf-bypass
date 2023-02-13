@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
+      "ARGS": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
+      "BODY": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
+      "COOKIE": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
+      "USER-AGENT": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
+      "REFERER": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
+      "HEADER": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}

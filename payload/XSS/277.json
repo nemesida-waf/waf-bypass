@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "\\\"><BODY ONLOAD=alert(0x000123)>",
+      "ARGS": "\\\"><BODY ONLOAD=alert(0x000123)>",
+      "BODY": "\\\"><BODY ONLOAD=alert(0x000123)>",
+      "COOKIE": "\\\"><BODY ONLOAD=alert(0x000123)>",
+      "USER-AGENT": "\\\"><BODY ONLOAD=alert(0x000123)>",
+      "REFERER": "\\\"><BODY ONLOAD=alert(0x000123)>",
+      "HEADER": "\\\"><BODY ONLOAD=alert(0x000123)>",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}
