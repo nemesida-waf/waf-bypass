@@ -1,13 +1,13 @@
 {
   "payload": [
     {
-      "URL": "admin' AND '1'='1'",
-      "ARGS": "admin' AND '1'='1'",
-      "BODY": "admin' AND '1'='1'",
-      "COOKIE": "admin' AND '1'='1'",
-      "USER-AGENT": "admin' AND '1'='1'",
-      "REFERER": "admin' AND '1'='1'",
-      "HEADER": "admin' AND '1'='1'",
+      "URL": "admin' AND '1'='1",
+      "ARGS": "admin' AND '1'='1",
+      "BODY": "admin' AND '1'='1",
+      "COOKIE": "admin' AND '1'='1",
+      "USER-AGENT": "admin' AND '1'='1",
+      "REFERER": "admin' AND '1'='1",
+      "HEADER": "admin' AND '1'='1",
       "ENCODE": "Base64",
       "BLOCKED": true
     }
