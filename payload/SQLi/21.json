@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "admin'; -- -",
+      "ARGS": "admin'; -- -",
+      "BODY": "admin'; -- -",
+      "COOKIE": "admin'; -- -",
+      "USER-AGENT": "admin'; -- -",
+      "REFERER": "admin'; -- -",
+      "HEADER": "admin'; -- -",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}
