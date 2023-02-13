@@ -46,7 +46,7 @@ Run with the command:
 
 - <code>'--details'</code> - display the False Positive and False Negative payloads. Not available in <code>JSON</code> format.
 
-- <code>'--exclude-dir'</code> - exclude the payload's directory (<code>--exclude-dir='FP'</code>). Multiple use is allowed.
+- <code>'--exclude-dir'</code> - exclude the payload's directory (<code>--exclude-dir='FP'</code> or <code>--exclude-dir='FP' --exclude-dir='XSS'</code>). Multiple use is allowed.
 
 ## Payloads
 
