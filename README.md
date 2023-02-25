@@ -27,11 +27,11 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 
 - <code>'--proxy'</code> (<code>--proxy='http://proxy.example.com:3128'</code>) - option allows to specify where to connect to instead of the host.
 
-- <code>'--header'</code> (<code>--header 'Authorization: Basic YWRtaW46YWRtaW4='</code> or <code>--header 'Authorization: Basic YWRtaW46YWRtaW4=' --header 'X-TOKEN: ABCDEF'</code>) - option allows to specify the HTTP header to send with all requests (e.g. for authentication). Multiple use is allowed.
+- <code>'--header'</code> (<code>--header 'Authorization: Basic YWRtaW46YWRtaW4=' --header 'X-TOKEN: ABCDEF'</code>) - option allows to specify the HTTP header to send with all requests (e.g. for authentication). Multiple use is allowed.
 
 - <code>'--user-agent'</code> (<code>--user-agent 'MyUserAgent 1/1'</code>) - option allows to specify the HTTP User-Agent to send with all requests, except when the User-Agent is set by the payload (<code>"USER-AGENT"</code>).
 
-- <code>'--block-code'</code> (<code>--block-code='222'</code> or <code>--block-code='403' --block-code='222'</code>) - option allows you to specify the HTTP status code to expect when the WAF is blocked. (default is <code>403</code>). Multiple use is allowed.
+- <code>'--block-code'</code> (<code>--block-code='403' --block-code='222'</code>) - option allows you to specify the HTTP status code to expect when the WAF is blocked. (default is <code>403</code>). Multiple use is allowed.
 
 - <code>'--threads'</code> (<code>--threads=15</code>) - option allows to specify the number of parallel scan threads (default is <code>10</code>).
 
@@ -41,7 +41,7 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 
 - <code>'--details'</code> - display the False Positive and False Negative payloads. Not available in <code>JSON</code> format.
 
-- <code>'--exclude-dir'</code> - exclude the payload's directory (<code>--exclude-dir='FP'</code> or <code>--exclude-dir='FP' --exclude-dir='XSS'</code>). Multiple use is allowed.
+- <code>'--exclude-dir'</code> - exclude the payload's directory (<code>--exclude-dir='SQLi' --exclude-dir='XSS'</code>). Multiple use is allowed.
 
 ## Payloads
 
