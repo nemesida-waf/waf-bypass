@@ -13,11 +13,6 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 
 <pre>
 # docker pull nemesida/waf-bypass
-</pre>
-
-Run with the command:
-
-<pre>
 # docker run nemesida/waf-bypass --host='example.com'
 </pre>
 
