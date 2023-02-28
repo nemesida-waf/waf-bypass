@@ -8,7 +8,7 @@
       "USER-AGENT": "%27%22%3E%3Cimg%2Fsrc%2Fonerror%3Dprompt%28%29%3Ejava%2526Tab%253bscript%3Aale%2526Tab%253brt%28%29%3Ciframe%20src%3Djavascript%3Aalert%28%29%2F%2F%3Cs%3Cscript%3Ecript%3Ealert%28%29%3C%2Fs%3Cscript%3Ecript%3E",
       "REFERER": "%27%22%3E%3Cimg%2Fsrc%2Fonerror%3Dprompt%28%29%3Ejava%2526Tab%253bscript%3Aale%2526Tab%253brt%28%29%3Ciframe%20src%3Djavascript%3Aalert%28%29%2F%2F%3Cs%3Cscript%3Ecript%3Ealert%28%29%3C%2Fs%3Cscript%3Ecript%3E",
       "HEADER": "%27%22%3E%3Cimg%2Fsrc%2Fonerror%3Dprompt%28%29%3Ejava%2526Tab%253bscript%3Aale%2526Tab%253brt%28%29%3Ciframe%20src%3Djavascript%3Aalert%28%29%2F%2F%3Cs%3Cscript%3Ecript%3Ealert%28%29%3C%2Fs%3Cscript%3Ecript%3E",
-      "ENCODE": "Base64 UTF-16 HTML-ENTITY",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

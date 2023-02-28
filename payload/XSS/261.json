@@ -1,13 +1,13 @@
 {
   "payload": [
     {
-      "URL": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fjsonp%3Fcallback%3Dpayload%22%3E",
-      "ARGS": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fjsonp%3Fcallback%3Dpayload%22%3E",
-      "BODY": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fjsonp%3Fcallback%3Dpayload%22%3E",
-      "COOKIE": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fjsonp%3Fcallback%3Dpayload%22%3E",
-      "USER-AGENT": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fjsonp%3Fcallback%3Dpayload%22%3E",
-      "REFERER": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fjsonp%3Fcallback%3Dpayload%22%3E",
-      "HEADER": "%3Cscript%20src%3D%22https%3A%2F%2Fexample.com%2Fjsonp%3Fcallback%3Dpayload%22%3E",
+      "URL": "<script src=\"https://example.com/jsonp?callback=payload\">",
+      "ARGS": "<script src=\"https://example.com/jsonp?callback=payload\">",
+      "BODY": "<script src=\"https://example.com/jsonp?callback=payload\">",
+      "COOKIE": "<script src=\"https://example.com/jsonp?callback=payload\">",
+      "USER-AGENT": "<script src=\"https://example.com/jsonp?callback=payload\">",
+      "REFERER": "<script src=\"https://example.com/jsonp?callback=payload\">",
+      "HEADER": "<script src=\"https://example.com/jsonp?callback=payload\">",
       "ENCODE": "Base64 UTF-16 HTML-ENTITY",
       "BLOCKED": true
     }
