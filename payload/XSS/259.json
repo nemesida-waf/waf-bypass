@@ -1,7 +1,6 @@
 {
   "payload": [
     {
-      "URL": "%00script%00>alert%00(%00'1'%00)",
       "ARGS": "%00script%00>alert%00(%00'1'%00)",
       "BODY": "%00script%00>alert%00(%00'1'%00)",
       "COOKIE": "%00script%00>alert%00(%00'1'%00)",
