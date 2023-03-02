@@ -1,13 +1,13 @@
 {
   "payload": [
     {
-      "URL": "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B", 
+      "URL": "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
       "ARGS": "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
       "BODY": "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
-      "COOKIE":  "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
-      "USER-AGENT":  "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
-      "REFERER":  "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
-      "HEADER":  "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
+      "COOKIE": "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
+      "USER-AGENT": "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
+      "REFERER": "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
+      "HEADER": "%3C%3F%3D%60%7B%24%7B~%22%5Cxa0%5Cxb8%5Cxba%5Cxab%22%7D%5B%22%5Cxa0%22%5D%7D%60%3B",
       "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
