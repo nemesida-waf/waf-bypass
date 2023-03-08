@@ -41,7 +41,7 @@ def table_get_result_summary(wb_result):
     payloads_summary_list_fp = []
     payloads_summary_list_fn = []
     table_headers_fn = [7 * ' ' + 'PAYLOAD TYPE', 10 * ' ' + 'PASSED', 10 * ' ' + 'BYPASSED', 10 * ' ' + 'FAILED']
-    table_headers_fp = [14 * ' ' + 'TOTAL', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'FAILED']
+    table_headers_fp = [7 * ' ' + 'PAYLOAD TYPE', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'FAILED']
 
     # get payloads type list
     payloads_list = list(set(['/'.join(k.split(':', 1)[0].split('/')[:-1]) for k in wb_result.keys()]))
@@ -76,7 +76,7 @@ def table_get_result_summary(wb_result):
         failed = str(v[3]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
         
         if k == 'FP':
-            payloads_summary_list_fp.append([total, passed, fx, failed])
+            payloads_summary_list_fp.append([k, passed, fx, failed])
         else:
             payloads_summary_list_fn.append([k, passed, fx, failed])
 
