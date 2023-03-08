@@ -1,7 +1,7 @@
 {
   "payload": [
     {
-      "ARGS": "{\"id\": \"MSB1bmlvbiBzZWxlY3QgdXNlciBmcm9tIHBhc3N3b3Jk\"}",
+      "ARGS": "id=MSB1bmlvbiBzZWxlY3QgdXNlciBmcm9tIHBhc3N3b3Jk",
       "BODY": "{\"id\": \"MSB1bmlvbiBzZWxlY3QgdXNlciBmcm9tIHBhc3N3b3Jk\"}",
       "BLOCKED": true
     }
