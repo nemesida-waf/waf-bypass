@@ -1,0 +1,10 @@
+{
+  "payload": [
+    {
+      "ARGS": "redirectUrl=javascript%3avar{a%3aonerror}%3d{a%3aalert}%3bthrow%2520document.domain",
+      "BODY": "redirectUrl=javascript%3avar{a%3aonerror}%3d{a%3aalert}%3bthrow%2520document.domain",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}
