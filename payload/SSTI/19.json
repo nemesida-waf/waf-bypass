@@ -1,10 +1,10 @@
 {
   "payload": [
     {
-      "ARGS": "{{ config.items()[4][1].__class__.__mro__[2].__subclasses__()\n[40](\"/tmp/flag\").read() }}",
-      "BODY": "{{ config.items()[4][1].__class__.__mro__[2].__subclasses__()\n[40](\"/tmp/flag\").read() }}",
-      "COOKIE": "{{ config.items()[4][1].__class__.__mro__[2].__subclasses__()\n[40](\"/tmp/flag\").read() }}",
-      "HEADER": "{{ config.items()[4][1].__class__.__mro__[2].__subclasses__()\n[40](\"/tmp/flag\").read() }}",
+      "ARGS": "%7B%7B%20config.items%28%29%5B4%5D%5B1%5D.__class__.__mro__%5B2%5D.__subclasses__%28%29%5Cn%5B40%5D%28%5C%22%2Ftmp%2Fflag%5C%22%29.read%28%29%20%7D%7D",
+      "BODY": "%7B%7B%20config.items%28%29%5B4%5D%5B1%5D.__class__.__mro__%5B2%5D.__subclasses__%28%29%5Cn%5B40%5D%28%5C%22%2Ftmp%2Fflag%5C%22%29.read%28%29%20%7D%7D",
+      "COOKIE": "%7B%7B%20config.items%28%29%5B4%5D%5B1%5D.__class__.__mro__%5B2%5D.__subclasses__%28%29%5Cn%5B40%5D%28%5C%22%2Ftmp%2Fflag%5C%22%29.read%28%29%20%7D%7D",
+      "HEADER": "%7B%7B%20config.items%28%29%5B4%5D%5B1%5D.__class__.__mro__%5B2%5D.__subclasses__%28%29%5Cn%5B40%5D%28%5C%22%2Ftmp%2Fflag%5C%22%29.read%28%29%20%7D%7D",
       "ENCODE": "",
       "BLOCKED": true
     }

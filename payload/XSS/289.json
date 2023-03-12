@@ -1,12 +1,12 @@
 {
   "payload": [
     {
-      "ARGS": "'''><iframe srcdoc='%26it;script>;prompt`\n${document.domain}`%26it;/script>'>",
-      "BODY": "'''><iframe srcdoc='%26it;script>;prompt`\n${document.domain}`%26it;/script>'>",
-      "COOKIE": "'''><iframe srcdoc='%26it;script>;prompt`\n${document.domain}`%26it;/script>'>",
-      "USER-AGENT": "'''><iframe srcdoc='%26it;script>;prompt`\n${document.domain}`%26it;/script>'>",
-      "REFERER": "'''><iframe srcdoc='%26it;script>;prompt`\n${document.domain}`%26it;/script>'>",
-      "HEADER": "'''><iframe srcdoc='%26it;script>;prompt`\n${document.domain}`%26it;/script>'>",
+      "ARGS": "'''><iframe srcdoc='%26it;script>;prompt`\n%24{document.domain}`%26it;/script>'>",
+      "BODY": "'''><iframe srcdoc='%26it;script>;prompt`\n%24{document.domain}`%26it;/script>'>",
+      "COOKIE": "'''><iframe srcdoc='%26it;script>;prompt`\n%24{document.domain}`%26it;/script>'>",
+      "USER-AGENT": "'''><iframe srcdoc='%26it;script>;prompt`\n%24{document.domain}`%26it;/script>'>",
+      "REFERER": "'''><iframe srcdoc='%26it;script>;prompt`\n%24{document.domain}`%26it;/script>'>",
+      "HEADER": "'''><iframe srcdoc='%26it;script>;prompt`\n%24{document.domain}`%26it;/script>'>",
       "ENCODE": "Base64",
       "BLOCKED": true
     }

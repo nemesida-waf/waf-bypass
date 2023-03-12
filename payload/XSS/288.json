@@ -1,12 +1,12 @@
 {
   "payload": [
     {
-      "ARGS": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\u0061lert(1)</script x>",
-      "BODY": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\u0061lert(1)</script x>",
-      "COOKIE": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\u0061lert(1)</script x>",
-      "USER-AGENT": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\u0061lert(1)</script x>",
-      "REFERER": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\u0061lert(1)</script x>",
-      "HEADER": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\u0061lert(1)</script x>",
+      "ARGS": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\\u0061lert(1)</script x>",
+      "BODY": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\\u0061lert(1)</script x>",
+      "COOKIE": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\\u0061lert(1)</script x>",
+      "USER-AGENT": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\\u0061lert(1)</script x>",
+      "REFERER": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\\u0061lert(1)</script x>",
+      "HEADER": "<select><noembed></select><script x='a@b'a>\ny='a@b'//a@b%0a\\u0061lert(1)</script x>",
       "ENCODE": "Base64",
       "BLOCKED": true
     }
