@@ -1,0 +1,12 @@
+{
+  "payload": [
+    {
+      "ARGS": "{{ config.items()[4][1].__class__.__mro__[2].__subclasses__()\n[40](\"/tmp/flag\").read() }}",
+      "BODY": "{{ config.items()[4][1].__class__.__mro__[2].__subclasses__()\n[40](\"/tmp/flag\").read() }}",
+      "COOKIE": "{{ config.items()[4][1].__class__.__mro__[2].__subclasses__()\n[40](\"/tmp/flag\").read() }}",
+      "HEADER": "{{ config.items()[4][1].__class__.__mro__[2].__subclasses__()\n[40](\"/tmp/flag\").read() }}",
+      "ENCODE": "",
+      "BLOCKED": true
+    }
+  ]
+}
