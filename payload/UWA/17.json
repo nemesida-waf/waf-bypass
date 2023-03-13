@@ -1,7 +1,7 @@
 {
   "payload": [
     {
-      "URL": "/do.php%00.png",
+      "URL": "/do.php%23.png",
       "ENCODE": "",
       "BLOCKED": true
     }
