@@ -34,7 +34,7 @@ def table_get_result_details(fp, fn):
     get_result_details(fn, 'BYPASSED')
 
 
-def table_get_result_summary(wb_result):
+def table_get_result_summary(wb_result, pdl):
 
     # init
     payloads_summary_dict = {}
@@ -44,12 +44,12 @@ def table_get_result_summary(wb_result):
     table_headers_fp = [7 * ' ' + 'PAYLOAD TYPE', 10 * ' ' + 'PASSED', 10 * ' ' + 'FALSED', 10 * ' ' + 'FAILED']
 
     # get payloads type list
-    payloads_list = list(set(['/'.join(k.split(':', 1)[0].split('/')[:-1]) for k in wb_result.keys()]))
+    payloads_list = list(set([pdl.join(k.split(':', 1)[0].split(pdl)[:-1]) for k in wb_result.keys()]))
     
     # create result dictionary by payloads type
     for payloads in payloads_list:
         
-        payloads_type = payloads.split('/payload/')[1].split('/')[0]  # leave payload type only
+        payloads_type = payloads.split(pdl + 'payload' + pdl)[1].split(pdl)[0]  # leave payload type only
         fx_type = 'FALSED' if payloads_type == 'FP' else 'BYPASSED'
 
         passed = len([k for k, v in wb_result.items() if k.startswith(payloads) and v == 'PASSED'])
@@ -63,8 +63,6 @@ def table_get_result_summary(wb_result):
     for k in sorted(payloads_summary_dict.keys()):
         
         v = payloads_summary_dict[k]
-
-        total = v[0]
 
         prcnt = get_percent_str(v[1], v[0])
         passed = str(v[1]) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'

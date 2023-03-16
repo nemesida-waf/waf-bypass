@@ -25,6 +25,20 @@ def init_session():
     return s
 
 
+def get_delimiter(p):
+    try:
+        # Set the path separator depending on the OS
+        return '\\' if '\\' in p else '/'
+    except Exception as e:
+        print(
+            '{}'
+            'An error occurred while processing path delimiter for {}: {}'
+            '{}'
+            .format(Fore.RED, p, e, Style.RESET_ALL)
+        )
+        return '/'
+        
+
 def zone_combining(data):
     
     # init
@@ -61,10 +75,10 @@ def json_processing(result):
     print(json.dumps(result))
 
 
-def table_processing(result, details):
+def table_processing(result, details, pdl):
 
     # print summary table
-    table_get_result_summary(result)
+    table_get_result_summary(result, pdl)
 
     # print FALSED/BYPASSED tables
     if details:
@@ -224,13 +238,14 @@ class WAFBypass:
         # init path
         relative_path = ''
         work_dir = os.path.dirname(os.path.realpath(__file__))
-        work_dir_payload = work_dir + '/payload'
-
+        work_dir_payload = os.path.join(work_dir, 'payload')
+        pdl = get_delimiter(work_dir)
+        
         def send_payload(json_path):
             try:
-                
+
                 # skip payload if it in exclude_dir
-                if json_path.split('/payload/', 1)[1].split('/')[0].upper() in self.exclude_dir:
+                if json_path.split(pdl + 'payload' + pdl, 1)[1].split(pdl)[0].upper() in self.exclude_dir:
                     return
 
                 # extract payload data
@@ -240,7 +255,7 @@ class WAFBypass:
                 if not payload:
                     err = 'No payloads found during processing file {}'.format(json_path)
                     if self.wb_result_json:
-                        self.wb_result['FAILED'].append({json_path.split('/payload/', 1)[1]: 'No payloads found'})
+                        self.wb_result['FAILED'].append({json_path.split(pdl + 'payload' + pdl, 1)[1]: 'No payloads found'})
                     print(
                         '{}{}{}'
                         .format(Fore.YELLOW, err, Style.RESET_ALL)
@@ -273,14 +288,14 @@ class WAFBypass:
                         return
 
                 # API dir processing
-                if '/API/' in json_path:
+                if pdl + 'API' + pdl in json_path:
                     # add a JSON header
                     headers['Content-Type'] = 'application/json'
                     # reset encode
                     encode_list = []
 
                 # MFD (multipart/form-data) dir processing
-                elif '/MFD/' in json_path:
+                elif pdl + 'MFD' + pdl in json_path:
                     
                     # if BODY is set
                     if payload['BODY']:
@@ -345,7 +360,7 @@ class WAFBypass:
                             v = self.test_url(json_path, z, payload, method, headers, encode)
                             
                             if self.wb_result_json:
-                                self.test_resp_status_processing(k.split('/payload/', 1)[1], v)
+                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
                             else:
                                 self.wb_result[k] = v
 
@@ -359,7 +374,7 @@ class WAFBypass:
                             v = self.test_args(json_path, z, payload, method, headers, encode)
                             
                             if self.wb_result_json:
-                                self.test_resp_status_processing(k.split('/payload/', 1)[1], v)
+                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
                             else:
                                 self.wb_result[k] = v
 
@@ -373,7 +388,7 @@ class WAFBypass:
                             v = self.test_body(json_path, z, payload, method, body, headers, encode)
                             
                             if self.wb_result_json:
-                                self.test_resp_status_processing(k.split('/payload/', 1)[1], v)
+                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
                             else:
                                 self.wb_result[k] = v
 
@@ -387,7 +402,7 @@ class WAFBypass:
                             v = self.test_cookie(json_path, z, payload, method, headers, encode)
                             
                             if self.wb_result_json:
-                                self.test_resp_status_processing(k.split('/payload/', 1)[1], v)
+                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
                             else:
                                 self.wb_result[k] = v
 
@@ -401,7 +416,7 @@ class WAFBypass:
                             v = self.test_ua(json_path, z, payload, method, headers, encode)
                             
                             if self.wb_result_json:
-                                self.test_resp_status_processing(k.split('/payload/', 1)[1], v)
+                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
                             else:
                                 self.wb_result[k] = v
 
@@ -415,7 +430,7 @@ class WAFBypass:
                             v = self.test_referer(json_path, z, payload, method, headers, encode)
                             
                             if self.wb_result_json:
-                                self.test_resp_status_processing(k.split('/payload/', 1)[1], v)
+                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
                             else:
                                 self.wb_result[k] = v
 
@@ -429,14 +444,14 @@ class WAFBypass:
                             v = self.test_header(json_path, z, payload, method, headers, encode)
                             
                             if self.wb_result_json:
-                                self.test_resp_status_processing(k.split('/payload/', 1)[1], v)
+                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
                             else:
                                 self.wb_result[k] = v
 
             except Exception as e:
                 if self.wb_result_json:
                     err = 'An error occurred while processing payload: {}'.format(e)
-                    self.wb_result['FAILED'].append({relative_path.split('/payload/', 1)[1]: err})
+                    self.wb_result['FAILED'].append({relative_path.split(pdl + 'payload' + pdl, 1)[1]: err})
                 else:
                     err = 'An error occurred while processing payload from file {}: {}'.format(relative_path, e)
                     print(
@@ -450,7 +465,9 @@ class WAFBypass:
         for (dir_path, _, filenames) in os.walk(work_dir_payload):
             for filename in filenames:
                 relative_path = os.path.join(dir_path, filename)
-                all_files_list.append(dir_path + '/' + filename)
+                all_files_list.append(
+                    os.path.join(dir_path, filename)
+                )
 
         # Multithreading
         pool = ThreadPool(processes=self.threads)
@@ -460,7 +477,7 @@ class WAFBypass:
         if self.wb_result_json:
             json_processing(self.wb_result)
         else:
-            table_processing(self.wb_result, self.details)
+            table_processing(self.wb_result, self.details, pdl)
 
     def test_resp_status_processing(self, k, v):
         try:
@@ -487,11 +504,14 @@ class WAFBypass:
 
     def test_err_resp_code_processing(self, json_path, z, encode, result):
         try:
-            
+
             if self.wb_result_json:
                 z = z if not encode else ':'.join([z, encode])
                 err = 'An incorrect response was received while processing request: {}'.format(result[1])
-                self.wb_result['FAILED'].append({json_path.split('/payload/', 1)[1] + ' in ' + z: err})
+                pdl = get_delimiter(json_path)
+                self.wb_result['FAILED'].append(
+                    {json_path.split(pdl + 'payload' + pdl, 1)[1] + ' in ' + z: err}
+                )
             else:
                 err = 'An incorrect response was received while processing request from file {} in {}: {}' \
                     .format(json_path, z, result[1])
@@ -509,7 +529,8 @@ class WAFBypass:
         try:
             if self.wb_result_json:
                 z = z if not encode else ':'.join([z, encode])
-                self.wb_result['FAILED'].append({json_path.split('/payload/', 1)[1] + ' in ' + z: str(error)})
+                pdl = get_delimiter(json_path)
+                self.wb_result['FAILED'].append({json_path.split(pdl + 'payload' + pdl, 1)[1] + ' in ' + z: str(error)})
             else:
                 err = 'An error occurred while processing file {} in {}: {}'.format(json_path, z, error)
                 print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
