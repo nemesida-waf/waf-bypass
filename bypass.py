@@ -120,14 +120,14 @@ def payload_encoding(z, payload, encode):
 
                 # processing data list by k/v
                 for item in payload.split('&'):
-                    # k/v
+                    # key/value
                     if '=' in item:
                         # extract k/v
                         k = item.split('=', 1)[0]
                         v = item.split('=', 1)[1]
                         # update data list
                         data_list.append([k, v])
-                    # k only
+                    # value only
                     else:
                         # update data list
                         data_list.append([item])
@@ -138,15 +138,16 @@ def payload_encoding(z, payload, encode):
                 else:
                     res = []
                     for item in data_list:
-                        # k/v
+                        # key/value
                         if len(item) > 1:
                             k = str(item[0])
-                            v = escape(str(item[1]))
+                            v = quote_plus(escape(str(item[1])))
                             res.append(k + '=' + v)
-                        # k only
+                        # value only
                         else:
-                            k = escape(str(item))
-                            res.append(k)
+                            res.append(
+                                quote_plus(escape(str(item[0])))
+                            )
                     return '&'.join(res)
 
             elif encode.upper() == 'UTF-16':
@@ -155,15 +156,16 @@ def payload_encoding(z, payload, encode):
                 else:
                     res = []
                     for item in data_list:
-                        # k/v
+                        # key/value
                         if len(item) > 1:
                             k = str(item[0])
                             v = ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item[1])])
                             res.append(k + '=' + v)
-                        # k only
+                        # value only
                         else:
-                            k = ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item)])
-                            res.append(k)
+                            res.append(
+                                ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item[0])])
+                            )
                     return '&'.join(res)
             
             elif encode.upper() == 'BASE64':
@@ -172,15 +174,16 @@ def payload_encoding(z, payload, encode):
                 else:
                     res = []
                     for item in data_list:
-                        # k/v
+                        # key/value
                         if len(item) > 1:
                             k = str(item[0])
                             v = base64.b64encode(str(item[1]).encode('UTF-8')).decode('UTF-8')
                             res.append(k + '=' + v)
-                        # k only
+                        # value only
                         else:
-                            k = base64.b64encode(str(item).encode('UTF-8')).decode('UTF-8')
-                            res.append(k)
+                            res.append(
+                                base64.b64encode(str(item[0]).encode('UTF-8')).decode('UTF-8')
+                            )
                     return '&'.join(res)
 
             else:
