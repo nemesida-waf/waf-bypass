@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "\"><iframe src=//example.com>",
+      "BODY": "\"><iframe src=//example.com>",
+      "COOKIE": "\"><iframe src=//example.com>",
+      "USER-AGENT": "\"><iframe src=//example.com>",
+      "REFERER": "\"><iframe src=//example.com>",
+      "HEADER": "\"><iframe src=//example.com>",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}
