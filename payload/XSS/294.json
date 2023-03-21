@@ -1,12 +1,12 @@
 {
   "payload": [
     {
-      "ARGS": "\"><iframe src=//⑮.rs>",
-      "BODY": "\"><iframe src=//⑮.rs>",
-      "COOKIE": "\"><iframe src=//⑮.rs>",
-      "USER-AGENT": "\"><iframe src=//⑮.rs>",
-      "REFERER": "\"><iframe src=//⑮.rs>",
-      "HEADER": "\"><iframe src=//⑮.rs>",
+      "ARGS": "\"><iframe src=//%E2%91%AE.rs>",
+      "BODY": "\"><iframe src=//%E2%91%AE.rs>",
+      "COOKIE": "\"><iframe src=//%E2%91%AE.rs>",
+      "USER-AGENT": "\"><iframe src=//%E2%91%AE.rs>",
+      "REFERER": "\"><iframe src=//%E2%91%AE.rs>",
+      "HEADER": "\"><iframe src=//%E2%91%AE.rs>",
       "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
