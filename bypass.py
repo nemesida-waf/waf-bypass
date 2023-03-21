@@ -5,13 +5,12 @@ import json
 import os
 import requests
 import secrets
-import urllib.parse
 
 from colorama import Fore
 from colorama import Style
 from html import escape
 from multiprocessing.dummy import Pool as ThreadPool
-from urllib.parse import urljoin
+from urllib.parse import urljoin, quote_plus
 
 from payloads import get_payload
 from tables import table_get_result_details, table_get_result_summary
@@ -135,7 +134,7 @@ def payload_encoding(z, payload, encode):
 
             if encode.upper() == 'HTML-ENTITY':
                 if not data_list:
-                    return escape(payload)
+                    return quote_plus(escape(payload))
                 else:
                     res = []
                     for item in data_list:
@@ -169,18 +168,18 @@ def payload_encoding(z, payload, encode):
             
             elif encode.upper() == 'BASE64':
                 if not data_list:
-                    return base64.b64encode(urllib.parse.quote_plus(payload).encode('UTF-8')).decode('UTF-8')
+                    return base64.b64encode(payload.encode('UTF-8')).decode('UTF-8')
                 else:
                     res = []
                     for item in data_list:
                         # k/v
                         if len(item) > 1:
                             k = str(item[0])
-                            v = base64.b64encode(urllib.parse.quote_plus(str(item[1])).encode('UTF-8')).decode('UTF-8')
+                            v = base64.b64encode(str(item[1]).encode('UTF-8')).decode('UTF-8')
                             res.append(k + '=' + v)
                         # k only
                         else:
-                            k = base64.b64encode(urllib.parse.quote_plus(str(item)).encode('UTF-8')).decode('UTF-8')
+                            k = base64.b64encode(str(item).encode('UTF-8')).decode('UTF-8')
                             res.append(k)
                     return '&'.join(res)
 
