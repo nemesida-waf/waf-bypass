@@ -8,7 +8,7 @@
       "USER-AGENT": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
       "REFERER": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
       "HEADER": "\\\"><img scr=0x94 onerror=alert(0x000123)>",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

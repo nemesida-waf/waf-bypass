@@ -7,7 +7,7 @@
       "USER-AGENT": "<script/src=//⑮.rs",
       "REFERER": "<script/src=//⑮.rs",
       "HEADER": "<script/src=//⑮.rs",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

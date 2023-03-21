@@ -8,7 +8,7 @@
       "USER-AGENT": "';alert(0x000123)'",
       "REFERER": "';alert(0x000123)'",
       "HEADER": "';alert(0x000123)'",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

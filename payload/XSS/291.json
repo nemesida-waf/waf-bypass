@@ -7,7 +7,7 @@
       "USER-AGENT": "''%3Bvar%20msgbox%3Bif(location.hash)%7Beval(location.hash.slice(1))%7Delse%7Balert(1)%7D%2F%2F%3Cimg%20src%3D%22xxx%3A%2F%2F%22%20onerror%3D%22if(location.hash)%7Beval(location.hash.slice(1))%7Delse%7Balert(1)%7D%22%3Emsgbox%2B1",
       "REFERER": "''%3Bvar%20msgbox%3Bif(location.hash)%7Beval(location.hash.slice(1))%7Delse%7Balert(1)%7D%2F%2F%3Cimg%20src%3D%22xxx%3A%2F%2F%22%20onerror%3D%22if(location.hash)%7Beval(location.hash.slice(1))%7Delse%7Balert(1)%7D%22%3Emsgbox%2B1",
       "HEADER": "''%3Bvar%20msgbox%3Bif(location.hash)%7Beval(location.hash.slice(1))%7Delse%7Balert(1)%7D%2F%2F%3Cimg%20src%3D%22xxx%3A%2F%2F%22%20onerror%3D%22if(location.hash)%7Beval(location.hash.slice(1))%7Delse%7Balert(1)%7D%22%3Emsgbox%2B1",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

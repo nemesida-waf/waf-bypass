@@ -8,7 +8,7 @@
       "USER-AGENT": "<scr<script>ipt>alert(0x000123)</script>",
       "REFERER": "<scr<script>ipt>alert(0x000123)</script>",
       "HEADER": "<scr<script>ipt>alert(0x000123)</script>",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

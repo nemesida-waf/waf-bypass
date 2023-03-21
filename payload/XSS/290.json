@@ -7,7 +7,7 @@
       "USER-AGENT": "<sVg/onfake=\"x=y\"oNload=;1^(co\u006efirm)``^1//",
       "REFERER": "<sVg/onfake=\"x=y\"oNload=;1^(co\u006efirm)``^1//",
       "HEADER": "<sVg/onfake=\"x=y\"oNload=;1^(co\u006efirm)``^1//",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

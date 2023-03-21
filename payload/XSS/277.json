@@ -8,7 +8,7 @@
       "USER-AGENT": "\\\"><BODY ONLOAD=alert(0x000123)>",
       "REFERER": "\\\"><BODY ONLOAD=alert(0x000123)>",
       "HEADER": "\\\"><BODY ONLOAD=alert(0x000123)>",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

@@ -8,7 +8,7 @@
       "USER-AGENT": "%27%27%3B%21-%5C%22%3CXSS%3E%3D%26%7B%28%29%7D",
       "REFERER": "%27%27%3B%21-%5C%22%3CXSS%3E%3D%26%7B%28%29%7D",
       "HEADER": "%27%27%3B%21-%5C%22%3CXSS%3E%3D%26%7B%28%29%7D",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

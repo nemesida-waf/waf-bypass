@@ -7,7 +7,7 @@
       "USER-AGENT": "\"><iframe src=//example.com>",
       "REFERER": "\"><iframe src=//example.com>",
       "HEADER": "\"><iframe src=//example.com>",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]

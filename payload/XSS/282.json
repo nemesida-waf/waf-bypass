@@ -8,7 +8,7 @@
       "USER-AGENT": "%2Balert(0x000123)%2B",
       "REFERER": "%2Balert(0x000123)%2B",
       "HEADER": "%2Balert(0x000123)%2B",
-      "ENCODE": "Base64",
+      "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
   ]
