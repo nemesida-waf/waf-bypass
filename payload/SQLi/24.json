@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "URL": "0'XOR(if(now()=sysdate(),sleep(6-2),0))XOR'Z",
+      "ARGS": "0'XOR(if(now()=sysdate(),sleep(6-2),0))XOR'Z",
+      "BODY": "0'XOR(if(now()=sysdate(),sleep(6-2),0))XOR'Z",
+      "COOKIE": "0'XOR(if(now()=sysdate(),sleep(6-2),0))XOR'Z",
+      "USER-AGENT": "0'XOR(if(now()=sysdate(),sleep(6-2),0))XOR'Z",
+      "REFERER": "0'XOR(if(now()=sysdate(),sleep(6-2),0))XOR'Z",
+      "HEADER": "0'XOR(if(now()=sysdate(),sleep(6-2),0))XOR'Z",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}
