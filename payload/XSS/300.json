@@ -1,0 +1,9 @@
+{
+  "payload": [
+    {
+      "BODY": "<<script>alert('1')<!--a-->a.png",
+      "ENCODE": "",
+      "BLOCKED": true
+    }
+  ]
+}
