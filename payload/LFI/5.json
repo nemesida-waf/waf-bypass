@@ -9,7 +9,7 @@
         "REFERER": "..%255C..%255C..%255C..%255C..%255C..%255C..%255C..%255C%252Fetc%252Fpasswd",
         "HEADER": "..%255C..%255C..%255C..%255C..%255C..%255C..%255C..%255C%252Fetc%252Fpasswd",
         "ENCODE": "Base64 UTF-16",
-      "BLOCKED": true
+        "BLOCKED": true
       }
     ]
   }

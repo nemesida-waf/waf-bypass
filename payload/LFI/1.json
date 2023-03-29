@@ -8,7 +8,7 @@
         "REFERER": "../../../../../../../..//etc/passwd",
         "HEADER": "../../../../../../../..//etc/passwd",
         "ENCODE": "Base64 UTF-16",
-      "BLOCKED": true
+        "BLOCKED": true
       }
     ]
   }

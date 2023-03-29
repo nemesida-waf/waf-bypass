@@ -8,7 +8,7 @@
         "REFERER": "../../../../../../../../../../../../boot.ini",
         "HEADER": "../../../../../../../../../../../../boot.ini",
         "ENCODE": "Base64 UTF-16",
-      "BLOCKED": true
+        "BLOCKED": true
       }
     ]
   }

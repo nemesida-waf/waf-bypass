@@ -9,7 +9,7 @@
         "REFERER": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
         "HEADER": "..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini",
         "ENCODE": "Base64 UTF-16",
-      "BLOCKED": true
+        "BLOCKED": true
       }
     ]
   }
