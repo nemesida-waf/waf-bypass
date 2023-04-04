@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "window[[%27a%27][0]%252b%27lert%27](1337)",
+      "BODY": "window[[%27a%27][0]%252b%27lert%27](1337)",
+      "COOKIE": "window[[%27a%27][0]%252b%27lert%27](1337)",
+      "USER-AGENT": "window[[%27a%27][0]%252b%27lert%27](1337)",
+      "REFERER": "window[[%27a%27][0]%252b%27lert%27](1337)",
+      "HEADER": "window[[%27a%27][0]%252b%27lert%27](1337)",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

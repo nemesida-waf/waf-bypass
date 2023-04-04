@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "window[['a'][0] + 'lert'](1337)",
+      "BODY": "window[['a'][0] + 'lert'](1337)",
+      "COOKIE": "window[['a'][0] + 'lert'](1337)",
+      "USER-AGENT": "window[['a'][0] + 'lert'](1337)",
+      "REFERER": "window[['a'][0] + 'lert'](1337)",
+      "HEADER": "window[['a'][0] + 'lert'](1337)",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
