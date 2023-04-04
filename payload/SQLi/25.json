@@ -3,7 +3,6 @@
     {
       "BODY": "{\"User\": \"admin'; waitfor delay '0:0:8' -- \", \"Password\": \"abcdefg\"}",
       "JSON": true,
-      "ENCODE": "Base64",
       "BLOCKED": true
     }
   ]
