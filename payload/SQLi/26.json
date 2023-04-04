@@ -1,0 +1,10 @@
+{
+  "payload": [
+    {
+      "BODY": "{\"User\": \"abcdefg\", \"Password\": \"admin'; waitfor delay '0:0:8' -- \"}",
+      "JSON": true,
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}
