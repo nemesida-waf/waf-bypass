@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "onfocus=;Function(`ale`+`rt(domain)`)()  ",
+      "BODY": "onfocus=;Function(`ale`+`rt(domain)`)()  ",
+      "COOKIE": "onfocus=;Function(`ale`+`rt(domain)`)()  ",
+      "USER-AGENT": "onfocus=;Function(`ale`+`rt(domain)`)()  ",
+      "REFERER": "onfocus=;Function(`ale`+`rt(domain)`)()  ",
+      "HEADER": "onfocus=;Function(`ale`+`rt(domain)`)()  ",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

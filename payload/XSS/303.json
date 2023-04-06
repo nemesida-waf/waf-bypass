@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "onfocus=;var{cookie}=document;write(cookie)",
+      "BODY": "onfocus=;var{cookie}=document;write(cookie)",
+      "COOKIE": "onfocus=;var{cookie}=document;write(cookie)",
+      "USER-AGENT": "onfocus=;var{cookie}=document;write(cookie)",
+      "REFERER": "onfocus=;var{cookie}=document;write(cookie)",
+      "HEADER": "onfocus=;var{cookie}=document;write(cookie)",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
