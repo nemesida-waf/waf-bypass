@@ -1,0 +1,13 @@
+{
+  "payload": [
+    {
+      "ARGS": "\"><BODy onbeforescriptexecute=\"x1='cookie';c=')';b='a';location='jav'+b+'script:con'+'fir\u006d('+'document'+'.'+x1+c\">",
+      "BODY": "\"><BODy onbeforescriptexecute=\"x1='cookie';c=')';b='a';location='jav'+b+'script:con'+'fir\u006d('+'document'+'.'+x1+c\">",
+      "COOKIE": "\"><BODy onbeforescriptexecute=\"x1='cookie';c=')';b='a';location='jav'+b+'script:con'+'fir\u006d('+'document'+'.'+x1+c\">",
+      "USER-AGENT": "\"><BODy onbeforescriptexecute=\"x1='cookie';c=')';b='a';location='jav'+b+'script:con'+'fir\u006d('+'document'+'.'+x1+c\">",
+      "REFERER": "\"><BODy onbeforescriptexecute=\"x1='cookie';c=')';b='a';location='jav'+b+'script:con'+'fir\u006d('+'document'+'.'+x1+c\">",
+      "HEADER": "\"><BODy onbeforescriptexecute=\"x1='cookie';c=')';b='a';location='jav'+b+'script:con'+'fir\u006d('+'document'+'.'+x1+c\">",
+      "BLOCKED": true
+    }
+  ]
+}
