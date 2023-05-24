@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<--<img/src=%20onerror=confirm``>%20--!>",
+      "BODY": "<--<img/src=%20onerror=confirm``>%20--!>",
+      "COOKIE": "<--<img/src=%20onerror=confirm``>%20--!>",
+      "USER-AGENT": "<--<img/src=%20onerror=confirm``>%20--!>",
+      "REFERER": "<--<img/src=%20onerror=confirm``>%20--!>",
+      "HEADER": "<--<img/src=%20onerror=confirm``>%20--!>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

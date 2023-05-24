@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<sVg/onLy=1 onLoaD=confirm(1)//",
+      "BODY": "<sVg/onLy=1 onLoaD=confirm(1)//",
+      "COOKIE": "<sVg/onLy=1 onLoaD=confirm(1)//",
+      "USER-AGENT": "<sVg/onLy=1 onLoaD=confirm(1)//",
+      "REFERER": "<sVg/onLy=1 onLoaD=confirm(1)//",
+      "HEADER": "<sVg/onLy=1 onLoaD=confirm(1)//",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<iframe src=java&Tab;sc&Tab;ript:al&Tab;ert()></iframe>",
+      "BODY": "<iframe src=java&Tab;sc&Tab;ript:al&Tab;ert()></iframe>",
+      "COOKIE": "<iframe src=java&Tab;sc&Tab;ript:al&Tab;ert()></iframe>",
+      "USER-AGENT": "<iframe src=java&Tab;sc&Tab;ript:al&Tab;ert()></iframe>",
+      "REFERER": "<iframe src=java&Tab;sc&Tab;ript:al&Tab;ert()></iframe>",
+      "HEADER": "<iframe src=java&Tab;sc&Tab;ript:al&Tab;ert()></iframe>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
