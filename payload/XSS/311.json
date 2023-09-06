@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<xss onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:50px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test</span></xss>",
+      "BODY": "<xss onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:50px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test</span></xss>",
+      "COOKIE": "<xss onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:50px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test</span></xss>",
+      "USER-AGENT": "<xss onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:50px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test</span></xss>",
+      "REFERER": "<xss onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:50px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test</span></xss>",
+      "HEADER": "<xss onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:50px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test</span></xss>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "a=<svg/onload=eval(`'`+URL)>#';alert(document.domain)",
+      "BODY": "a=<svg/onload=eval(`'`+URL)>#';alert(document.domain)",
+      "COOKIE": "a=<svg/onload=eval(`'`+URL)>#';alert(document.domain)",
+      "USER-AGENT": "a=<svg/onload=eval(`'`+URL)>#';alert(document.domain)",
+      "REFERER": "a=<svg/onload=eval(`'`+URL)>#';alert(document.domain)",
+      "HEADER": "a=<svg/onload=eval(`'`+URL)>#';alert(document.domain)",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
