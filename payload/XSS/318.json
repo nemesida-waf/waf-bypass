@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<s\\Cr\\ipt\\>alert(document\\.cookie)<\/s\\Cr\\ipt\\>\\;\/>",
+      "BODY": "<s\\Cr\\ipt\\>alert(document\\.cookie)<\/s\\Cr\\ipt\\>\\;\/>",
+      "COOKIE": "<s\\Cr\\ipt\\>alert(document\\.cookie)<\/s\\Cr\\ipt\\>\\;\/>",
+      "USER-AGENT": "<s\\Cr\\ipt\\>alert(document\\.cookie)<\/s\\Cr\\ipt\\>\\;\/>",
+      "REFERER": "<s\\Cr\\ipt\\>alert(document\\.cookie)<\/s\\Cr\\ipt\\>\\;\/>",
+      "HEADER": "<s\\Cr\\ipt\\>alert(document\\.cookie)<\/s\\Cr\\ipt\\>\\;\/>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": "https://twitter.com/thecybertix/status/1700007652280148221"
+}
