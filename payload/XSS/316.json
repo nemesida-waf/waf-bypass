@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "JavaScript://%250Aalert?.(1)//'/*\\'/*\"/*\"/*`/*\\`/*%26apos;)/*<!--></Title/</Style/</Script/</textArea/</iFrame/</noScript>\\74k<K/contentEditable/autoFocus/OnFocus=/*${/*/;{/**/(alert)(1)}//><Base/Href=//X55.is\\76-->",
+      "BODY": "JavaScript://%250Aalert?.(1)//'/*\\'/*\"/*\"/*`/*\\`/*%26apos;)/*<!--></Title/</Style/</Script/</textArea/</iFrame/</noScript>\\74k<K/contentEditable/autoFocus/OnFocus=/*${/*/;{/**/(alert)(1)}//><Base/Href=//X55.is\\76-->",
+      "COOKIE": "JavaScript://%250Aalert?.(1)//'/*\\'/*\"/*\"/*`/*\\`/*%26apos;)/*<!--></Title/</Style/</Script/</textArea/</iFrame/</noScript>\\74k<K/contentEditable/autoFocus/OnFocus=/*${/*/;{/**/(alert)(1)}//><Base/Href=//X55.is\\76-->",
+      "USER-AGENT": "JavaScript://%250Aalert?.(1)//'/*\\'/*\"/*\"/*`/*\\`/*%26apos;)/*<!--></Title/</Style/</Script/</textArea/</iFrame/</noScript>\\74k<K/contentEditable/autoFocus/OnFocus=/*${/*/;{/**/(alert)(1)}//><Base/Href=//X55.is\\76-->",
+      "REFERER": "JavaScript://%250Aalert?.(1)//'/*\\'/*\"/*\"/*`/*\\`/*%26apos;)/*<!--></Title/</Style/</Script/</textArea/</iFrame/</noScript>\\74k<K/contentEditable/autoFocus/OnFocus=/*${/*/;{/**/(alert)(1)}//><Base/Href=//X55.is\\76-->",
+      "HEADER": "JavaScript://%250Aalert?.(1)//'/*\\'/*\"/*\"/*`/*\\`/*%26apos;)/*<!--></Title/</Style/</Script/</textArea/</iFrame/</noScript>\\74k<K/contentEditable/autoFocus/OnFocus=/*${/*/;{/**/(alert)(1)}//><Base/Href=//X55.is\\76-->",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

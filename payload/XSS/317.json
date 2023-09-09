@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<py-script>'\\74img/src/onerror\\75alert(1)\\76'</py-script>",
+      "BODY": "<py-script>'\\74img/src/onerror\\75alert(1)\\76'</py-script>",
+      "COOKIE": "<py-script>'\\74img/src/onerror\\75alert(1)\\76'</py-script>",
+      "USER-AGENT": "<py-script>'\\74img/src/onerror\\75alert(1)\\76'</py-script>",
+      "REFERER": "<py-script>'\\74img/src/onerror\\75alert(1)\\76'</py-script>",
+      "HEADER": "<py-script>'\\74img/src/onerror\\75alert(1)\\76'</py-script>",
+      "ENCODE": "Base64",
+      "BLOCKED": true
+    }
+  ]
+}
