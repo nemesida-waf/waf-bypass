@@ -12,8 +12,8 @@ from html import escape
 from multiprocessing.dummy import Pool as ThreadPool
 from urllib.parse import urljoin, quote_plus
 
-from payloads import get_payload
-from tables import table_get_result_details, table_get_result_summary
+from .payloads import get_payload
+from .tables import table_get_result_details, table_get_result_summary
 
 requests.packages.urllib3.disable_warnings()
 

@@ -16,6 +16,12 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 # docker run nemesida/waf-bypass --host='example.com'
 </pre>
 
+### Run using pipx
+<pre>
+# pipx install git+https://github.com/nemesida-waf/waf-bypass.git
+# &ltpipx bin dir&gt/waf-bypass
+</pre>
+
 ### Run source code from GitHub
 <pre>
 # git clone https://github.com/nemesida-waf/waf_bypass.git /opt/waf-bypass/
