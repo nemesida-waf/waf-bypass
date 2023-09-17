@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<SvG><set%0Aonbegin%0A=%0aa=confirm;a%28%60xss%60)/x>",
+      "BODY": "<SvG><set%0Aonbegin%0A=%0aa=confirm;a%28%60xss%60)/x>",
+      "COOKIE": "<SvG><set%0Aonbegin%0A=%0aa=confirm;a%28%60xss%60)/x>",
+      "USER-AGENT": "<SvG><set%0Aonbegin%0A=%0aa=confirm;a%28%60xss%60)/x>",
+      "REFERER": "<SvG><set%0Aonbegin%0A=%0aa=confirm;a%28%60xss%60)/x>",
+      "HEADER": "<SvG><set%0Aonbegin%0A=%0aa=confirm;a%28%60xss%60)/x>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": "https://twitter.com/xsspayloads/status/1702226889727688789"
+}

@@ -10,6 +10,7 @@ from urllib3 import connectionpool, poolmanager
 
 
 def patch_http_connection_pool(**constructor_kwargs):
+
     """
     This allows to override the default parameters of the
     HTTPConnectionPool constructor.
@@ -30,6 +31,7 @@ def patch_http_connection_pool(**constructor_kwargs):
 
 
 def get_help():
+
     print("Usage: python3 /opt/waf-bypass/main.py --host=example.com:80 [OPTION]")
     print("")
     print("Mandatory arguments:")
@@ -45,6 +47,7 @@ def get_help():
     
 
 def main():
+
     # increasing max pool size
     patch_http_connection_pool(maxsize=50)
 
