@@ -8,7 +8,7 @@ WAF bypass Tool is an open source tool to analyze the security of any WAF for Fa
 
 > It is forbidden to use for illegal and illegal purposes. Don't break the law. We are not responsible for possible risks associated with the use of this software.
 
-### Run from Docker
+### Run using Docker
 The latest waf-bypass always available via the [Docker Hub](https://hub.docker.com/r/nemesida/waf-bypass). It can be easily pulled via the following command:
 
 <pre>
@@ -22,7 +22,7 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 # &ltpipx bin dir&gt/waf-bypass
 </pre>
 
-### Run source code from GitHub
+### Run directly from source code using CLI
 <pre>
 # git clone https://github.com/nemesida-waf/waf_bypass.git /opt/waf-bypass/
 # python3 -m pip install -r /opt/waf-bypass/requirements.txt
