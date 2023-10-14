@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "\"%3e%3cImG%20sRC=X%20OneRRoR=alert(document.cookie)%20\"%3c",
+      "BODY": "\"%3e%3cImG%20sRC=X%20OneRRoR=alert(document.cookie)%20\"%3c",
+      "COOKIE": "\"%3e%3cImG%20sRC=X%20OneRRoR=alert(document.cookie)%20\"%3c",
+      "USER-AGENT": "\"%3e%3cImG%20sRC=X%20OneRRoR=alert(document.cookie)%20\"%3c",
+      "REFERER": "\"%3e%3cImG%20sRC=X%20OneRRoR=alert(document.cookie)%20\"%3c",
+      "HEADER": "\"%3e%3cImG%20sRC=X%20OneRRoR=alert(document.cookie)%20\"%3c",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
