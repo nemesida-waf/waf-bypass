@@ -57,16 +57,16 @@ Depending on the purpose, payloads are located in the appropriate folders:
 - API - API testing payloads
 - CM - Custom HTTP Method payloads
 - GraphQL - GraphQL testing payloads
-- LDAP - LDAP Injection etc. payloads
+- LDAP - LDAP Injection payloads
 - LFI - Local File Include payloads
 - MFD - multipart/form-data payloads
-- NoSQLi - NoSQL injection payloads
+- NoSQLi - NoSQL Injection payloads
 - OR - Open Redirect payloads
 - RCE - Remote Code Execution payloads
 - RFI - Remote File Inclusion payloads
-- SQLi - SQL injection payloads
+- SQLi - SQL Injection payloads
 - SSI - Server-Side Includes payloads
-- SSRF - Server-side request forgery payloads
+- SSRF - Server-Side Request Forgery payloads
 - SSTI - Server-Side Template Injection payloads
 - UWA - Unwanted Access payloads
 - XSS - Cross-Site Scripting payloads
