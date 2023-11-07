@@ -26,7 +26,7 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 <pre>
 # git clone https://github.com/nemesida-waf/waf_bypass.git /opt/waf-bypass/
 # python3 -m pip install -r /opt/waf-bypass/requirements.txt
-# python3 /opt/waf-bypass/main.py --host='example.com'  
+# python3 /opt/waf-bypass/main.py --host='example.com'
 </pre>
 
 #### Options
@@ -43,11 +43,75 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 
 - <code>'--timeout'</code> (<code>--timeout=10</code>) - option allows to specify a request processing timeout in sec. (default is <code>30</code>).
 
-- <code>'--json-format'</code> - an option that allows you to display the result of the work in JSON format (useful for integrating the tool with security platforms).
+- <code>'--exclude-dir'</code> - exclude the payload's directory (<code>--exclude-dir='SQLi,XSS')</code>.
 
-- <code>'--details'</code> - display the False Positive and False Negative payloads. Not available in <code>JSON</code> format.
+- <code>'--json-format'</code> - an option that allows you to display the result of the work in JSON format (useful for integrating the tool with security platforms). If the option is not specified, the output will be in table format (the default format).
 
-- <code>'--exclude-dir'</code> - exclude the payload's directory (<code>--exclude-dir='SQLi' --exclude-dir='XSS'</code>). Multiple use is allowed.
+- <code>'--details'</code> - display the False Positive and False Negative payloads. Not compatible with option <code>--json</code> option.
+
+- <code>'--curl-replay'</code> - display the cURL command to reproduce False Positive, False Negative or Failed requests. Not compatible with option <code>--json</code> option.
+
+## JSON format
+
+JSON output specification example:
+
+<pre>
+{
+  "TARGET": "https://example.com", // defined by --host option
+  "PROXY": {},                     // defined by --proxy option
+  "HEADERS": {                     // defined by --header option
+    "User-Agent": ""
+  },
+  "BLOCK-CODE": [                  // defined by --block-code option
+    ...
+  ],
+  "THREADS": 50,                   // defined by --threads option
+  "TIMEOUT": 30,                   // defined by --timeout option
+  "EXCLUDE-DIR": [                 // defined by --exclude-dir option
+    ...
+  ],
+  "FAILED": {                      // requests with failed processing status
+    "MFD/7.json": {
+      "BODY": "WBHTTPSConnectionPool(host='example.com', port=443): Read timed out. (read timeout=1)"
+    },
+    ...
+  },
+  "PASSED": {                      // passed requests
+    "UWA/3.json": {
+      "URL": "403 RESPONSE CODE"
+    },
+    ...
+  },
+  "FALSED": {                      // requests with false positive processing status
+    ...
+  },
+  "BYPASSED": {                    // requests with false negative processing status
+    "UWA/26.json": {
+      "URL": "200 RESPONSE CODE"
+    },
+    ...
+  },
+  "TestRequest": {                // test requests with processing status, exclude passed
+    "FAILED": {},
+    "FALSED": {
+        "UWA/3.json": {
+        "URL": "403 RESPONSE CODE"
+        },
+        ...
+    }
+    
+  },
+  "CURL": {                       // cURL command to reproduce false positive and false negative requests
+    "FALSED": {},
+    "BYPASSED": {
+      "UWA/26.json": {
+        "URL": "curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36' 'https://example.com/do.php#.png'"
+      },
+      ...
+    }
+  }
+}
+</pre>
 
 ## Payloads
 

@@ -35,16 +35,17 @@ def get_help():
     print("Usage: python3 /opt/waf-bypass/main.py --host=example.com:80 [OPTION]")
     print("")
     print("Mandatory arguments:")
-    print("--proxy       - set proxy-server (e.g. --proxy='http://1.2.3.4:3128)") 
+    print("--proxy       - set proxy-server (e.g. --proxy='http://1.2.3.4:3128)")
     print("--header      - add the HTTP header to all requests (e.g. --header='Authorization: Basic YWRtaW46YWRtaW4='). Multiple use is allowed.")
     print("--user-agent  - set the HTTP User-Agent to send with all requests, except when the User-Agent is set by the payload (e.g. --user-agent='MyUserAgent 1/1')")
     print("--block-code  - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403). Multiple use is allowed.")
     print("--threads     - set the number of parallel scan threads (e.g. --threads=10, default: 4)")
     print("--timeout     - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
     print("--json-format - display the result of the work in JSON format")
-    print("--details     - display the False Positive and False Negative payloads (not available in JSON format)")
-    print("--exclude-dir - exclude the payload's directory (e.g., --exclude-dir='FP'). Multiple use is allowed.")
-    
+    print("--details     - display the False Positive and False Negative payloads")
+    print("--curl-replay - display the cURL command to reproduce False Positive, False Negative or Failed requests")
+    print("--exclude-dir - exclude the payload's directory (e.g., --exclude-dir='SQLi,XSS')")
+
 
 def main():
 
@@ -60,6 +61,7 @@ def main():
     wb_result = {}
     wb_result_json = False
     details = False
+    replay = False
     exclude_dir = []
 
     # set user-agent
@@ -73,28 +75,28 @@ def main():
 
         # options
         launch_args_options = [
-            'help', 'host=', 'proxy=', 'header=', 'user-agent=', 'block-code=', 'threads=', 'timeout=', 'json-format', 'details', 'exclude-dir='
+            'help', 'host=', 'proxy=', 'header=', 'user-agent=', 'block-code=', 'threads=', 'timeout=', 'json-format', 'details', 'curl-replay', 'exclude-dir=',
         ]
 
         # parsing args
         block_code = {}
         optlist, values = getopt.getopt(launch_args, '', launch_args_options)
-        
+
         for k, v in optlist:
-            
+
             if k == '--help':
                 get_help()
                 sys.exit()
-            
+
             if k == '--host':
                 host = str(v).lower()
                 # check host's schema
                 if not re.search(r'^https?://', host):
                     host = 'http://' + host
-            
+
             elif k == '--proxy':
                 proxy = str(v).lower()
-            
+
             elif k == '--header':
                 hname, hval = str(v).split(':')
                 hname = hname.strip()
@@ -103,7 +105,7 @@ def main():
 
             elif k == '--user-agent':
                 headers['User-Agent'] = v
-            
+
             elif k == '--block-code':
                 block_code[int(v)] = True
 
@@ -119,9 +121,12 @@ def main():
             elif k == '--details':
                 details = True
 
+            elif k == '--curl-replay':
+                replay = True
+
             elif k == '--exclude-dir':
                 exclude_dir.extend(v.replace(',', ' ').split())
-        
+
         if len(block_code) == 0:
             block_code[403] = True
 
@@ -144,7 +149,7 @@ def main():
         print('')
         print('##')
         print('# Target:       {}'.format(host))
-        print('# Proxy:        {}'.format(proxy)) if len(proxy) else print('# Proxy:')
+        print('# Proxy:        {}'.format(proxy)) if len(proxy) else print('# Proxy:        not used')
         print('# Timeout:      {}s'.format(timeout))
         print('# Threads:      {}'.format(threads))
         print('# Block code:   {}'.format(list(block_code.keys())[0]))
@@ -154,7 +159,7 @@ def main():
             for k, v in headers.items():
                 if k.lower() == 'user-agent':
                     continue
-                else:    
+                else:
                     print('# Headers:      {}: {}'.format(k, v))
 
         print('# User-Agent:   {}'.format(headers['User-Agent']))
@@ -173,7 +178,7 @@ def main():
         wb_result['EXCLUDE-DIR'] = exclude_dir
 
     # launch WAF Bypass
-    waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, exclude_dir)
+    waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, replay, exclude_dir)
 
     try:
         waf_bypass.start()
@@ -186,6 +191,6 @@ def main():
     if not wb_result_json:
         print('')
 
-    
+
 if __name__ == "__main__":
     main()

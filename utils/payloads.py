@@ -5,7 +5,7 @@ import secrets
 
 
 def get_payload(json_path):
-        
+
     # init
     ret = {}
 

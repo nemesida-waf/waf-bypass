@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import base64
+import curlify
 import json
 import os
 import requests
@@ -13,7 +14,9 @@ from multiprocessing.dummy import Pool as ThreadPool
 from urllib.parse import urljoin, quote_plus
 
 from .payloads import get_payload
-from .tables import table_get_result_details, table_get_result_summary
+from .tables import table_get_result_details
+from .tables import table_get_result_replay
+from .tables import table_get_result_summary
 
 requests.packages.urllib3.disable_warnings()
 
@@ -36,72 +39,84 @@ def get_delimiter(p):
             .format(Fore.RED, p, e, Style.RESET_ALL)
         )
         return '/'
-        
+
 
 def zone_combining(data):
-    
+
     # init
     res = {}
 
     # skip empty list
-    if not len(data):
+    if not data:
         return res
-    
+
     # list processing
     for item in data:
-        k = item.split(':', 1)[0]
-        v = item.split(':', 1)[1]
-        if k not in res:
-            res[k] = []
-        res[k].append(v)
-    
-    # dictionary processing
-    for k, v in res.items():
-        res[k] = '|'.join(v)
+
+        path = item[0]
+        zone = item[1]
+        error = item[2]
+
+        if path not in res:
+            res[path] = {zone: error}
+        else:
+            res[path] = {**res[path], **{zone: error}}
 
     # return result
     return res
 
 
-def json_processing(result):
-    
-    # processing FX (convert list of 'payload:zone' to list of dict. 'payload:z1|z2')
-    result['PASSED'] = zone_combining(result['PASSED'])
-    result['FALSED'] = zone_combining(result['FALSED'])
-    result['BYPASSED'] = zone_combining(result['BYPASSED'])
+def json_processing(statuses, result):
+
+    # basic data processing
+    for k in statuses:
+        result[k] = zone_combining(result[k])
+
+    # other data processing
+    for col in ['cURL', 'TestRequest']:
+        for k in result[col]:
+            result[col][k] = zone_combining(result[col][k])
 
     # print result in JSON
     print(json.dumps(result))
 
 
-def table_processing(result, details, pdl):
+def table_processing(statuses, wb_result, details, replay):
 
     # print summary table
-    table_get_result_summary(result, pdl)
+    table_get_result_summary(statuses, wb_result)
 
-    # print FALSED/BYPASSED tables
+    # show FALSED/BYPASSED details
     if details:
 
-        fp = [k for k, v in result.items() if v == 'FALSED']
-        fn = [k for k, v in result.items() if v == 'BYPASSED']
-        fp.sort()
-        fn.sort()
-        fp = zone_combining(fp)
-        fn = zone_combining(fn)
+        fp = {x[0]: x[1] for x in wb_result['FALSED']}
+        fn = {x[0]: x[1] for x in wb_result['BYPASSED']}
+        fp = dict(sorted(fp.items()))
+        fn = dict(sorted(fn.items()))
         table_get_result_details(fp, fn)
 
+    # show cURL command output
+    if replay:
+        table_get_result_replay(wb_result)
 
-def processing_result(blocked, block_code, status_code):
-    
-    # if status code is not 20x and not in block codes list (403, 222 etc.) 
+
+def processing_result(plp, zone, wb_result_json, blocked, block_code, status_code):
+
+    # if status code is not 20x and not in block codes list (403, 222 etc.)
     if (not str(status_code).startswith('20') or status_code == 404) and status_code not in block_code:
-        status = ['FAILED', str(status_code) + ' RESPONSE CODE']
+        status = ['FAILED', status_code]
+        if not wb_result_json:
+            err = (
+                'An incorrect response was received while processing payload {} in {}: {}'
+                .format(plp, zone, status_code)
+            )
+            print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
     else:
         if blocked:
             status = ['PASSED', status_code] if status_code in block_code else ['BYPASSED', status_code]
         else:
             status = ['PASSED', status_code] if status_code not in block_code else ['FALSED', status_code]
-    
+
     return status
 
 
@@ -167,7 +182,7 @@ def payload_encoding(z, payload, encode):
                                 ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item[0])])
                             )
                     return '&'.join(res)
-            
+
             elif encode.upper() == 'BASE64':
                 if not data_list:
                     return base64.b64encode(payload.encode('UTF-8')).decode('UTF-8')
@@ -194,7 +209,7 @@ def payload_encoding(z, payload, encode):
                     .format(Fore.YELLOW, payload, encode, Style.RESET_ALL)
                 )
                 return payload
-    
+
     except Exception as e:
         print(
             '{}'
@@ -207,8 +222,8 @@ def payload_encoding(z, payload, encode):
 
 class WAFBypass:
 
-    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, exclude_dir):
-        
+    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, replay, exclude_dir):
+
         # init
         self.host = host
         self.proxy = {'http': proxy, 'https': proxy}
@@ -219,49 +234,67 @@ class WAFBypass:
         self.wb_result = wb_result
         self.wb_result_json = wb_result_json
         self.details = details
+        self.replay = replay
         self.exclude_dir = exclude_dir
 
         # init statuses
         self.statuses = [
-            'PASSED',    # OK
-            'FAILED',    # Failed requests (e.g.,cannot connect to server, incorrect response code etc.)
-            'FALSED',    # False Positive
-            'BYPASSED',  # False Negative
+            'FAILED',     # Failed requests (incorrect response code, can not connect to server) etc.)
+            'PASSED',     # OK
+            'FALSED',     # False Positive
+            'BYPASSED',   # False Negative
         ]
+
+        # init zones
         self.zones = ['URL', 'ARGS', 'BODY', 'COOKIE', 'USER-AGENT', 'REFERER', 'HEADER']
 
-        # add extra keys for JSON format
-        if self.wb_result_json:
-            for k in self.statuses:
-                self.wb_result[k] = []
+        # basic output init
+        for k in self.statuses:
+            self.wb_result[k] = []
+
+        # cURL command output init
+        col = 'TestRequest'
+        self.wb_result[col] = {}
+        for k in self.statuses:
+            if k not in ['PASSED', 'BYPASSED']:
+                self.wb_result[col][k] = []
+
+        # cURL command output init
+        col = 'cURL'
+        self.wb_result[col] = {}
+        for k in self.statuses:
+            if k not in ['FAILED', 'PASSED']:
+                self.wb_result[col][k] = []
 
     def start(self):
-       
+
         # init path
         relative_path = ''
         work_dir = os.path.dirname(os.path.realpath(__file__))
         work_dir_payload = os.path.join(work_dir, 'payload')
         pdl = get_delimiter(work_dir)
-        
+
         def send_payload(json_path):
             try:
 
+                # init
+                k = json_path.split(pdl + 'payload' + pdl, 1)[1]
+
                 # skip payload if it in exclude_dir
-                if json_path.split(pdl + 'payload' + pdl, 1)[1].split(pdl)[0].upper() in self.exclude_dir:
+                if k.split(pdl)[0].upper() in self.exclude_dir:
                     return
 
                 # extract payload data
                 payload = get_payload(json_path)
-                
+
                 # if payload is empty
                 if not payload:
-                    err = 'No payloads found during processing file {}'.format(json_path)
-                    if self.wb_result_json:
-                        self.wb_result['FAILED'].append({json_path.split(pdl + 'payload' + pdl, 1)[1]: 'No payloads found'})
-                    print(
-                        '{}{}{}'
-                        .format(Fore.YELLOW, err, Style.RESET_ALL)
-                    )
+                    if not self.wb_result_json:
+                        err = 'No payloads found during processing file {}'.format(json_path)
+                        print(
+                            '{}{}{}'
+                            .format(Fore.YELLOW, err, Style.RESET_ALL)
+                        )
                     return
 
                 # init
@@ -281,12 +314,12 @@ class WAFBypass:
                     # check ENCODE
                     if payload['ENCODE']:
                         print(
-                                '{}'
-                                'An error occurred while processing payload from file {}:'
-                                ' simultaneous use of "JSON" and "ENCODE" is prohibited'
-                                '{}'
-                                .format(Fore.YELLOW, json_path, Style.RESET_ALL)
-                            )
+                            '{}'
+                            'An error occurred while processing payload from file {}:'
+                            ' simultaneous use of "JSON" and "ENCODE" is prohibited'
+                            '{}'
+                            .format(Fore.YELLOW, json_path, Style.RESET_ALL)
+                        )
                         return
 
                 # API dir processing
@@ -298,7 +331,7 @@ class WAFBypass:
 
                 # MFD (multipart/form-data) dir processing
                 elif pdl + 'MFD' + pdl in json_path:
-                    
+
                     # if BODY is set
                     if payload['BODY']:
 
@@ -311,7 +344,7 @@ class WAFBypass:
                             headers['Content-Type'] = 'multipart/form-data; boundary=' + payload['BOUNDARY']
 
                         else:
-                            
+
                             # set body/headers
                             boundary = secrets.token_hex(30)  # 60 symbols
                             body = '--' + boundary + '\r\n' \
@@ -331,19 +364,22 @@ class WAFBypass:
                 # encode list processing
                 encode_list.append('')
 
+                # set payload path
+                plp = json_path.split(pdl + 'payload' + pdl, 1)[1]
+
                 # processing the payload of each zone
-                for z in payload:
+                for zone in payload:
 
                     # skip specific zone (e.g., boundary, method etc.)
-                    if z not in self.zones:
+                    if zone not in self.zones:
                         continue
 
                     # skip empty
-                    if not payload[z]:
+                    if not payload[zone]:
                         continue
 
                     # reset the method
-                    default_method = 'post' if z == 'BODY' else 'get'
+                    default_method = 'post' if zone == 'BODY' else 'get'
                     method = default_method if not payload['METHOD'] else payload['METHOD']
 
                     ##
@@ -352,109 +388,78 @@ class WAFBypass:
 
                     for encode in encode_list:
 
-                        if z == 'URL':
-                            
+                        if zone == 'URL':
+
                             if not encode:
-                                k = ':'.join([str(json_path), str(z).upper()])
+                                k = ':'.join([str(json_path), str(zone).upper()])
                             else:
                                 continue
 
-                            v = self.test_url(json_path, z, payload, method, headers, encode)
-                            
-                            if self.wb_result_json:
-                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
-                            else:
-                                self.wb_result[k] = v
+                            result, curl = self.test_url(plp, zone, payload, method, headers, encode)
+                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
-                        elif z == 'ARGS':
-                            
+                        elif zone == 'ARGS':
+
                             if not encode:
-                                k = ':'.join([str(json_path), str(z).upper()])
+                                k = ':'.join([str(json_path), str(zone).upper()])
                             else:
-                                k = ':'.join([str(json_path), str(z).upper(), encode.upper()])
+                                k = ':'.join([str(json_path), str(zone).upper(), encode.upper()])
 
-                            v = self.test_args(json_path, z, payload, method, headers, encode)
-                            
-                            if self.wb_result_json:
-                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
-                            else:
-                                self.wb_result[k] = v
+                            result, curl = self.test_args(plp, zone, payload, method, headers, encode)
+                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
-                        elif z == 'BODY':
-                            
+                        elif zone == 'BODY':
+
                             if not encode:
-                                k = ':'.join([str(json_path), str(z).upper()])
+                                k = ':'.join([str(json_path), str(zone).upper()])
                             else:
-                                k = ':'.join([str(json_path), str(z).upper(), encode.upper()])
+                                k = ':'.join([str(json_path), str(zone).upper(), encode.upper()])
 
-                            v = self.test_body(json_path, z, payload, method, body, headers, encode)
-                            
-                            if self.wb_result_json:
-                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
-                            else:
-                                self.wb_result[k] = v
+                            result, curl = self.test_body(plp, zone, payload, method, body, headers, encode)
+                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
-                        elif z == 'COOKIE':
-                            
+                        elif zone == 'COOKIE':
+
                             if not encode:
-                                k = ':'.join([str(json_path), str(z).upper()])
+                                k = ':'.join([str(json_path), str(zone).upper()])
                             else:
-                                k = ':'.join([str(json_path), str(z).upper(), encode.upper()])
+                                k = ':'.join([str(json_path), str(zone).upper(), encode.upper()])
 
-                            v = self.test_cookie(json_path, z, payload, method, headers, encode)
-                            
-                            if self.wb_result_json:
-                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
-                            else:
-                                self.wb_result[k] = v
+                            result, curl = self.test_cookie(plp, zone, payload, method, headers, encode)
+                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
-                        elif z == 'USER-AGENT':
-                            
+                        elif zone == 'USER-AGENT':
+
                             if not encode:
-                                k = ':'.join([str(json_path), str(z).upper()])
+                                k = ':'.join([str(json_path), str(zone).upper()])
                             else:
                                 continue
 
-                            v = self.test_ua(json_path, z, payload, method, headers, encode)
-                            
-                            if self.wb_result_json:
-                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
-                            else:
-                                self.wb_result[k] = v
+                            result, curl = self.test_ua(plp, zone, payload, method, headers, encode)
+                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
-                        elif z == 'REFERER':
-                            
+                        elif zone == 'REFERER':
+
                             if not encode:
-                                k = ':'.join([str(json_path), str(z).upper()])
+                                k = ':'.join([str(json_path), str(zone).upper()])
                             else:
                                 continue
 
-                            v = self.test_referer(json_path, z, payload, method, headers, encode)
-                            
-                            if self.wb_result_json:
-                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
-                            else:
-                                self.wb_result[k] = v
+                            result, curl = self.test_referer(plp, zone, payload, method, headers, encode)
+                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
-                        elif z == 'HEADER':
-                            
+                        elif zone == 'HEADER':
+
                             if not encode:
-                                k = ':'.join([str(json_path), str(z).upper()])
+                                k = ':'.join([str(json_path), str(zone).upper()])
                             else:
-                                k = ':'.join([str(json_path), str(z).upper(), encode.upper()])
+                                k = ':'.join([str(json_path), str(zone).upper(), encode.upper()])
 
-                            v = self.test_header(json_path, z, payload, method, headers, encode)
-                            
-                            if self.wb_result_json:
-                                self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], v)
-                            else:
-                                self.wb_result[k] = v
+                            result, curl = self.test_header(plp, zone, payload, method, headers, encode)
+                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
             except Exception as e:
-                if self.wb_result_json:
-                    err = 'An error occurred while processing payload: {}'.format(e)
-                    self.wb_result['FAILED'].append({relative_path.split(pdl + 'payload' + pdl, 1)[1]: err})
-                else:
+                if not self.wb_result_json:
                     err = 'An error occurred while processing payload from file {}: {}'.format(relative_path, e)
                     print(
                         '{}{}{}'
@@ -475,255 +480,237 @@ class WAFBypass:
         pool = ThreadPool(processes=self.threads)
         pool.map(send_payload, all_files_list)
 
-        # Processing result
+        # JSON output
         if self.wb_result_json:
-            json_processing(self.wb_result)
+            json_processing(self.statuses, self.wb_result)
+        # Normal output
         else:
-            table_processing(self.wb_result, self.details, pdl)
+            table_processing(self.statuses, self.wb_result, self.details, self.replay)
 
-    def test_resp_status_processing(self, k, v):
+    def test_resp_status_processing(self, k, result, curl):
         try:
-
-            if v in ['PASSED', 'FALSED', 'BYPASSED']:
-                self.wb_result[v].append(k)
-            elif v == 'FAILED':
-                return
-            else:
-                print(
-                    '{}'
-                    'An error occurred while processing request status: {} ({}) not in PASSED/FAILED/FALSED/BYPASSED'
-                    '{}'
-                    .format(Fore.YELLOW, v, k, Style.RESET_ALL)
-                )
         
+            if result:
+
+                # init
+                plp = k.split(':', 1)[0]
+                zone = k.split(':', 1)[1]
+                status = result[0]
+
+                # update with basic data
+                self.wb_result[status].append([plp, zone, str(result[1]) + ' RESPONSE CODE'])
+
+                # update with cURL data
+                if status not in ['PASSED', 'FAILED']:
+                    self.wb_result['cURL'][status].append([plp, zone, curl])
+
         except Exception as e:
             print(
                 '{}'
-                'An error occurred while processing test\'s status: {}'
+                'An error occurred while processing the status of the request: {}'
                 '{}'
                 .format(Fore.YELLOW, e, Style.RESET_ALL)
             )
 
-    def test_err_resp_code_processing(self, json_path, z, encode, result):
-        try:
-
-            if self.wb_result_json:
-                z = z if not encode else ':'.join([z, encode])
-                err = 'An incorrect response was received while processing request: {}'.format(result[1])
-                pdl = get_delimiter(json_path)
-                self.wb_result['FAILED'].append(
-                    {json_path.split(pdl + 'payload' + pdl, 1)[1] + ' in ' + z: err}
-                )
-            else:
-                err = 'An incorrect response was received while processing request from file {} in {}: {}' \
-                    .format(json_path, z, result[1])
-                print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
-        
-        except Exception as e:
-            print(
-                '{}'
-                'An error occurred while processing test\'s error response code: {}'
-                '{}'
-                .format(Fore.YELLOW, e, Style.RESET_ALL)
-            )
-
-    def test_fail_response_processing(self, json_path, z, encode, error):
-        try:
-            if self.wb_result_json:
-                z = z if not encode else ':'.join([z, encode])
-                pdl = get_delimiter(json_path)
-                self.wb_result['FAILED'].append({json_path.split(pdl + 'payload' + pdl, 1)[1] + ' in ' + z: str(error)})
-            else:
-                err = 'An error occurred while processing file {} in {}: {}'.format(json_path, z, error)
-                print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
-        except Exception as e:
-            print(
-                '{}'
-                'An error occurred while processing test\'s fail response code: {}'
-                '{}'
-                .format(Fore.YELLOW, e, Style.RESET_ALL)
-            )
-
-    def test_noblocked(self, method, headers):
-        try:
-
-            headers = {**self.headers, **headers}
-
-            s = init_session()
-            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            result = processing_result(False, self.block_code, result.status_code)
-
-            # check status code
-            if result[0] == 'PASSED':
-                return
-            elif result[0] == 'FAILED':
-                print(
-                    '{}'
-                    'An incorrect response was received while processing test request to {}: {}'
-                    '{}'
-                    .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
-                )
-            else:
-                print(
-                    '{}'
-                    'An error occurred while processing test request to {}: access blocked ({})'
-                    ' (the auto-ban policy might be enabled)'
-                    '{}'
-                    .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
-                )
-
-        except Exception as error:
-            if self.wb_result_json:
-                self.wb_result['FAILED'].append({'Test request': str(error)})
-            else:
-                err = 'An incorrect response was received while test request: {}'.format(error)
-                print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
-
-    def test_url(self, json_path, z, payload, method, headers, encode):            
+    def test_error_response_processing(self, plp, zone, encode, error):
         try:
 
             # init
-            encoded_payload = payload_encoding(z, payload[z], encode)
+            status = 'FAILED'
+            zone = zone if not encode else ':'.join([zone, encode])
+
+            # update with basic data
+            self.wb_result[status].append([plp, zone, str(error)])
+
+            # Normal output
+            if not self.wb_result_json:
+                err = 'An error occurred while processing payload {} in {}: {}'.format(plp, zone, error)
+                print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
+
+        except Exception as e:
+
+            if not self.wb_result_json:
+                print(
+                    '{}'
+                    'An error occurred while processing fail response code of the request: {}'
+                    '{}'
+                    .format(Fore.YELLOW, e, Style.RESET_ALL)
+                )
+
+    def test_noblocked(self, method, headers):
+
+        # init
+        k = 'TestRequest-{}'.format(method)
+        z = 'DEFAULT'
+
+        # send test request
+        try:
+
+            # send the request
+            s = init_session()
+            headers = {**self.headers, **headers}
+            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
+            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+            result = processing_result(k, z, self.wb_result_json, False, self.block_code, result.status_code)
+
+            # FALSED/FAILED
+            if result[0] in ['FAILED', 'FALSED']:
+
+                # init
+                status = result[0]
+
+                # Normal output
+                if not self.wb_result_json:
+
+                    # FAILED
+                    if status == 'FAILED':
+                        print(
+                            '{}'
+                            'An error occurred while processing test request to {}: access blocked ({})'
+                            ' (the auto-ban policy might be enabled)'
+                            '{}'
+                            .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
+                        )
+
+                    # BYPASSED/FALSED
+                    else:
+                        print(
+                            '{}'
+                            'An incorrect response was received while processing test request to {}: {}'
+                            '{}'
+                            .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
+                        )
+
+                    # cURL data
+                    print('Replay with cURL: {}'.format(curl))
+
+            else:
+                return
+
+        except Exception as error:
+
+            # Normal output
+            if not self.wb_result_json:
+                err = 'An incorrect response was received while sending test request to {}: {}'.format(self.host, error)
+                print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
+
+    def test_url(self, plp, zone, payload, method, headers, encode):
+        try:
+
+            # init
+            encoded_payload = payload_encoding(zone, payload[zone], encode)
             host = urljoin(self.host, encoded_payload)
             headers = {**self.headers, **headers}
 
             s = init_session()
             result = s.request(method, host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
-            v = result[0]
-
-            if v == 'FAILED':
-                self.test_err_resp_code_processing(json_path, z, encode, result[1])
+            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
+            return result, curl
 
         except Exception as error:
-            v = 'FAILED'
-            self.test_fail_response_processing(json_path, z, encode, error)
+            self.test_error_response_processing(plp, zone, encode, error)
+            return None, None
 
-        return v
-
-    def test_args(self, json_path, z, payload, method, headers, encode):
+    def test_args(self, plp, zone, payload, method, headers, encode):
         try:
-            
+
             # init
-            encoded_payload = payload_encoding(z, payload[z], encode)
+            encoded_payload = payload_encoding(zone, payload[zone], encode)
             headers = {**self.headers, **headers}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, params=encoded_payload, proxies=self.proxy, timeout=self.timeout, verify=False)
-            result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
-            v = result[0]
-
-            if v == 'FAILED':
-                self.test_err_resp_code_processing(json_path, z, encode, result[1])
+            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
+            return result, curl
 
         except Exception as error:
-            v = 'FAILED'
-            self.test_fail_response_processing(json_path, z, encode, error)
+            self.test_error_response_processing(plp, zone, encode, error)
+            return None, None
 
-        return v
-
-    def test_body(self, json_path, z, payload, method, body, headers, encode):
+    def test_body(self, plp, zone, payload, method, body, headers, encode):
         try:
 
             # init
-            encoded_payload = payload_encoding(z, body, encode)
+            encoded_payload = payload_encoding(zone, body, encode)
             headers = {**self.headers, **headers}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, data=encoded_payload, proxies=self.proxy, timeout=self.timeout, verify=False)
-            result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
-            v = result[0]
-
-            if v == 'FAILED':
-                self.test_err_resp_code_processing(json_path, z, encode, result[1])
+            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
+            return result, curl
 
         except Exception as error:
-            v = 'FAILED'
-            self.test_fail_response_processing(json_path, z, encode, error)
+            self.test_error_response_processing(plp, zone, encode, error)
+            return None, None
 
-        return v
-
-    def test_cookie(self, json_path, z, payload, method, headers, encode):
+    def test_cookie(self, plp, zone, payload, method, headers, encode):
         try:
-            
+
             # init
-            encoded_payload = payload_encoding(z, payload[z], encode)
+            encoded_payload = payload_encoding(zone, payload[zone], encode)
             headers = {**self.headers, **headers}
             cookies = {f"WBC-{secrets.token_hex(3)}": encoded_payload}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, cookies=cookies, proxies=self.proxy, timeout=self.timeout, verify=False)
-            result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
-            v = result[0]
-
-            if v == 'FAILED':
-                self.test_err_resp_code_processing(json_path, z, encode, result[1])
+            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
+            return result, curl
 
         except Exception as error:
-            v = 'FAILED'
-            self.test_fail_response_processing(json_path, z, encode, error)
+            self.test_error_response_processing(plp, zone, encode, error)
+            return None, None
 
-        return v
-
-    def test_ua(self, json_path, z, payload, method, headers, encode):
+    def test_ua(self, plp, zone, payload, method, headers, encode):
         try:
-            
+
             # init
-            encoded_payload = payload_encoding(z, payload[z], encode)
+            encoded_payload = payload_encoding(zone, payload[zone], encode)
             headers = {**self.headers, **headers, 'User-Agent': encoded_payload}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
-            v = result[0]
-
-            if v == 'FAILED':
-                self.test_err_resp_code_processing(json_path, z, encode, result[1])
+            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
+            return result, curl
 
         except Exception as error:
-            v = 'FAILED'
-            self.test_fail_response_processing(json_path, z, encode, error)
+            self.test_error_response_processing(plp, zone, encode, error)
+            return None, None
 
-        return v
-
-    def test_referer(self, json_path, z, payload, method, headers, encode):
+    def test_referer(self, plp, zone, payload, method, headers, encode):
         try:
 
             # init
-            encoded_payload = payload_encoding(z, payload[z], encode)
+            encoded_payload = payload_encoding(zone, payload[zone], encode)
             headers = {**self.headers, **headers, 'Referer': encoded_payload}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
-            v = result[0]
-
-            if v == 'FAILED':
-                self.test_err_resp_code_processing(json_path, z, encode, result[1])
+            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
+            return result, curl
 
         except Exception as error:
-            v = 'FAILED'
-            self.test_fail_response_processing(json_path, z, encode, error)
+            self.test_error_response_processing(plp, zone, encode, error)
+            return None, None
 
-        return v
-
-    def test_header(self, json_path, z, payload, method, headers, encode):            
+    def test_header(self, plp, zone, payload, method, headers, encode):
         try:
 
             # init
-            encoded_payload = payload_encoding(z, payload[z], encode)
+            encoded_payload = payload_encoding(zone, payload[zone], encode)
             headers = {**self.headers, **headers, f"WBH-{secrets.token_hex(3)}": encoded_payload}
 
             s = init_session()
             result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            result = processing_result(payload['BLOCKED'], self.block_code, result.status_code)
-            v = result[0]
-
-            if v == 'FAILED':
-                self.test_err_resp_code_processing(json_path, z, encode, result[1])
+            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
+            return result, curl
 
         except Exception as error:
-            v = 'FAILED'
-            self.test_fail_response_processing(json_path, z, encode, error)
-
-        return v
+            self.test_error_response_processing(plp, zone, encode, error)
+            return None, None
