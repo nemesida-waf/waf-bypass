@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='waf-bypass',
-    version='3',
+    version='2.0',
     description='Check your WAF before an attacker does',
     author='Nemesida WAF team',
     url='https://github.com/nemesida-waf/waf-bypass',
