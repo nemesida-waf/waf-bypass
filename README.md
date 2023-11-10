@@ -47,9 +47,9 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 
 - <code>'--json-format'</code> - an option that allows you to display the result of the work in JSON format (useful for integrating the tool with security platforms). If the option is not specified, the output will be in table format (the default format).
 
-- <code>'--details'</code> - display the False Positive and False Negative payloads. Not compatible with option <code>--json</code> option.
+- <code>'--details'</code> - display the False Positive and False Negative payloads. Not compatible with option <code>--json-format</code> option.
 
-- <code>'--curl-replay'</code> - display the cURL command to reproduce False Positive, False Negative or Failed requests. Not compatible with option <code>--json</code> option.
+- <code>'--curl-replay'</code> - display the cURL command to reproduce False Positive, False Negative or Failed requests. Not compatible with option <code>--json-format</code> option.
 
 ## JSON format
 
