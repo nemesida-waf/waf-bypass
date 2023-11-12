@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "javascript:var a=\"ale\";var b=\"rt\";var c=\"()\";decodeURI(\"<button popovertarget=x>Click me</button><hvita onbeforetoggle=\"+a+b+c+\" popover id=x>Hvita</hvita>\")",
+      "BODY": "javascript:var a=\"ale\";var b=\"rt\";var c=\"()\";decodeURI(\"<button popovertarget=x>Click me</button><hvita onbeforetoggle=\"+a+b+c+\" popover id=x>Hvita</hvita>\")",
+      "COOKIE": "javascript:var a=\"ale\";var b=\"rt\";var c=\"()\";decodeURI(\"<button popovertarget=x>Click me</button><hvita onbeforetoggle=\"+a+b+c+\" popover id=x>Hvita</hvita>\")",
+      "USER-AGENT": "javascript:var a=\"ale\";var b=\"rt\";var c=\"()\";decodeURI(\"<button popovertarget=x>Click me</button><hvita onbeforetoggle=\"+a+b+c+\" popover id=x>Hvita</hvita>\")",
+      "REFERER": "javascript:var a=\"ale\";var b=\"rt\";var c=\"()\";decodeURI(\"<button popovertarget=x>Click me</button><hvita onbeforetoggle=\"+a+b+c+\" popover id=x>Hvita</hvita>\")",
+      "HEADER": "javascript:var a=\"ale\";var b=\"rt\";var c=\"()\";decodeURI(\"<button popovertarget=x>Click me</button><hvita onbeforetoggle=\"+a+b+c+\" popover id=x>Hvita</hvita>\")",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
