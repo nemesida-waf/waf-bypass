@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<svg/ONxss='0'/ONload=location=window[`atob`]`amF2YXNjcmlwdDphbGVydCgxKQ==`;//",
+      "BODY": "<svg/ONxss='0'/ONload=location=window[`atob`]`amF2YXNjcmlwdDphbGVydCgxKQ==`;//",
+      "COOKIE": "<svg/ONxss='0'/ONload=location=window[`atob`]`amF2YXNjcmlwdDphbGVydCgxKQ==`;//",
+      "USER-AGENT": "<svg/ONxss='0'/ONload=location=window[`atob`]`amF2YXNjcmlwdDphbGVydCgxKQ==`;//",
+      "REFERER": "<svg/ONxss='0'/ONload=location=window[`atob`]`amF2YXNjcmlwdDphbGVydCgxKQ==`;//",
+      "HEADER": "<svg/ONxss='0'/ONload=location=window[`atob`]`amF2YXNjcmlwdDphbGVydCgxKQ==`;//",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

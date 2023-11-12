@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<a/autofocus+ONxss='0'/ONfocus=alert`0`+href>Hello</a>",
+      "BODY": "<a/autofocus+ONxss='0'/ONfocus=alert`0`+href>Hello</a>",
+      "COOKIE": "<a/autofocus+ONxss='0'/ONfocus=alert`0`+href>Hello</a>",
+      "USER-AGENT": "<a/autofocus+ONxss='0'/ONfocus=alert`0`+href>Hello</a>",
+      "REFERER": "<a/autofocus+ONxss='0'/ONfocus=alert`0`+href>Hello</a>",
+      "HEADER": "<a/autofocus+ONxss='0'/ONfocus=alert`0`+href>Hello</a>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
