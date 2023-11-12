@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<inpuT autofocus oNFocus=\"setTimeout(function() { /*\\*/top['al'+'\u0065'+'rt'](1)/*\\*/ }, 5000);\"></inpuT%3E;",
+      "BODY": "<inpuT autofocus oNFocus=\"setTimeout(function() { /*\\*/top['al'+'\u0065'+'rt'](1)/*\\*/ }, 5000);\"></inpuT%3E;",
+      "COOKIE": "<inpuT autofocus oNFocus=\"setTimeout(function() { /*\\*/top['al'+'\u0065'+'rt'](1)/*\\*/ }, 5000);\"></inpuT%3E;",
+      "USER-AGENT": "<inpuT autofocus oNFocus=\"setTimeout(function() { /*\\*/top['al'+'\u0065'+'rt'](1)/*\\*/ }, 5000);\"></inpuT%3E;",
+      "REFERER": "<inpuT autofocus oNFocus=\"setTimeout(function() { /*\\*/top['al'+'\u0065'+'rt'](1)/*\\*/ }, 5000);\"></inpuT%3E;",
+      "HEADER": "<inpuT autofocus oNFocus=\"setTimeout(function() { /*\\*/top['al'+'\u0065'+'rt'](1)/*\\*/ }, 5000);\"></inpuT%3E;",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
