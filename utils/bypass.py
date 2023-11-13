@@ -33,16 +33,12 @@ def get_delimiter(p):
         return '\\' if '\\' in p else '/'
     except Exception as e:
         print(
-            '{}'
-            'An error occurred while processing path delimiter for {}: {}'
-            '{}'
-            .format(Fore.RED, p, e, Style.RESET_ALL)
+            f'{Fore.RED}An error occurred while processing path delimiter for {p}: {e}{Style.RESET_ALL}'
         )
         return '/'
 
 
 def zone_combining(data):
-
     # init
     res = {}
 
@@ -57,17 +53,12 @@ def zone_combining(data):
         zone = item[1]
         error = item[2]
 
-        if path not in res:
-            res[path] = {zone: error}
-        else:
-            res[path] = {**res[path], **{zone: error}}
-
+        res[path] = {**res[path], **{zone: error}} if path in res else {zone: error}
     # return result
     return res
 
 
 def json_processing(statuses, result):
-
     # basic data processing
     for k in statuses:
         result[k] = zone_combining(result[k])
@@ -82,13 +73,11 @@ def json_processing(statuses, result):
 
 
 def table_processing(statuses, wb_result, details, replay):
-
     # print summary table
     table_get_result_summary(statuses, wb_result)
 
     # show FALSED/BYPASSED details
     if details:
-
         fp = {x[0]: x[1] for x in wb_result['FALSED']}
         fn = {x[0]: x[1] for x in wb_result['BYPASSED']}
         fp = dict(sorted(fp.items()))
@@ -101,21 +90,16 @@ def table_processing(statuses, wb_result, details, replay):
 
 
 def processing_result(plp, zone, wb_result_json, blocked, block_code, status_code):
-
     # if status code is not 20x and not in block codes list (403, 222 etc.)
     if (not str(status_code).startswith('20') or status_code == 404) and status_code not in block_code:
         status = ['FAILED', status_code]
         if not wb_result_json:
-            err = (
-                'An incorrect response was received while processing payload {} in {}: {}'
-                .format(plp, zone, status_code)
-            )
-            print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
+            err = f'An incorrect response was received while processing payload {plp} in {zone}: {status_code}'
+            print(f'{Fore.YELLOW}{err}{Style.RESET_ALL}')
+    elif blocked:
+        status = ['PASSED', status_code] if status_code in block_code else ['BYPASSED', status_code]
     else:
-        if blocked:
-            status = ['PASSED', status_code] if status_code in block_code else ['BYPASSED', status_code]
-        else:
-            status = ['PASSED', status_code] if status_code not in block_code else ['FALSED', status_code]
+        status = ['PASSED', status_code] if status_code not in block_code else ['FALSED', status_code]
 
     return status
 
@@ -125,104 +109,91 @@ def payload_encoding(z, payload, encode):
 
         if not encode:
             return payload
+        # init
+        data_list = []
+
+        # split by &
+        if z.upper() in ['ARGS', 'BODY']:
+
+            # processing data list by k/v
+            for item in payload.split('&'):
+                # key/value
+                if '=' in item:
+                    # extract k/v
+                    k = item.split('=', 1)[0]
+                    v = item.split('=', 1)[1]
+                    # update data list
+                    data_list.append([k, v])
+                # value only
+                else:
+                    # update data list
+                    data_list.append([item])
+
+        if encode.upper() == 'HTML-ENTITY':
+            if not data_list:
+                return quote_plus(escape(payload))
+            res = []
+            for item in data_list:
+                        # key/value
+                if len(item) > 1:
+                    k = str(item[0])
+                    v = quote_plus(escape(str(item[1])))
+                    res.append(f'{k}={v}')
+                else:
+                    res.append(
+                        quote_plus(escape(str(item[0])))
+                    )
+            return '&'.join(res)
+
+        elif encode.upper() == 'UTF-16':
+            if not data_list:
+                return ''.join([hex(ord(x)).replace('0x', '\\u00') for x in payload])
+            res = []
+            for item in data_list:
+                        # key/value
+                if len(item) > 1:
+                    k = str(item[0])
+                    v = ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item[1])])
+                    res.append(f'{k}={v}')
+                else:
+                    res.append(
+                        ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item[0])])
+                    )
+            return '&'.join(res)
+
+        elif encode.upper() == 'BASE64':
+            if not data_list:
+                return base64.b64encode(payload.encode('UTF-8')).decode('UTF-8')
+            res = []
+            for item in data_list:
+                        # key/value
+                if len(item) > 1:
+                    k = str(item[0])
+                    v = base64.b64encode(str(item[1]).encode('UTF-8')).decode('UTF-8')
+                    res.append(f'{k}={v}')
+                else:
+                    res.append(
+                        base64.b64encode(str(item[0]).encode('UTF-8')).decode('UTF-8')
+                    )
+            return '&'.join(res)
+
         else:
-
-            # init
-            data_list = []
-
-            # split by &
-            if z.upper() in ['ARGS', 'BODY']:
-
-                # processing data list by k/v
-                for item in payload.split('&'):
-                    # key/value
-                    if '=' in item:
-                        # extract k/v
-                        k = item.split('=', 1)[0]
-                        v = item.split('=', 1)[1]
-                        # update data list
-                        data_list.append([k, v])
-                    # value only
-                    else:
-                        # update data list
-                        data_list.append([item])
-
-            if encode.upper() == 'HTML-ENTITY':
-                if not data_list:
-                    return quote_plus(escape(payload))
-                else:
-                    res = []
-                    for item in data_list:
-                        # key/value
-                        if len(item) > 1:
-                            k = str(item[0])
-                            v = quote_plus(escape(str(item[1])))
-                            res.append(k + '=' + v)
-                        # value only
-                        else:
-                            res.append(
-                                quote_plus(escape(str(item[0])))
-                            )
-                    return '&'.join(res)
-
-            elif encode.upper() == 'UTF-16':
-                if not data_list:
-                    return ''.join([hex(ord(x)).replace('0x', '\\u00') for x in payload])
-                else:
-                    res = []
-                    for item in data_list:
-                        # key/value
-                        if len(item) > 1:
-                            k = str(item[0])
-                            v = ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item[1])])
-                            res.append(k + '=' + v)
-                        # value only
-                        else:
-                            res.append(
-                                ''.join([hex(ord(x)).replace('0x', '\\u00') for x in str(item[0])])
-                            )
-                    return '&'.join(res)
-
-            elif encode.upper() == 'BASE64':
-                if not data_list:
-                    return base64.b64encode(payload.encode('UTF-8')).decode('UTF-8')
-                else:
-                    res = []
-                    for item in data_list:
-                        # key/value
-                        if len(item) > 1:
-                            k = str(item[0])
-                            v = base64.b64encode(str(item[1]).encode('UTF-8')).decode('UTF-8')
-                            res.append(k + '=' + v)
-                        # value only
-                        else:
-                            res.append(
-                                base64.b64encode(str(item[0]).encode('UTF-8')).decode('UTF-8')
-                            )
-                    return '&'.join(res)
-
-            else:
-                print(
-                    '{}'
-                    'An error occurred while encoding payload ({}) with {}: incorrect encoding type'
-                    '{}'
-                    .format(Fore.YELLOW, payload, encode, Style.RESET_ALL)
-                )
-                return payload
+            print(
+                f'{Fore.YELLOW}An error occurred while encoding payload ({payload}) with {encode}: incorrect encoding type{Style.RESET_ALL}'
+            )
+            return payload
 
     except Exception as e:
         print(
-            '{}'
-            'An error occurred while encoding payload ({}) with {}: {}'
-            '{}'
-            .format(Fore.YELLOW, payload, encode, e, Style.RESET_ALL)
+            f'{Fore.YELLOW}An error occurred while encoding payload ({payload}) with {encode}: {e}{Style.RESET_ALL}'
         )
         return payload
 
 
 class WAFBypass:
 
-    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, replay, exclude_dir):
+    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, replay,
+                 exclude_dir):
 
         # init
         self.host = host
@@ -239,10 +210,10 @@ class WAFBypass:
 
         # init statuses
         self.statuses = [
-            'FAILED',     # Failed requests (incorrect response code, can not connect to server) etc.)
-            'PASSED',     # OK
-            'FALSED',     # False Positive
-            'BYPASSED',   # False Negative
+            'FAILED',  # Failed requests (incorrect response code, can not connect to server) etc.)
+            'PASSED',  # OK
+            'FALSED',  # False Positive
+            'BYPASSED',  # False Negative
         ]
 
         # init zones
@@ -254,11 +225,9 @@ class WAFBypass:
 
         # cURL command output init
         col = 'TestRequest'
-        self.wb_result[col] = {}
-        for k in self.statuses:
-            if k not in ['PASSED', 'BYPASSED']:
-                self.wb_result[col][k] = []
-
+        self.wb_result[col] = {
+            k: [] for k in self.statuses if k not in ['PASSED', 'BYPASSED']
+        }
         # cURL command output init
         col = 'cURL'
         self.wb_result[col] = {}
@@ -278,7 +247,7 @@ class WAFBypass:
             try:
 
                 # init
-                k = json_path.split(pdl + 'payload' + pdl, 1)[1]
+                k = json_path.split(f'{pdl}payload{pdl}', 1)[1]
 
                 # skip payload if it in exclude_dir
                 if k.split(pdl)[0].upper() in self.exclude_dir:
@@ -323,14 +292,13 @@ class WAFBypass:
                         return
 
                 # API dir processing
-                if pdl + 'API' + pdl in json_path:
+                if f'{pdl}API{pdl}' in json_path:
                     # add a JSON header
                     headers['Content-Type'] = 'application/json'
                     # reset encode
                     encode_list = []
 
-                # MFD (multipart/form-data) dir processing
-                elif pdl + 'MFD' + pdl in json_path:
+                elif f'{pdl}MFD{pdl}' in json_path:
 
                     # if BODY is set
                     if payload['BODY']:
@@ -347,10 +315,34 @@ class WAFBypass:
 
                             # set body/headers
                             boundary = secrets.token_hex(30)  # 60 symbols
-                            body = '--' + boundary + '\r\n' \
-                                + 'Content-Disposition: form-data; name="' + secrets.token_urlsafe(5) + '"' \
-                                + '\r\n\r\n' + payload['BODY'] + '\r\n' + '--' + boundary + '--' + '\r\n'
-                            headers['Content-Type'] = 'multipart/form-data; boundary=' + boundary
+                            body = (
+                                (
+                                    (
+                                        (
+                                            (
+                                                (
+                                                    (
+                                                        (
+                                                            f'--{boundary}'
+                                                            + '\r\n'
+                                                            + 'Content-Disposition: form-data; name="'
+                                                        )
+                                                        + secrets.token_urlsafe(5)
+                                                        + '"'
+                                                    )
+                                                    + '\r\n\r\n'
+                                                )
+                                                + payload['BODY']
+                                            )
+                                            + '\r\n'
+                                        )
+                                        + '--'
+                                    )
+                                    + boundary
+                                )
+                                + '--'
+                            ) + '\r\n'
+                            headers['Content-Type'] = f'multipart/form-data; boundary={boundary}'
 
                     else:
                         print(
@@ -365,7 +357,7 @@ class WAFBypass:
                 encode_list.append('')
 
                 # set payload path
-                plp = json_path.split(pdl + 'payload' + pdl, 1)[1]
+                plp = json_path.split(f'{pdl}payload{pdl}', 1)[1]
 
                 # processing the payload of each zone
                 for zone in payload:
@@ -380,7 +372,7 @@ class WAFBypass:
 
                     # reset the method
                     default_method = 'post' if zone == 'BODY' else 'get'
-                    method = default_method if not payload['METHOD'] else payload['METHOD']
+                    method = payload['METHOD'] or default_method
 
                     ##
                     # Processing the payloads
@@ -396,7 +388,9 @@ class WAFBypass:
                                 continue
 
                             result, curl = self.test_url(plp, zone, payload, method, headers, encode)
-                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
+                            self.test_resp_status_processing(
+                                k.split(f'{pdl}payload{pdl}', 1)[1], result, curl
+                            )
 
                         elif zone == 'ARGS':
 
@@ -406,7 +400,9 @@ class WAFBypass:
                                 k = ':'.join([str(json_path), str(zone).upper(), encode.upper()])
 
                             result, curl = self.test_args(plp, zone, payload, method, headers, encode)
-                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
+                            self.test_resp_status_processing(
+                                k.split(f'{pdl}payload{pdl}', 1)[1], result, curl
+                            )
 
                         elif zone == 'BODY':
 
@@ -416,7 +412,9 @@ class WAFBypass:
                                 k = ':'.join([str(json_path), str(zone).upper(), encode.upper()])
 
                             result, curl = self.test_body(plp, zone, payload, method, body, headers, encode)
-                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
+                            self.test_resp_status_processing(
+                                k.split(f'{pdl}payload{pdl}', 1)[1], result, curl
+                            )
 
                         elif zone == 'COOKIE':
 
@@ -426,7 +424,9 @@ class WAFBypass:
                                 k = ':'.join([str(json_path), str(zone).upper(), encode.upper()])
 
                             result, curl = self.test_cookie(plp, zone, payload, method, headers, encode)
-                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
+                            self.test_resp_status_processing(
+                                k.split(f'{pdl}payload{pdl}', 1)[1], result, curl
+                            )
 
                         elif zone == 'USER-AGENT':
 
@@ -436,7 +436,9 @@ class WAFBypass:
                                 continue
 
                             result, curl = self.test_ua(plp, zone, payload, method, headers, encode)
-                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
+                            self.test_resp_status_processing(
+                                k.split(f'{pdl}payload{pdl}', 1)[1], result, curl
+                            )
 
                         elif zone == 'REFERER':
 
@@ -446,7 +448,9 @@ class WAFBypass:
                                 continue
 
                             result, curl = self.test_referer(plp, zone, payload, method, headers, encode)
-                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
+                            self.test_resp_status_processing(
+                                k.split(f'{pdl}payload{pdl}', 1)[1], result, curl
+                            )
 
                         elif zone == 'HEADER':
 
@@ -456,7 +460,9 @@ class WAFBypass:
                                 k = ':'.join([str(json_path), str(zone).upper(), encode.upper()])
 
                             result, curl = self.test_header(plp, zone, payload, method, headers, encode)
-                            self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
+                            self.test_resp_status_processing(
+                                k.split(f'{pdl}payload{pdl}', 1)[1], result, curl
+                            )
 
             except Exception as e:
                 if not self.wb_result_json:
@@ -489,7 +495,7 @@ class WAFBypass:
 
     def test_resp_status_processing(self, k, result, curl):
         try:
-        
+
             if result:
 
                 # init
@@ -498,7 +504,7 @@ class WAFBypass:
                 status = result[0]
 
                 # update with basic data
-                self.wb_result[status].append([plp, zone, str(result[1]) + ' RESPONSE CODE'])
+                self.wb_result[status].append([plp, zone, f'{str(result[1])} RESPONSE CODE'])
 
                 # update with cURL data
                 if status not in ['PASSED', 'FAILED']:
@@ -506,10 +512,7 @@ class WAFBypass:
 
         except Exception as e:
             print(
-                '{}'
-                'An error occurred while processing the status of the request: {}'
-                '{}'
-                .format(Fore.YELLOW, e, Style.RESET_ALL)
+                f'{Fore.YELLOW}An error occurred while processing the status of the request: {e}{Style.RESET_ALL}'
             )
 
     def test_error_response_processing(self, plp, zone, encode, error):
@@ -517,30 +520,27 @@ class WAFBypass:
 
             # init
             status = 'FAILED'
-            zone = zone if not encode else ':'.join([zone, encode])
+            zone = ':'.join([zone, encode]) if encode else zone
 
             # update with basic data
             self.wb_result[status].append([plp, zone, str(error)])
 
             # Normal output
             if not self.wb_result_json:
-                err = 'An error occurred while processing payload {} in {}: {}'.format(plp, zone, error)
-                print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
+                err = f'An error occurred while processing payload {plp} in {zone}: {error}'
+                print(f'{Fore.YELLOW}{err}{Style.RESET_ALL}')
 
         except Exception as e:
 
             if not self.wb_result_json:
                 print(
-                    '{}'
-                    'An error occurred while processing fail response code of the request: {}'
-                    '{}'
-                    .format(Fore.YELLOW, e, Style.RESET_ALL)
+                    f'{Fore.YELLOW}An error occurred while processing fail response code of the request: {e}{Style.RESET_ALL}'
                 )
 
     def test_noblocked(self, method, headers):
 
         # init
-        k = 'TestRequest-{}'.format(method)
+        k = f'TestRequest-{method}'
         z = 'DEFAULT'
 
         # send test request
@@ -549,50 +549,40 @@ class WAFBypass:
             # send the request
             s = init_session()
             headers = {**self.headers, **headers}
-            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
+            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout,
+                               verify=False)
             curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
             result = processing_result(k, z, self.wb_result_json, False, self.block_code, result.status_code)
 
-            # FALSED/FAILED
-            if result[0] in ['FAILED', 'FALSED']:
+            if result[0] not in ['FAILED', 'FALSED']:
+                return
+
+                # Normal output
+            if not self.wb_result_json:
 
                 # init
                 status = result[0]
 
-                # Normal output
-                if not self.wb_result_json:
-
                     # FAILED
-                    if status == 'FAILED':
-                        print(
-                            '{}'
-                            'An error occurred while processing test request to {}: access blocked ({})'
-                            ' (the auto-ban policy might be enabled)'
-                            '{}'
-                            .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
-                        )
+                if status == 'FAILED':
+                    print(
+                        f'{Fore.YELLOW}An error occurred while processing test request to {self.host}: access blocked ({result[1]}) (the auto-ban policy might be enabled){Style.RESET_ALL}'
+                    )
 
-                    # BYPASSED/FALSED
-                    else:
-                        print(
-                            '{}'
-                            'An incorrect response was received while processing test request to {}: {}'
-                            '{}'
-                            .format(Fore.YELLOW, self.host, result[1], Style.RESET_ALL)
-                        )
+                else:
+                    print(
+                        f'{Fore.YELLOW}An incorrect response was received while processing test request to {self.host}: {result[1]}{Style.RESET_ALL}'
+                    )
 
                     # cURL data
-                    print('Replay with cURL: {}'.format(curl))
-
-            else:
-                return
+                print(f'Replay with cURL: {curl}')
 
         except Exception as error:
 
             # Normal output
             if not self.wb_result_json:
-                err = 'An incorrect response was received while sending test request to {}: {}'.format(self.host, error)
-                print('{}{}{}'.format(Fore.YELLOW, err, Style.RESET_ALL))
+                err = f'An incorrect response was received while sending test request to {self.host}: {error}'
+                print(f'{Fore.YELLOW}{err}{Style.RESET_ALL}')
 
     def test_url(self, plp, zone, payload, method, headers, encode):
         try:
@@ -604,10 +594,7 @@ class WAFBypass:
 
             s = init_session()
             result = s.request(method, host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
-            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
-            return result, curl
-
+            return self._extracted_from_test_header_11(result, plp, zone, payload)
         except Exception as error:
             self.test_error_response_processing(plp, zone, encode, error)
             return None, None
@@ -620,11 +607,9 @@ class WAFBypass:
             headers = {**self.headers, **headers}
 
             s = init_session()
-            result = s.request(method, self.host, headers=headers, params=encoded_payload, proxies=self.proxy, timeout=self.timeout, verify=False)
-            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
-            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
-            return result, curl
-
+            result = s.request(method, self.host, headers=headers, params=encoded_payload, proxies=self.proxy,
+                               timeout=self.timeout, verify=False)
+            return self._extracted_from_test_header_11(result, plp, zone, payload)
         except Exception as error:
             self.test_error_response_processing(plp, zone, encode, error)
             return None, None
@@ -637,11 +622,9 @@ class WAFBypass:
             headers = {**self.headers, **headers}
 
             s = init_session()
-            result = s.request(method, self.host, headers=headers, data=encoded_payload, proxies=self.proxy, timeout=self.timeout, verify=False)
-            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
-            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
-            return result, curl
-
+            result = s.request(method, self.host, headers=headers, data=encoded_payload, proxies=self.proxy,
+                               timeout=self.timeout, verify=False)
+            return self._extracted_from_test_header_11(result, plp, zone, payload)
         except Exception as error:
             self.test_error_response_processing(plp, zone, encode, error)
             return None, None
@@ -655,11 +638,9 @@ class WAFBypass:
             cookies = {f"WBC-{secrets.token_hex(3)}": encoded_payload}
 
             s = init_session()
-            result = s.request(method, self.host, headers=headers, cookies=cookies, proxies=self.proxy, timeout=self.timeout, verify=False)
-            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
-            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
-            return result, curl
-
+            result = s.request(method, self.host, headers=headers, cookies=cookies, proxies=self.proxy,
+                               timeout=self.timeout, verify=False)
+            return self._extracted_from_test_header_11(result, plp, zone, payload)
         except Exception as error:
             self.test_error_response_processing(plp, zone, encode, error)
             return None, None
@@ -672,11 +653,9 @@ class WAFBypass:
             headers = {**self.headers, **headers, 'User-Agent': encoded_payload}
 
             s = init_session()
-            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
-            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
-            return result, curl
-
+            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout,
+                               verify=False)
+            return self._extracted_from_test_header_11(result, plp, zone, payload)
         except Exception as error:
             self.test_error_response_processing(plp, zone, encode, error)
             return None, None
@@ -689,11 +668,9 @@ class WAFBypass:
             headers = {**self.headers, **headers, 'Referer': encoded_payload}
 
             s = init_session()
-            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
-            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
-            return result, curl
-
+            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout,
+                               verify=False)
+            return self._extracted_from_test_header_11(result, plp, zone, payload)
         except Exception as error:
             self.test_error_response_processing(plp, zone, encode, error)
             return None, None
@@ -706,11 +683,22 @@ class WAFBypass:
             headers = {**self.headers, **headers, f"WBH-{secrets.token_hex(3)}": encoded_payload}
 
             s = init_session()
-            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout, verify=False)
-            curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
-            result = processing_result(plp, zone, self.wb_result_json, payload['BLOCKED'], self.block_code, result.status_code)
-            return result, curl
-
+            result = s.request(method, self.host, headers=headers, proxies=self.proxy, timeout=self.timeout,
+                               verify=False)
+            return self._extracted_from_test_header_11(result, plp, zone, payload)
         except Exception as error:
             self.test_error_response_processing(plp, zone, encode, error)
             return None, None
+
+    # TODO Rename this here and in `test_url`, `test_args`, `test_body`, `test_cookie`, `test_ua`, `test_referer` and `test_header`
+    def _extracted_from_test_header_11(self, result, plp, zone, payload):
+        curl = curlify.to_curl(result.request).replace('\r\n', '\\r\\n')
+        result = processing_result(
+            plp,
+            zone,
+            self.wb_result_json,
+            payload['BLOCKED'],
+            self.block_code,
+            result.status_code,
+        )
+        return result, curl

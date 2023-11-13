@@ -8,11 +8,10 @@ def get_stats(result, status):
 
 
 def get_percent_str(i, a):
-    return round((i/a)*100, 2) if a != 0 else 0.00
+    return round((i / a) * 100, 2) if a != 0 else 0.00
 
 
 def table_get_result_details(fp, fn):
-
     def get_result_details(fx, status):
 
         if not fx:
@@ -35,7 +34,6 @@ def table_get_result_details(fp, fn):
 
 
 def table_get_result_replay(wb_result):
-
     def get_result_replay(status, result):
 
         # extract the data
@@ -53,7 +51,6 @@ def table_get_result_replay(wb_result):
 
         # print payloads
         for item in data:
-
             # init
             plp = item[0]
             pzn = item[1]
@@ -68,13 +65,11 @@ def table_get_result_replay(wb_result):
 
     # result processing
     for k in wb_result['cURL']:
-    
         # show data
         get_result_replay(k, wb_result)
 
 
 def table_get_result_summary(statuses, wb_result):
-
     # init
     result = {}
     payloads_type = set()
@@ -88,7 +83,6 @@ def table_get_result_summary(statuses, wb_result):
     # result processing
     for k in statuses:
         for item in wb_result[k]:
-
             # extract the data
             t = item[0].split('/')[0]
             z = item[1]
@@ -101,7 +95,6 @@ def table_get_result_summary(statuses, wb_result):
 
     # create result dictionary by payloads type
     for pt in payloads_type:
-
         fx_type = 'FALSED' if pt == 'FP' else 'BYPASSED'
         passed = len([k for k, v in result.items() if k.startswith(pt + '/') and v == 'PASSED'])
         failed = len([k for k, v in result.items() if k.startswith(pt + '/') and v == 'FAILED'])

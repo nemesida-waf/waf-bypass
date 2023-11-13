@@ -10,35 +10,39 @@ from urllib3 import connectionpool, poolmanager
 
 
 def patch_http_connection_pool(**constructor_kwargs):
-
     """
     This allows to override the default parameters of the
     HTTPConnectionPool constructor.
     For example, to increase the pool size to fix problems
     with "HttpConnectionPool is full, discarding connection"
     """
+
     class WBHTTPConnectionPool(connectionpool.HTTPConnectionPool):
         def __init__(self, *args, **kwargs):
             kwargs.update(constructor_kwargs)
             super(WBHTTPConnectionPool, self).__init__(*args, **kwargs)
+
     poolmanager.pool_classes_by_scheme['http'] = WBHTTPConnectionPool
 
     class WBHTTPSConnectionPool(connectionpool.HTTPSConnectionPool):
         def __init__(self, *args, **kwargs):
             kwargs.update(constructor_kwargs)
             super(WBHTTPSConnectionPool, self).__init__(*args, **kwargs)
+
     poolmanager.pool_classes_by_scheme['https'] = WBHTTPSConnectionPool
 
 
 def get_help():
-
     print("Usage: python3 /opt/waf-bypass/main.py --host=example.com:80 [OPTION]")
     print("")
     print("Mandatory arguments:")
     print("--proxy       - set proxy-server (e.g. --proxy='http://1.2.3.4:3128)")
-    print("--header      - add the HTTP header to all requests (e.g. --header='Authorization: Basic YWRtaW46YWRtaW4='). Multiple use is allowed.")
-    print("--user-agent  - set the HTTP User-Agent to send with all requests, except when the User-Agent is set by the payload (e.g. --user-agent='MyUserAgent 1/1')")
-    print("--block-code  - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403). Multiple use is allowed.")
+    print(
+        "--header      - add the HTTP header to all requests (e.g. --header='Authorization: Basic YWRtaW46YWRtaW4='). Multiple use is allowed.")
+    print(
+        "--user-agent  - set the HTTP User-Agent to send with all requests, except when the User-Agent is set by the payload (e.g. --user-agent='MyUserAgent 1/1')")
+    print(
+        "--block-code  - set the HTTP status codes as meaning 'WAF blocked' (e.g. --block-code=222, default: 403). Multiple use is allowed.")
     print("--threads     - set the number of parallel scan threads (e.g. --threads=10, default: 4)")
     print("--timeout     - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
     print("--json-format - display the result of the work in JSON format")
@@ -48,7 +52,6 @@ def get_help():
 
 
 def main():
-
     # increasing max pool size
     patch_http_connection_pool(maxsize=50)
 
@@ -65,7 +68,8 @@ def main():
     exclude_dir = []
 
     # set user-agent
-    headers['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    headers[
+        'User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
 
     # Processing args from cmd
     try:
@@ -75,7 +79,8 @@ def main():
 
         # options
         launch_args_options = [
-            'help', 'host=', 'proxy=', 'header=', 'user-agent=', 'block-code=', 'threads=', 'timeout=', 'json-format', 'details', 'curl-replay', 'exclude-dir=',
+            'help', 'host=', 'proxy=', 'header=', 'user-agent=', 'block-code=', 'threads=', 'timeout=', 'json-format',
+            'details', 'curl-replay', 'exclude-dir=',
         ]
 
         # parsing args
@@ -178,7 +183,8 @@ def main():
         wb_result['EXCLUDE-DIR'] = exclude_dir
 
     # launch WAF Bypass
-    waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, replay, exclude_dir)
+    waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details,
+                           replay, exclude_dir)
 
     try:
         waf_bypass.start()
