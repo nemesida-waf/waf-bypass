@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<detalhes%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%230000000000000000041//",
+      "BODY": "<detalhes%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%230000000000000000041//",
+      "COOKIE": "<detalhes%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%230000000000000000041//",
+      "USER-AGENT": "<detalhes%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%230000000000000000041//",
+      "REFERER": "<detalhes%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%230000000000000000041//",
+      "HEADER": "<detalhes%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%230000000000000000041//",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
