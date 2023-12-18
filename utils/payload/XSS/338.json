@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "\"onfocus=\"prompt(document.cookie)\"autofocus=\"",
+      "BODY": "\"onfocus=\"prompt(document.cookie)\"autofocus=\"",
+      "COOKIE": "\"onfocus=\"prompt(document.cookie)\"autofocus=\"",
+      "USER-AGENT": "\"onfocus=\"prompt(document.cookie)\"autofocus=\"",
+      "REFERER": "\"onfocus=\"prompt(document.cookie)\"autofocus=\"",
+      "HEADER": "\"onfocus=\"prompt(document.cookie)\"autofocus=\"",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
