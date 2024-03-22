@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "\"><track/onerror='confirm`1`'>",
+      "BODY": "\"><track/onerror='confirm`1`'>",
+      "COOKIE": "\"><track/onerror='confirm`1`'>",
+      "USER-AGENT": "\"><track/onerror='confirm`1`'>",
+      "REFERER": "\"><track/onerror='confirm`1`'>",
+      "HEADER": "\"><track/onerror='confirm`1`'>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": "@RootMoksha"
+}
