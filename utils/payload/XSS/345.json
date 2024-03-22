@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<input id=b value=javascrip>",
+      "BODY": "<input id=b value=javascrip>",
+      "COOKIE": "<input id=b value=javascrip>",
+      "USER-AGENT": "<input id=b value=javascrip>",
+      "REFERER": "<input id=b value=javascrip>",
+      "HEADER": "<input id=b value=javascrip>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": "@smaury92"
+}

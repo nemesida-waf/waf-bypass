@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<lol           contenteditable          onbeforeinput='location=b.value+c.value+d.value'>",
+      "BODY": "<lol           contenteditable          onbeforeinput='location=b.value+c.value+d.value'>",
+      "COOKIE": "<lol           contenteditable          onbeforeinput='location=b.value+c.value+d.value'>",
+      "USER-AGENT": "<lol           contenteditable          onbeforeinput='location=b.value+c.value+d.value'>",
+      "REFERER": "<lol           contenteditable          onbeforeinput='location=b.value+c.value+d.value'>",
+      "HEADER": "<lol           contenteditable          onbeforeinput='location=b.value+c.value+d.value'>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": "@smaury92"
+}
