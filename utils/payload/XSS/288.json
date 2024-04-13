@@ -7,7 +7,7 @@
       "USER-AGENT": "<select><noembed></select><script x='a@b'a>%0Ay='a@b'//a@b%0A\\u0061lert(1)</script x>",
       "REFERER": "<select><noembed></select><script x='a@b'a>%0Ay='a@b'//a@b%0A\\u0061lert(1)</script x>",
       "HEADER": "<select><noembed></select><script x='a@b'a>%0Ay='a@b'//a@b%0A\\u0061lert(1)</script x>",
-      "ENCODE": "Base64 UTF-16",
+      "ENCODE": "Base64",
       "BLOCKED": true
     }
   ]

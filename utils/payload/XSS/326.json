@@ -7,7 +7,7 @@
       "USER-AGENT": "<details%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%2300000000000000000041//",
       "REFERER": "<details%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%2300000000000000000041//",
       "HEADER": "<details%0Aopen%0AonToGgle%0A=%0Aabc=(co\\u006efirm);abc%28%60xss%60%26%2300000000000000000041//",
-      "ENCODE": "Base64 UTF-16",
+      "ENCODE": "Base64",
       "BLOCKED": true
     }
   ]
