@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "url=file:$(br)/et$(u)c%252Fpas$(te)swd%3F/",
+      "BODY": "url=file:$(br)/et$(u)c%252Fpas$(te)swd%3F/",
+      "COOKIE": "file:$(br)/et$(u)c%252Fpas$(te)swd%3F/",
+      "USER-AGENT": "file:$(br)/et$(u)c%252Fpas$(te)swd%3F/",
+      "REFERER": "file:$(br)/et$(u)c%252Fpas$(te)swd%3F/",
+      "HEADER": "file:$(br)/et$(u)c%252Fpas$(te)swd%3F/",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

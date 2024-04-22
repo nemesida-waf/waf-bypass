@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "url=file:///etc/%3F/../passwd",
+      "BODY": "url=file:///etc/%3F/../passwd",
+      "COOKIE": "file:///etc/%3F/../passwd",
+      "USER-AGENT": "file:///etc/%3F/../passwd",
+      "REFERER": "file:///etc/%3F/../passwd",
+      "HEADER": "file:///etc/%3F/../passwd",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
