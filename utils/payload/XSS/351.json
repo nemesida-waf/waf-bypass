@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<Img Src=OnXSS OnError=confirm(document.cookie)>",
+      "BODY": "<Img Src=OnXSS OnError=confirm(document.cookie)>",
+      "COOKIE": "<Img Src=OnXSS OnError=confirm(document.cookie)>",
+      "USER-AGENT": "<Img Src=OnXSS OnError=confirm(document.cookie)>",
+      "REFERER": "<Img Src=OnXSS OnError=confirm(document.cookie)>",
+      "HEADER": "<Img Src=OnXSS OnError=confirm(document.cookie)>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
