@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "%3cSvg%20Only%3d1%20OnLoad%3dconfirm(1)%3e",
+      "BODY": "%3cSvg%20Only%3d1%20OnLoad%3dconfirm(1)%3e",
+      "COOKIE": "%3cSvg%20Only%3d1%20OnLoad%3dconfirm(1)%3e",
+      "USER-AGENT": "%3cSvg%20Only%3d1%20OnLoad%3dconfirm(1)%3e",
+      "REFERER": "%3cSvg%20Only%3d1%20OnLoad%3dconfirm(1)%3e",
+      "HEADER": "%3cSvg%20Only%3d1%20OnLoad%3dconfirm(1)%3e",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
