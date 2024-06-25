@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<img/src/onerror=alert&#xFEFF;(1337)>",
+      "BODY": "<img/src/onerror=alert&#xFEFF;(1337)>",
+      "COOKIE": "<img/src/onerror=alert&#xFEFF;(1337)>",
+      "USER-AGENT": "<img/src/onerror=alert&#xFEFF;(1337)>",
+      "REFERER": "<img/src/onerror=alert&#xFEFF;(1337)>",
+      "HEADER": "<img/src/onerror=alert&#xFEFF;(1337)>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}

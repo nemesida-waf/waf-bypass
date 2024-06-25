@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<svg/onload=&nbsp;alert&#65279;(2)>",
+      "BODY": "<svg/onload=&nbsp;alert&#65279;(2)>",
+      "COOKIE": "<svg/onload=&nbsp;alert&#65279;(2)>",
+      "USER-AGENT": "<svg/onload=&nbsp;alert&#65279;(2)>",
+      "REFERER": "<svg/onload=&nbsp;alert&#65279;(2)>",
+      "HEADER": "<svg/onload=&nbsp;alert&#65279;(2)>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
