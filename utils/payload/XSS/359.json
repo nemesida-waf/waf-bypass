@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "'/confirm?.(1)/'%0A1%22%3EK=%27%3E%3CSvg%20/OnLoad=(confirm)(1)%3E",
+      "BODY": "'/confirm?.(1)/'%0A1%22%3EK=%27%3E%3CSvg%20/OnLoad=(confirm)(1)%3E",
+      "COOKIE": "'/confirm?.(1)/'%0A1%22%3EK=%27%3E%3CSvg%20/OnLoad=(confirm)(1)%3E",
+      "USER-AGENT": "'/confirm?.(1)/'%0A1%22%3EK=%27%3E%3CSvg%20/OnLoad=(confirm)(1)%3E",
+      "REFERER": "'/confirm?.(1)/'%0A1%22%3EK=%27%3E%3CSvg%20/OnLoad=(confirm)(1)%3E",
+      "HEADER": "'/confirm?.(1)/'%0A1%22%3EK=%27%3E%3CSvg%20/OnLoad=(confirm)(1)%3E",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}

@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "%3Cimg%2Fsrc%2Fonerror%3D.1%7Cprompt%60bypassed%60%3E",
+      "BODY": "%3Cimg%2Fsrc%2Fonerror%3D.1%7Cprompt%60bypassed%60%3E",
+      "COOKIE": "%3Cimg%2Fsrc%2Fonerror%3D.1%7Cprompt%60bypassed%60%3E",
+      "USER-AGENT": "%3Cimg%2Fsrc%2Fonerror%3D.1%7Cprompt%60bypassed%60%3E",
+      "REFERER": "%3Cimg%2Fsrc%2Fonerror%3D.1%7Cprompt%60bypassed%60%3E",
+      "HEADER": "%3Cimg%2Fsrc%2Fonerror%3D.1%7Cprompt%60bypassed%60%3E",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
