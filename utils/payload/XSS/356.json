@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<img+src=oNlY=1+ onerror=\"alert(['a', 'x', 'b', 'x', 'c', 's'].map(c => c.replace(/[abc]/g, '')).join(''))\">",
+      "BODY": "<img+src=oNlY=1+ onerror=\"alert(['a', 'x', 'b', 'x', 'c', 's'].map(c => c.replace(/[abc]/g, '')).join(''))\">",
+      "COOKIE": "<img+src=oNlY=1+ onerror=\"alert(['a', 'x', 'b', 'x', 'c', 's'].map(c => c.replace(/[abc]/g, '')).join(''))\">",
+      "USER-AGENT": "<img+src=oNlY=1+ onerror=\"alert(['a', 'x', 'b', 'x', 'c', 's'].map(c => c.replace(/[abc]/g, '')).join(''))\">",
+      "REFERER": "<img+src=oNlY=1+ onerror=\"alert(['a', 'x', 'b', 'x', 'c', 's'].map(c => c.replace(/[abc]/g, '')).join(''))\">",
+      "HEADER": "<img+src=oNlY=1+ onerror=\"alert(['a', 'x', 'b', 'x', 'c', 's'].map(c => c.replace(/[abc]/g, '')).join(''))\">",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}

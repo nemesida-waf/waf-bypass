@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<img+src=oNlY=1+ onerror=\"alert(['x', String.fromCharCode(121), 'x', 's'].filter(c => c.charCodeAt(0) !== 121).join(''))\">",
+      "BODY": "<img+src=oNlY=1+ onerror=\"alert(['x', String.fromCharCode(121), 'x', 's'].filter(c => c.charCodeAt(0) !== 121).join(''))\">",
+      "COOKIE": "<img+src=oNlY=1+ onerror=\"alert(['x', String.fromCharCode(121), 'x', 's'].filter(c => c.charCodeAt(0) !== 121).join(''))\">",
+      "USER-AGENT": "<img+src=oNlY=1+ onerror=\"alert(['x', String.fromCharCode(121), 'x', 's'].filter(c => c.charCodeAt(0) !== 121).join(''))\">",
+      "REFERER": "<img+src=oNlY=1+ onerror=\"alert(['x', String.fromCharCode(121), 'x', 's'].filter(c => c.charCodeAt(0) !== 121).join(''))\">",
+      "HEADER": "<img+src=oNlY=1+ onerror=\"alert(['x', String.fromCharCode(121), 'x', 's'].filter(c => c.charCodeAt(0) !== 121).join(''))\">",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
