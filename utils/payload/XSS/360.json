@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<img%20hrEF=\"x\"%20sRC=\"data:x,\"%20oNLy=1%20oNErrOR=prompt`1`>",
+      "BODY": "<img%20hrEF=\"x\"%20sRC=\"data:x,\"%20oNLy=1%20oNErrOR=prompt`1`>",
+      "COOKIE": "<img%20hrEF=\"x\"%20sRC=\"data:x,\"%20oNLy=1%20oNErrOR=prompt`1`>",
+      "USER-AGENT": "<img%20hrEF=\"x\"%20sRC=\"data:x,\"%20oNLy=1%20oNErrOR=prompt`1`>",
+      "REFERER": "<img%20hrEF=\"x\"%20sRC=\"data:x,\"%20oNLy=1%20oNErrOR=prompt`1`>",
+      "HEADER": "<img%20hrEF=\"x\"%20sRC=\"data:x,\"%20oNLy=1%20oNErrOR=prompt`1`>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
