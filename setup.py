@@ -18,7 +18,7 @@ setup(
         'tableprint==0.9.1,
         'yarl==1.8.2,
     ],
-    python_requires='>=3.0.0',
+    python_requires='>=3.9.0',
     entry_points={
         'console_scripts': [
             'waf-bypass = main:main'
