@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "'\"><script>(1)</script><iFrAme/src=jaVascRipt:prompt.valueOf()(1)+class=spider></iFramE>",
+      "BODY": "'\"><script>(1)</script><iFrAme/src=jaVascRipt:prompt.valueOf()(1)+class=spider></iFramE>",
+      "COOKIE": "'\"><script>(1)</script><iFrAme/src=jaVascRipt:prompt.valueOf()(1)+class=spider></iFramE>",
+      "USER-AGENT": "'\"><script>(1)</script><iFrAme/src=jaVascRipt:prompt.valueOf()(1)+class=spider></iFramE>",
+      "REFERER": "'\"><script>(1)</script><iFrAme/src=jaVascRipt:prompt.valueOf()(1)+class=spider></iFramE>",
+      "HEADER": "'\"><script>(1)</script><iFrAme/src=jaVascRipt:prompt.valueOf()(1)+class=spider></iFramE>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
