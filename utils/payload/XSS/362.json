@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<details open ontoggle=\"(()=>alert`abc`)()\"></details>",
+      "BODY": "<details open ontoggle=\"(()=>alert`abc`)()\"></details>",
+      "COOKIE": "<details open ontoggle=\"(()=>alert`abc`)()\"></details>",
+      "USER-AGENT": "<details open ontoggle=\"(()=>alert`abc`)()\"></details>",
+      "REFERER": "<details open ontoggle=\"(()=>alert`abc`)()\"></details>",
+      "HEADER": "<details open ontoggle=\"(()=>alert`abc`)()\"></details>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
