@@ -11,6 +11,8 @@ from colorama import Fore
 from colorama import Style
 from html import escape
 from multiprocessing.dummy import Pool as ThreadPool
+from statistics import mode
+from time import time
 from urllib.parse import urljoin, quote_plus
 
 from .payloads import get_payload
@@ -220,6 +222,21 @@ def payload_encoding(z, payload, encode):
         return payload
 
 
+def progress_bar(eta, iteration, total):
+
+    # init
+    fill = '█'
+    length = 120
+
+    # show the progress
+    prcnt = ("{0:." + str(1) + "f}").format(100 * (iteration / float(total)))
+    filled_length = int(length * iteration // total)
+    bar = fill * filled_length + '-' * (length - filled_length)
+    print(f'\rProgress |{bar}| {prcnt}% complete, ETA: {eta} min.', end='\r')
+    if iteration == total: 
+        print()
+
+
 class WAFBypass:
 
     def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, replay, exclude_dir):
@@ -236,6 +253,10 @@ class WAFBypass:
         self.details = details
         self.replay = replay
         self.exclude_dir = exclude_dir
+        self.progress_bar_sz = 0
+        self.progress_bar_eta = 0
+        self.progress_bar_processed = 0
+        self.progress_bar_eta_stats = []
 
         # init statuses
         self.statuses = [
@@ -278,6 +299,7 @@ class WAFBypass:
             try:
 
                 # init
+                stm = time()
                 k = json_path.split(pdl + 'payload' + pdl, 1)[1]
 
                 # skip payload if it in exclude_dir
@@ -458,6 +480,28 @@ class WAFBypass:
                             result, curl = self.test_header(plp, zone, payload, method, headers, encode)
                             self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
+                # print progress bar
+                if not self.wb_result_json:
+
+                    # get the request processing time
+                    dtm = round(time() - stm, 1)
+
+                    # update the ETA stats
+                    self.progress_bar_eta_stats.append(dtm)
+
+                    # calculate the ETA
+                    prcnt = self.progress_bar_processed / 30 if self.progress_bar_processed else 0.0
+                    if prcnt.is_integer():
+                        eta = mode(self.progress_bar_eta_stats)
+                        self.progress_bar_etas = []
+                        self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * eta / 60)
+
+                    # update the progress
+                    progress_bar(self.progress_bar_eta, self.progress_bar_processed, self.progress_bar_sz)
+
+                    # update the counter
+                    self.progress_bar_processed += 1
+
             except Exception as e:
                 if not self.wb_result_json:
                     err = 'An error occurred while processing payload from file {}: {}'.format(relative_path, e)
@@ -475,6 +519,9 @@ class WAFBypass:
                 all_files_list.append(
                     os.path.join(dir_path, filename)
                 )
+
+        # init progress bar
+        self.progress_bar_sz = len(all_files_list)
 
         # Multithreading
         pool = ThreadPool(processes=self.threads)
