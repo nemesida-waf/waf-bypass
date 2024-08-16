@@ -227,6 +227,7 @@ def progress_bar(eta, iteration, total):
     # init
     fill = '█'
     length = 120
+    eta = eta if eta else 1
 
     # show the progress
     prcnt = ("{0:." + str(1) + "f}").format(100 * (iteration / float(total)))
