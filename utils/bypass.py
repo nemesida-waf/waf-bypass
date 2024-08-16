@@ -480,46 +480,47 @@ class WAFBypass:
                             result, curl = self.test_header(plp, zone, payload, method, headers, encode)
                             self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
-                        # update the ETA stats
-                        if not self.wb_result_json:
-                            dtm = round(time() - stm, 1)
-                            self.progress_bar_eta_stats.append(dtm)
-
                 # print progress bar
                 if not self.wb_result_json:
+
+                    # update the ETA stats
+                    dtm = round(time() - stm, 1)
+                    self.progress_bar_eta_stats.append(dtm)
 
                     # extract requests processing time list
                     pbes = sorted(self.progress_bar_eta_stats.copy())
 
-                    # processing for non-empty or small list
-                    if len(pbes) > 5:
-
-                        # check that the percentage is a multiple of X
-                        prcnt = self.progress_bar_processed / 30 if self.progress_bar_processed else 0.0
-                        if prcnt.is_integer():
-
-                            # reset the list
-                            self.progress_bar_eta_stats = []
-
-                            # ETA preprocessing
-                            if len(pbes) > 1:
-                                lmt = int(len(pbes)/4)    # split list to X blocks
-                                pbes = pbes[lmt:]         # remove 1/X from the start of list
-                                pbes = pbes[:-lmt]        # remove 1/X from the end of list
-
-                            # payload processing average time and ETA calculation
-                            ppat = round(mean(pbes), 2)
-                            self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * ppat / 60)
-
-                    # first requests
-                    elif not self.progress_bar_processed:
+                    # first X requests
+                    if self.progress_bar_processed < 25:
 
                         # payload processing average time and ETA calculation
                         ppat = round(mean(pbes), 2)
-                        self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * ppat / 60)
+                        self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * ppat / self.threads / 60)
 
-                    # update the progress
-                    progress_bar(self.progress_bar_eta, self.progress_bar_processed, self.progress_bar_sz)
+                    # other requests
+                    else:
+
+                        # normal list size
+                        if len(pbes) > 10:
+
+                            # check that the percentage is a multiple of X
+                            prcnt = self.progress_bar_processed / 100 if self.progress_bar_processed else 0.0
+                            if prcnt.is_integer():
+
+                                # reset the list
+                                self.progress_bar_eta_stats = []
+
+                                # ETA preprocessing
+                                lmt = int(len(pbes)/3)    # split list to X blocks
+                                pbes = pbes[lmt:]         # remove 1/X from the start of list
+                                pbes = pbes[:-lmt]        # remove 1/X from the end of list
+
+                                # payload processing average time and ETA calculation
+                                ppat = round(mean(pbes), 2)
+                                self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * ppat / self.threads / 60)
+
+                        # update the progress
+                        progress_bar(self.progress_bar_eta, self.progress_bar_processed, self.progress_bar_sz)
 
                     # update the counter
                     self.progress_bar_processed += 1
