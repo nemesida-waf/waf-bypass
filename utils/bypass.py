@@ -496,7 +496,7 @@ class WAFBypass:
 
                         # payload processing average time and ETA calculation
                         ppat = round(mean(pbes), 2)
-                        self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * ppat / self.threads / 60)
+                        self.progress_bar_eta = round((self.progress_bar_sz - self.progress_bar_processed) * ppat / self.threads / 60)
 
                     # other requests
                     else:
@@ -518,7 +518,7 @@ class WAFBypass:
 
                                 # payload processing average time and ETA calculation
                                 ppat = round(mean(pbes), 2)
-                                self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * ppat / self.threads / 60)
+                                self.progress_bar_eta = round((self.progress_bar_sz - self.progress_bar_processed) * ppat / self.threads / 60)
 
                         # update the progress
                         progress_bar(self.progress_bar_eta, self.progress_bar_processed, self.progress_bar_sz)
