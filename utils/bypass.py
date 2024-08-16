@@ -11,7 +11,7 @@ from colorama import Fore
 from colorama import Style
 from html import escape
 from multiprocessing.dummy import Pool as ThreadPool
-from statistics import mode
+from statistics import mean
 from time import time
 from urllib.parse import urljoin, quote_plus
 
@@ -258,7 +258,7 @@ class WAFBypass:
         self.progress_bar_processed = 0
         self.progress_bar_eta_stats = []
 
-        # init statuses
+        # init the statuses
         self.statuses = [
             'FAILED',     # Failed requests (incorrect response code, can not connect to server) etc.)
             'PASSED',     # OK
@@ -480,21 +480,43 @@ class WAFBypass:
                             result, curl = self.test_header(plp, zone, payload, method, headers, encode)
                             self.test_resp_status_processing(k.split(pdl + 'payload' + pdl, 1)[1], result, curl)
 
+                        # update the ETA stats
+                        if not self.wb_result_json:
+                            dtm = round(time() - stm, 1)
+                            self.progress_bar_eta_stats.append(dtm)
+
                 # print progress bar
                 if not self.wb_result_json:
 
-                    # get the request processing time
-                    dtm = round(time() - stm, 1)
+                    # extract requests processing time list
+                    pbes = sorted(self.progress_bar_eta_stats.copy())
 
-                    # update the ETA stats
-                    self.progress_bar_eta_stats.append(dtm)
+                    # processing for non-empty or small list
+                    if len(pbes) > 5:
 
-                    # calculate the ETA
-                    prcnt = self.progress_bar_processed / 30 if self.progress_bar_processed else 0.0
-                    if prcnt.is_integer():
-                        eta = mode(self.progress_bar_eta_stats)
-                        self.progress_bar_etas = []
-                        self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * eta / 60)
+                        # check that the percentage is a multiple of X
+                        prcnt = self.progress_bar_processed / 30 if self.progress_bar_processed else 0.0
+                        if prcnt.is_integer():
+
+                            # reset the list
+                            self.progress_bar_eta_stats = []
+
+                            # ETA preprocessing
+                            if len(pbes) > 1:
+                                lmt = int(len(pbes)/4)    # split list to X blocks
+                                pbes = pbes[lmt:]         # remove 1/X from the start of list
+                                pbes = pbes[:-lmt]        # remove 1/X from the end of list
+
+                            # payload processing average time and ETA calculation
+                            ppat = round(mean(pbes), 2)
+                            self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * ppat / 60)
+
+                    # first requests
+                    elif not self.progress_bar_processed:
+
+                        # payload processing average time and ETA calculation
+                        ppat = round(mean(pbes), 2)
+                        self.progress_bar_eta = int((self.progress_bar_sz - self.progress_bar_processed) * ppat / 60)
 
                     # update the progress
                     progress_bar(self.progress_bar_eta, self.progress_bar_processed, self.progress_bar_sz)
