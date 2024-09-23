@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "%3csvg%2fonload%3de%00val%28a%29%3e",
+      "BODY": "%3csvg%2fonload%3de%00val%28a%29%3e",
+      "COOKIE": "%3csvg%2fonload%3de%00val%28a%29%3e",
+      "USER-AGENT": "%3csvg%2fonload%3de%00val%28a%29%3e",
+      "REFERER": "%3csvg%2fonload%3de%00val%28a%29%3e",
+      "HEADER": "%3csvg%2fonload%3de%00val%28a%29%3e",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
