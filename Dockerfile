@@ -1,4 +1,4 @@
-FROM debian:12.6
+FROM debian:12.7
 
 WORKDIR /opt/waf-bypass
 
