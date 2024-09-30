@@ -6,6 +6,7 @@ WAF bypass Tool is an open source tool to analyze the security of any WAF for Fa
 
 ## How to run
 
+### DON’T DO ANYTHING ILLEGAL
 > It is forbidden to use for illegal and illegal purposes. Don't break the law. We are not responsible for possible risks associated with the use of this software.
 
 ### Run using Docker
