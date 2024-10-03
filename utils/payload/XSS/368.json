@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<Svg Only=1 OnLoad=confirm(atob(\"dGVzdA==\"))>",
+      "BODY": "<Svg Only=1 OnLoad=confirm(atob(\"dGVzdA==\"))>",
+      "COOKIE": "<Svg Only=1 OnLoad=confirm(atob(\"dGVzdA==\"))>",
+      "USER-AGENT": "<Svg Only=1 OnLoad=confirm(atob(\"dGVzdA==\"))>",
+      "REFERER": "<Svg Only=1 OnLoad=confirm(atob(\"dGVzdA==\"))>",
+      "HEADER": "<Svg Only=1 OnLoad=confirm(atob(\"dGVzdA==\"))>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
