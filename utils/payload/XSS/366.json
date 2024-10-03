@@ -1,12 +1,12 @@
 {
   "payload": [
     {
-      "ARGS": "‘>alert(154)</script><script/154=’;;;;;;;",
-      "BODY": "‘>alert(154)</script><script/154=’;;;;;;;",
-      "COOKIE": "‘>alert(154)</script><script/154=’;;;;;;;",
-      "USER-AGENT": "‘>alert(154)</script><script/154=’;;;;;;;",
-      "REFERER": "‘>alert(154)</script><script/154=’;;;;;;;",
-      "HEADER": "‘>alert(154)</script><script/154=’;;;;;;;",
+      "ARGS": "%E2%80%98%3Ealert(154)%3C%2Fscript%3E%3Cscript%2F154%3D%E2%80%99%3B%3B%3B%3B%3B%3B%3B",
+      "BODY": "%E2%80%98%3Ealert(154)%3C%2Fscript%3E%3Cscript%2F154%3D%E2%80%99%3B%3B%3B%3B%3B%3B%3B",
+      "COOKIE": "%E2%80%98%3Ealert(154)%3C%2Fscript%3E%3Cscript%2F154%3D%E2%80%99%3B%3B%3B%3B%3B%3B%3B",
+      "USER-AGENT": "%E2%80%98%3Ealert(154)%3C%2Fscript%3E%3Cscript%2F154%3D%E2%80%99%3B%3B%3B%3B%3B%3B%3B",
+      "REFERER": "%E2%80%98%3Ealert(154)%3C%2Fscript%3E%3Cscript%2F154%3D%E2%80%99%3B%3B%3B%3B%3B%3B%3B",
+      "HEADER": "%E2%80%98%3Ealert(154)%3C%2Fscript%3E%3Cscript%2F154%3D%E2%80%99%3B%3B%3B%3B%3B%3B%3B",
       "ENCODE": "Base64 UTF-16",
       "BLOCKED": true
     }
