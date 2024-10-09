@@ -4,10 +4,10 @@ WAF bypass Tool is an open source tool to analyze the security of any WAF for Fa
 
 ![WAF Bypass Tool](https://user-images.githubusercontent.com/99513957/223762773-e7f875dc-671e-4c14-a9ae-9bb1c6258da2.png)
 
-## How to run
-
-#### Don't do anything illegal
+## Don't do anything illegal
 It is forbidden to use for illegal and illegal purposes. Don't break the law. We are not responsible for possible risks associated with the use of this software.
+
+## How to run
 
 ### Run using Docker
 The latest waf-bypass always available via the [Docker Hub](https://hub.docker.com/r/nemesida/waf-bypass). It can be easily pulled via the following command:
