@@ -1,0 +1,15 @@
+{
+  "payload": [
+    {
+      "ARGS": "<svg> <script> 1<![CDATA[</script>]]>/-alert(1) </script> </svg>",
+      "BODY": "<svg> <script> 1<![CDATA[</script>]]>/-alert(1) </script> </svg>",
+      "COOKIE": "<svg> <script> 1<![CDATA[</script>]]>/-alert(1) </script> </svg>",
+      "USER-AGENT": "<svg> <script> 1<![CDATA[</script>]]>/-alert(1) </script> </svg>",
+      "REFERER": "<svg> <script> 1<![CDATA[</script>]]>/-alert(1) </script> </svg>",
+      "HEADER": "<svg> <script> 1<![CDATA[</script>]]>/-alert(1) </script> </svg>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ],
+  "source": ""
+}
