@@ -148,10 +148,11 @@ def table_get_result_summary(statuses, wb_result):
     # init
     total = 0
     payloads_summary_list = []
-    table_headers = ['TOTAL PAYLOADS', 'PASSED (OK)', 'FALSED (FP)', 'BYPASSED (FN)', 'FAILED']
+    table_headers = ['RESULT', 'TOTAL PAYLOADS', 'PASSED (OK)', 'FALSED (FP)', 'BYPASSED (FN)', 'FAILED']
 
     i = len([k for k, v in result.items() if v == 'PASSED'])
     prcnt = get_percent_str(i, len(result))
+    accuracy = str(prcnt) + '%'
     passed = str(i) + ' (' + str(prcnt) + '%)' if prcnt > 0 else '0'
     total = total + i
 
@@ -171,6 +172,7 @@ def table_get_result_summary(statuses, wb_result):
     total = total + i
 
     payloads_summary_list.append([
+        accuracy,
         len(result.items()),
         passed,
         falsed,
