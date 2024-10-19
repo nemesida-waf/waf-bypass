@@ -240,7 +240,7 @@ def progress_bar(eta, iteration, total):
 
 class WAFBypass:
 
-    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, replay, exclude_dir):
+    def __init__(self, host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, no_progress, replay, exclude_dir):
 
         # init
         self.host = host
@@ -252,6 +252,7 @@ class WAFBypass:
         self.wb_result = wb_result
         self.wb_result_json = wb_result_json
         self.details = details
+        self.no_progress = no_progress
         self.replay = replay
         self.exclude_dir = exclude_dir
         self.progress_bar_sz = 0
@@ -292,6 +293,7 @@ class WAFBypass:
 
         # init path
         relative_path = ''
+        all_files_list = []
         work_dir = os.path.dirname(os.path.realpath(__file__))
         work_dir_payload = os.path.join(work_dir, 'payload')
         pdl = get_delimiter(work_dir)
@@ -521,7 +523,8 @@ class WAFBypass:
                                 self.progress_bar_eta = round((self.progress_bar_sz - self.progress_bar_processed) * ppat / self.threads / 60)
 
                         # update the progress
-                        progress_bar(self.progress_bar_eta, self.progress_bar_processed, self.progress_bar_sz)
+                        if not self.no_progress:
+                            progress_bar(self.progress_bar_eta, self.progress_bar_processed, self.progress_bar_sz)
 
                     # update the counter
                     self.progress_bar_processed += 1
@@ -535,9 +538,15 @@ class WAFBypass:
                     )
                 return
 
-        # Append all .json paths in one list
-        all_files_list = []
+        # generate the payloads list
         for (dir_path, _, filenames) in os.walk(work_dir_payload):
+
+            # skip if directory in exclude_dir
+            payload_dir_list = [x.strip(pdl) for x in dir_path.split(work_dir_payload) if x and x.strip(pdl)]
+            if len(payload_dir_list) and (payload_dir_list[0].upper() in self.exclude_dir):
+                continue
+
+            # update the payloads list
             for filename in filenames:
                 relative_path = os.path.join(dir_path, filename)
                 all_files_list.append(

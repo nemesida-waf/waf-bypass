@@ -50,6 +50,8 @@ The latest waf-bypass always available via the [Docker Hub](https://hub.docker.c
 
 - <code>'--details'</code> - display the False Positive and False Negative payloads. Not compatible with option <code>--json-format</code> option.
 
+- <code>'--no-progress'</code> - do not display progress bar.
+
 - <code>'--curl-replay'</code> - display the cURL command to reproduce False Positive, False Negative or Failed requests. Not compatible with option <code>--json-format</code> option.
 
 ## JSON format

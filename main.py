@@ -43,6 +43,7 @@ def get_help():
     print("--timeout     - set the request processing timeout in sec. (e.g. --timeout=10, default: 30)")
     print("--json-format - display the result of the work in JSON format")
     print("--details     - display the False Positive and False Negative payloads")
+    print("--no-progress - do not display progress bar")
     print("--curl-replay - display the cURL command to reproduce False Positive, False Negative or Failed requests")
     print("--exclude-dir - exclude the payload's directory (e.g., --exclude-dir='SQLi,XSS')")
 
@@ -56,11 +57,13 @@ def main():
     host = ''
     proxy = {}
     headers = {}
+    block_code = {}
     threads = 5
     timeout = 30
     wb_result = {}
     wb_result_json = False
     details = False
+    no_progress = False
     replay = False
     exclude_dir = []
 
@@ -75,11 +78,22 @@ def main():
 
         # options
         launch_args_options = [
-            'help', 'host=', 'proxy=', 'header=', 'user-agent=', 'block-code=', 'threads=', 'timeout=', 'json-format', 'details', 'curl-replay', 'exclude-dir=',
+            'help',
+            'host=',
+            'proxy=',
+            'header=',
+            'user-agent=',
+            'block-code=',
+            'threads=',
+            'timeout=',
+            'json-format',
+            'details',
+            'no-progress',
+            'curl-replay',
+            'exclude-dir=',
         ]
 
         # parsing args
-        block_code = {}
         optlist, values = getopt.getopt(launch_args, '', launch_args_options)
 
         for k, v in optlist:
@@ -121,14 +135,17 @@ def main():
             elif k == '--details':
                 details = True
 
+            elif k == '--no-progress':
+                no_progress = True
+
             elif k == '--curl-replay':
                 replay = True
 
             elif k == '--exclude-dir':
                 exclude_dir.extend(v.replace(',', ' ').split())
 
-        if len(block_code) == 0:
-            block_code[403] = True
+        # set 403 code as blocked code anyway
+        block_code[403] = True
 
         # convert to uppercase
         exclude_dir = [x.upper() for x in exclude_dir]
@@ -178,7 +195,7 @@ def main():
         wb_result['EXCLUDE-DIR'] = exclude_dir
 
     # launch WAF Bypass
-    waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, replay, exclude_dir)
+    waf_bypass = WAFBypass(host, proxy, headers, block_code, timeout, threads, wb_result, wb_result_json, details, no_progress, replay, exclude_dir)
 
     try:
         waf_bypass.start()
