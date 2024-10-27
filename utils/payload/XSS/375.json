@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<input accesskey=X onclick=\"self['wind'+'ow']['one'+'rror']=alert;throw 1337;\">",
+      "BODY": "<input accesskey=X onclick=\"self['wind'+'ow']['one'+'rror']=alert;throw 1337;\">",
+      "COOKIE": "<input accesskey=X onclick=\"self['wind'+'ow']['one'+'rror']=alert;throw 1337;\">",
+      "USER-AGENT": "<input accesskey=X onclick=\"self['wind'+'ow']['one'+'rror']=alert;throw 1337;\">",
+      "REFERER": "<input accesskey=X onclick=\"self['wind'+'ow']['one'+'rror']=alert;throw 1337;\">",
+      "HEADER": "<input accesskey=X onclick=\"self['wind'+'ow']['one'+'rror']=alert;throw 1337;\">",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
