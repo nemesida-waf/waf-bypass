@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "<Img Src=OnXSS OnError=alert(1)>",
+      "BODY": "<Img Src=OnXSS OnError=alert(1)>",
+      "COOKIE": "<Img Src=OnXSS OnError=alert(1)>",
+      "USER-AGENT": "<Img Src=OnXSS OnError=alert(1)>",
+      "REFERER": "<Img Src=OnXSS OnError=alert(1)>",
+      "HEADER": "<Img Src=OnXSS OnError=alert(1)>",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}

