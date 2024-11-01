@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "ARGS": "%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E",
+      "BODY": "%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E",
+      "COOKIE": "%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E",
+      "USER-AGENT": "%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E",
+      "REFERER": "%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E",
+      "HEADER": "%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E%3Csvg%3E%20%0A%3Cscript%3Ealert%3C%21%5BCDATA%5B%3C%21----%3E%5D%5D%3E%0A%20%281%29%3C%2Fscript%3E%3C%2Fsvg%3E",
+      "ENCODE": "Base64 UTF-16",
+      "BLOCKED": true
+    }
+  ]
+}
