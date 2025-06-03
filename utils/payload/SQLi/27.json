@@ -3,7 +3,7 @@
     {
       "URL": "?id=0+Union+Select-1,Make_Set(7,@:=0,(Select-1.From(Information_Schema.Columns)Where@:=Make_Set(63,@,0xa,Table_Schema,Table_Name,Column_Name)),@),1,1",
       "ARGS": "?id=0+Union+Select-1,Make_Set(7,@:=0,(Select-1.From(Information_Schema.Columns)Where@:=Make_Set(63,@,0xa,Table_Schema,Table_Name,Column_Name)),@),1,1",
-      "ARGS": "?id=0+Union+Select-1,Make_Set(7,@:=0,(Select-1.From(Information_Schema.Columns)Where@:=Make_Set(63,@,0xa,Table_Schema,Table_Name,Column_Name)),@),1,1",
+      "BODY": "?id=0+Union+Select-1,Make_Set(7,@:=0,(Select-1.From(Information_Schema.Columns)Where@:=Make_Set(63,@,0xa,Table_Schema,Table_Name,Column_Name)),@),1,1",
       "COOKIE": "?id=0+Union+Select-1,Make_Set(7,@:=0,(Select-1.From(Information_Schema.Columns)Where@:=Make_Set(63,@,0xa,Table_Schema,Table_Name,Column_Name)),@),1,1",
       "USER-AGENT": "?id=0+Union+Select-1,Make_Set(7,@:=0,(Select-1.From(Information_Schema.Columns)Where@:=Make_Set(63,@,0xa,Table_Schema,Table_Name,Column_Name)),@),1,1",
       "REFERER": "?id=0+Union+Select-1,Make_Set(7,@:=0,(Select-1.From(Information_Schema.Columns)Where@:=Make_Set(63,@,0xa,Table_Schema,Table_Name,Column_Name)),@),1,1",
