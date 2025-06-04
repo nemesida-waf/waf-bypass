@@ -169,7 +169,7 @@ def main():
         print('# Proxy:        {}'.format(proxy)) if len(proxy) else print('# Proxy:        not used')
         print('# Timeout:      {}s'.format(timeout))
         print('# Threads:      {}'.format(threads))
-        print('# Block code:   {}'.format(list(block_code.keys())[0]))
+        print('# Block codes:  {}'.format(' '.join([str(k) for k in block_code.keys()])))
         print('# Exclude dirs: {}'.format(' '.join(exclude_dir)))
 
         if len(headers) > 0:
