@@ -14,7 +14,7 @@ setup(
         'chardet==5.2.0',
         'colorama==0.4.6',
         'curlify==2.2.1',
-        'requests==2.32.4',
+        'requests==2.33.0',
         'tableprint==0.9.1',
         'yarl==1.9.4'
     ],
