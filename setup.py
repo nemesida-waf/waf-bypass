@@ -10,15 +10,15 @@ setup(
     packages=['utils'],
     py_modules=['main'],
     install_requires=[
-        'attrs==24.2.0',
-        'chardet==5.2.0',
+        'attrs==26.1.0',
+        'chardet==7.4.3',
         'colorama==0.4.6',
-        'curlify==2.2.1',
-        'requests==2.32.4',
+        'curlify==3.0.0',
+        'requests==2.34.2',
         'tableprint==0.9.1',
-        'yarl==1.9.4'
+        'yarl==1.24.5'
     ],
-    python_requires='>=3.9.0',
+    python_requires='>=3.10.12',
     entry_points={
         'console_scripts': [
             'waf-bypass = main:main'
